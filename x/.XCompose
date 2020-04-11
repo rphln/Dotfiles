@@ -1,0 +1,5 @@
+include "%L"
+
+# Force 'c to output ç instead of ć.
+<dead_acute> <C> : "Ç"
+<dead_acute> <c> : "ç"

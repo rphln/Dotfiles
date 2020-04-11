@@ -1,0 +1,10 @@
+# Player options {{{
+
+player = mpv
+player-args = --profile=protocol.streamlink {filename}
+
+# }}}
+
+default-stream = best
+
+# vim: set ft=config

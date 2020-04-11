@@ -1,0 +1,18 @@
+[user]
+    name = Raphael Nepomuceno
+    email = 58113327+rphln@users.noreply.github.com
+
+[init]
+    templatedir = ~/Dotfiles/_git/template/
+
+[alias]
+    history = log --pretty=format:'%Cred(%h) %Creset%s %Cgreen(%ar) %Cblue<%an>'
+
+    standup = history --since yesterday
+    today = history --since midnight
+
+    # Trust repositories' binaries in `bin`.
+    trust = !mkdir -p .git/safe
+
+[diff]
+    algorithm = histogram

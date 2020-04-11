@@ -1,0 +1,108 @@
+#!/usr/bin/env bash
+
+# This script can be executed with `bash <(curl -sL https://raw.githubusercontent.com/rphln/Dotfiles/master/_arch/install-arch)`.
+
+set -euxo pipefail
+
+die() {
+	echo "${0}:" "${@}" >&2
+	exit 1
+}
+
+# Warning
+
+cat <<EOF
+Remember that some preferences should be changed directly in the script source!
+
+   1. The system is using UEFI;
+   2. The system has a disk with at least 40GiB (ish);
+   3. The locale is en-GB;
+   4. The timezone is America/São Paulo.
+   5. The user credentials (except for the password) are also hardcoded.
+
+EOF
+
+# Disk setup prompt.
+
+echo "Listing available disks..."
+lsblk -p -o name,size
+echo
+
+read -rp "Select the installation device: " device
+: "${device:?'Disk not specified!'}"
+
+# Choose mirrors
+
+pacman -Sy --noconfirm pacman-contrib
+
+echo "Updating mirror list..."
+
+curl -s "https://www.archlinux.org/mirrorlist/?country=BR&use_mirror_status=on" |
+	sed -e 's/^#Server/Server/' -e '/^#/d' |
+	rankmirrors -n 5 - >/etc/pacman.d/mirrorlist
+
+# Partitions {{{
+
+parted -s "${device}" -- mklabel gpt
+
+parted -s "${device}" -- mkpart ESP fat32 1MiB 512MiB          # 1 = /boot
+parted -s "${device}" -- mkpart primary ext4 512MiB 40GiB      # 2 = /
+parted -s "${device}" -- mkpart primary linux-swap 40GiB 52GiB # 3 = swap
+parted -s "${device}" -- mkpart primary ext4 52GiB 100%        # 4 = /home
+
+parted -s "${device}" -- set 1 boot on
+
+part_boot="${device}1"
+part_root="${device}2"
+part_swap="${device}3"
+part_home="${device}4"
+
+mkswap "${part_swap}"
+swapon "${part_swap}"
+
+mkfs.fat -F32 "${part_boot}"
+
+mkfs.ext4 -L "Arch" "${part_root}"
+mkfs.ext4 -L "Home" "${part_home}"
+
+mount "${part_root}" /mnt
+
+mkdir -p /mnt/boot && mount "${part_boot}" /mnt/boot
+mkdir -p /mnt/home && mount "${part_home}" /mnt/home
+
+# }}}
+# Bootstrap {{{
+
+pacstrap /mnt base base-devel
+
+# }}}
+# Bootloader {{{
+
+arch-chroot /mnt bootctl install
+
+tee /mnt/boot/loader/loader.conf <<EOF
+default arch
+EOF
+
+tee /mnt/boot/loader/entries/arch.conf <<EOF
+title    Arch Linux
+linux    /vmlinuz-linux
+initrd   /initramfs-linux.img
+options  root=LABEL=Arch rw
+EOF
+
+# }}}
+# Generate `fstab` {{{
+
+genfstab /mnt | tee /mnt/etc/fstab
+
+# }}}
+# Post installation {{{
+
+arch-chroot /mnt bash <(curl -sL https://raw.githubusercontent.com/rphln/Dotfiles/master/_arch/post-install)
+
+# }}}
+
+echo "Installation finished!"
+
+# vim: set ft=sh fdm=marker:

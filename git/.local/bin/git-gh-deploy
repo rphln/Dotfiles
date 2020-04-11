@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+if [[ -z "${1}" ]]; then
+  echo "usage: git gh-deploy <path> [remote]"
+  exit 1
+fi
+
+exec git subtree push --prefix "${1}" "${2:-origin}" gh-pages

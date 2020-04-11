@@ -1,0 +1,14 @@
+# Maintainer: Raphael Nepomuceno <58113327+rphln@users.noreply.github.com>
+
+pkgname=rphln-firefox-extras
+pkgver=1.0.0
+pkgrel=2
+arch=(any)
+depends=(firefox)
+source=('google.xml' 'policies.json')
+md5sums=('a9bad05d6d67a1301149845457018186' 'c7b5391f94dacc381b9cc4ca133591f5')
+
+package() {
+	install -D --mode 0644 "${srcdir}/policies.json" -t "${pkgdir}/usr/lib/firefox/distribution/"
+	install -D --mode 0644 "${srcdir}/google.xml" -t "${pkgdir}/usr/lib/firefox/distribution/searchplugins/common/"
+}

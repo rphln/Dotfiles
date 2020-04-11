@@ -1,0 +1,130 @@
+#!/usr/bin/env bash
+
+set -euxo pipefail
+
+# Locale {{{
+
+append() {
+	if ! grep -qxF "${1}" "${2}"; then
+		echo "${1}" >>"${2}"
+	fi
+}
+
+append "en_GB.UTF-8 UTF-8" /etc/locale.gen
+append "pt_BR.UTF-8 UTF-8" /etc/locale.gen
+
+locale-gen
+
+localectl set-locale en_GB
+
+# }}}
+# Time zone {{{
+
+timedatectl set-ntp true
+timedatectl set-timezone America/Sao_Paulo
+
+# }}}
+# Host name {{{
+
+hostnamectl set-hostname musashi
+
+# }}}
+# Packages {{{
+
+packages=(
+	adapta-gtk-theme
+	adapta-kde
+	alacritty
+	ark
+	colord-kde
+	cpupower
+	dolphin
+	dolphin-plugins
+	ffmpegthumbs
+	figlet
+	firefox
+	fscrypt
+	git
+	gwenview
+	hub
+	kcron
+	kde-gtk-config
+	kdegraphics-mobipocket
+	kdegraphics-thumbnailers
+	kdeplasma-addons
+	kgamma5
+	kinfocenter
+	kio-extras
+	kscreen
+	ksshaskpass
+	ksysguard
+	ksystemlog
+	kwalletmanager
+	libreoffice-fresh
+	linux
+	moreutils
+	neovim
+	okular
+	papirus-icon-theme
+	partitionmanager
+	plasma-browser-integration
+	plasma-desktop
+	plasma-nm
+	plasma-pa
+	powerdevil
+	sddm-kcm
+	stow
+	sudo
+	syncthing
+	tree
+	user-manager
+	xclip
+	xdg-desktop-portal-kde
+	zsh
+)
+
+pacman -Syyuu --noconfirm ${packages[@]}
+
+# }}}
+# User {{{
+
+user_opts=(
+	--storage fscrypt
+	--shell $(which zsh)
+	--member-of wheel
+	--real-name "Raphael Nepomuceno"
+)
+
+homectl create rphln "${user_opts[@]}"
+
+# }}}
+# Pacman cache {{{
+
+env SYSTEMD_EDITOR=tee systemctl edit darkhttpd.service <<EOF
+[Service]
+ExecStart =
+ExecStart = /usr/bin/darkhttpd /var/cache/pacman/pkg --port 8086 --no-server-id
+
+User = http
+Group = http
+EOF
+
+# }}}
+# Override scaling governor {{{
+
+env SYSTEMD_EDITOR=tee systemctl edit cpupower.service <<EOF
+[Service]
+ExecStart =
+ExecStart = /usr/bin/cpupower --cpu all frequency-set --governor performance
+EOF
+
+systemctl enable --now cpupower.service
+
+# }}}
+# Display manager {{{
+
+systemctl enable sddm
+
+# }}}
+
+# vim: set ft=sh fdm=marker:

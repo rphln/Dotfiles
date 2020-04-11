@@ -1,0 +1,125 @@
+/* Copyright 2019 Raphael Nepomuceno
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+#include QMK_KEYBOARD_H
+
+enum layer {
+  _BASE,
+  _LOWER,
+  _RAISE,
+  _ADJUST,
+};
+
+enum custom_keycodes {
+  KC_INTO = SAFE_RANGE,
+  KC_OOM,
+};
+
+#define KC_ (KC_NO)
+#define KC__ (KC_TRNS)
+
+#define KC_RST (RESET)
+
+#define KC_LOW (MO(_LOWER))
+#define KC_RAI (MO(_RAISE))
+
+#define KC_ARRW (DF(_RAISE))
+#define KC_BASE (DF(_BASE))
+#define KC_NMPD (DF(_LOWER))
+
+// `KC_SYSREQ` doesn't work.
+#define KC_SYSRQ (LALT(KC_PSCR))
+
+// Cycle keyboard layouts on Plasma.
+#define KC_KBD (LCTL(LALT(KC_K)))
+
+// Because `<M-F4>` is hard to reach.
+#define KC_QUIT (LALT(KC_F4))
+
+const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+    // clang-format off
+    [_BASE] = LAYOUT_kc(
+        // ╭──────┬──────┬──────┬──────┬──────┬──────╮             ╭──────┬──────┬──────┬──────┬──────┬──────╮
+             TAB  , Q    , W    , F    , P    , B    ,               J    , L    , U    , Y    , SCLN , BSPC ,
+        // ├──────┼──────┼──────┼──────┼──────┼──────┤             ├──────┼──────┼──────┼──────┼──────┼──────┤
+             ESC  , A    , R    , S    , T    , G    ,               M    , N    , E    , I    , O    , ENT  ,
+        // ├──────┼──────┼──────┼──────┼──────┼──────┤             ├──────┼──────┼──────┼──────┼──────┼──────┤
+             LCTL , Z    , X    , C    , D    , V    ,               K    , H    , COMM , DOT  , SLSH , RCTL ,
+        // ╰──────┴──────┴──────┴────┬─┴────┬─┴────┬─┴────╮   ╭────┴─┬────┴─┬────┴─┬────┴──────┴──────┴──────╯
+                                       LWIN , LOW  , SPC  ,     LSFT , RAI  , LALT
+        //                           ╰──────┴──────┴──────╯   ╰──────┴──────┴──────╯
+        ),
+    [_LOWER] = LAYOUT_kc(
+        // ╭──────┬──────┬──────┬──────┬──────┬──────╮             ╭──────┬──────┬──────┬──────┬──────┬──────╮
+                  ,      , RBRC , RPRN , BSLS ,      ,                    , 7    , 8    , 9    ,      , DEL  ,
+        // ├──────┼──────┼──────┼──────┼──────┼──────┤             ├──────┼──────┼──────┼──────┼──────┼──────┤
+                  , MINS , LBRC , LPRN , QUOT , GRV  ,               EQL  , 4    , 5    , 6    , 0    , INS  ,
+        // ├──────┼──────┼──────┼──────┼──────┼──────┤             ├──────┼──────┼──────┼──────┼──────┼──────┤
+             _    ,      ,      ,      ,      ,      ,                    , 1    , 2    , 3    ,      , _    ,
+        // ╰──────┴──────┴──────┴────┬─┴────┬─┴────┬─┴────╮   ╭────┴─┬────┴─┬────┴─┬────┴──────┴──────┴──────╯
+                                       _    , _    , _    ,     _    , _    , _
+        //                           ╰──────┴──────┴──────╯   ╰──────┴──────┴──────╯
+        ),
+    [_RAISE] = LAYOUT_kc(
+        // ╭──────┬──────┬──────┬──────┬──────┬──────╮             ╭──────┬──────┬──────┬──────┬──────┬──────╮
+                  , PGUP , HOME , UP   , END  ,      ,                    , F7   , F8   , F9   , F10  ,      ,
+        // ├──────┼──────┼──────┼──────┼──────┼──────┤             ├──────┼──────┼──────┼──────┼──────┼──────┤
+                  , PGDN , LEFT , DOWN , RGHT , MPLY ,               PSCR , F4   , F5   , F6   , F11  ,      ,
+        // ├──────┼──────┼──────┼──────┼──────┼──────┤             ├──────┼──────┼──────┼──────┼──────┼──────┤
+             _    ,      ,      ,      ,      ,      ,                    , F1   , F2   , F3   , F12  , _    ,
+        // ╰──────┴──────┴──────┴────┬─┴────┬─┴────┬─┴────╮   ╭────┴─┬────┴─┬────┴─┬────┴──────┴──────┴──────╯
+                                       _    , _    , _    ,     _    , _    , _
+        //                           ╰──────┴──────┴──────╯   ╰──────┴──────┴──────╯
+        ),
+    [_ADJUST] = LAYOUT_kc(
+        // ╭──────┬──────┬──────┬──────┬──────┬──────╮             ╭──────┬──────┬──────┬──────┬──────┬──────╮
+                  , OOM  ,      , VOLU ,      ,      ,                    , BASE , ARRW , NMPD ,      , RST  ,
+        // ├──────┼──────┼──────┼──────┼──────┼──────┤             ├──────┼──────┼──────┼──────┼──────┼──────┤
+             CAPS , QUIT , MPRV , VOLD , MNXT ,      ,                    , INTO ,      ,      ,      , KBD  ,
+        // ├──────┼──────┼──────┼──────┼──────┼──────┤             ├──────┼──────┼──────┼──────┼──────┼──────┤
+             _    ,      ,      ,      ,      ,      ,                    ,      ,      ,      ,      , _    ,
+        // ╰──────┴──────┴──────┴────┬─┴────┬─┴────┬─┴────╮   ╭────┴─┬────┴─┬────┴─┬────┴──────┴──────┴──────╯
+                                       _    , _    , _    ,     _    , _    , _
+        //                           ╰──────┴──────┴──────╯   ╰──────┴──────┴──────╯
+        ),
+    // clang-format on
+};
+
+uint32_t layer_state_set_user(uint32_t state) {
+  return update_tri_layer_state(state, _LOWER, _RAISE, _ADJUST);
+};
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+  switch (keycode) {
+  case KC_INTO:
+    if (record->event.pressed) {
+      SEND_STRING("\n|> ");
+    };
+
+    break;
+
+  case KC_OOM:
+    if (record->event.pressed) {
+      register_code16(KC_SYSRQ);
+      tap_code16(KC_F);
+      unregister_code16(KC_SYSRQ);
+    };
+
+    break;
+  };
+
+  return true;
+};

@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+exec ctags --tag-relative --fields=+ailmnS -o "$(git rev-parse --git-dir)/tags" -L <(fd --type f --follow --hidden --exclude .git) "${@}"

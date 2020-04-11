@@ -1,0 +1,14 @@
+# Maintainer: Raphael Nepomuceno <58113327+rphln@users.noreply.github.com>
+
+pkgname=rphln-pacman-hooks
+pkgver=1.0.0
+pkgrel=3
+arch=(any)
+depends=(pacman-contrib)
+source=('rk1.hook' 'ruk0.hook')
+md5sums=('6b679aeb510ad6cc05917338c21542f5' '1a914d5ea19d7945561fd61da008f96d')
+
+package() {
+	install -D --mode 0644 "${srcdir}/rk1.hook" -t "${pkgdir}/etc/pacman.d/hooks/"
+	install -D --mode 0644 "${srcdir}/ruk0.hook" -t "${pkgdir}/etc/pacman.d/hooks/"
+}

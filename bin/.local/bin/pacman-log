@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+
+for package in $(pacman -Qqe); do
+  grep "\[ALPM\] installed ${package} \(\S*\)" /var/log/pacman.log
+done | sort -u

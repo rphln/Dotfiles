@@ -1,0 +1,52 @@
+window:
+  dimensions:
+    columns: 104
+    lines: 24
+
+  padding:
+    x: 18
+    y: 18
+
+font:
+  size: 18.0
+
+  offset:
+    y: 1
+
+  normal:
+    family: Iosevka
+
+colors:
+  primary:
+    background: "#263238"
+    foreground: "#e7ebed"
+
+  normal:
+    black: "#435b67"
+    red: "#fc3841"
+    green: "#5cf19e"
+    yellow: "#fed032"
+    blue: "#37b6ff"
+    magenta: "#fc226e"
+    cyan: "#59ffd1"
+    white: "#ffffff"
+
+  bright:
+    black: "#a1b0b8"
+    red: "#fc746d"
+    green: "#adf7be"
+    yellow: "#fee16c"
+    blue: "#70cfff"
+    magenta: "#fc669b"
+    cyan: "#9affe6"
+    white: "#ffffff"
+
+key_bindings:
+  - { key: Q, mods: Control, action: Quit }
+
+  # Open new window in the current directory.
+  - { key: N, mods: Control | Shift, action: SpawnNewInstance }
+
+  # Kill {previous,next} word.
+  - { key: Back, mods: Control, chars: "" }
+  - { key: Delete, mods: Control, chars: "d" }

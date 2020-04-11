@@ -1,0 +1,11 @@
+[Trigger]
+Operation = Remove
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = *
+
+[Action]
+Description = Pruning uninstalled packages.
+When = PostTransaction
+Exec = /usr/bin/paccache --remove --uninstalled --keep 0

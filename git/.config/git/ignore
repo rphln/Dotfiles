@@ -1,0 +1,31 @@
+# Compiled sources
+*.class
+*.com
+*.dll
+*.exe
+*.o
+*.pyc
+*.so
+
+# Packages
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases
+*.log
+*.sqlite
+
+# Operating system files
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+._*
+Thumbs.db
+ehthumbs.db
