@@ -370,17 +370,17 @@ nnoremap <Leader>f :Files<CR>
 " Search files using `rg`.
 nnoremap <Leader>r :Rg<CR>
 
+" Search on Google.
+nnoremap <Leader>gg :call open#google(v:false)<CR>
+xnoremap <Leader>gg :call open#google(v:true)<CR>
+
 " Open GitHub repositories.
 nnoremap <Leader>gh :call open#github(v:false)<CR>
 xnoremap <Leader>gh :call open#github(v:true)<CR>
 
 " Open links.
-nnoremap <Leader>gx :call open#uri(v:false)<CR>
-xnoremap <Leader>gx :call open#uri(v:true)<CR>
-
-" Search on Google.
-nnoremap <Leader>go :call open#google(v:false)<CR>
-xnoremap <Leader>go :call open#google(v:true)<CR>
+nnoremap <Leader>go :call open#uri(v:false)<CR>
+xnoremap <Leader>go :call open#uri(v:true)<CR>
 
 " }}}
 " Snippet expansion {{{
