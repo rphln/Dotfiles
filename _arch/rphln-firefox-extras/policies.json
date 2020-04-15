@@ -3,7 +3,6 @@
     "DNSOverHTTPS": {
       "Enabled": false
     },
-    "DisableBuiltinPDFViewer": true,
     "DisableFirefoxAccounts": true,
     "DisableFormHistory": true,
     "DisableMasterPasswordCreation": true,
