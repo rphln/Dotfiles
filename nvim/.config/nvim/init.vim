@@ -347,12 +347,6 @@ xnoremap <Leader>ar :sort!<CR>
 " Sort selected lines.
 xnoremap <Leader>as :sort<CR>
 
-" Source the current file.
-nnoremap <Leader>vs :source %<CR>
-
-" Source a visual range.
-xnoremap <Leader>vs y:@"<CR>
-
 " Trim spaces.
 nnoremap <Leader>ts :call trim#all()<CR>
 
