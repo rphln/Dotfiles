@@ -363,7 +363,7 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gr <Plug>(coc-references)
 
 " Show documentation for hovered object.
-nnoremap <silent> K :call CocAction('doHover')<CR>
+nnoremap <silent> K <Cmd>call CocAction('doHover')<CR>
 
 " }}}
 
