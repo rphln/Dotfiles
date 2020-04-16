@@ -2,9 +2,6 @@
     name = Raphael Nepomuceno
     email = 58113327+rphln@users.noreply.github.com
 
-[init]
-    templatedir = ~/Dotfiles/_git/template/
-
 [alias]
     history = log --pretty=format:'%Cred(%h) %Creset%s %Cgreen(%ar) %Cblue<%an>'
 
