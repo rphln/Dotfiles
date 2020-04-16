@@ -25,7 +25,7 @@ uninstall:
 # Pseudo-packages {{{
 
 nvim-update: nvim
-	nvim +PlugUpgrade +PlugUpdate +PlugInstall +qall
+	nvim +PlugUpgrade +PlugUpdate +PlugInstall +"CocInstall -sync" +CocUpdateSync +qall
 
 # QMK {{{
 
