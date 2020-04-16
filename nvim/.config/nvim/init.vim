@@ -288,25 +288,17 @@ xnoremap < <gv
 xnoremap > >gv
 
 " }}}
-" Pane navigation {{{
+" Split navigation {{{
 
-" Open hovered {file,tag} in a new tab.
-nnoremap <M-f> <C-w>gf
-nnoremap <M-t> <C-w><C-]><C-w>T
-
-" Move through tabs.
-nnoremap <M-n> :tabn<CR>
-nnoremap <M-p> :tabp<CR>
+" Split horizontally or vertically.
+nnoremap <M-s> <C-w>s
+nnoremap <M-v> <C-w>v
 
 " Move through splits.
 nnoremap <M-h> <C-w>h
 nnoremap <M-j> <C-w>j
 nnoremap <M-k> <C-w>k
 nnoremap <M-l> <C-w>l
-
-" Split horizontally or vertically.
-nnoremap <M-s> <C-w>s
-nnoremap <M-v> <C-w>v
 
 " }}}
 " Insert mode {{{
