@@ -40,14 +40,14 @@ enum custom_keycodes {
 #define KC_BASE (DF(_BASE))
 #define KC_NMPD (DF(_LOWER))
 
-// `KC_SYSREQ` doesn't work.
-#define KC_SYSRQ (LALT(KC_PSCR))
-
 // Cycle keyboard layouts on Plasma.
 #define KC_KBD (LCTL(LALT(KC_K)))
 
-// Because `<M-F4>` is hard to reach.
+// `<M-F4>` is hard to reach.
 #define KC_QUIT (LALT(KC_F4))
+
+// `KC_SYSREQ` doesn't work.
+#define KC_SYSRQ (LALT(KC_PSCR))
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // clang-format off
@@ -66,7 +66,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // ╭──────┬──────┬──────┬──────┬──────┬──────╮             ╭──────┬──────┬──────┬──────┬──────┬──────╮
                   , PGUP , HOME , UP   , END  ,      ,                    , 7    , 8    , 9    ,      , DEL  ,
         // ├──────┼──────┼──────┼──────┼──────┼──────┤             ├──────┼──────┼──────┼──────┼──────┼──────┤
-                  , PGDN , LEFT , DOWN , RGHT ,      ,               BSLS , 4    , 5    , 6    , 0    , INS  ,
+                  , PGDN , LEFT , DOWN , RGHT ,      ,                    , 4    , 5    , 6    , 0    , INS  ,
         // ├──────┼──────┼──────┼──────┼──────┼──────┤             ├──────┼──────┼──────┼──────┼──────┼──────┤
              _    ,      ,      , PSCR , MPLY ,      ,                    , 1    , 2    , 3    ,      , _    ,
         // ╰──────┴──────┴──────┴────┬─┴────┬─┴────┬─┴────╮   ╭────┴─┬────┴─┬────┴─┬────┴──────┴──────┴──────╯
@@ -75,9 +75,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         ),
     [_RAISE] = LAYOUT_kc(
         // ╭──────┬──────┬──────┬──────┬──────┬──────╮             ╭──────┬──────┬──────┬──────┬──────┬──────╮
-             TILD , RCBR , LCBR , DQUO , MINS , PLUS ,                    , AMPR , ASTR , LPRN ,      ,      ,
+             TILD , RCBR , LCBR , DQUO , MINS , PLUS ,               PIPE , AMPR , ASTR , LPRN ,      ,      ,
         // ├──────┼──────┼──────┼──────┼──────┼──────┤             ├──────┼──────┼──────┼──────┼──────┼──────┤
-             GRV  , RBRC , LBRC , QUOT , UNDS , EQL  ,               PIPE , DLR  , PERC , CIRC , RPRN ,      ,
+             GRV  , RBRC , LBRC , QUOT , UNDS , EQL  ,               BSLS , DLR  , PERC , CIRC , RPRN ,      ,
         // ├──────┼──────┼──────┼──────┼──────┼──────┤             ├──────┼──────┼──────┼──────┼──────┼──────┤
              _    ,      ,      ,      , INTO ,      ,                    , EXLM , AT   , HASH ,      , _    ,
         // ╰──────┴──────┴──────┴────┬─┴────┬─┴────┬─┴────╮   ╭────┴─┬────┴─┬────┴─┬────┴──────┴──────┴──────╯
