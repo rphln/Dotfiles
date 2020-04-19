@@ -303,6 +303,13 @@ inoremap <C-l> <Esc>[S1z=``a
 " Reflow the current line.
 inoremap <C-y> <C-o>gq_
 
+" Kill to the end of the {line,word}.
+inoremap <C-k> <C-o>D
+inoremap <M-d> <C-o>de
+
+" Comment the current line with `<C-/>`.
+imap <C-_> <C-o>gcc
+
 " }}}
 " Leader keys {{{
 
