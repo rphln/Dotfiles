@@ -1,0 +1,16 @@
+[Desktop Entry]
+Name=rphln's Panel
+Comment=
+
+Encoding=UTF-8
+Type=Service
+
+X-KDE-PluginInfo-Author=Raphael Nepomuceno
+X-KDE-PluginInfo-Email=
+X-KDE-PluginInfo-EnabledByDefault=true
+X-KDE-PluginInfo-License=LGPLv2+
+X-KDE-PluginInfo-Name=io.github.rphln.plasma-panel
+X-KDE-PluginInfo-Version=1.0
+X-KDE-ServiceTypes=Plasma/LayoutTemplate
+X-Plasma-ContainmentCategories=panel
+X-Plasma-Shell=plasmashell

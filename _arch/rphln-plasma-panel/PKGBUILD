@@ -1,0 +1,15 @@
+# Maintainer: Raphael Nepomuceno <58113327+rphln@users.noreply.github.com>
+
+pkgname=rphln-plasma-panel
+pkgver=1.0.3
+pkgrel=1
+arch=(any)
+depends=(plasma-desktop)
+source=('layout.js' 'metadata.desktop')
+md5sums=('9aaaa64dba77d5f9ac6475f6a51cde21'
+	'f23641759290197d6fec6d579321632b')
+
+package() {
+	install -D --mode 0644 "${srcdir}/layout.js" -t "${pkgdir}/usr/share/plasma/layout-templates/io.github.rphln.plasma-panel/contents/"
+	install -D --mode 0644 "${srcdir}/metadata.desktop" -t "${pkgdir}/usr/share/plasma/layout-templates/io.github.rphln.plasma-panel/"
+}
