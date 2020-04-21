@@ -1,6 +1,8 @@
 alias l='ls --classify --color --group-directories-first'
 alias ll='l -l --human-readable'
 
+alias open='xdg-open &>/dev/null'
+
 alias t='touch'
 
 alias v='nvim'
