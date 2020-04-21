@@ -1,7 +1,7 @@
 let panel = new Panel();
 {
   panel.location = "bottom";
-  panel.height = gridUnit * 2;
+  panel.height = gridUnit * 2.5;
   panel.alignment = "center";
   panel.hiding = "autohide";
 }
