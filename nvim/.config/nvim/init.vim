@@ -8,10 +8,6 @@ let s:plug_target = s:data . '/site/autoload/plug.vim'
 
 let s:plugged = s:data . '/plug'
 
-" Use the system Python binary.
-let g:python_host_prog = '/usr/bin/python'
-let g:python3_host_prog = '/usr/bin/python3'
-
 " }}}
 " Automatic commands namespace {{{
 
