@@ -1,4 +1,4 @@
-let g:open#command = 'xdg-open'
+let g:open#command = 'xdg-open %s'
 
 let g:open#github = 'https://github.com/%s'
 let g:open#google = 'https://www.google.com/search?gl=us&hl=en&q=%s'
@@ -16,7 +16,7 @@ function! open#google(visual) abort
 endfunction
 
 function! s:open(target) abort
-  call jobstart(join([g:open#command, shellescape(a:target)]), {'detach': v:true})
+  call jobstart(printf(g:open#command, shellescape(a:target)), {'detach': v:true})
 endfunction
 
 " See: <https://stackoverflow.com/a/1534347>
