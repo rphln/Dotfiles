@@ -28,35 +28,27 @@ endif
 " }}}
 " Plugins {{{
 
-call plug#begin(s:plugged) | if 1
+call plug#begin(s:plugged) | if v:true
   Plug 'honza/vim-snippets'
 
   Plug 'junegunn/fzf'
   Plug 'junegunn/fzf.vim'
 
   Plug 'tpope/vim-abolish'
-  Plug 'tpope/vim-apathy'
   Plug 'tpope/vim-commentary'
-  Plug 'tpope/vim-endwise'
-  Plug 'tpope/vim-eunuch'
   Plug 'tpope/vim-fugitive'
-  Plug 'tpope/vim-projectionist'
   Plug 'tpope/vim-repeat'
-  Plug 'tpope/vim-sensible'
   Plug 'tpope/vim-sleuth'
   Plug 'tpope/vim-surround'
 
-  " Language server and more.
+  " Language servers and snippets.
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-  " Language support.
-  Plug 'sheerun/vim-polyglot'
-
   " Color scheme.
-  Plug 'skielbasa/vim-material-monokai', {'tag': '989b0e2'}
+  Plug 'skielbasa/vim-material-monokai'
 
-  " Must be loaded early in order to work correctly.
-  call plug#load('vim-sensible')
+  " Elixir syntax.
+  Plug 'elixir-editors/vim-elixir', {'for': 'elixir'}
 endif | call plug#end()
 
 " }}}
