@@ -92,7 +92,7 @@ set splitright splitbelow
 set title
 let &titlestring = "%t — nvim"
 
-" Remove the delay from <Esc>.
+" Remove the delay from `<Esc>`.
 set ttimeoutlen=0
 
 " Disable netrw.
@@ -121,6 +121,8 @@ set nohlsearch
 syntax enable
 
 set background=dark
+
+" Don't use the colors set by the terminal.
 set termguicolors
 
 let g:materialmonokai_gui_italic = v:false
@@ -186,7 +188,7 @@ set shiftround
 set shiftwidth=2 softtabstop=2
 
 " }}}
-" Views  {{{
+" Views {{{
 
 " Persist the undo history between sessions.
 set undofile
@@ -224,9 +226,6 @@ let $FZF_DEFAULT_OPTS = '--color bw --preview "cat {}"'
 
 " General {{{
 
-" Clear to use as leader.
-noremap <Space> <nop>
-
 " Use semicolon for commands.
 noremap ; :
 
@@ -237,18 +236,18 @@ noremap : ;
 noremap / /\v
 noremap ? ?\v
 
-" Jump to the matching pair character.
+" Jump to the paired character.
 noremap Z %
 
-" Execute the macro recorded in `q`.
+" Execute the macro recorded in the `q` register. If on visual mode, do it on each line.
 nnoremap Q @q
 xnoremap Q :normal! @q<CR>
 
-" Center view on the next (or previous) search result.
-nnoremap n nzz
+" Center the view on the {previous,next} search result.
 nnoremap N Nzz
+nnoremap n nzz
 
-" Yank from the cursor to the end of the line.
+" Make `Y` consistent with `D` and `C`.
 nnoremap Y y$
 
 " Insert a blank line below the cursor.
@@ -313,6 +312,9 @@ imap <C-_> <C-o>gcc
 
 " Use the space bar as leader key.
 let mapleader = ' '
+
+" Clear the default action to prevent unexpected effects.
+noremap <Leader> <nop>
 
 " Paste over a selection without yanking it.
 xnoremap <Leader>p "_dP`]
