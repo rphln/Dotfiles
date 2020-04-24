@@ -143,7 +143,7 @@ let &fillchars = "fold: ,eob: "
 
 " Show whitespace characters.
 set list
-let &listchars = "tab:┆ ,trail:•,extends:…,precedes:…,nbsp:‡"
+let &listchars = "tab:┆ ,trail:•,extends:»,precedes:«,nbsp:‡"
 
 " Don't highlight the current line or column.
 set nocursorline nocursorcolumn
