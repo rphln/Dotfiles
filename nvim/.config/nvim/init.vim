@@ -250,8 +250,8 @@ nnoremap n nzz
 " Make `Y` consistent with `D` and `C`.
 nnoremap Y y$
 
-" Insert a blank line below the cursor.
-nnoremap <Return> o<Esc>
+" Toggle a fold.
+nnoremap <Return> za
 
 " Alternate between files.
 nnoremap <Backspace> <C-^>
