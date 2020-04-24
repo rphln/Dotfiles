@@ -379,7 +379,15 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gr <Plug>(coc-references)
 
 " Show documentation for hovered object.
-nnoremap <silent> K <Cmd>call CocAction('doHover')<CR>
+nnoremap <silent> K <Cmd>call <SID>hover()<CR>
+
+function! s:hover() abort
+  if index(['vim', 'help'], &filetype) >= 0
+    normal! K
+  else
+    call CocAction('doHover')
+  endif
+endfunction
 
 " }}}
 
