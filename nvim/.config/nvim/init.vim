@@ -76,7 +76,7 @@ set mouse=nvi
 " Check spelling.
 set spelllang+=en,pt
 
-" Position of new windows.
+" Split in a more natural direction.
 set splitright splitbelow
 
 " Use a custom terminal title.
@@ -138,7 +138,7 @@ let &fillchars = "fold: ,eob: "
 set list
 let &listchars = "tab:┆ ,trail:•,extends:»,precedes:«,nbsp:‡"
 
-" Don't highlight the current line or column.
+" Don't highlight the current {line,column}.
 set nocursorline nocursorcolumn
 
 " Show relative line numbers.
@@ -230,7 +230,7 @@ noremap ? ?\v
 " Jump to the paired character.
 noremap Z %
 
-" Execute the macro recorded in the `q` register. If on visual mode, do it on each line.
+" Play the macro recorded in the `q` register. If on visual mode, do it on each line.
 nnoremap Q @q
 xnoremap Q :normal! @q<CR>
 
@@ -254,7 +254,7 @@ nnoremap gV `[v`]
 nnoremap p p`]
 xnoremap p p`]
 
-" Don't leave visual mode after indenting.
+" Stay in visual mode after indenting.
 xnoremap < <gv
 xnoremap > >gv
 
@@ -310,11 +310,9 @@ noremap <Leader> <nop>
 " Paste over a selection without yanking it.
 xnoremap <Leader>p "_dP`]
 
-" Save and quit.
-nnoremap <Leader>q ZZ
-
-" Save file.
+" Write the current file if it's modified{, and quit}.
 nnoremap <Leader>w :update<CR>
+nnoremap <Leader>q ZZ
 
 " Align selected columns.
 xnoremap <Leader>at :!column -t -o ' '<CR>
