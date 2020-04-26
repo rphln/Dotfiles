@@ -250,14 +250,14 @@ xnoremap > >gv
 " Split navigation {{{
 
 " Split horizontally or vertically.
-nnoremap <M-s> <C-w>s
-nnoremap <M-v> <C-w>v
+nnoremap <M-a>s <C-w>s
+nnoremap <M-a>v <C-w>v
 
 " Move through splits.
-nnoremap <M-h> <C-w>h
-nnoremap <M-j> <C-w>j
-nnoremap <M-k> <C-w>k
-nnoremap <M-l> <C-w>l
+nnoremap <M-Left>  <C-w>h
+nnoremap <M-Down>  <C-w>j
+nnoremap <M-Up>    <C-w>k
+nnoremap <M-Right> <C-w>l
 
 " }}}
 " Insert mode {{{
