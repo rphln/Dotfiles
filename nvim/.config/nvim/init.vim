@@ -193,18 +193,6 @@ autocmd vimrc BufWinEnter * if ! empty(glob("%:p")) | silent! loadview | endif
 autocmd vimrc BufWinLeave * if ! empty(glob("%:p")) | silent! mkview   | endif
 
 " }}}
-" Backups {{{
-
-" Store backups before overwriting files.
-set backup
-
-" Don't clutter the working directory.
-set backupdir^=~/.local/share/nvim/backup/
-
-" Append a timestamp to the backup name.
-autocmd vimrc BufWritePre * let &backupext = strftime("@%F %R")
-
-" }}}
 " Fuzzy finder {{{
 
 " Skip binary or ignored files.
