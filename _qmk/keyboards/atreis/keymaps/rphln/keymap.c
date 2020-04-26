@@ -53,13 +53,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // clang-format off
     [_COLEMAK] = LAYOUT_kc(
         // ╭──────┬──────┬──────┬──────┬──────┬──────╮             ╭──────┬──────┬──────┬──────┬──────┬──────╮
-             TAB  , Q    , W    , F    , P    , B    ,               J    , L    , U    , Y    , SCLN , BSPC ,
+             TAB  , Q    , W    , F    , P    , B    ,               J    , L    , U    , Y    , QUOT , BSPC ,
         // ├──────┼──────┼──────┼──────┼──────┼──────┤             ├──────┼──────┼──────┼──────┼──────┼──────┤
              ESC  , A    , R    , S    , T    , G    ,               M    , N    , E    , I    , O    , ENT  ,
         // ├──────┼──────┼──────┼──────┼──────┼──────┤             ├──────┼──────┼──────┼──────┼──────┼──────┤
-             LCTL , Z    , X    , C    , D    , V    ,               K    , H    , COMM , DOT  , SLSH , RCTL ,
+             LSPO , Z    , X    , C    , D    , V    ,               K    , H    , COMM , DOT  , SLSH , RSPC ,
         // ╰──────┴──────┴──────┴────┬─┴────┬─┴────┬─┴────╮   ╭────┴─┬────┴─┬────┴─┬────┴──────┴──────┴──────╯
-                                       LWIN , LOW  , SPC  ,     LSFT , RAI  , LALT
+                                       LWIN , LOW  , LCTL ,     SPC  , RAI  , LALT
         //                           ╰──────┴──────┴──────╯   ╰──────┴──────┴──────╯
         ),
     [_LOWER] = LAYOUT_kc(
@@ -75,9 +75,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         ),
     [_RAISE] = LAYOUT_kc(
         // ╭──────┬──────┬──────┬──────┬──────┬──────╮             ╭──────┬──────┬──────┬──────┬──────┬──────╮
-             TILD , RCBR , LCBR , DQUO , MINS , PLUS ,               PIPE , AMPR , ASTR , LPRN ,      ,      ,
+             TILD , COLN , RCBR , LCBR , MINS , PLUS ,               PIPE , AMPR , ASTR , LPRN ,      ,      ,
         // ├──────┼──────┼──────┼──────┼──────┼──────┤             ├──────┼──────┼──────┼──────┼──────┼──────┤
-             GRV  , RBRC , LBRC , QUOT , UNDS , EQL  ,               BSLS , DLR  , PERC , CIRC , RPRN ,      ,
+             GRV  , SCLN , RBRC , LBRC , UNDS , EQL  ,               BSLS , DLR  , PERC , CIRC , RPRN ,      ,
         // ├──────┼──────┼──────┼──────┼──────┼──────┤             ├──────┼──────┼──────┼──────┼──────┼──────┤
              _    ,      ,      ,      , INTO ,      ,                    , EXLM , AT   , HASH ,      , _    ,
         // ╰──────┴──────┴──────┴────┬─┴────┬─┴────┬─┴────╮   ╭────┴─┬────┴─┬────┴─┬────┴──────┴──────┴──────╯
