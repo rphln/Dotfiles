@@ -205,15 +205,8 @@ let $FZF_DEFAULT_OPTS = '--color bw --preview "cat {}"'
 
 " General {{{
 
-" Use semicolon for commands.
-noremap ; :
-
-" Repeat the last `f` or `t` operator.
-noremap : ;
-
-" Use Perl-like regular expressions when searching.
-noremap / /\v
-noremap ? ?\v
+" Use `Enter` for commands.
+noremap <Return> :
 
 " Jump to the paired character.
 noremap Z %
@@ -229,18 +222,11 @@ nnoremap n nzz
 " Make `Y` consistent with `D` and `C`.
 nnoremap Y y$
 
-" Toggle a fold.
-nnoremap <Return> za
-
 " Alternate between files.
 nnoremap <Backspace> <C-^>
 
 " Select the last edited text.
 nnoremap gV `[v`]
-
-" Jump to the end of the pasted text.
-nnoremap p p`]
-xnoremap p p`]
 
 " Stay in visual mode after indenting.
 xnoremap < <gv
