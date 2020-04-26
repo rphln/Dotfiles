@@ -120,7 +120,7 @@ let g:materialmonokai_gui_italic = v:false
 let g:materialmonokai_italic = v:false
 
 function! s:colorscheme() abort
-  highlight! link ColorColumn Folded
+  highlight! link ColorColumn LineNr
   highlight! link MatchParen Type
 endfunction
 
