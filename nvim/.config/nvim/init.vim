@@ -64,23 +64,14 @@ set clipboard+=unnamed,unnamedplus
 " Suggest the longest common match first.
 set completeopt^=longest
 
-" Treat dashes as word characters.
-set iskeyword+=-
-
 " Hide the status line.
 set laststatus=0
 
 " Don't redraw the screen while executing macros.
 set lazyredraw
 
-" Allow jumping to matching square brackets.
-set matchpairs+=<:>
-
 " Enable mouse support.
 set mouse=nvi
-
-" Number of lines to keep around the cursor.
-set scrolloff=4
 
 " Check spelling.
 set spelllang+=en,pt
