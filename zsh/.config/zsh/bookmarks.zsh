@@ -38,4 +38,4 @@ fzf-bookmarks() {
 }
 
 zle -N fzf-bookmarks
-bindkey '^G' fzf-bookmarks
+bindkey '^T' fzf-bookmarks
