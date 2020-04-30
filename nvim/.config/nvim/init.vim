@@ -30,6 +30,8 @@ call plug#begin(s:plugged) | if v:true
   Plug 'honza/vim-snippets'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+  Plug 'sheerun/vim-polyglot'
+
   Plug 'tpope/vim-abolish'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-fugitive'
@@ -38,9 +40,6 @@ call plug#begin(s:plugged) | if v:true
   Plug 'tpope/vim-surround'
 
   Plug 'skielbasa/vim-material-monokai'
-
-  " Language support.
-  Plug 'elixir-editors/vim-elixir', {'for': 'elixir'}
 endif | call plug#end()
 
 " }}}
