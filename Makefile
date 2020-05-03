@@ -1,5 +1,5 @@
 # Stow packages installable with `make <target>`.
-PACKAGES := alacritty bin git mpv nvim quodlibet tmux x zsh
+PACKAGES := alacritty bin git mpv nvim quodlibet termux tmux x zsh
 
 # Tree clone location.
 QMK ?= $(HOME)/Projects/qmk_firmware
