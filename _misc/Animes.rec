@@ -1,0 +1,5107 @@
+%rec: Anime
+%key: Title
+%sort: Title
+%mandatory: Status Episodes Progress Page
+%constraint: Progress = 0 => Status = 'Planned'
+%constraint: Episodes = 0 => Status != 'Completed'
+%constraint: Episodes > 0 => Progress <= Episodes
+%constraint: Episodes > 0 && Progress = Episodes => Status = 'Completed'
+%type: Episodes int
+%type: Finished date
+%type: Progress int
+%type: Status enum Watching Completed Pending Dropped Planned
+%type: Title line
+%type: Page line
+
+Title: 3-gatsu no Lion
+Status: Planned
+Progress: 0
+Episodes: 22
+Page: https://kitsu.io/anime/3-gatsu-no-lion
+
+Title: 5-toubun no Hanayome
+Status: Planned
+Progress: 0
+Episodes: 12
+Page: https://kitsu.io/anime/5-toubun-no-hanayome
+
+Title: 91 Days
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Oct 13, 2016
+Page: https://kitsu.io/anime/91-days
+
+Title: A-Channel
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jan 29, 2018
+Page: https://kitsu.io/anime/a-channel
+
+Title: Accel World
+Status: Completed
+Progress: 24
+Episodes: 24
+Page: https://kitsu.io/anime/accel-world
+
+Title: Accel World EX
+Status: Completed
+Progress: 2
+Episodes: 2
+Finished: Mar 31, 2013
+Page: https://kitsu.io/anime/accel-world-ex
+
+Title: Acchi Kocchi (TV)
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: May 10, 2015
+Page: https://kitsu.io/anime/acchi-kocchi
+
+Title: Aiura
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jun 24, 2016
+Page: https://kitsu.io/anime/aiura
+
+Title: Ajin
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Jun 24, 2016
+Page: https://kitsu.io/anime/ajin
+
+Title: Ajin 2nd Season
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Jan 15, 2017
+Page: https://kitsu.io/anime/ajin-2nd-season
+
+Title: Akagami no Shirayuki-hime
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Sep 28, 2015
+Page: https://kitsu.io/anime/akagami-no-shirayuki-hime
+
+Title: Akagami no Shirayuki-hime 2nd Season
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Apr 09, 2016
+Page: https://kitsu.io/anime/akagami-no-shirayuki-hime-2
+
+Title: Akame ga Kill!
+Status: Completed
+Progress: 24
+Episodes: 24
+Finished: Dec 24, 2014
+Page: https://kitsu.io/anime/akame-ga-kill
+
+Title: Akame ga Kill! Theater
+Status: Completed
+Progress: 24
+Episodes: 24
+Finished: Dec 24, 2014
+Page: https://kitsu.io/anime/akame-ga-kill-theater
+
+Title: Akatsuki no Yona
+Status: Completed
+Progress: 24
+Episodes: 24
+Finished: Apr 02, 2015
+Page: https://kitsu.io/anime/akatsuki-no-yona
+
+Title: Aldnoah.Zero
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Sep 22, 2014
+Page: https://kitsu.io/anime/aldnoah-zero
+
+Title: Aldnoah.Zero 2nd Season
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Mar 29, 2015
+Page: https://kitsu.io/anime/aldnoah-zero-2
+
+Title: Amaama to Inazuma
+Status: Dropped
+Progress: 4
+Episodes: 12
+Page: https://kitsu.io/anime/amaama-to-inazuma
+
+Title: Amagami SS
+Status: Planned
+Progress: 0
+Episodes: 25
+Page: https://kitsu.io/anime/amagami-ss
+
+Title: Amagi Brilliant Park
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Dec 27, 2014
+Page: https://kitsu.io/anime/amagi-brilliant-park
+
+Title: Amanchu!
+Status: Planned
+Progress: 0
+Episodes: 12
+Page: https://kitsu.io/anime/amanchu
+
+Title: Angel Beats!
+Status: Planned
+Progress: 0
+Episodes: 13
+Page: https://kitsu.io/anime/angel-beats
+
+Title: Anima Yell!
+Status: Planned
+Progress: 0
+Episodes: 12
+Page: https://kitsu.io/anime/anima-yell
+
+Title: Anne Happy♪
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jun 24, 2016
+Page: https://kitsu.io/anime/anne-happy
+
+Title: Ao no Exorcist
+Status: Completed
+Progress: 25
+Episodes: 25
+Page: https://kitsu.io/anime/ao-no-exorcist
+
+Title: Ao no Exorcist: Kyoto Fujouou-hen
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jul 15, 2017
+Page: https://kitsu.io/anime/ao-no-exorcist-2
+
+Title: Ao no Kanata no Four Rhythm
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Apr 03, 2016
+Page: https://kitsu.io/anime/ao-no-kanata-no-four-rhythm
+
+Title: Aoki Hagane no Arpeggio: Ars Nova
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jan 02, 2014
+Page: https://kitsu.io/anime/aoki-hagane-no-arpeggio-ars-nova
+
+Title: Araburu Kisetsu no Otome-domo yo.
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Sep 21, 2019
+Page: https://kitsu.io/anime/araburu-kisetsu-no-otome-domo-yo
+
+Title: Arcana Famiglia
+Status: Dropped
+Progress: 1
+Episodes: 12
+Page: https://kitsu.io/anime/arcana-famiglia
+
+Title: Arifureta Shokugyou de Sekai Saikyou
+Status: Dropped
+Progress: 1
+Episodes: 13
+Page: https://kitsu.io/anime/arifureta-shokugyou-de-sekai-saikyou
+
+Title: Asobi Asobase
+Status: Planned
+Progress: 0
+Episodes: 12
+Page: https://kitsu.io/anime/asobi-asobase
+
+Title: Asobi ni Iku yo!
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Aug 09, 2015
+Page: https://kitsu.io/anime/asobi-ni-iku-yo
+
+Title: Asobi ni Iku yo!: Asobi ni Oide
+Status: Completed
+Progress: 1
+Episodes: 1
+Finished: Aug 09, 2015
+Page: https://kitsu.io/anime/asobi-ni-iku-yo-asobi-ni-oide
+
+Title: Astarotte no Omocha!
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/astarotte-no-omocha
+
+Title: Astarotte no Omocha! EX
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/astarotte-no-omocha-ex
+
+Title: Aura: Maryuuin Kouga Saigo no Tatakai
+Status: Planned
+Progress: 0
+Episodes: 1
+Page: https://kitsu.io/anime/aura-maryuuinkouga-saigo-no-tatakai
+
+Title: Azumanga Daioh
+Status: Planned
+Progress: 0
+Episodes: 26
+Page: https://kitsu.io/anime/azumanga-daioh
+
+Title: Baka to Test to Shoukanjuu
+Status: Completed
+Progress: 13
+Episodes: 13
+Page: https://kitsu.io/anime/baka-to-test-to-shoukanjuu
+
+Title: Baka to Test to Shoukanjuu Ni!
+Status: Completed
+Progress: 13
+Episodes: 13
+Page: https://kitsu.io/anime/baka-to-test-to-shoukanjuu-ni
+
+Title: Baka to Test to Shoukanjuu: Matsuri
+Status: Completed
+Progress: 2
+Episodes: 2
+Page: https://kitsu.io/anime/baka-to-test-to-shoukanjuu-matsuri
+
+Title: Baka to Test to Shoukanjuu: Spinout! Sore ga Bokura no Nichijou
+Status: Completed
+Progress: 6
+Episodes: 6
+Page: https://kitsu.io/anime/baka-to-test-to-shoukanjuu-spinout-sore-ga-bokura-no-nichijou
+
+Title: Bakemonogatari
+Status: Completed
+Progress: 15
+Episodes: 15
+Finished: Jan 31, 2016
+Page: https://kitsu.io/anime/bakemonogatari
+
+Title: Baldr Force Exe Resolution
+Status: Dropped
+Progress: 1
+Episodes: 4
+Page: https://kitsu.io/anime/baldr-force-exe-resolution
+
+Title: Battle Programmer Shirase
+Status: Completed
+Progress: 15
+Episodes: 15
+Page: https://kitsu.io/anime/battle-programmer-shirase
+
+Title: Beatless
+Status: Dropped
+Progress: 4
+Episodes: 20
+Page: https://kitsu.io/anime/beatless
+
+Title: Beck
+Status: Planned
+Progress: 0
+Episodes: 26
+Page: https://kitsu.io/anime/beck
+
+Title: Beelzebub-jou no Okinimesu mama.
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Feb 12, 2019
+Page: https://kitsu.io/anime/beelzebub-jou-no-okinimesu-mama
+
+Title: Ben-To
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jul 27, 2015
+Page: https://kitsu.io/anime/ben-to
+
+Title: Big Order (TV)
+Status: Completed
+Progress: 10
+Episodes: 10
+Finished: Jun 17, 2016
+Page: https://kitsu.io/anime/big-order-tv
+
+Title: Binbougami ga!
+Status: Completed
+Progress: 13
+Episodes: 13
+Page: https://kitsu.io/anime/binbougami-ga
+
+Title: Black Bullet
+Status: Completed
+Progress: 13
+Episodes: 13
+Page: https://kitsu.io/anime/black-bullet
+
+Title: BlazBlue: Alter Memory
+Status: Dropped
+Progress: 2
+Episodes: 12
+Page: https://kitsu.io/anime/blazblue-alter-memory
+
+Title: Bleach
+Status: Dropped
+Progress: 256
+Episodes: 366
+Page: https://kitsu.io/anime/bleach
+
+Title: Bleach Movie 1: Memories of Nobody
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/bleach-memories-of-nobody
+
+Title: Bleach Movie 3: Fade to Black - Kimi no Na wo Yobu
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/bleach-fade-to-black-kimi-no-na-wo-yobu
+
+Title: Bleach Movie 4: Jigoku-hen
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/bleach-jigokuhen
+
+Title: Blend S
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Dec 24, 2017
+Page: https://kitsu.io/anime/blend-s
+
+Title: Blood Lad
+Status: Completed
+Progress: 10
+Episodes: 10
+Page: https://kitsu.io/anime/blood-lad
+
+Title: Blood Lad: Wagahai wa Neko de wa Nai
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/blood-lad-ova
+
+Title: Boku dake ga Inai Machi
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Mar 25, 2016
+Page: https://kitsu.io/anime/boku-dake-ga-inai-machi
+
+Title: Boku no Hero Academia
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Jun 26, 2016
+Page: https://kitsu.io/anime/boku-no-hero-academia
+
+Title: Boku no Hero Academia 2
+Status: Completed
+Progress: 25
+Episodes: 25
+Finished: Oct 03, 2017
+Page: https://kitsu.io/anime/boku-no-hero-academia-2nd-season
+
+Title: Boku no Hero Academia 3
+Status: Completed
+Progress: 25
+Episodes: 25
+Finished: Sep 29, 2018
+Page: https://kitsu.io/anime/boku-no-hero-academia-3rd-season
+
+Title: Boku no Hero Academia 4
+Status: Completed
+Progress: 25
+Episodes: 25
+Finished: Apr 05, 2020
+Page: https://kitsu.io/anime/boku-no-hero-academia-4
+
+Title: Boku no Hero Academia the Movie: Futari no Hero
+Status: Planned
+Progress: 0
+Episodes: 1
+Page: https://kitsu.io/anime/boku-no-hero-academia-the-movie
+
+Title: Boku no Hero Academia: Sukue! Kyuujo Kunren!
+Status: Planned
+Progress: 0
+Episodes: 1
+Page: https://kitsu.io/anime/boku-no-hero-academia-ova
+
+Title: Boku no Hero Academia: Training of the Dead
+Status: Planned
+Progress: 0
+Episodes: 1
+Page: https://kitsu.io/anime/boku-no-hero-academia-training-of-the-dead
+
+Title: Boku wa Tomodachi ga Sukunai
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/boku-wa-tomodachi-ga-sukunai
+
+Title: Boku wa Tomodachi ga Sukunai Next
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Mar 29, 2013
+Page: https://kitsu.io/anime/boku-wa-tomodachi-ga-sukunai-next
+
+Title: Boku wa Tomodachi ga Sukunai: Relay Shousetsu wa Ketsumatsu ga Hanpanai
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/boku-wa-tomodachi-ga-sukunai-add-on-disc
+
+Title: Bokura ga Ita
+Status: Planned
+Progress: 0
+Episodes: 26
+Page: https://kitsu.io/anime/bokura-ga-ita
+
+Title: Bokusatsu Tenshi Dokuro-chan
+Status: Completed
+Progress: 4
+Episodes: 4
+Finished: Nov 15, 2014
+Page: https://kitsu.io/anime/bokusatsu-tenshi-dokuro-chan
+
+Title: Brave Witches
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jul 16, 2017
+Page: https://kitsu.io/anime/brave-witches
+
+Title: Break Blade 1: Kakusei no Toki
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/break-blade-1-kakusei-no-toki
+
+Title: Break Blade 2: Ketsubetsu no Michi
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/break-blade-2-ketsubetsu-no-michi
+
+Title: Break Blade 3: Kyoujin no Ato
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/break-blade-3-kyoujin-no-ato
+
+Title: Break Blade 4: Sanka no Chi
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/break-blade-4-sanka-no-chi
+
+Title: Break Blade 5: Shisen no Hate
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/break-blade-5-shisen-no-hate
+
+Title: Break Blade 6: Doukoku no Toride
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/break-blade-6-doukoku-no-toride
+
+Title: Bubuki Buranki
+Status: Dropped
+Progress: 2
+Episodes: 12
+Page: https://kitsu.io/anime/bubuki-buranki
+
+Title: Bungou Stray Dogs
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jun 22, 2016
+Page: https://kitsu.io/anime/bungou-stray-dogs
+
+Title: Bungou Stray Dogs 2nd Season
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Dec 17, 2016
+Page: https://kitsu.io/anime/bungou-stray-dogs-2
+
+Title: Bungou Stray Dogs 3
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jun 29, 2019
+Page: https://kitsu.io/anime/bungou-stray-dogs-3
+
+Title: Bungou Stray Dogs: Dead Apple
+Status: Completed
+Progress: 1
+Episodes: 1
+Finished: Jun 02, 2019
+Page: https://kitsu.io/anime/bungou-stray-dogs-dead-apple
+
+Title: Bungou Stray Dogs: Hitori Ayumu
+Status: Completed
+Progress: 1
+Episodes: 1
+Finished: Jun 01, 2019
+Page: https://kitsu.io/anime/bungou-stray-dogs-hitori-ayumu
+
+Title: C: The Money of Soul and Possibility Control
+Status: Completed
+Progress: 11
+Episodes: 11
+Page: https://kitsu.io/anime/c-the-money-of-soul-and-possibility-control
+
+Title: Campione!: Matsurowanu Kamigami to Kamigoroshi no Maou
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: May 01, 2013
+Page: https://kitsu.io/anime/campione
+
+Title: Candy Boy Episode: EX01 - Mirai Yohouzu
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/candy-boy-ex1
+
+Title: Candy Boy Episode: EX02 - Shiawase Kyouyuu Riron
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/candy-boy-ex02
+
+Title: Candy Boy: Nonchalant Talk of the Certain Twin Sisters in Daily Life
+Status: Completed
+Progress: 7
+Episodes: 7
+Page: https://kitsu.io/anime/candy-boy
+
+Title: Candy☆Boy: Side Story For Archive
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/candy-boy-episode-0
+
+Title: Captain Herlock
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/captain-harlock
+
+Title: Carole & Tuesday
+Status: Completed
+Progress: 24
+Episodes: 24
+Finished: Oct 08, 2019
+Page: https://kitsu.io/anime/carole-and-tuesday
+
+Title: Charlotte
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Sep 26, 2015
+Page: https://kitsu.io/anime/charlotte
+
+Title: Charlotte: Tsuyoimono-tachi
+Status: Completed
+Progress: 1
+Episodes: 1
+Finished: Apr 17, 2016
+Page: https://kitsu.io/anime/charlotte-special
+
+Title: Chobits
+Status: Completed
+Progress: 24
+Episodes: 26
+Page: https://kitsu.io/anime/chobits
+
+Title: Choboraunyopomi Gekijou Ai Mai Mii
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Jan 09, 2014
+Page: https://kitsu.io/anime/ai-mai-mi
+
+Title: Choujigen Game Neptune The Animation
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jan 10, 2015
+Page: https://kitsu.io/anime/choujigen-game-neptune-the-animation
+
+Title: Chuunibyou demo Koi ga Shitai!
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/chuunibyou-demo-koi-ga-shitai
+
+Title: Chuunibyou demo Koi ga Shitai! Lite
+Status: Completed
+Progress: 6
+Episodes: 6
+Page: https://kitsu.io/anime/chuunibyou-demo-koi-ga-shitai-lite
+
+Title: Chuunibyou demo Koi ga Shitai! Ren
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Apr 29, 2014
+Page: https://kitsu.io/anime/chuunibyou-demo-koi-ga-shitai-ren
+
+Title: Chuunibyou demo Koi ga Shitai! Ren: The Rikka Wars
+Status: Completed
+Progress: 1
+Episodes: 1
+Finished: Apr 21, 2016
+Page: https://kitsu.io/anime/chuunibyou-demo-koi-ga-shitai-ren-the-rikka-wars
+
+Title: Chuunibyou demo Koi ga Shitai!: Kirameki no... Slapstick Noel
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/chuunibyou-demo-koi-ga-shitai-kirameki-no-slapstick-noel
+
+Title: Citrus
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Apr 21, 2018
+Page: https://kitsu.io/anime/citrus
+
+Title: Classroom☆Crisis
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Oct 05, 2015
+Page: https://kitsu.io/anime/classroom-crisis
+
+Title: Code Geass: Boukoku no Akito 1 - Yokuryuu wa Maiorita
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/code-geass-akito-the-exiled-1
+
+Title: Code Geass: Boukoku no Akito 2 - Hikisakareshi Yokuryuu
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/code-geass-akito-the-exiled-2-the-torn-up-wyvern
+
+Title: Code Geass: Fukkatsu no Lelouch
+Status: Planned
+Progress: 0
+Episodes: 1
+Page: https://kitsu.io/anime/code-geass-fukkatsu-no-lelouch
+
+Title: Code Geass: Hangyaku no Lelouch
+Status: Completed
+Progress: 25
+Episodes: 25
+Page: https://kitsu.io/anime/code-geass-lelouch-of-the-rebellion
+
+Title: Code Geass: Hangyaku no Lelouch I - Koudou
+Status: Planned
+Progress: 0
+Episodes: 1
+Page: https://kitsu.io/anime/code-geass-hangyaku-no-lelouch-i-koudou
+
+Title: Code Geass: Hangyaku no Lelouch II - Handou
+Status: Planned
+Progress: 0
+Episodes: 1
+Page: https://kitsu.io/anime/code-geass-hangyaku-no-lelouch-ii-handou
+
+Title: Code Geass: Hangyaku no Lelouch III - Oudou
+Status: Planned
+Progress: 0
+Episodes: 1
+Page: https://kitsu.io/anime/code-geass-hangyaku-no-lelouch-iii-oudou
+
+Title: Code Geass: Hangyaku no Lelouch R2
+Status: Completed
+Progress: 25
+Episodes: 25
+Page: https://kitsu.io/anime/code-geass-lelouch-of-the-rebellion-r2
+
+Title: Code:Breaker
+Status: Completed
+Progress: 13
+Episodes: 13
+Page: https://kitsu.io/anime/code-breaker
+
+Title: Comet Lucifer
+Status: Dropped
+Progress: 2
+Episodes: 12
+Page: https://kitsu.io/anime/comet-lucifer
+
+Title: Comic Girls
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jul 11, 2018
+Page: https://kitsu.io/anime/comic-girls
+
+Title: Coppelion
+Status: Dropped
+Progress: 2
+Episodes: 13
+Page: https://kitsu.io/anime/coppelion
+
+Title: Cowboy Bebop
+Status: Planned
+Progress: 0
+Episodes: 26
+Page: https://kitsu.io/anime/cowboy-bebop
+
+Title: C³
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/c
+
+Title: C³: Rikan Gakkou Confussion!
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/c-special
+
+Title: D-Frag!
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Mar 24, 2014
+Page: https://kitsu.io/anime/d-frag
+
+Title: D-Frag!: Water!!
+Status: Completed
+Progress: 1
+Episodes: 1
+Finished: Dec 30, 2014
+Page: https://kitsu.io/anime/d-frag-ova
+
+Title: D.Gray-man
+Status: Completed
+Progress: 103
+Episodes: 103
+Page: https://kitsu.io/anime/d-gray-man
+
+Title: D.Gray-man Hallow
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Nov 10, 2016
+Page: https://kitsu.io/anime/d-gray-man-hallow
+
+Title: D.N.Angel
+Status: Dropped
+Progress: 2
+Episodes: 26
+Page: https://kitsu.io/anime/d-n-angel
+
+Title: Dagashi Kashi
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jun 20, 2016
+Page: https://kitsu.io/anime/dagashi-kashi
+
+Title: Dai Mahou Touge
+Status: Planned
+Progress: 0
+Episodes: 4
+Page: https://kitsu.io/anime/dai-mahou-touge
+
+Title: Danchigai
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Sep 26, 2015
+Page: https://kitsu.io/anime/danchigai
+
+Title: Danna ga Nani wo Itteiru ka Wakaranai Ken
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Dec 25, 2014
+Page: https://kitsu.io/anime/danna-ga-nani-wo-itteiru-ka-wakaranai-ken
+
+Title: Danna ga Nani wo Itteiru ka Wakaranai Ken 2 Sure-me
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Jun 30, 2015
+Page: https://kitsu.io/anime/danna-ga-nani-wo-itteiru-ka-wakaranai-ken-2
+
+Title: Dansai Bunri no Crime Edge
+Status: Completed
+Progress: 13
+Episodes: 13
+Page: https://kitsu.io/anime/dansai-bunri-no-crime-edge
+
+Title: Danshi Koukousei no Nichijou
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jun 30, 2015
+Page: https://kitsu.io/anime/danshi-koukousei-no-nichijou
+
+Title: Dantalian no Shoka
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/dantalian-no-shoka
+
+Title: Darker than Black: Kuro no Keiyakusha
+Status: Completed
+Progress: 25
+Episodes: 25
+Page: https://kitsu.io/anime/darker-than-black
+
+Title: Darker than Black: Kuro no Keiyakusha - Sakura no Hana no Mankai no Shita
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/darker-than-black-kuro-no-keiyakusha-special
+
+Title: Darker than Black: Kuro no Keiyakusha Gaiden
+Status: Completed
+Progress: 4
+Episodes: 4
+Page: https://kitsu.io/anime/darker-than-black-kuro-no-keiyakusha-gaiden
+
+Title: Darker than Black: Ryuusei no Gemini
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/darker-than-black-ryuusei-no-gemini
+
+Title: Darling in the FranXX
+Status: Completed
+Progress: 24
+Episodes: 24
+Finished: Jul 11, 2018
+Page: https://kitsu.io/anime/darling-in-the-franxx
+
+Title: Date A Live
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jun 22, 2013
+Page: https://kitsu.io/anime/date-a-live
+
+Title: Date A Live II
+Status: Completed
+Progress: 10
+Episodes: 10
+Finished: Jun 16, 2014
+Page: https://kitsu.io/anime/date-a-live-ii
+
+Title: Date A Live: Date to Date
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/date-a-live-ova
+
+Title: Date A Live: Encore
+Status: Completed
+Progress: 1
+Episodes: 1
+Finished: Mar 11, 2016
+Page: https://kitsu.io/anime/date-a-live-encore-ova
+
+Title: Death Billiards
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/death-billiards
+
+Title: Death March kara Hajimaru Isekai Kyousoukyoku
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Mar 30, 2018
+Page: https://kitsu.io/anime/death-march-kara-hajimaru-isekai-kyousoukyoku
+
+Title: Death Note
+Status: Completed
+Progress: 37
+Episodes: 37
+Finished: Feb 09, 2018
+Page: https://kitsu.io/anime/death-note
+
+Title: Death Parade
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Mar 28, 2015
+Page: https://kitsu.io/anime/death-parade
+
+Title: Demi-chan wa Kataritai
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Apr 09, 2017
+Page: https://kitsu.io/anime/demi-chan-wa-kataritai
+
+Title: Demi-chan wa Kataritai: Demi-chan no Natsuyasumi
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/demi-chan-wa-kataritai-special
+
+Title: Denpa Onna to Seishun Otoko
+Status: Planned
+Progress: 0
+Episodes: 12
+Page: https://kitsu.io/anime/denpa-onna-to-seishun-otoko
+
+Title: Densetsu no Yuusha no Densetsu
+Status: Planned
+Progress: 0
+Episodes: 24
+Page: https://kitsu.io/anime/densetsu-no-yuusha-no-densetsu
+
+Title: Devil Survivor 2 The Animation
+Status: Completed
+Progress: 13
+Episodes: 13
+Page: https://kitsu.io/anime/devil-survivor-2-the-animation
+
+Title: Dies Irae
+Status: Dropped
+Progress: 1
+Episodes: 11
+Page: https://kitsu.io/anime/dies-irae
+
+Title: Digimon Adventure tri. 1: Saikai
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/digimon-adventure-tri-1-saikai
+
+Title: Digimon Adventure tri. 2: Ketsui
+Status: Completed
+Progress: 1
+Episodes: 1
+Finished: Mar 13, 2016
+Page: https://kitsu.io/anime/digimon-adventure-tri-2-ketsui
+
+Title: Digimon Adventure tri. 3: Kokuhaku
+Status: Completed
+Progress: 1
+Episodes: 1
+Finished: Dec 04, 2016
+Page: https://kitsu.io/anime/digimon-adventure-tri-3-kokuhaku
+
+Title: Digimon Adventure tri. 4: Soushitsu
+Status: Completed
+Progress: 1
+Episodes: 1
+Finished: Aug 05, 2017
+Page: https://kitsu.io/anime/digimon-adventure-tri-4
+
+Title: Dimension W
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Mar 28, 2016
+Page: https://kitsu.io/anime/dimension-w
+
+Title: Dog Days
+Status: Completed
+Progress: 13
+Episodes: 13
+Page: https://kitsu.io/anime/dog-days
+
+Title: Dog Days'
+Status: Completed
+Progress: 13
+Episodes: 13
+Page: https://kitsu.io/anime/dog-days-2
+
+Title: Dog Days''
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jul 22, 2017
+Page: https://kitsu.io/anime/dog-days-3
+
+Title: Domestic na Kanojo
+Status: Planned
+Progress: 0
+Episodes: 12
+Page: https://kitsu.io/anime/domestic-na-kanojo
+
+Title: Dororo
+Status: Completed
+Progress: 24
+Episodes: 24
+Finished: Jul 06, 2019
+Page: https://kitsu.io/anime/dororo
+
+Title: Dr. Stone
+Status: Completed
+Progress: 24
+Episodes: 24
+Finished: Dec 14, 2019
+Page: https://kitsu.io/anime/dr-stone
+
+Title: Dragon Crisis!
+Status: Dropped
+Progress: 8
+Episodes: 12
+Page: https://kitsu.io/anime/dragon-crisis
+
+Title: Drifters
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Dec 23, 2016
+Page: https://kitsu.io/anime/drifters-tv
+
+Title: Drifters (OVA)
+Status: Planned
+Progress: 0
+Episodes: 2
+Page: https://kitsu.io/anime/drifters-ova-2017
+
+Title: Dungeon ni Deai wo Motomeru no wa Machigatteiru Darou ka
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Jun 26, 2015
+Page: https://kitsu.io/anime/dungeon-ni-deai-wo-motomeru-no-wa-machigatteiru-no-darou-ka
+
+Title: Dungeon ni Deai wo Motomeru no wa Machigatteiru Darou ka Gaiden: Sword Oratoria
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jul 12, 2019
+Page: https://kitsu.io/anime/dungeon-ni-deai-wo-motomeru-no-wa-machigatte-iru-darouka-gaiden-sword-oratoria
+
+Title: Dungeon ni Deai wo Motomeru no wa Machigatteiru Darou ka II
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Sep 28, 2019
+Page: https://kitsu.io/anime/dungeon-ni-deai-wo-motomeru-no-wa-machigatteiru-no-darou-ka-ii
+
+Title: Dungeon ni Deai wo Motomeru no wa Machigatteiru Darou ka II: Past & Future
+Status: Completed
+Progress: 1
+Episodes: 1
+Finished: Jul 12, 2019
+Page: https://kitsu.io/anime/dungeon-ni-deai-wo-motomeru-no-wa-machigatteiru-darou-ka-ii-past-&-future
+
+Title: Durarara!!
+Status: Completed
+Progress: 24
+Episodes: 24
+Finished: Jan 02, 2015
+Page: https://kitsu.io/anime/durarara
+
+Title: Durarara!! Specials
+Status: Completed
+Progress: 2
+Episodes: 2
+Finished: Jan 03, 2015
+Page: https://kitsu.io/anime/durarara-specials
+
+Title: Durarara!!x2 Ketsu
+Status: Planned
+Progress: 0
+Episodes: 12
+Page: https://kitsu.io/anime/durarara-x2-ketsu
+
+Title: Durarara!!x2 Shou
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Mar 28, 2015
+Page: https://kitsu.io/anime/durarara-x2
+
+Title: Durarara!!x2 Ten
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Sep 28, 2015
+Page: https://kitsu.io/anime/durarara-x2-ten
+
+Title: Eizouken ni wa Te wo Dasu na!
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Apr 03, 2020
+Page: https://kitsu.io/anime/eizouken-ni-wa-te-wo-dasu-na
+
+Title: Elfen Lied
+Status: Completed
+Progress: 13
+Episodes: 13
+Page: https://kitsu.io/anime/elfen-lied
+
+Title: Elfen Lied Special
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/elfen-lied-special
+
+Title: Emiya-san Chi no Kyou no Gohan
+Status: Pending
+Progress: 3
+Episodes: 13
+Page: https://kitsu.io/anime/emiya-san-chi-no-kyou-no-gohan
+
+Title: Endro~!
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Apr 15, 2019
+Page: https://kitsu.io/anime/endro
+
+Title: Eromanga-sensei
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Aug 03, 2017
+Page: https://kitsu.io/anime/eromanga-sensei
+
+Title: Escha & Logy no Atelier: Tasogare no Sora no Renkinjutsushi
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jul 01, 2014
+Page: https://kitsu.io/anime/escha-logy-no-atelier-tasogare-no-sora-no-renkinjutsushi
+
+Title: Etotama
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jun 25, 2015
+Page: https://kitsu.io/anime/etotama
+
+Title: Eve no Jikan (Movie)
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/eve-no-jikan-movie
+
+Title: Fairy Tail
+Status: Dropped
+Progress: 127
+Episodes: 175
+Page: https://kitsu.io/anime/fairy-tail
+
+Title: Fate/Apocrypha
+Status: Dropped
+Progress: 16
+Episodes: 25
+Page: https://kitsu.io/anime/fate-apocrypha
+
+Title: Fate/Zero
+Status: Completed
+Progress: 13
+Episodes: 13
+Page: https://kitsu.io/anime/fate-zero
+
+Title: Fate/Zero 2nd Season
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/fate-zero-2nd-season
+
+Title: Fate/kaleid liner Prisma☆Illya
+Status: Completed
+Progress: 10
+Episodes: 10
+Page: https://kitsu.io/anime/fate-kaleid-liner-prisma-illya
+
+Title: Fate/kaleid liner Prisma☆Illya 2wei Herz!
+Status: Completed
+Progress: 10
+Episodes: 10
+Finished: Sep 27, 2015
+Page: https://kitsu.io/anime/fate-kaleid-liner-prisma-illya-2wei-herz
+
+Title: Fate/kaleid liner Prisma☆Illya 2wei!
+Status: Completed
+Progress: 10
+Episodes: 10
+Finished: Sep 13, 2014
+Page: https://kitsu.io/anime/fate-kaleid-liner-prisma-illya-2wei
+
+Title: Fate/kaleid liner Prisma☆Illya 3rei!!
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Oct 14, 2016
+Page: https://kitsu.io/anime/fate-kaleid-liner-prisma-illya-3rei
+
+Title: Fate/kaleid liner Prisma☆Illya Movie: Sekka no Chikai
+Status: Planned
+Progress: 0
+Episodes: 1
+Page: https://kitsu.io/anime/fate-kaleid-liner-prisma-illya-movie-sekka-no-chikai
+
+Title: Fate/stay night
+Status: Dropped
+Progress: 6
+Episodes: 24
+Page: https://kitsu.io/anime/fate-stay-night
+
+Title: Fate/stay night Movie: Unlimited Blade Works
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/fate-stay-night-unlimited-blade-works
+
+Title: Fate/stay night: Heaven's Feel - III. Spring Song
+Status: Planned
+Progress: 0
+Episodes: 1
+Page: https://kitsu.io/anime/fate-stay-night-movie-heaven-s-feel-3
+
+Title: Fate/stay night: Heaven's Feel I. Presage Flower
+Status: Planned
+Progress: 0
+Episodes: 1
+Page: https://kitsu.io/anime/fate-stay-night-movie-heaven-s-feel
+
+Title: Fate/stay night: Heaven's Feel II. Lost Butterfly
+Status: Planned
+Progress: 0
+Episodes: 1
+Page: https://kitsu.io/anime/fate-stay-night-movie-heaven-s-feel-2
+
+Title: Fate/stay night: Unlimited Blade Works
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Dec 28, 2014
+Page: https://kitsu.io/anime/fate-stay-night-unlimited-blade-works-2014
+
+Title: Fate/stay night: Unlimited Blade Works - Prologue
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/fate-stay-night-unlimited-blade-works-tv-episode-0
+
+Title: Fate/stay night: Unlimited Blade Works 2nd Season
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Jun 30, 2015
+Page: https://kitsu.io/anime/fate-stay-night-unlimited-blade-works-tv-2
+
+Title: Five Star Stories
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/five-star-stories
+
+Title: Flip Flappers
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Dec 29, 2016
+Page: https://kitsu.io/anime/flip-flappers
+
+Title: Flying Witch
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jun 26, 2016
+Page: https://kitsu.io/anime/flying-witch
+
+Title: Full Metal Panic!
+Status: Pending
+Progress: 10
+Episodes: 24
+Page: https://kitsu.io/anime/full-metal-panic
+
+Title: GJ-bu
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Aug 16, 2013
+Page: https://kitsu.io/anime/gj-bu
+
+Title: GJ-bu@
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/gj-bu-special
+
+Title: Ga-Rei: Zero
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/ga-rei-zero
+
+Title: Gabriel DropOut
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/gabriel-dropout
+
+Title: Gakkou Gurashi!
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Sep 26, 2015
+Page: https://kitsu.io/anime/gakkou-gurashi
+
+Title: Gakusen Toshi Asterisk
+Status: Dropped
+Progress: 3
+Episodes: 12
+Page: https://kitsu.io/anime/gakusen-toshi-asterisk
+
+Title: Gamers!
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Oct 03, 2017
+Page: https://kitsu.io/anime/gamers
+
+Title: Gangsta.
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Sep 29, 2015
+Page: https://kitsu.io/anime/gangsta
+
+Title: Garo: Honoo no Kokuin
+Status: Dropped
+Progress: 1
+Episodes: 24
+Page: https://kitsu.io/anime/garo-honoo-no-kokuin
+
+Title: Gatchaman Crowds
+Status: Dropped
+Progress: 1
+Episodes: 12
+Page: https://kitsu.io/anime/gatchaman-crowds
+
+Title: Gate: Jieitai Kanochi nite, Kaku Tatakaeri
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Sep 23, 2015
+Page: https://kitsu.io/anime/gate-jieitai-kanochi-nite-kaku-tatakaeri
+
+Title: Gate: Jieitai Kanochi nite, Kaku Tatakaeri 2nd Season
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Mar 26, 2016
+Page: https://kitsu.io/anime/gate-jieitai-kanochi-nite-kaku-tatakaeri-2
+
+Title: Gekijouban Kidou Senshi Gundam 00: A Wakening of the Trailblazer
+Status: Completed
+Progress: 1
+Episodes: 1
+Finished: Jan 19, 2016
+Page: https://kitsu.io/anime/mobile-suit-gundam-00-the-movie-a-wakening-of-the-trailblazer
+
+Title: Gekkan Shoujo Nozaki-kun
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Sep 22, 2014
+Page: https://kitsu.io/anime/gekkan-shoujo-nozaki-kun
+
+Title: Gekkan Shoujo Nozaki-kun Specials
+Status: Completed
+Progress: 6
+Episodes: 6
+Finished: Dec 22, 2015
+Page: https://kitsu.io/anime/gekkan-shoujo-nozaki-kun-specials
+
+Title: Genei wo Kakeru Taiyou
+Status: Dropped
+Progress: 1
+Episodes: 13
+Page: https://kitsu.io/anime/genei-wo-kakeru-taiyou
+
+Title: Getsuyoubi no Tawawa
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Dec 26, 2016
+Page: https://kitsu.io/anime/getsuyoubi-no-tawawa
+
+Title: Ghost in the Shell
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/ghost-in-the-shell
+
+Title: Gi(a)rlish Number
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Dec 28, 2016
+Page: https://kitsu.io/anime/girlish-number
+
+Title: Gi(a)rlish Number Shura
+Status: Planned
+Progress: 0
+Episodes: 0
+Page: https://kitsu.io/anime/gi-a-rlish-number-shura
+
+Title: Ginga Eiyuu Densetsu
+Status: Completed
+Progress: 110
+Episodes: 110
+Finished: Feb 04, 2020
+Page: https://kitsu.io/anime/ginga-eiyuu-densetsu
+
+Title: Ginga Eiyuu Densetsu: Die Neue These - Kaikou
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jun 26, 2018
+Page: https://kitsu.io/anime/ginga-eiyuu-densetsu-die-neue-these-kaikou
+
+Title: Ginga Eiyuu Densetsu: Die Neue These Seiran 1
+Status: Completed
+Progress: 4
+Episodes: 4
+Finished: Dec 22, 2019
+Page: https://kitsu.io/anime/ginga-eiyuu-densetsu-die-neue-these-seiran
+
+Title: Ginga Eiyuu Densetsu: Die Neue These Seiran 2
+Status: Completed
+Progress: 4
+Episodes: 4
+Finished: Dec 22, 2019
+Page: https://kitsu.io/anime/ginga-eiyuu-densetsu-die-neue-these-seiran-two
+
+Title: Ginga Eiyuu Densetsu: Die Neue These Seiran 3
+Status: Completed
+Progress: 4
+Episodes: 4
+Finished: Dec 22, 2019
+Page: https://kitsu.io/anime/ginga-eiyuu-densetsu-die-neue-these-seiran-three
+
+Title: Girls & Panzer
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Feb 05, 2018
+Page: https://kitsu.io/anime/girls-und-panzer
+
+Title: Girls & Panzer Movie
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/girls-und-panzer-der-film
+
+Title: Girls & Panzer Movie Specials
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/girls-und-panzer-der-film-arisu-war
+
+Title: Girls & Panzer Specials
+Status: Completed
+Progress: 6
+Episodes: 6
+Page: https://kitsu.io/anime/girls-und-panzer-specials
+
+Title: Girls & Panzer: Fushou Akiyama Yukari no Sensha Kouza
+Status: Completed
+Progress: 6
+Episodes: 6
+Page: https://kitsu.io/anime/girls-und-panzer-fushou-akiyama-yukari-no-sensha-kouza
+
+Title: Girls & Panzer: Kore ga Hontou no Anzio-sen desu!
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/girls-und-panzer-kore-ga-hontou-no-anzio-sen-desu
+
+Title: Girls und Panzer: Saishuushou
+Status: Watching
+Progress: 2
+Episodes: 6
+Page: https://anidb.net/anime/12361
+
+Title: Goblin Slayer
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jan 03, 2019
+Page: https://kitsu.io/anime/goblin-slayer
+
+Title: Gochuumon wa Usagi desu ka?
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jun 28, 2014
+Page: https://kitsu.io/anime/gochuumon-wa-usagi-desu-ka
+
+Title: Gochuumon wa Usagi desu ka??
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Dec 27, 2015
+Page: https://kitsu.io/anime/gochuumon-wa-usagi-desu-ka-2
+
+Title: God Eater
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Mar 26, 2016
+Page: https://kitsu.io/anime/god-eater
+
+Title: Gokukoku no Brynhildr
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Jun 30, 2014
+Page: https://kitsu.io/anime/gokukoku-no-brynhildr
+
+Title: Golden Boy
+Status: Planned
+Progress: 0
+Episodes: 6
+Page: https://kitsu.io/anime/golden-boy
+
+Title: Golden Kamuy
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jun 26, 2018
+Page: https://kitsu.io/anime/golden-kamuy
+
+Title: Golden Kamuy 2
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jan 27, 2019
+Page: https://kitsu.io/anime/golden-kamuy-2
+
+Title: Gosick
+Status: Planned
+Progress: 0
+Episodes: 24
+Page: https://kitsu.io/anime/gosick
+
+Title: Granblue Fantasy The Animation
+Status: Dropped
+Progress: 2
+Episodes: 13
+Page: https://kitsu.io/anime/granblue-fantasy-the-animation
+
+Title: Guilty Crown
+Status: Completed
+Progress: 22
+Episodes: 22
+Page: https://kitsu.io/anime/guilty-crown
+
+Title: Gunslinger Stratos: The Animation
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jun 25, 2015
+Page: https://kitsu.io/anime/gunslinger-stratos-the-animation
+
+Title: Hagane no Renkinjutsushi
+Status: Completed
+Progress: 51
+Episodes: 51
+Finished: Apr 15, 2015
+Page: https://kitsu.io/anime/fullmetal-alchemist
+
+Title: Hagane no Renkinjutsushi: Fullmetal Alchemist
+Status: Completed
+Progress: 64
+Episodes: 64
+Finished: Mar 08, 2013
+Page: https://kitsu.io/anime/fullmetal-alchemist-brotherhood
+
+Title: Hai to Gensou no Grimgar
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Mar 29, 2016
+Page: https://kitsu.io/anime/hai-to-gensou-no-grimgar
+
+Title: Haibane Renmei
+Status: Planned
+Progress: 0
+Episodes: 13
+Page: https://kitsu.io/anime/haibane-renmei
+
+Title: Haiyore! Nyaruko-san
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/haiyore-nyaruko-san
+
+Title: Haiyore! Nyaruko-san W
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/haiyore-nyaruko-san-w
+
+Title: Haiyore! Nyaruko-san: Yasashii Teki no Shitome-kata
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/haiyore-nyaruko-san-yasashii-teki-no-shitome-kata
+
+Title: Hakata Tonkotsu Ramens
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Apr 21, 2018
+Page: https://kitsu.io/anime/hakata-tonkotsu-ramens
+
+Title: Hakumei to Mikochi
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Apr 30, 2018
+Page: https://kitsu.io/anime/hakumei-to-mikochi
+
+Title: Hamatora The Animation
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/hamatora-the-animation
+
+Title: Hanamonogatari
+Status: Completed
+Progress: 5
+Episodes: 5
+Finished: Feb 02, 2016
+Page: https://kitsu.io/anime/hanamonogatari
+
+Title: Hanayamata
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/hanayamata
+
+Title: Happy Sugar Life
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Oct 03, 2018
+Page: https://kitsu.io/anime/happy-sugar-life
+
+Title: HaruChika: Haruta to Chika wa Seishun suru
+Status: Dropped
+Progress: 1
+Episodes: 12
+Page: https://kitsu.io/anime/haruchika-haruta-to-chika-wa-seishun-suru
+
+Title: Hataraku Maou-sama!
+Status: Completed
+Progress: 13
+Episodes: 13
+Page: https://kitsu.io/anime/the-devil-is-a-part-timer
+
+Title: Hataraku Saibou
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Oct 09, 2018
+Page: https://kitsu.io/anime/hataraku-saibou-tv
+
+Title: Hataraku Saibou 2
+Status: Planned
+Progress: 0
+Episodes: 0
+Page: https://kitsu.io/anime/hataraku-saibou-2
+
+Title: Hayate no Gotoku!
+Status: Dropped
+Progress: 23
+Episodes: 52
+Page: https://kitsu.io/anime/hayate-no-gotoku-1
+
+Title: Heavy Object
+Status: Completed
+Progress: 24
+Episodes: 24
+Finished: Mar 26, 2016
+Page: https://kitsu.io/anime/heavy-object
+
+Title: Hentai Ouji to Warawanai Neko.
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jun 30, 2013
+Page: https://kitsu.io/anime/the-hentai-prince-and-the-stony-cat
+
+Title: Heya Camp△
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Apr 26, 2020
+Page: https://kitsu.io/anime/heya-camp
+
+Title: Hibike! Euphonium
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Jul 09, 2015
+Page: https://kitsu.io/anime/hibike-euphonium
+
+Title: Hibike! Euphonium 2
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Jul 23, 2017
+Page: https://kitsu.io/anime/hibike-euphonium-2
+
+Title: Hibike! Euphonium Movie: Kitauji Koukou Suisougaku-bu e Youkoso
+Status: Planned
+Progress: 0
+Episodes: 1
+Page: https://kitsu.io/anime/hibike-euphonium-movie-kitauji-koukou-suisougaku-bu-e-youkoso
+
+Title: Hibike! Euphonium Movie: Todoketai Melody
+Status: Planned
+Progress: 0
+Episodes: 1
+Page: https://kitsu.io/anime/hibike-euphonium-movie-todoketai-melody
+
+Title: Hibike! Euphonium: Kakedasu Monaka
+Status: Completed
+Progress: 1
+Episodes: 1
+Finished: Jul 19, 2016
+Page: https://kitsu.io/anime/hibike-euphonium-kakedasu-monaka
+
+Title: Hibike! Euphonium: Suisougaku-bu no Nichijou
+Status: Planned
+Progress: 0
+Episodes: 7
+Page: https://kitsu.io/anime/hibike-euphonium-specials
+
+Title: Hidan no Aria AA
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jan 28, 2016
+Page: https://kitsu.io/anime/hidan-no-aria-aa
+
+Title: High School DxD
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/high-school-dxd
+
+Title: High School DxD New
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/high-school-dxd-new
+
+Title: High School DxD OVA
+Status: Completed
+Progress: 2
+Episodes: 2
+Finished: Mar 29, 2015
+Page: https://kitsu.io/anime/high-school-dxd-ova
+
+Title: High School DxD Specials
+Status: Completed
+Progress: 6
+Episodes: 6
+Page: https://kitsu.io/anime/high-school-dxd-specials
+
+Title: High School Fleet
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jun 26, 2016
+Page: https://kitsu.io/anime/high-school-fleet
+
+Title: Higurashi no Naku Koro ni
+Status: Completed
+Progress: 26
+Episodes: 26
+Page: https://kitsu.io/anime/higurashi-no-naku-koro-ni
+
+Title: Higurashi no Naku Koro ni Kai
+Status: Completed
+Progress: 24
+Episodes: 24
+Page: https://kitsu.io/anime/higurashi-no-naku-koro-ni-kai
+
+Title: Higurashi no Naku Koro ni Rei
+Status: Completed
+Progress: 5
+Episodes: 5
+Finished: Mar 12, 2016
+Page: https://kitsu.io/anime/higurashi-no-naku-koro-ni-rei
+
+Title: Himouto! Umaru-chan
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Sep 24, 2015
+Page: https://kitsu.io/anime/himouto-umaru-chan
+
+Title: Himouto! Umaru-chan R
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Dec 26, 2017
+Page: https://kitsu.io/anime/himouto-umaru-chan-r
+
+Title: Hinamatsuri
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jun 23, 2018
+Page: https://kitsu.io/anime/hinamatsuri
+
+Title: Hitsugi no Chaika
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jun 27, 2014
+Page: https://kitsu.io/anime/hitsugi-no-chaika
+
+Title: Hitsugi no Chaika: Avenging Battle
+Status: Completed
+Progress: 10
+Episodes: 10
+Finished: Dec 15, 2014
+Page: https://kitsu.io/anime/hitsugi-no-chaika-avenging-battle
+
+Title: Honzuki no Gekokujou: Shisho ni Naru Tame ni wa Shudan wo Erandeiraremasen 2
+Status: Watching
+Progress: 4
+Episodes: 12
+Page: https://kitsu.io/anime/honzuki-no-gekokujou-shisho-ni-naru-tame-ni-wa-shudan-wo-erandeiraremasen-2
+
+Title: Hotarubi no Mori e
+Status: Planned
+Progress: 0
+Episodes: 1
+Page: https://kitsu.io/anime/hotarubi-no-mori-e
+
+Title: Houseki no Kuni (TV)
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Dec 24, 2017
+Page: https://kitsu.io/anime/houseki-no-kuni-tv
+
+Title: Hunter x Hunter (2011)
+Status: Completed
+Progress: 148
+Episodes: 148
+Page: https://kitsu.io/anime/hunter-x-hunter-2011
+
+Title: Hunter x Hunter Movie 1: Phantom Rouge
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/hunter-x-hunter-phantom-rouge
+
+Title: Hyouka
+Status: Planned
+Progress: 0
+Episodes: 22
+Page: https://kitsu.io/anime/hyouka
+
+Title: ID:INVADED
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Apr 01, 2020
+Page: https://kitsu.io/anime/id-invaded
+
+Title: IS: Infinite Stratos
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/is-infinite-stratos
+
+Title: IS: Infinite Stratos 2
+Status: Dropped
+Progress: 2
+Episodes: 12
+Page: https://kitsu.io/anime/is-infinite-stratos-2
+
+Title: IS: Infinite Stratos Encore - Koi ni Kogareru Rokujuusou
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/is-infinite-stratos-encore-koi-ni-kogareru-sextet
+
+Title: Ichigo Mashimaro
+Status: Planned
+Progress: 0
+Episodes: 12
+Page: https://kitsu.io/anime/ichigo-mashimaro
+
+Title: Imouto sae Ireba Ii.
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Dec 26, 2017
+Page: https://kitsu.io/anime/imouto-sae-ireba-ii
+
+Title: Inari, Konkon, Koi Iroha.
+Status: Completed
+Progress: 10
+Episodes: 10
+Page: https://kitsu.io/anime/inari-konkon-koi-iroha
+
+Title: Inari, Konkon, Koi Iroha.: Inari, Konkon, Semishigure.
+Status: Completed
+Progress: 1
+Episodes: 1
+Finished: Jan 20, 2016
+Page: https://kitsu.io/anime/inari-konkon-koi-iroha-ova
+
+Title: Infinite Dendrogram
+Status: Dropped
+Progress: 4
+Episodes: 13
+Page: https://kitsu.io/anime/infinite-dendrogram
+
+Title: Inou-Battle wa Nichijou-kei no Naka de
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Dec 22, 2014
+Page: https://kitsu.io/anime/inou-battle-wa-nichijou-kei-no-naka-de
+
+Title: Inu to Hasami wa Tsukaiyou
+Status: Dropped
+Progress: 6
+Episodes: 12
+Page: https://kitsu.io/anime/inu-to-hasami-wa-tsukaiyou
+
+Title: Inu x Boku SS
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/inu-x-boku-ss
+
+Title: Inu x Boku SS Special
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/inu-x-boku-ss-special
+
+Title: InuYasha
+Status: Dropped
+Progress: 48
+Episodes: 167
+Page: https://kitsu.io/anime/inuyasha
+
+Title: Inuyashiki
+Status: Dropped
+Progress: 4
+Episodes: 11
+Page: https://kitsu.io/anime/inuyashiki
+
+Title: Ippatsu Kiki Musume
+Status: Completed
+Progress: 16
+Episodes: 16
+Page: https://kitsu.io/anime/ippatsu-kiki-musume
+
+Title: Iroduku Sekai no Ashita kara
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Feb 17, 2019
+Page: https://kitsu.io/anime/iroduku-sekai-no-ashita-kara
+
+Title: Isekai Maou to Shoukan Shoujo no Dorei Majutsu
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Sep 22, 2018
+Page: https://kitsu.io/anime/isekai-maou-to-shoukan-shoujo-no-dorei-majutsu
+
+Title: Itai no wa Iya nano de Bougyoryoku ni Kyokufuri Shitai to Omoimasu.
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Apr 01, 2020
+Page: https://kitsu.io/anime/itai-no-wa-lya-nano-de-bougyoryoku-ni-kyokufuri-shitai-to-omoimasu
+
+Title: Itsuka Tenma no Kuro Usagi
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jan 30, 2016
+Page: https://kitsu.io/anime/itsuka-tenma-no-kuro-usagi
+
+Title: Itsuka Tenma no Kuro Usagi OVA
+Status: Completed
+Progress: 1
+Episodes: 1
+Finished: Mar 11, 2016
+Page: https://kitsu.io/anime/itsuka-tenma-no-kuro-usagi-ova
+
+Title: Jibaku Shounen Hanako-kun
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Apr 03, 2020
+Page: https://kitsu.io/anime/jibaku-shounen-hanako-kun
+
+Title: Jinrui wa Suitai Shimashita
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Mar 29, 2013
+Page: https://kitsu.io/anime/jinrui-wa-suitai-shimashita
+
+Title: Jinsei
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Dec 22, 2014
+Page: https://kitsu.io/anime/jinsei
+
+Title: JoJo no Kimyou na Bouken (TV)
+Status: Completed
+Progress: 26
+Episodes: 26
+Finished: Dec 19, 2017
+Page: https://kitsu.io/anime/jojo-s-bizarre-adventure-2012
+
+Title: JoJo no Kimyou na Bouken: Diamond wa Kudakenai
+Status: Completed
+Progress: 39
+Episodes: 39
+Finished: Jan 07, 2018
+Page: https://kitsu.io/anime/jojo-s-bizarre-adventure-diamond-is-unbreakable
+
+Title: JoJo no Kimyou na Bouken: Ougon no Kaze
+Status: Completed
+Progress: 39
+Episodes: 39
+Finished: Jul 28, 2019
+Page: https://kitsu.io/anime/jojo-s-bizarre-adventure-part-5-vento-aureo
+
+Title: JoJo no Kimyou na Bouken: Stardust Crusaders
+Status: Completed
+Progress: 24
+Episodes: 24
+Finished: Dec 27, 2017
+Page: https://kitsu.io/anime/jojo-s-bizarre-adventure-stardust-crusaders
+
+Title: JoJo no Kimyou na Bouken: Stardust Crusaders 2nd Season
+Status: Completed
+Progress: 24
+Episodes: 24
+Finished: Dec 28, 2017
+Page: https://kitsu.io/anime/jojo-s-bizarre-adventure-stardust-crusaders-2
+
+Title: Joker Game
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jul 17, 2016
+Page: https://kitsu.io/anime/joker-game
+
+Title: Jormungand
+Status: Planned
+Progress: 0
+Episodes: 12
+Page: https://kitsu.io/anime/jormungand
+
+Title: Joukamachi no Dandelion
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Sep 28, 2015
+Page: https://kitsu.io/anime/joukamachi-no-dandelion
+
+Title: Junketsu no Maria
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Mar 31, 2015
+Page: https://kitsu.io/anime/junketsu-no-maria
+
+Title: Juuni Kokuki
+Status: Completed
+Progress: 45
+Episodes: 45
+Page: https://kitsu.io/anime/juuni-kokuki
+
+Title: Juuni Taisen
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Dec 19, 2017
+Page: https://kitsu.io/anime/juuni-taisen
+
+Title: K
+Status: Completed
+Progress: 13
+Episodes: 13
+Page: https://kitsu.io/anime/k-project
+
+Title: K-On!
+Status: Completed
+Progress: 13
+Episodes: 13
+Page: https://kitsu.io/anime/k-on
+
+Title: K-On!: Live House!
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/k-on-live-house
+
+Title: Kaguya-sama wa Kokurasetai: Tensai-tachi no Renai Zunousen
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: May 18, 2019
+Page: https://kitsu.io/anime/kaguya-sama-wa-kokurasetai-tensai-tachi-no-renai-zunousen
+
+Title: Kakegurui
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Oct 03, 2017
+Page: https://kitsu.io/anime/kakegurui
+
+Title: Kakegurui××
+Status: Planned
+Progress: 0
+Episodes: 12
+Page: https://kitsu.io/anime/Kakegurui××
+
+Title: Kakumeiki Valvrave
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jun 30, 2013
+Page: https://kitsu.io/anime/kakumeiki-valvrave
+
+Title: Kakumeiki Valvrave 2nd Season
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jan 06, 2014
+Page: https://kitsu.io/anime/kakumeiki-valvrave-2nd-season
+
+Title: Kakushigoto
+Status: Watching
+Progress: 4
+Episodes: 0
+Page: https://kitsu.io/anime/kakushigoto-tv
+
+Title: Kami no Tou: Tower of God
+Status: Watching
+Progress: 5
+Episodes: 13
+Page: https://kitsu.io/anime/tower-of-god
+
+Title: Kami nomi zo Shiru Sekai
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/the-world-god-only-knows
+
+Title: Kami nomi zo Shiru Sekai II
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/the-world-god-only-knows-ii
+
+Title: Kami nomi zo Shiru Sekai: 4-nin to Idol
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/kami-nomi-zo-shiru-sekai-yonin-to-idol
+
+Title: Kami nomi zo Shiru Sekai: Megami-hen
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/the-world-god-only-knows-goddess-arc
+
+Title: Kami nomi zo Shiru Sekai: Tenri-hen
+Status: Completed
+Progress: 2
+Episodes: 2
+Page: https://kitsu.io/anime/kami-nomi-zo-shiru-sekai-tenri-hen
+
+Title: Kamichu!
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Feb 17, 2016
+Page: https://kitsu.io/anime/kamichu
+
+Title: Kamichu! Specials
+Status: Completed
+Progress: 4
+Episodes: 4
+Finished: Feb 17, 2016
+Page: https://kitsu.io/anime/kamichu-specials
+
+Title: Kamisama Hajimemashita
+Status: Completed
+Progress: 13
+Episodes: 13
+Page: https://kitsu.io/anime/kamisama-hajimemashita-kiss
+
+Title: Kamisama no Memochou
+Status: Planned
+Progress: 0
+Episodes: 12
+Page: https://kitsu.io/anime/kamisama-no-memochou
+
+Title: Kanata no Astra
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Sep 21, 2019
+Page: https://kitsu.io/anime/kanata-no-astra
+
+Title: Kannagi
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Mar 02, 2016
+Page: https://kitsu.io/anime/kannagi
+
+Title: Kannagi: Moshimo Kannagi ga Attara...
+Status: Completed
+Progress: 1
+Episodes: 1
+Finished: Mar 02, 2016
+Page: https://kitsu.io/anime/kannagi-special
+
+Title: Kannazuki no Miko
+Status: Planned
+Progress: 0
+Episodes: 12
+Page: https://kitsu.io/anime/kannazuki-no-miko
+
+Title: Kantai Collection: KanColle
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Mar 26, 2015
+Page: https://kitsu.io/anime/kantai-collection
+
+Title: Kantai Collection: Zoku-hen
+Status: Planned
+Progress: 0
+Episodes: 0
+Page: https://kitsu.io/anime/kantai-collection-kancolle-2
+
+Title: Kara no Kyoukai 1: Fukan Fuukei
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/kara-no-kyoukai-1-fukan-fuukei
+
+Title: Kara no Kyoukai 2: Satsujin Kousatsu (Zen)
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/kara-no-kyoukai-2-satsujin-kousatsu-part-1
+
+Title: Kara no Kyoukai 3: Tsuukaku Zanryuu
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/kara-no-kyoukai-3-tsuukaku-zanryuu
+
+Title: Kara no Kyoukai 4: Garan no Dou
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/kara-no-kyoukai-4-garan-no-dou
+
+Title: Kara no Kyoukai 5: Mujun Rasen
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/kara-no-kyoukai-5-mujun-rasen
+
+Title: Kara no Kyoukai 6: Boukyaku Rokuon
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/kara-no-kyoukai-6-boukyaku-rokuon
+
+Title: Kara no Kyoukai 7: Satsujin Kousatsu (Kou)
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/kara-no-kyoukai-7-satsujin-kousatsu-part-2
+
+Title: Kara no Kyoukai 8: Shuushou
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/kara-no-kyoukai-epilogue
+
+Title: Kara no Kyoukai: Mirai Fukuin
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/kara-no-kyoukai-mirai-fukuin
+
+Title: Karakai Jouzu no Takagi-san
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: May 21, 2018
+Page: https://kitsu.io/anime/karakai-jouzu-no-takagi-san
+
+Title: Karakai Jouzu no Takagi-san 2
+Status: Planned
+Progress: 0
+Episodes: 12
+Page: https://kitsu.io/anime/karakai-jouzu-no-takagi-san-2
+
+Title: Karin
+Status: Completed
+Progress: 24
+Episodes: 24
+Page: https://kitsu.io/anime/karin
+
+Title: Kashimashi: Girl Meets Girl
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/kashimashi-girl-meets-girl
+
+Title: Kashimashi: Girl Meets Girl - Shoujo wa Shoujo ni Koi wo Shita
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/kashimashi-girl-meets-girl-ova
+
+Title: Katanagatari
+Status: Planned
+Progress: 0
+Episodes: 12
+Page: https://kitsu.io/anime/katanagatari
+
+Title: Keijo!!!!!!!!
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jan 10, 2017
+Page: https://kitsu.io/anime/keijo
+
+Title: Kekkai Sensen
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Oct 08, 2015
+Page: https://kitsu.io/anime/kekkai-sensen
+
+Title: Kekkai Sensen & Beyond
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Dec 24, 2017
+Page: https://kitsu.io/anime/kekkai-sensen-beyond
+
+Title: Kekkai Sensen: Soresaemo Saitei de Saikou na Hibi
+Status: Completed
+Progress: 1
+Episodes: 1
+Finished: Jun 19, 2015
+Page: https://kitsu.io/anime/kekkai-sensen-soresaemo-saitei-de-saikou-na-hibi
+
+Title: Kenzen Robo Daimidaler
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/kenzen-robo-daimidaler
+
+Title: Kidou Senshi Gundam 00
+Status: Completed
+Progress: 25
+Episodes: 25
+Finished: Jan 12, 2016
+Page: https://kitsu.io/anime/mobile-suit-gundam-00
+
+Title: Kidou Senshi Gundam 00 Second Season
+Status: Completed
+Progress: 25
+Episodes: 25
+Finished: Jan 17, 2016
+Page: https://kitsu.io/anime/mobile-suit-gundam-00-second-season
+
+Title: Kidou Senshi Gundam: Tekketsu no Orphans
+Status: Completed
+Progress: 25
+Episodes: 25
+Finished: Mar 29, 2016
+Page: https://kitsu.io/anime/mobile-suit-gundam-iron-blooded-orphans
+
+Title: Kidou Senshi Gundam: Tekketsu no Orphans 2
+Status: Completed
+Progress: 25
+Episodes: 25
+Finished: Jul 15, 2017
+Page: https://kitsu.io/anime/mobile-suit-gundam-iron-blooded-orphans-2
+
+Title: Kidou Tenshi Angelic Layer
+Status: Dropped
+Progress: 6
+Episodes: 26
+Page: https://kitsu.io/anime/angelic-layer
+
+Title: Kiitarou Shounen no Youkai Enikki
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jan 16, 2017
+Page: https://kitsu.io/anime/kiitarou-shounen-no-youkai-enikki
+
+Title: Kill la Kill
+Status: Completed
+Progress: 24
+Episodes: 24
+Finished: Mar 28, 2014
+Page: https://kitsu.io/anime/kill-la-kill
+
+Title: Kimetsu no Yaiba
+Status: Completed
+Progress: 26
+Episodes: 26
+Finished: Sep 28, 2019
+Page: https://kitsu.io/anime/kimetsu-no-yaiba
+
+Title: Kimi ni Todoke
+Status: Planned
+Progress: 0
+Episodes: 25
+Page: https://kitsu.io/anime/kimi-ni-todoke
+
+Title: Kimi no Na wa.
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/kimi-no-na-wa
+
+Title: Kiniro Mosaic
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Dec 20, 2015
+Page: https://kitsu.io/anime/kiniro-mosaic
+
+Title: Kino no Tabi: The Beautiful World - The Animated Series
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Dec 22, 2017
+Page: https://kitsu.io/anime/kino-no-tabi-the-beautiful-world-the-animated-series
+
+Title: Kiseijuu: Sei no Kakuritsu
+Status: Completed
+Progress: 24
+Episodes: 24
+Finished: Mar 25, 2015
+Page: https://kitsu.io/anime/kiseijuu
+
+Title: Kiss x Sis (TV)
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/kiss-x-sis-tv
+
+Title: Kiznaiver
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jul 08, 2016
+Page: https://kitsu.io/anime/kiznaiver
+
+Title: Kizumonogatari I: Tekketsu-hen
+Status: Completed
+Progress: 1
+Episodes: 1
+Finished: Jul 29, 2016
+Page: https://kitsu.io/anime/kizumonogatari-part-1-tekketsu-hen
+
+Title: Kizumonogatari II: Nekketsu-hen
+Status: Completed
+Progress: 1
+Episodes: 1
+Finished: Jul 23, 2017
+Page: https://kitsu.io/anime/kizumonogatari-part-2-nekketsu-hen
+
+Title: Kizumonogatari III: Reiketsu-hen
+Status: Completed
+Progress: 1
+Episodes: 1
+Finished: Sep 16, 2017
+Page: https://kitsu.io/anime/kizumonogatari-part-3-reiketsu-hen
+
+Title: Kobayashi-san Chi no Maid Dragon
+Status: Completed
+Progress: 13
+Episodes: 13
+Page: https://kitsu.io/anime/kobayashi-san-chi-no-maid-dragon
+
+Title: Kobayashi-san Chi no Maid Dragon: Valentine, Soshite Onsen! - Amari Kitai Shinaide Kudasai
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/kobayashi-san-chi-no-maid-dragon-ova
+
+Title: Kodomo no Jikan (TV)
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Apr 20, 2015
+Page: https://kitsu.io/anime/kodomo-no-jikan
+
+Title: Koe no Katachi
+Status: Planned
+Progress: 0
+Episodes: 1
+Page: https://kitsu.io/anime/koe-no-katachi
+
+Title: Koisuru Asteroid
+Status: Watching
+Progress: 4
+Episodes: 12
+Page: https://kitsu.io/anime/koisuru-asteroid
+
+Title: Kokkoku
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Mar 30, 2018
+Page: https://kitsu.io/anime/kokkoku
+
+Title: Kokoro Connect
+Status: Completed
+Progress: 13
+Episodes: 13
+Page: https://kitsu.io/anime/kokoro-connect
+
+Title: Kokoro Connect: Michi Random
+Status: Completed
+Progress: 4
+Episodes: 4
+Page: https://kitsu.io/anime/kokoro-connect-michi-random
+
+Title: Komori-san wa Kotowarenai!
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Dec 20, 2015
+Page: https://kitsu.io/anime/komori-san-wa-kotowarenai
+
+Title: Kono Bijutsubu ni wa Mondai ga Aru!
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Nov 20, 2016
+Page: https://kitsu.io/anime/kono-bijutsubu-ni-wa-mondai-ga-aru
+
+Title: Kono Subarashii Sekai ni Shukufuku wo!
+Status: Completed
+Progress: 10
+Episodes: 10
+Finished: Mar 19, 2016
+Page: https://kitsu.io/anime/kono-subarashii-sekai-ni-shukufuku-wo
+
+Title: Kono Subarashii Sekai ni Shukufuku wo! 2
+Status: Completed
+Progress: 10
+Episodes: 10
+Finished: Jul 15, 2017
+Page: https://kitsu.io/anime/kono-subarashii-sekai-ni-shukufuku-wo-2
+
+Title: Kono Subarashii Sekai ni Shukufuku wo! 2 OVA
+Status: Completed
+Progress: 1
+Episodes: 1
+Finished: Sep 16, 2017
+Page: https://kitsu.io/anime/kono-subarashii-sekai-ni-shukufuku-wo-2-ova
+
+Title: Kono Subarashii Sekai ni Shukufuku wo! OVA
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/kono-subarashii-sekai-ni-shukufuku-wo-ova
+
+Title: Konohana Kitan
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Dec 22, 2017
+Page: https://kitsu.io/anime/konohana-kitan
+
+Title: Kore ga Watashi no Goshujinsama
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Feb 20, 2013
+Page: https://kitsu.io/anime/kore-ga-watashi-no-goshujin-sama
+
+Title: Kore wa Zombie Desu ka?
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Feb 24, 2013
+Page: https://kitsu.io/anime/kore-wa-zombie-desu-ka
+
+Title: Kore wa Zombie Desu ka? OVA
+Status: Completed
+Progress: 2
+Episodes: 2
+Finished: May 29, 2015
+Page: https://kitsu.io/anime/kore-wa-zombie-desu-ka-ova
+
+Title: Kore wa Zombie Desu ka? of the Dead
+Status: Completed
+Progress: 10
+Episodes: 10
+Page: https://kitsu.io/anime/kore-wa-zombie-desu-ka-of-the-dead
+
+Title: Kore wa Zombie Desu ka? of the Dead: Hai, Minotake ni Attemasu
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/kore-wa-zombie-desu-ka-of-the-dead-ova
+
+Title: Kotonoha no Niwa
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/the-garden-of-words
+
+Title: Kotoura-san
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Mar 29, 2013
+Page: https://kitsu.io/anime/kotoura-san
+
+Title: Koukaku no Pandora
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jun 22, 2016
+Page: https://kitsu.io/anime/koukaku-no-pandora
+
+Title: Koutetsujou no Kabaneri
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jul 01, 2016
+Page: https://kitsu.io/anime/koutetsujou-no-kabaneri
+
+Title: Koyomimonogatari
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Mar 27, 2016
+Page: https://kitsu.io/anime/koyomimonogatari
+
+Title: Kubikiri Cycle: Aoiro Savant to Zaregototsukai
+Status: Completed
+Progress: 8
+Episodes: 8
+Finished: Dec 05, 2017
+Page: https://kitsu.io/anime/zaregoto
+
+Title: Kuma Miko
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jun 22, 2016
+Page: https://kitsu.io/anime/kuma-miko
+
+Title: Kuro to Kin no Akanai Kagi.
+Status: Completed
+Progress: 2
+Episodes: 2
+Page: https://kitsu.io/anime/kuro-to-kin-no-hirakanai-kagi
+
+Title: Kuromukuro
+Status: Dropped
+Progress: 3
+Episodes: 26
+Page: https://kitsu.io/anime/kuromukuro
+
+Title: Kuttsukiboshi
+Status: Completed
+Progress: 2
+Episodes: 2
+Page: https://kitsu.io/anime/kuttsukiboshi
+
+Title: Kyokou Suiri
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Apr 03, 2020
+Page: https://kitsu.io/anime/kyokou-suiri
+
+Title: Kyou no 5 no 2
+Status: Completed
+Progress: 4
+Episodes: 4
+Page: https://kitsu.io/anime/kyou-no-go-no-ni
+
+Title: Kyoukaisenjou no Horizon
+Status: Completed
+Progress: 13
+Episodes: 13
+Page: https://kitsu.io/anime/horizon-in-the-middle-of-nowhere
+
+Title: Kyoukaisenjou no Horizon II
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: May 27, 2016
+Page: https://kitsu.io/anime/kyoukaisenjou-no-horizon-ii
+
+Title: Lance N' Masques
+Status: Dropped
+Progress: 2
+Episodes: 12
+Page: https://kitsu.io/anime/lance-n-masques
+
+Title: Listeners
+Status: Dropped
+Progress: 3
+Episodes: 0
+Page: https://kitsu.io/anime/listeners
+
+Title: Little Witch Academia
+Status: Completed
+Progress: 1
+Episodes: 1
+Finished: Feb 18, 2016
+Page: https://kitsu.io/anime/little-witch-academia
+
+Title: Liz to Aoi Tori
+Status: Planned
+Progress: 0
+Episodes: 1
+Page: https://kitsu.io/anime/liz-to-aoi-tori
+
+Title: Log Horizon
+Status: Completed
+Progress: 25
+Episodes: 25
+Page: https://kitsu.io/anime/log-horizon
+
+Title: Log Horizon 2nd Season
+Status: Completed
+Progress: 25
+Episodes: 25
+Finished: Mar 28, 2015
+Page: https://kitsu.io/anime/log-horizon-2
+
+Title: Log Horizon: Entaku Houkai
+Status: Planned
+Progress: 0
+Episodes: 0
+Page: https://kitsu.io/anime/log-horizon-3rd-season
+
+Title: Lord El-Melloi II Sei no Jikenbo: Rail Zeppelin Grace Note
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Sep 28, 2019
+Page: https://kitsu.io/anime/lord-el-melloi-ii-sei-no-jikenbo-rail-zeppelin-grace-note
+
+Title: Love Live! School Idol Project
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Jun 17, 2015
+Page: https://kitsu.io/anime/love-live-school-idol-project
+
+Title: Love Live! School Idol Project 2nd Season
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Oct 05, 2015
+Page: https://kitsu.io/anime/love-live-school-idol-project-2nd-season
+
+Title: Love Live! School Idol Project OVA
+Status: Completed
+Progress: 1
+Episodes: 1
+Finished: Jun 17, 2015
+Page: https://kitsu.io/anime/love-live-school-idol-project-ova
+
+Title: Love Live! Sunshine!!
+Status: Planned
+Progress: 0
+Episodes: 13
+Page: https://kitsu.io/anime/love-live-sunshine
+
+Title: Luck & Logic
+Status: Dropped
+Progress: 5
+Episodes: 12
+Page: https://kitsu.io/anime/luck-logic
+
+Title: Machikado Mazoku
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Oct 11, 2019
+Page: https://kitsu.io/anime/machikado-mazoku
+
+Title: Machine-Doll wa Kizutsukanai
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/unbreakable-machine-doll
+
+Title: Made in Abyss
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Oct 03, 2017
+Page: https://kitsu.io/anime/made-in-abyss
+
+Title: Made in Abyss: Fukaki Tamashii no Reimei
+Status: Planned
+Progress: 0
+Episodes: 1
+Page: https://kitsu.io/anime/made-in-abyss-fukaki-tamashii-no-reimei
+
+Title: Magi: Sinbad no Bouken
+Status: Completed
+Progress: 5
+Episodes: 5
+Finished: Apr 30, 2016
+Page: https://kitsu.io/anime/magi-sinbad-no-bouken
+
+Title: Magi: Sinbad no Bouken (TV)
+Status: Planned
+Progress: 0
+Episodes: 13
+Page: https://kitsu.io/anime/magi-sinbad-no-bouken-tv
+
+Title: Magi: The Kingdom of Magic
+Status: Completed
+Progress: 25
+Episodes: 25
+Finished: Apr 05, 2014
+Page: https://kitsu.io/anime/magi-the-kingdom-of-magic
+
+Title: Magi: The Labyrinth of Magic
+Status: Completed
+Progress: 25
+Episodes: 25
+Finished: Mar 31, 2013
+Page: https://kitsu.io/anime/magi-the-labyrinth-of-magic
+
+Title: Magic Kaito 1412
+Status: Planned
+Progress: 0
+Episodes: 24
+Page: https://kitsu.io/anime/magic-kaito-1412
+
+Title: Magical☆Star Kanon 100%
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/magical-star-kanon-100
+
+Title: Mahoromatic 2
+Status: Completed
+Progress: 14
+Episodes: 14
+Page: https://kitsu.io/anime/mahoromatic-2
+
+Title: Mahoromatic: Automatic Maiden
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/mahoromatic
+
+Title: Mahou Sensou
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/magical-warfare
+
+Title: Mahou Shoujo Ikusei Keikaku
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Dec 17, 2016
+Page: https://kitsu.io/anime/mahou-shoujo-ikusei-keikaku
+
+Title: Mahou Shoujo Lyrical Nanoha: Reflection
+Status: Planned
+Progress: 0
+Episodes: 1
+Page: https://kitsu.io/anime/mahou-shoujo-lyrical-nanoha-reflection
+
+Title: Mahou Shoujo Lyrical Nanoha: The Movie 1st
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/mahou-shoujo-lyrical-nanoha-the-movie-1st
+
+Title: Mahou Shoujo Lyrical Nanoha: The Movie 2nd A's
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/mahou-shoujo-lyrical-nanoha-the-movie-2nd-a-s
+
+Title: Mahou Shoujo Madoka★Magica
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/mahou-shoujo-madoka-magica
+
+Title: Mahou Shoujo Madoka★Magica Movie 1: Hajimari no Monogatari
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/mahou-shoujo-madoka-magica-movie-1-hajimari-no-monogatari
+
+Title: Mahou Shoujo Madoka★Magica Movie 2: Eien no Monogatari
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/mahou-shoujo-madoka-magica-movie-2-eien-no-monogatari
+
+Title: Mahou Shoujo Madoka★Magica Movie 3: Hangyaku no Monogatari
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/mahou-shoujo-madoka-magica-movie-3-hangyaku-no-monogatari
+
+Title: Mahou Shoujo Nante Mou Ii Desukara.
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Mar 29, 2016
+Page: https://kitsu.io/anime/mahou-shoujo-nante-mou-ii-desukara
+
+Title: Mahou Shoujo Nante Mou Ii Desukara. Second Season
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Dec 26, 2016
+Page: https://kitsu.io/anime/mahou-shoujo-nante-mou-ii-desukara-2nd-season
+
+Title: Mahouka Koukou no Rettousei
+Status: Completed
+Progress: 26
+Episodes: 26
+Page: https://kitsu.io/anime/mahouka-koukou-no-rettousei
+
+Title: Mahouka Koukou no Rettousei Movie: Hoshi wo Yobu Shoujo
+Status: Planned
+Progress: 0
+Episodes: 1
+Page: https://kitsu.io/anime/mahouka-koukou-no-rettousei-movie-hoshi-wo-yobu-shoujo
+
+Title: Mahoutsukai no Yome
+Status: Completed
+Progress: 24
+Episodes: 24
+Finished: Mar 26, 2018
+Page: https://kitsu.io/anime/mahoutsukai-no-yome
+
+Title: Mahoutsukai no Yome: Hoshi Matsu Hito
+Status: Planned
+Progress: 0
+Episodes: 3
+Page: https://kitsu.io/anime/mahou-tsukai-no-yome-hoshi-matsu-hito
+
+Title: Manaria Friends
+Status: Planned
+Progress: 0
+Episodes: 10
+Page: https://kitsu.io/anime/manaria-friends
+
+Title: Maou-sama, Retry!
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Oct 13, 2019
+Page: https://kitsu.io/anime/maou-sama-retry
+
+Title: Maoyuu Maou Yuusha
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/maoyu
+
+Title: Masamune-kun no Revenge
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jul 16, 2017
+Page: https://kitsu.io/anime/masamune-kun-no-revenge
+
+Title: Mashiro-iro Symphony: The Color of Lovers
+Status: Planned
+Progress: 0
+Episodes: 12
+Page: https://kitsu.io/anime/mashiroiro-symphony-the-color-of-lovers
+
+Title: Medaka Box
+Status: Dropped
+Progress: 2
+Episodes: 12
+Page: https://kitsu.io/anime/medaka-box
+
+Title: Megalo Box
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Jun 28, 2018
+Page: https://kitsu.io/anime/megalo-box
+
+Title: Mikakunin de Shinkoukei
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/mikakunin-de-shinkoukei
+
+Title: Mirai Nikki (TV)
+Status: Completed
+Progress: 26
+Episodes: 26
+Page: https://kitsu.io/anime/mirai-nikki-tv
+
+Title: Mitsuboshi Colors
+Status: Dropped
+Progress: 5
+Episodes: 12
+Page: https://kitsu.io/anime/mitsuboshi-colors
+
+Title: Mob Psycho 100
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Feb 20, 2019
+Page: https://kitsu.io/anime/mob-psycho-100
+
+Title: Mob Psycho 100 II
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Apr 14, 2019
+Page: https://kitsu.io/anime/mob-psycho-100-ii
+
+Title: Mondaiji-tachi ga Isekai kara Kuru Sou Desu yo?
+Status: Completed
+Progress: 10
+Episodes: 10
+Finished: Mar 17, 2013
+Page: https://kitsu.io/anime/problem-children-are-coming-from-another-world-aren-t-they
+
+Title: Mondaiji-tachi ga Isekai kara Kuru Sou Desu yo?: Onsen Manyuuki
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/mondaiji-tachi-ga-isekai-kara-kuru-sou-desu-yo-ova
+
+Title: Monogatari Series: Second Season
+Status: Completed
+Progress: 26
+Episodes: 26
+Finished: Feb 02, 2016
+Page: https://kitsu.io/anime/monogatari-series-second-season
+
+Title: Monster
+Status: Planned
+Progress: 0
+Episodes: 74
+Page: https://kitsu.io/anime/monster
+
+Title: Monster Musume no Iru Nichijou
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Sep 24, 2015
+Page: https://kitsu.io/anime/monster-musume-no-iru-nichijou
+
+Title: Motto To LOVE-Ru
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/motto-to-love-ru
+
+Title: Mujaki no Rakuen
+Status: Completed
+Progress: 3
+Episodes: 3
+Finished: Jul 15, 2017
+Page: https://kitsu.io/anime/mujaki-no-rakuen
+
+Title: Murenase! Shiiton Gakuen
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Apr 06, 2020
+Page: https://kitsu.io/anime/murenase-shiiton-gakuen
+
+Title: Musaigen no Phantom World
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Apr 09, 2016
+Page: https://kitsu.io/anime/musaigen-no-phantom-world
+
+Title: Mushishi
+Status: Completed
+Progress: 26
+Episodes: 26
+Finished: Mar 14, 2016
+Page: https://kitsu.io/anime/mushishi
+
+Title: Mushishi Special: Hihamukage
+Status: Completed
+Progress: 1
+Episodes: 1
+Finished: Mar 19, 2016
+Page: https://kitsu.io/anime/mushishi-special-hihamukage
+
+Title: Mushishi Zoku Shou
+Status: Completed
+Progress: 10
+Episodes: 10
+Finished: Mar 20, 2016
+Page: https://kitsu.io/anime/mushishi-zoku-shou
+
+Title: Mushishi Zoku Shou 2nd Season
+Status: Completed
+Progress: 10
+Episodes: 10
+Finished: Apr 17, 2016
+Page: https://kitsu.io/anime/mushishi-zoku-shou-2
+
+Title: Mushishi Zoku Shou: Odoro no Michi
+Status: Completed
+Progress: 1
+Episodes: 1
+Finished: Mar 20, 2016
+Page: https://kitsu.io/anime/mushishi-zoku-shou-special
+
+Title: Muv-Luv Alternative: Total Eclipse
+Status: Completed
+Progress: 24
+Episodes: 24
+Page: https://kitsu.io/anime/muv-luv-alternative-total-eclipse
+
+Title: Märchen Mädchen
+Status: Dropped
+Progress: 1
+Episodes: 10
+Page: https://kitsu.io/anime/marchen-madchen
+
+Title: Nagi no Asukara
+Status: Completed
+Progress: 26
+Episodes: 26
+Page: https://kitsu.io/anime/nagi-no-asukara
+
+Title: Naruto: Shippuuden
+Status: Dropped
+Progress: 8
+Episodes: 500
+Page: https://kitsu.io/anime/naruto-shippuden
+
+Title: Needless
+Status: Completed
+Progress: 24
+Episodes: 24
+Page: https://kitsu.io/anime/needless
+
+Title: Needless Specials
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/needless-specials
+
+Title: Nekomonogatari: Kuro
+Status: Completed
+Progress: 4
+Episodes: 4
+Finished: Jul 29, 2013
+Page: https://kitsu.io/anime/nekomonogatari-kuro
+
+Title: Nekopara (TV)
+Status: Watching
+Progress: 4
+Episodes: 12
+Page: https://kitsu.io/anime/nekopara-tv
+
+Title: Neppuu Kairiku Bushi Road
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/neppuu-kairiku-bushi-road
+
+Title: Nerawareta Gakuen
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/nerawareta-gakuen
+
+Title: Net-juu no Susume
+Status: Completed
+Progress: 10
+Episodes: 10
+Finished: Dec 12, 2017
+Page: https://kitsu.io/anime/net-juu-no-susume
+
+Title: Net-juu no Susume Special
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/net-juu-no-susume-special
+
+Title: Netoge no Yome wa Onnanoko ja Nai to Omotta?
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jun 24, 2016
+Page: https://kitsu.io/anime/netoge-no-yome-wa-onnanoko-ja-nai-to-omotta
+
+Title: New Game!
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jul 16, 2017
+Page: https://kitsu.io/anime/new-game
+
+Title: New Game!!
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Oct 03, 2017
+Page: https://kitsu.io/anime/new-game-2
+
+Title: New Game!: Watashi, Shain Ryokou tte Hajimete nano de...
+Status: Completed
+Progress: 1
+Episodes: 1
+Finished: Jul 16, 2017
+Page: https://kitsu.io/anime/watashi-shain-ryokou-tte-hajimete-na-node
+
+Title: Nichijou
+Status: Completed
+Progress: 26
+Episodes: 26
+Finished: Jul 26, 2016
+Page: https://kitsu.io/anime/nichijou
+
+Title: Nisemonogatari
+Status: Completed
+Progress: 11
+Episodes: 11
+Finished: Feb 01, 2016
+Page: https://kitsu.io/anime/nisemonogatari
+
+Title: No Game No Life
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jun 29, 2014
+Page: https://kitsu.io/anime/no-game-no-life
+
+Title: No Game No Life: Zero
+Status: Planned
+Progress: 0
+Episodes: 1
+Page: https://kitsu.io/anime/no-game-no-life-zero
+
+Title: Nobunaga no Shinobi
+Status: Dropped
+Progress: 19
+Episodes: 26
+Page: https://kitsu.io/anime/nobunaga-no-shinobi
+
+Title: Nobunaga the Fool
+Status: Dropped
+Progress: 10
+Episodes: 24
+Page: https://kitsu.io/anime/nobunaga-the-fool
+
+Title: Nobunagun
+Status: Dropped
+Progress: 3
+Episodes: 13
+Page: https://kitsu.io/anime/nobunagun
+
+Title: Nodame Cantabile
+Status: Planned
+Progress: 0
+Episodes: 23
+Page: https://kitsu.io/anime/nodame-cantabile
+
+Title: Non Non Biyori
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/non-non-biyori
+
+Title: Non Non Biyori Movie: Vacation
+Status: Planned
+Progress: 0
+Episodes: 1
+Page: https://kitsu.io/anime/non-non-biyori-vacation
+
+Title: Non Non Biyori Repeat
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Sep 26, 2015
+Page: https://kitsu.io/anime/non-non-biyori-2
+
+Title: Non Non Biyori Repeat: Hotaru ga Tanoshinda
+Status: Completed
+Progress: 1
+Episodes: 1
+Finished: Jan 16, 2017
+Page: https://kitsu.io/anime/non-non-biyori-repeat-ova
+
+Title: Non Non Biyori: Okinawa e Ikukoto ni Natta
+Status: Completed
+Progress: 1
+Episodes: 1
+Finished: Jan 06, 2016
+Page: https://kitsu.io/anime/non-non-biyori-ova
+
+Title: Noragami
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Mar 23, 2014
+Page: https://kitsu.io/anime/noragami
+
+Title: Noragami Aragoto
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Jan 01, 2016
+Page: https://kitsu.io/anime/noragami-aragoto
+
+Title: Noragami OVA
+Status: Completed
+Progress: 2
+Episodes: 2
+Finished: Aug 17, 2014
+Page: https://kitsu.io/anime/noragami-ova
+
+Title: Nourin
+Status: Dropped
+Progress: 3
+Episodes: 12
+Page: https://kitsu.io/anime/nourin
+
+Title: Nozoki Ana
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/nozoki-ana
+
+Title: Nurarihyon no Mago
+Status: Planned
+Progress: 0
+Episodes: 24
+Page: https://kitsu.io/anime/nurarihyon-no-mago
+
+Title: Nyan Koi!
+Status: Dropped
+Progress: 2
+Episodes: 12
+Page: https://kitsu.io/anime/nyan-koi
+
+Title: Oda Nobuna no Yabou
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/oda-nobuna-no-yabou
+
+Title: Ojisan to Marshmallow
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Mar 25, 2016
+Page: https://kitsu.io/anime/ojisan-to-marshmallow
+
+Title: Okusama ga Seitokaichou!
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jul 03, 2016
+Page: https://kitsu.io/anime/oku-sama-ga-seito-kaichou
+
+Title: Okusama ga Seitokaichou!+!
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jan 06, 2017
+Page: https://kitsu.io/anime/okusama-ga-seitokaichou-2
+
+Title: One Punch Man
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Dec 20, 2015
+Page: https://kitsu.io/anime/one-punch-man
+
+Title: One Punch Man 2
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jul 06, 2019
+Page: https://kitsu.io/anime/one-punch-man-2
+
+Title: One Punch Man: Road to Hero
+Status: Completed
+Progress: 1
+Episodes: 1
+Finished: Dec 20, 2015
+Page: https://kitsu.io/anime/one-punch-man-ova
+
+Title: Onsen Yousei Hakone-chan
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Dec 27, 2015
+Page: https://kitsu.io/anime/onsen-yousei-hakone-chan
+
+Title: Ookami Kodomo no Ame to Yuki
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/wolf-children
+
+Title: Ookami to Koushinryou
+Status: Completed
+Progress: 13
+Episodes: 13
+Page: https://kitsu.io/anime/spice-and-wolf
+
+Title: Ookami to Koushinryou II
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: May 19, 2013
+Page: https://kitsu.io/anime/spice-and-wolf-ii
+
+Title: Ookami to Koushinryou II: Ookami to Kohakuiro no Yuuutsu
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/ookami-to-koushinryou-ii-ookami-to-kohakuiro-no-yuuutsu
+
+Title: Ookami-san to Shichinin no Nakama-tachi
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/ookami-san-to-shichinin-no-nakama-tachi
+
+Title: Ooyasan wa Shishunki!
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Mar 29, 2016
+Page: https://kitsu.io/anime/ooyasan-wa-shishunki
+
+Title: Ore ga Ojousama Gakkou ni "Shomin Sample" Toshite Gets♥Sareta Ken
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Dec 25, 2015
+Page: https://kitsu.io/anime/ore-ga-ojou-sama-gakkou-ni-shomin-sample-toshite-rachirareta-ken
+
+Title: Ore no Imouto ga Konnani Kawaii Wake ga Nai
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/oreimo
+
+Title: Ore no Imouto ga Konnani Kawaii Wake ga Nai Specials
+Status: Completed
+Progress: 4
+Episodes: 4
+Page: https://kitsu.io/anime/oreimo-specials
+
+Title: Ore no Imouto ga Konnani Kawaii Wake ga Nai.
+Status: Dropped
+Progress: 3
+Episodes: 13
+Page: https://kitsu.io/anime/oreimo-season-2
+
+Title: Ore no Nounai Sentakushi ga, Gakuen Love Comedy wo Zenryoku de Jama Shiteiru
+Status: Completed
+Progress: 10
+Episodes: 10
+Page: https://kitsu.io/anime/noucome-my-mental-choices-are-completely-interfering-with-my-school-romantic-comedy
+
+Title: Ore, Twintail ni Narimasu.
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Oct 07, 2015
+Page: https://kitsu.io/anime/ore-twintails-ni-narimasu
+
+Title: Osake wa Fuufu ni Natte kara
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Dec 27, 2017
+Page: https://kitsu.io/anime/osake-wa-fuufu-ni-natte-kara
+
+Title: Oshiete! Galko-chan
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Apr 30, 2016
+Page: https://kitsu.io/anime/oshiete-galko-chan
+
+Title: Otome Game no Hametsu Flag shika Nai Akuyaku Reijou ni Tensei shiteshimatta...
+Status: Watching
+Progress: 4
+Episodes: 0
+Page: https://kitsu.io/anime/otome-game-no-hametsu-flag-shika-nai-akuyaku-reijou-ni-tensei-shiteshimatta
+
+Title: Outbreak Company
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/outbreak-company
+
+Title: Overlord
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Sep 29, 2015
+Page: https://kitsu.io/anime/overlord
+
+Title: Overlord II
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Apr 09, 2018
+Page: https://kitsu.io/anime/overlord-ii
+
+Title: Overlord III
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Oct 03, 2018
+Page: https://kitsu.io/anime/overlord-iii
+
+Title: Overlord: Ple Ple Pleiades
+Status: Completed
+Progress: 8
+Episodes: 8
+Page: https://kitsu.io/anime/overlord-specials
+
+Title: Owari no Seraph
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jun 21, 2015
+Page: https://kitsu.io/anime/owari-no-seraph
+
+Title: Owari no Seraph: Owaranai Seraph
+Status: Completed
+Progress: 9
+Episodes: 9
+Finished: Dec 12, 2015
+Page: https://kitsu.io/anime/owari-no-seraph-owaranai-seraph
+
+Title: Owarimonogatari
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Dec 29, 2015
+Page: https://kitsu.io/anime/owarimonogatari
+
+Title: Owarimonogatari 2nd Season
+Status: Completed
+Progress: 7
+Episodes: 7
+Page: https://kitsu.io/anime/owarimonogatari-2nd-season
+
+Title: Pan de Peace!
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Jun 26, 2016
+Page: https://kitsu.io/anime/pan-de-peace
+
+Title: Papa no Iukoto wo Kikinasai!
+Status: Planned
+Progress: 0
+Episodes: 12
+Page: https://kitsu.io/anime/papa-no-iukoto-wo-kikinasai
+
+Title: Paradise Kiss
+Status: Planned
+Progress: 0
+Episodes: 12
+Page: https://kitsu.io/anime/paradise-kiss
+
+Title: Persona 3 the Movie 1: Spring of Birth
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/persona-3-the-movie-1-spring-of-birth
+
+Title: Persona 3 the Movie 2: Midsummer Knight's Dream
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/persona-3-the-movie-2-midsummer-knight-s-dream
+
+Title: Persona 3 the Movie 3: Falling Down
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/persona-3-the-movie-3-falling-down
+
+Title: Persona 3 the Movie 4: Winter of Rebirth
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/persona-3-the-movie-4-winter-of-rebirth
+
+Title: Persona 4 the Animation
+Status: Completed
+Progress: 25
+Episodes: 25
+Page: https://kitsu.io/anime/persona-4-the-animation
+
+Title: Persona 4 the Animation: No One is Alone
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/persona-4-the-animation-no-one-is-alone
+
+Title: Persona 5 the Animation: The Day Breakers
+Status: Planned
+Progress: 0
+Episodes: 1
+Page: https://kitsu.io/anime/persona-5
+
+Title: Phantom: Requiem for the Phantom
+Status: Completed
+Progress: 26
+Episodes: 26
+Page: https://kitsu.io/anime/phantom-requiem-for-the-phantom
+
+Title: Pokemon XY: Mega Evolution
+Status: Dropped
+Progress: 2
+Episodes: 4
+Page: https://kitsu.io/anime/pokemon-xy-mega-evolution
+
+Title: Pokemon: The Origin
+Status: Completed
+Progress: 4
+Episodes: 4
+Page: https://kitsu.io/anime/pokemon-the-origin
+
+Title: Pop Team Epic
+Status: Dropped
+Progress: 6
+Episodes: 12
+Page: https://kitsu.io/anime/pop-team-epic
+
+Title: Princess Principal
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Sep 24, 2017
+Page: https://kitsu.io/anime/princess-principal
+
+Title: Prison School
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Sep 26, 2015
+Page: https://kitsu.io/anime/prison-school
+
+Title: Prison School: Mad Wax
+Status: Planned
+Progress: 0
+Episodes: 1
+Page: https://kitsu.io/anime/prison-school-ova
+
+Title: Psycho-Pass
+Status: Completed
+Progress: 22
+Episodes: 22
+Page: https://kitsu.io/anime/psycho-pass
+
+Title: Punch Line
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jul 05, 2015
+Page: https://kitsu.io/anime/punch-line
+
+Title: Pupa
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/pupa
+
+Title: Rakudai Kishi no Cavalry
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Dec 27, 2015
+Page: https://kitsu.io/anime/rakudai-kishi-no-cavalry
+
+Title: Rakuen Tsuihou
+Status: Completed
+Progress: 1
+Episodes: 1
+Finished: Jan 28, 2015
+Page: https://kitsu.io/anime/rakuen-tsuihou-expelled-from-paradise
+
+Title: Re:Creators
+Status: Completed
+Progress: 22
+Episodes: 22
+Finished: Sep 16, 2017
+Page: https://kitsu.io/anime/re-creators
+
+Title: Re:Zero kara Hajimeru Isekai Seikatsu
+Status: Completed
+Progress: 25
+Episodes: 25
+Finished: Sep 19, 2016
+Page: https://kitsu.io/anime/re-zero-kara-hajimeru-isekai-seikatsu
+
+Title: Re:Zero kara Hajimeru Isekai Seikatsu: Memory Snow
+Status: Planned
+Progress: 0
+Episodes: 1
+Page: https://kitsu.io/anime/re-zero-kara-hajimeru-isekai-seikatsu-memory-snow
+
+Title: ReLIFE
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Jul 02, 2016
+Page: https://kitsu.io/anime/relife
+
+Title: ReLIFE: Kanketsu-hen
+Status: Planned
+Progress: 0
+Episodes: 4
+Page: https://kitsu.io/anime/relife-kanketsu-hen
+
+Title: Release the Spyce
+Status: Dropped
+Progress: 2
+Episodes: 12
+Page: https://kitsu.io/anime/release-the-spyce
+
+Title: Renkin San-kyuu Magical? Pokaan
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/renkin-san-kyuu-magical-pokaan
+
+Title: Rescue Me!
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/rescue-me
+
+Title: Rikei ga Koi ni Ochita no de Shoumei shitemita.
+Status: Watching
+Progress: 5
+Episodes: 12
+Page: https://kitsu.io/anime/rikei-ga-koi-ni-ochita-no-de-shoumei-shitemita
+
+Title: Rizelmine
+Status: Completed
+Progress: 24
+Episodes: 24
+Finished: Feb 26, 2016
+Page: https://kitsu.io/anime/rizelmine
+
+Title: Robotics;Notes
+Status: Completed
+Progress: 22
+Episodes: 22
+Page: https://kitsu.io/anime/robotics-notes
+
+Title: Rokka no Yuusha
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Sep 23, 2015
+Page: https://kitsu.io/anime/rokka-no-yuusha
+
+Title: Rokujouma no Shinryakusha!? (TV)
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/rokujouma-no-shinryakusha-tv
+
+Title: Rolling☆Girls
+Status: Planned
+Progress: 0
+Episodes: 12
+Page: https://kitsu.io/anime/the-rolling-girls
+
+Title: Rozen Maiden (2013)
+Status: Completed
+Progress: 13
+Episodes: 13
+Page: https://kitsu.io/anime/rozen-maiden-zuruckspulen
+
+Title: Runway de Waratte
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Apr 03, 2020
+Page: https://kitsu.io/anime/runway-de-waratte
+
+Title: Ryuugajou Nanana no Maizoukin (TV)
+Status: Completed
+Progress: 11
+Episodes: 11
+Finished: Jun 27, 2014
+Page: https://kitsu.io/anime/ryuugajou-nanana-no-maizoukin-tv
+
+Title: Ryuuou no Oshigoto!
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Mar 30, 2018
+Page: https://kitsu.io/anime/ryuuou-no-oshigoto
+
+Title: Sacred Seven
+Status: Planned
+Progress: 0
+Episodes: 12
+Page: https://kitsu.io/anime/sacred-seven
+
+Title: Saenai Heroine no Sodatekata
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jan 29, 2016
+Page: https://kitsu.io/anime/saenai-heroine-no-sodate-kata
+
+Title: Saenai Heroine no Sodatekata Fine
+Status: Planned
+Progress: 0
+Episodes: 1
+Page: https://kitsu.io/anime/saenai-heroine-no-sodatekata-movie
+
+Title: Saenai Heroine no Sodatekata ♭
+Status: Completed
+Progress: 11
+Episodes: 11
+Finished: Aug 03, 2017
+Page: https://kitsu.io/anime/saenai-heroine-no-sodatekata-flat
+
+Title: Saenai Heroine no Sodatekata ♭: Koi to Junjou no Service-kai
+Status: Completed
+Progress: 1
+Episodes: 1
+Finished: Aug 03, 2017
+Page: https://kitsu.io/anime/saenai-heroine-no-sodatekata-flat-koi-to-junjou-no-service-kai
+
+Title: Saenai Heroine no Sodatekata: Ai to Seishun no Service-kai
+Status: Completed
+Progress: 1
+Episodes: 1
+Finished: Jan 26, 2016
+Page: https://kitsu.io/anime/saenai-heroine-no-sodatekata-episode-0-ai-to-seishun-no-service-kai
+
+Title: Saijaku Muhai no Bahamut
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Apr 09, 2016
+Page: https://kitsu.io/anime/saijaku-muhai-no-bahamut
+
+Title: Sakamoto desu ga?
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jul 02, 2016
+Page: https://kitsu.io/anime/sakamoto-desu-ga
+
+Title: Sakasama no Patema
+Status: Completed
+Progress: 1
+Episodes: 1
+Finished: Nov 25, 2015
+Page: https://kitsu.io/anime/sakasama-no-patema
+
+Title: Sakura Trick
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jul 21, 2017
+Page: https://kitsu.io/anime/sakura-trick
+
+Title: Sakurada Reset
+Status: Planned
+Progress: 0
+Episodes: 24
+Page: https://kitsu.io/anime/sakurada-reset
+
+Title: Sakurasou no Pet na Kanojo
+Status: Completed
+Progress: 24
+Episodes: 24
+Page: https://kitsu.io/anime/sakurasou-no-pet-na-kanojo
+
+Title: Sankarea
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/sankarea
+
+Title: Sansha Sanyou
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jun 26, 2016
+Page: https://kitsu.io/anime/sansha-sanyou
+
+Title: Sasami-san@Ganbaranai
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Apr 17, 2013
+Page: https://kitsu.io/anime/sasami-san-ganbaranai
+
+Title: School Rumble
+Status: Dropped
+Progress: 8
+Episodes: 26
+Page: https://kitsu.io/anime/school-rumble
+
+Title: Schwarzesmarken
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Mar 29, 2016
+Page: https://kitsu.io/anime/schwarzesmarken
+
+Title: Scrapped Princess
+Status: Completed
+Progress: 24
+Episodes: 24
+Page: https://kitsu.io/anime/scrapped-princess
+
+Title: Seiken Tsukai no World Break
+Status: Dropped
+Progress: 2
+Episodes: 12
+Page: https://kitsu.io/anime/seiken-tsukai-no-world-break
+
+Title: Seikoku no Dragonar
+Status: Dropped
+Progress: 2
+Episodes: 12
+Page: https://kitsu.io/anime/seikoku-no-dragonar
+
+Title: Seikon no Qwaser
+Status: Completed
+Progress: 24
+Episodes: 24
+Finished: Jan 20, 2015
+Page: https://kitsu.io/anime/seikon-no-qwaser
+
+Title: Seikon no Qwaser II
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jan 23, 2015
+Page: https://kitsu.io/anime/seikon-no-qwaser-ii
+
+Title: Seishun Buta Yarou wa Bunny Girl Senpai no Yume wo Minai
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Jan 05, 2019
+Page: https://kitsu.io/anime/seishun-buta-yarou-wa-bunny-girl-senpai-no-yume-wo-minai
+
+Title: Seitokai Yakuindomo
+Status: Planned
+Progress: 0
+Episodes: 13
+Page: https://kitsu.io/anime/seitokai-yakuindomo
+
+Title: Sekai Seifuku: Bouryaku no Zvezda
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jul 11, 2015
+Page: https://kitsu.io/anime/sekai-seifuku-bouryaku-no-zvezda
+
+Title: Senki Zesshou Symphogear
+Status: Completed
+Progress: 13
+Episodes: 13
+Page: https://kitsu.io/anime/senki-zesshou-symphogear-meteoroid-falling-burning-and-disappear-then
+
+Title: Senran Kagura
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jul 14, 2015
+Page: https://kitsu.io/anime/senran-kagura
+
+Title: Senyuu.
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Jun 14, 2013
+Page: https://kitsu.io/anime/senyuu
+
+Title: Senyuu. 2
+Status: Completed
+Progress: 13
+Episodes: 13
+Page: https://kitsu.io/anime/senyuu-2
+
+Title: Serial Experiments Lain
+Status: Planned
+Progress: 0
+Episodes: 13
+Page: https://kitsu.io/anime/serial-experiments-lain
+
+Title: Seto no Hanayome
+Status: Completed
+Progress: 26
+Episodes: 26
+Finished: Jan 05, 2016
+Page: https://kitsu.io/anime/seto-no-hanayome
+
+Title: Shakugan no Shana
+Status: Completed
+Progress: 24
+Episodes: 24
+Page: https://kitsu.io/anime/shakugan-no-shana
+
+Title: Shakugan no Shana II (Second)
+Status: Completed
+Progress: 24
+Episodes: 24
+Page: https://kitsu.io/anime/shakugan-no-shana-ii-second
+
+Title: Shakugan no Shana III (Final)
+Status: Completed
+Progress: 24
+Episodes: 24
+Page: https://kitsu.io/anime/shakugan-no-shana-iii-final
+
+Title: Shakugan no Shana Movie
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/shakugan-no-shana-movie
+
+Title: Shakugan no Shana S
+Status: Completed
+Progress: 4
+Episodes: 4
+Page: https://kitsu.io/anime/shakugan-no-shana-s
+
+Title: Shigatsu wa Kimi no Uso
+Status: Dropped
+Progress: 1
+Episodes: 22
+Page: https://kitsu.io/anime/shigatsu-wa-kimi-no-uso
+
+Title: Shigurui
+Status: Planned
+Progress: 0
+Episodes: 12
+Page: https://kitsu.io/anime/shigurui
+
+Title: Shiki
+Status: Completed
+Progress: 22
+Episodes: 22
+Finished: Nov 13, 2015
+Page: https://kitsu.io/anime/shiki
+
+Title: Shiki Specials
+Status: Completed
+Progress: 2
+Episodes: 2
+Page: https://kitsu.io/anime/shiki-specials
+
+Title: Shimoneta to Iu Gainen ga Sonzai Shinai Taikutsu na Sekai
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: May 08, 2016
+Page: https://kitsu.io/anime/shimoneta-to-iu-gainen-ga-sonzai-shinai-taikutsu-na-sekai
+
+Title: Shingeki no Bahamut: Genesis
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Dec 30, 2014
+Page: https://kitsu.io/anime/shingeki-no-bahamut-genesis
+
+Title: Shingeki no Bahamut: Virgin Soul
+Status: Completed
+Progress: 24
+Episodes: 24
+Finished: Oct 03, 2017
+Page: https://kitsu.io/anime/shingeki-no-bahamut-virgin-soul
+
+Title: Shingeki no Kyojin
+Status: Dropped
+Progress: 12
+Episodes: 25
+Page: https://kitsu.io/anime/attack-on-titan
+
+Title: Shingetsutan Tsukihime
+Status: Dropped
+Progress: 6
+Episodes: 12
+Page: https://kitsu.io/anime/shingetsutan-tsukihime
+
+Title: Shinmai Maou no Testament
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jul 18, 2017
+Page: https://kitsu.io/anime/shinmai-maou-no-testament
+
+Title: Shinmai Maou no Testament Burst
+Status: Planned
+Progress: 0
+Episodes: 10
+Page: https://kitsu.io/anime/shinmai-maou-no-testament-burst
+
+Title: Shinmai Maou no Testament OVA
+Status: Completed
+Progress: 1
+Episodes: 1
+Finished: Jul 18, 2017
+Page: https://kitsu.io/anime/shinmai-maou-no-testament-ova
+
+Title: Shinsekai yori
+Status: Planned
+Progress: 0
+Episodes: 25
+Page: https://kitsu.io/anime/shinsekai-yori
+
+Title: Shirobako
+Status: Completed
+Progress: 24
+Episodes: 24
+Finished: Mar 29, 2015
+Page: https://kitsu.io/anime/shirobako
+
+Title: Shoujo Shuumatsu Ryokou
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Dec 27, 2017
+Page: https://kitsu.io/anime/shoujo-shuumatsu-ryokou
+
+Title: Shoujo-tachi wa Kouya wo Mezasu
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Mar 25, 2016
+Page: https://kitsu.io/anime/shoujo-tachi-wa-kouya-wo-mezasu
+
+Title: Shouwa Genroku Rakugo Shinjuu
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Apr 03, 2016
+Page: https://kitsu.io/anime/shouwa-genroku-rakugo-shinjuu-tv
+
+Title: Shouwa Genroku Rakugo Shinjuu: Sukeroku Futatabi-hen
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/shouwa-genroku-rakugo-shinjuu-sukeroku-futatabi-hen
+
+Title: Shuumatsu Nani Shitemasu ka? Isogashii desu ka? Sukutte Moratte Ii desu ka?
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jun 02, 2018
+Page: https://kitsu.io/anime/shuumatsu-nani-shitemasu-ka-isogashii-desu-ka-sukutte-moratte-ii-desu-ka
+
+Title: Shuumatsu no Izetta
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Dec 17, 2016
+Page: https://kitsu.io/anime/shuumatsu-no-izetta
+
+Title: Sketchbook: Full Color's
+Status: Planned
+Progress: 0
+Episodes: 13
+Page: https://kitsu.io/anime/sketchbook-full-color-s
+
+Title: Slow Start
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: May 22, 2018
+Page: https://kitsu.io/anime/slow-start
+
+Title: So Ra No Wo To
+Status: Planned
+Progress: 0
+Episodes: 12
+Page: https://kitsu.io/anime/so-ra-no-wo-to
+
+Title: Somali to Mori no Kamisama
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Apr 02, 2020
+Page: https://kitsu.io/anime/somali-to-mori-no-kamisama
+
+Title: Sora no Otoshimono
+Status: Completed
+Progress: 13
+Episodes: 13
+Page: https://kitsu.io/anime/heaven-s-lost-property
+
+Title: Sora no Otoshimono Final: Eternal My Master
+Status: Planned
+Progress: 0
+Episodes: 1
+Page: https://kitsu.io/anime/heaven-s-lost-property-final-eternal-my-master
+
+Title: Sora no Otoshimono: Forte
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/heaven-s-lost-property-forte
+
+Title: Sora no Otoshimono: Tokeijikake no Angeloid
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/heaven-s-lost-property-the-movie-the-angeloid-of-clockwork
+
+Title: Sora yori mo Tooi Basho
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Apr 14, 2018
+Page: https://kitsu.io/anime/a-place-further-than-the-universe
+
+Title: Sore ga Seiyuu!
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Oct 02, 2015
+Page: https://kitsu.io/anime/sore-ga-seiyuu
+
+Title: Soul Eater
+Status: Planned
+Progress: 0
+Episodes: 51
+Page: https://kitsu.io/anime/soul-eater
+
+Title: Sousei no Onmyouji
+Status: Dropped
+Progress: 4
+Episodes: 50
+Page: https://kitsu.io/anime/sousei-no-onmyouji
+
+Title: Steins;Gate
+Status: Completed
+Progress: 24
+Episodes: 24
+Page: https://kitsu.io/anime/steins-gate
+
+Title: Steins;Gate 0
+Status: Completed
+Progress: 23
+Episodes: 23
+Finished: Sep 26, 2018
+Page: https://kitsu.io/anime/steins-gate-0
+
+Title: Steins;Gate Movie: Fuka Ryouiki no Déjà vu
+Status: Completed
+Progress: 1
+Episodes: 1
+Finished: Nov 04, 2017
+Page: https://kitsu.io/anime/steins-gate-fuka-ryouiki-no-deja-vu
+
+Title: Steins;Gate: Kyoukaimenjou no Missing Link - Divide By Zero
+Status: Completed
+Progress: 1
+Episodes: 1
+Finished: Jun 04, 2018
+Page: https://kitsu.io/anime/steins-gate-episode-23
+
+Title: Steins;Gate: Oukoubakko no Poriomania
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/steins-gate-egoistic-poriomania
+
+Title: Stella no Mahou
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jan 08, 2017
+Page: https://kitsu.io/anime/stella-no-mahou
+
+Title: Strike Witches
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/strike-witches
+
+Title: Strike Witches 2
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/strike-witches-2
+
+Title: Strike Witches Movie
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/strike-witches-the-movie
+
+Title: Strike the Blood
+Status: Completed
+Progress: 24
+Episodes: 24
+Page: https://kitsu.io/anime/strike-the-blood
+
+Title: Suisei no Gargantia
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Jul 04, 2013
+Page: https://kitsu.io/anime/gargantia-on-the-verdurous-planet
+
+Title: Suisei no Gargantia Specials
+Status: Completed
+Progress: 2
+Episodes: 2
+Finished: Apr 21, 2016
+Page: https://kitsu.io/anime/suisei-no-gargantia-specials
+
+Title: Suzumiya Haruhi no Shoushitsu
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/the-disappearance-of-haruhi-suzumiya
+
+Title: Suzumiya Haruhi no Yuuutsu
+Status: Completed
+Progress: 14
+Episodes: 14
+Page: https://kitsu.io/anime/the-melancholy-of-haruhi-suzumiya
+
+Title: Suzumiya Haruhi no Yuuutsu (2009)
+Status: Completed
+Progress: 14
+Episodes: 14
+Page: https://kitsu.io/anime/the-melancholy-of-haruhi-suzumiya-2009
+
+Title: Sword Art Online
+Status: Completed
+Progress: 25
+Episodes: 25
+Page: https://kitsu.io/anime/sword-art-online
+
+Title: Sword Art Online Alternative: Gun Gale Online
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jun 30, 2018
+Page: https://kitsu.io/anime/sword-art-online-alternative-gun-gale-online
+
+Title: Sword Art Online II
+Status: Completed
+Progress: 24
+Episodes: 24
+Finished: Dec 26, 2014
+Page: https://kitsu.io/anime/sword-art-online-ii
+
+Title: Sword Art Online Movie: Ordinal Scale
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/sword-art-online-ordinal-scale
+
+Title: Sword Art Online: Alicization
+Status: Completed
+Progress: 24
+Episodes: 24
+Finished: Mar 31, 2019
+Page: https://kitsu.io/anime/sword-art-online-alicization
+
+Title: Sword Art Online: Alicization - War of Underworld
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jan 05, 2020
+Page: https://kitsu.io/anime/sword-art-online-alicization-war-of-underworld
+
+Title: Taboo Tattoo
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Oct 23, 2016
+Page: https://kitsu.io/anime/taboo-tattoo
+
+Title: Tachibanakan Triangle
+Status: Dropped
+Progress: 7
+Episodes: 12
+Page: https://kitsu.io/anime/tachibanakan-to-lie-triangle
+
+Title: Tada-kun wa Koi wo Shinai
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Jun 28, 2018
+Page: https://kitsu.io/anime/tada-kun-wa-koi-wo-shinai
+
+Title: Taimadou Gakuen 35 Shiken Shoutai
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Dec 25, 2015
+Page: https://kitsu.io/anime/taimadou-gakuen-35-shiken-shoutai
+
+Title: Tales of Zestiria the X
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Nov 13, 2016
+Page: https://kitsu.io/anime/tales-of-zestiria-the-x
+
+Title: Tales of Zestiria the X 2nd Season
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Jul 17, 2017
+Page: https://kitsu.io/anime/tales-of-zestiria-the-x-2
+
+Title: Tales of Zestiria the X: Saiyaku no Jidai
+Status: Completed
+Progress: 1
+Episodes: 1
+Finished: Jul 29, 2016
+Page: https://kitsu.io/anime/tales-of-zestiria-the-x-saiyaku-no-jidai
+
+Title: Tales of Zestiria: Doushi no Yoake
+Status: Completed
+Progress: 1
+Episodes: 1
+Finished: Jan 03, 2015
+Page: https://kitsu.io/anime/tales-of-zestiria-doushi-no-yoake
+
+Title: Tamako Market
+Status: Dropped
+Progress: 1
+Episodes: 12
+Page: https://kitsu.io/anime/tamako-market
+
+Title: Tanaka-kun wa Itsumo Kedaruge
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jun 25, 2016
+Page: https://kitsu.io/anime/tanaka-kun-wa-itsumo-kedaruge
+
+Title: Tari Tari
+Status: Completed
+Progress: 13
+Episodes: 13
+Page: https://kitsu.io/anime/tari-tari
+
+Title: Tate no Yuusha no Nariagari
+Status: Completed
+Progress: 25
+Episodes: 25
+Finished: Jul 06, 2019
+Page: https://kitsu.io/anime/tate-no-yuusha-no-nariagari
+
+Title: Tengen Toppa Gurren Lagann
+Status: Completed
+Progress: 27
+Episodes: 27
+Page: https://kitsu.io/anime/tengen-toppa-gurren-lagann
+
+Title: Tensei shitara Slime Datta Ken
+Status: Completed
+Progress: 24
+Episodes: 24
+Finished: Apr 14, 2019
+Page: https://kitsu.io/anime/tensei-shitara-slime-datta-ken
+
+Title: Tenshi no 3P!
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Oct 03, 2017
+Page: https://kitsu.io/anime/tenshi-no-3p
+
+Title: The iDOLM@STER Cinderella Girls
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Sep 07, 2015
+Page: https://kitsu.io/anime/the-idolm-ster-cinderella-girls
+
+Title: To LOVE-Ru
+Status: Completed
+Progress: 26
+Episodes: 26
+Page: https://kitsu.io/anime/to-love-ru
+
+Title: To LOVE-Ru Darkness
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/to-love-ru-darkness
+
+Title: To LOVE-Ru OVA
+Status: Completed
+Progress: 6
+Episodes: 6
+Page: https://kitsu.io/anime/to-love-ru-ova
+
+Title: Toaru Kagaku no Accelerator
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Sep 28, 2019
+Page: https://kitsu.io/anime/toaru-kagaku-no-accelerator
+
+Title: Toaru Kagaku no Railgun
+Status: Completed
+Progress: 24
+Episodes: 24
+Finished: Nov 28, 2016
+Page: https://kitsu.io/anime/toaru-kagaku-no-railgun
+
+Title: Toaru Kagaku no Railgun S
+Status: Completed
+Progress: 24
+Episodes: 24
+Finished: Nov 29, 2016
+Page: https://kitsu.io/anime/toaru-kagaku-no-railgun-s
+
+Title: Toaru Kagaku no Railgun T
+Status: Watching
+Progress: 12
+Episodes: 25
+Page: https://kitsu.io/anime/toaru-kagaku-no-railgun-t
+
+Title: Toaru Kagaku no Railgun: Entenka no Satsuei Model mo Raku Ja Arimasen wa ne.
+Status: Completed
+Progress: 1
+Episodes: 1
+Finished: Nov 28, 2016
+Page: https://kitsu.io/anime/toaru-kagaku-no-railgun-entenka-no-satsuei-model-mo-raku-ja-arimasen-wa-ne
+
+Title: Toaru Majutsu no Index
+Status: Completed
+Progress: 24
+Episodes: 24
+Finished: Mar 28, 2013
+Page: https://kitsu.io/anime/toaru-majutsu-no-index
+
+Title: Toaru Majutsu no Index II
+Status: Completed
+Progress: 24
+Episodes: 24
+Finished: Oct 20, 2018
+Page: https://kitsu.io/anime/toaru-majutsu-no-index-ii
+
+Title: Toaru Majutsu no Index III
+Status: Completed
+Progress: 26
+Episodes: 26
+Finished: Apr 14, 2019
+Page: https://kitsu.io/anime/toaru-majutsu-no-index-iii
+
+Title: Toji no Miko
+Status: Dropped
+Progress: 2
+Episodes: 24
+Page: https://kitsu.io/anime/toji-no-miko
+
+Title: Tokyo ESP
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/tokyo-esp
+
+Title: Tokyo Ghoul
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jan 03, 2015
+Page: https://kitsu.io/anime/tokyo-ghoul
+
+Title: Tokyo Ghoul √A
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Mar 28, 2015
+Page: https://kitsu.io/anime/tokyo-ghoul-2
+
+Title: Tokyo Ravens
+Status: Completed
+Progress: 24
+Episodes: 24
+Page: https://kitsu.io/anime/tokyo-ravens
+
+Title: Tonari no Kaibutsu-kun
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Feb 27, 2013
+Page: https://kitsu.io/anime/my-little-monster
+
+Title: Tonari no Kyuuketsuki-san
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jan 10, 2019
+Page: https://kitsu.io/anime/tonari-no-kyuuketsuki-san
+
+Title: Tonari no Seki-kun
+Status: Completed
+Progress: 21
+Episodes: 21
+Page: https://kitsu.io/anime/tonari-no-seki-kun
+
+Title: Tonari no Seki-kun OVA
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/tonari-no-seki-kun-ova
+
+Title: Tonari no Seki-kun Specials
+Status: Completed
+Progress: 2
+Episodes: 2
+Finished: Aug 17, 2014
+Page: https://kitsu.io/anime/tonari-no-seki-kun-specials
+
+Title: Toradora!
+Status: Completed
+Progress: 25
+Episodes: 25
+Page: https://kitsu.io/anime/toradora
+
+Title: Trigun
+Status: Completed
+Progress: 26
+Episodes: 26
+Finished: Sep 02, 2017
+Page: https://kitsu.io/anime/trigun
+
+Title: Trinity Seven
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Dec 26, 2014
+Page: https://kitsu.io/anime/trinity-seven
+
+Title: Trinity Seven: Yuukyuu Toshokan to Rekinjutsu Shoujo
+Status: Planned
+Progress: 0
+Episodes: 1
+Page: https://kitsu.io/anime/trinity-seven-movie-eternity-library-to-alchemic-girl
+
+Title: Tsukimonogatari
+Status: Completed
+Progress: 4
+Episodes: 4
+Finished: Dec 28, 2015
+Page: https://kitsu.io/anime/tsukimonogatari
+
+Title: Tsurezure Children
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Sep 24, 2017
+Page: https://kitsu.io/anime/tsurezure-children
+
+Title: UQ Holder!: Mahou Sensei Negima! 2
+Status: Dropped
+Progress: 2
+Episodes: 12
+Page: https://kitsu.io/anime/uq-holder
+
+Title: Uchi no Maid ga Uzasugiru!
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jan 28, 2019
+Page: https://kitsu.io/anime/uchi-no-maid-ga-uzasugiru
+
+Title: Uchi no Musume no Tame naraba, Ore wa Moshikashitara Maou mo Taoseru kamo Shirenai.
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Sep 30, 2019
+Page: https://kitsu.io/anime/uchinoko
+
+Title: Uma Musume: Pretty Derby
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Jun 17, 2018
+Page: https://kitsu.io/anime/uma-musume-pretty-derby-tv
+
+Title: Ushio to Tora (TV)
+Status: Completed
+Progress: 26
+Episodes: 26
+Finished: Mar 01, 2016
+Page: https://kitsu.io/anime/ushio-to-tora-tv
+
+Title: Ushio to Tora (TV) 2nd Season
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Jun 24, 2016
+Page: https://kitsu.io/anime/ushio-to-tora-tv-2
+
+Title: Utawarerumono
+Status: Completed
+Progress: 26
+Episodes: 26
+Finished: Jul 22, 2015
+Page: https://kitsu.io/anime/utawarerumono
+
+Title: Utawarerumono OVA
+Status: Completed
+Progress: 3
+Episodes: 3
+Finished: Jul 25, 2015
+Page: https://kitsu.io/anime/utawarerumono-ova
+
+Title: Utawarerumono Specials
+Status: Completed
+Progress: 6
+Episodes: 6
+Page: https://kitsu.io/anime/utawarerumono-specials
+
+Title: Utawarerumono: Itsuwari no Kamen
+Status: Completed
+Progress: 25
+Episodes: 25
+Finished: Mar 26, 2016
+Page: https://kitsu.io/anime/utawarerumono-itsuwari-no-kamen
+
+Title: Vinland Saga
+Status: Completed
+Progress: 24
+Episodes: 24
+Finished: Dec 29, 2019
+Page: https://kitsu.io/anime/vinland-saga
+
+Title: Violet Evergarden
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: May 21, 2018
+Page: https://kitsu.io/anime/violet-evergarden
+
+Title: Vividred Operation
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Apr 03, 2013
+Page: https://kitsu.io/anime/vividred-operation
+
+Title: Wakaba*Girl
+Status: Completed
+Progress: 13
+Episodes: 13
+Finished: Sep 26, 2015
+Page: https://kitsu.io/anime/wakaba-girl
+
+Title: Watashi ni Tenshi ga Maiorita!
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Apr 20, 2019
+Page: https://kitsu.io/anime/watashi-ni-tenshi-ga-maiorita
+
+Title: Watashi, Nouryoku wa Heikinchi de tte Itta yo ne!
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jan 05, 2020
+Page: https://kitsu.io/anime/watashi-nouryoku-wa-heikinchi-de-itta-yo-ne
+
+Title: Wizard Barristers: Benmashi Cecil
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/wizard-barristers-benmashi-cecil
+
+Title: Working!!
+Status: Planned
+Progress: 0
+Episodes: 13
+Page: https://kitsu.io/anime/working-1
+
+Title: Wotaku ni Koi wa Muzukashii
+Status: Completed
+Progress: 11
+Episodes: 11
+Finished: Jun 28, 2018
+Page: https://kitsu.io/anime/wotaku-ni-koi-wa-muzukashii
+
+Title: Yagate Kimi ni Naru
+Status: Planned
+Progress: 0
+Episodes: 13
+Page: https://kitsu.io/anime/yagate-kimi-ni-naru
+
+Title: Yakusoku no Neverland
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Mar 28, 2019
+Page: https://kitsu.io/anime/yakusoku-no-neverland
+
+Title: Yamada-kun to 7-nin no Majo (TV)
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jul 05, 2015
+Page: https://kitsu.io/anime/yamada-kun-to-7-nin-no-majo-tv
+
+Title: Yami to Boushi to Hon no Tabibito
+Status: Completed
+Progress: 13
+Episodes: 13
+Page: https://kitsu.io/anime/yami-to-boushi-to-hon-no-tabibito
+
+Title: Youjo Senki
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jun 06, 2017
+Page: https://kitsu.io/anime/youjo-senki
+
+Title: Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Oct 03, 2017
+Page: https://kitsu.io/anime/youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e-tv
+
+Title: Yozakura Quartet: Hana no Uta
+Status: Completed
+Progress: 13
+Episodes: 13
+Page: https://kitsu.io/anime/yozakura-quartet-hana-no-uta
+
+Title: Yozakura Quartet: Hoshi no Umi
+Status: Completed
+Progress: 3
+Episodes: 3
+Page: https://kitsu.io/anime/yozakura-quartet-hoshi-no-umi
+
+Title: Yozakura Quartet: Tsuki ni Naku
+Status: Completed
+Progress: 3
+Episodes: 3
+Finished: Nov 16, 2014
+Page: https://kitsu.io/anime/yozakura-quartet-tsuki-ni-naku
+
+Title: Yuru Camp△
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Apr 19, 2018
+Page: https://kitsu.io/anime/yuru-camp
+
+Title: Yuru Yuri
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Mar 15, 2013
+Page: https://kitsu.io/anime/yuru-yuri
+
+Title: Yuru Yuri San☆Hai!
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Dec 21, 2015
+Page: https://kitsu.io/anime/yuru-yuri-3
+
+Title: Yuru Yuri♪♪
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/yuru-yuri-2
+
+Title: Yuuki Yuuna wa Yuusha de Aru
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jan 04, 2015
+Page: https://kitsu.io/anime/yuuki-yuuna-wa-yuusha-de-aru
+
+Title: Yuuki Yuuna wa Yuusha de Aru: Hidamari
+Status: Completed
+Progress: 1
+Episodes: 1
+Page: https://kitsu.io/anime/yuuki-yuuna-wa-yuusha-de-aru-hidamari
+
+Title: Yuuki Yuuna wa Yuusha de Aru: Washio Sumi no Shou
+Status: Completed
+Progress: 6
+Episodes: 6
+Finished: Nov 10, 2017
+Page: https://kitsu.io/anime/yuuki-yuuna-wa-yuusha-de-aru-washio-sumi-no-shou
+
+Title: Yuuki Yuuna wa Yuusha de Aru: Yuusha no Shou
+Status: Completed
+Progress: 6
+Episodes: 6
+Finished: Jan 05, 2018
+Page: https://kitsu.io/anime/yuuki-yuuna-wa-yuusha-de-aru-yuusha-no-shou-tv
+
+Title: Yuusha ni Narenakatta Ore wa Shibushibu Shuushoku wo Ketsui Shimashita.
+Status: Dropped
+Progress: 1
+Episodes: 12
+Page: https://kitsu.io/anime/yuusha-ni-narenakatta-ore-wa-shibushibu-shuushoku-wo-ketsui-shimashita
+
+Title: Yuyushiki
+Status: Planned
+Progress: 0
+Episodes: 12
+Page: https://kitsu.io/anime/yuyushiki
+
+Title: Zankyou no Terror
+Status: Completed
+Progress: 11
+Episodes: 11
+Finished: Nov 06, 2014
+Page: https://kitsu.io/anime/zankyou-no-terror
+
+Title: Zegapain
+Status: Completed
+Progress: 26
+Episodes: 26
+Page: https://kitsu.io/anime/zegapain
+
+Title: Zero no Tsukaima
+Status: Completed
+Progress: 13
+Episodes: 13
+Page: https://kitsu.io/anime/zero-no-tsukaima
+
+Title: Zero no Tsukaima: Futatsuki no Kishi
+Status: Completed
+Progress: 12
+Episodes: 12
+Page: https://kitsu.io/anime/zero-no-tsukaima-futatsuki-no-kishi
+
+Title: Zetsuen no Tempest
+Status: Completed
+Progress: 24
+Episodes: 24
+Finished: Apr 16, 2013
+Page: https://kitsu.io/anime/zetsuen-no-tempest
+
+Title: Zettai Bouei Leviathan
+Status: Dropped
+Progress: 8
+Episodes: 13
+Page: https://kitsu.io/anime/zettai-bouei-leviathan
+
+Title: Zettai Karen Children: The Unlimited - Hyoubu Kyousuke
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Mar 26, 2013
+Page: https://kitsu.io/anime/zettai-karen-children-the-unlimited-hyoubu-kyousuke
+
+Title: Zoku Owarimonogatari
+Status: Completed
+Progress: 1
+Episodes: 1
+Finished: Jul 05, 2019
+Page: https://kitsu.io/anime/zoku-owarimonogatari
+
+Title: Zombieland Saga
+Status: Completed
+Progress: 12
+Episodes: 12
+Finished: Jan 10, 2019
+Page: https://kitsu.io/anime/zombieland-saga
+
+Title: s.CRY.ed
+Status: Completed
+Progress: 26
+Episodes: 26
+Page: https://kitsu.io/anime/scryed
