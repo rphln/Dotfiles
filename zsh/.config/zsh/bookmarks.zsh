@@ -3,9 +3,13 @@
 declare -Ag bookmarks=(
 	[pro]=~/Projects
 	[dot]=~/Dotfiles
+
 	[uni]=~/University
-	[docs]=~/Documents
-	[desk]=~/Desktop
+	[doc]=~/Documents
+	[des]=~/Desktop
+
+	[zsh]=~/Dotfiles/zsh/.config/zsh
+	[vim]=~/Dotfiles/nvim/.config/nvim
 )
 
 t() {
