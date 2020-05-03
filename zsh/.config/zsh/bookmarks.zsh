@@ -10,6 +10,8 @@ declare -Ag bookmarks=(
 
 	[zsh]=~/Dotfiles/zsh/.config/zsh
 	[vim]=~/Dotfiles/nvim/.config/nvim
+
+	[qmk]=~/Projects/qmk_firmware/keyboards/atreis/keymaps/rphln
 )
 
 t() {
