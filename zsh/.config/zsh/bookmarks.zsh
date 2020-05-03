@@ -8,12 +8,12 @@ declare -Ag bookmarks=(
 	[desk]=~/Desktop
 )
 
-j() {
+t() {
 	cd ${bookmarks[${1}]:-${1}}
 }
 
-_j() {
+_t() {
 	reply=(${(k)bookmarks})
 }
 
-compctl -K _j j
+compctl -K _t t

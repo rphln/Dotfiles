@@ -3,8 +3,6 @@ alias ll='l -l --human-readable'
 
 alias open='xdg-open &>/dev/null'
 
-alias t='touch'
-
 alias v='nvim'
 alias m='nvim +"set wrap" +Goyo'
 
