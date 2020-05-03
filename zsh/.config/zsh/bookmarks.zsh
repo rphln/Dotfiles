@@ -1,41 +1,19 @@
-# Jump around.
+# Jump around predictably.
 
--do-fzf-bookmarks() {
-	setopt localoptions pipefail
+declare -Ag bookmarks=(
+	[pro]=~/Projects
+	[dot]=~/Dotfiles
+	[uni]=~/University
+	[docs]=~/Documents
+	[desk]=~/Desktop
+)
 
-	local search_paths=(
-		~
-		~/Desktop
-		~/Documents
-		~/Dotfiles
-		~/Projects
-		~/University
-	)
-
-	local fd_opts=(
-		--absolute-path
-		--max-depth 2
-		--type directory
-	)
-
-	local fzf_opts=(
-		--cycle
-		--preview "tree -L 1 --dirsfirst -- {}"
-	)
-
-	fd . ${fd_opts[@]} ${search_paths[@]} | awk '!seen[$0]++' | fzf ${fzf_opts[@]}
+j() {
+	cd ${bookmarks[${1}]:-${1}}
 }
 
-fzf-bookmarks() {
-	local target=$(-do-fzf-bookmarks)
-
-	if [[ ! -z ${target} ]]; then
-		echo
-
-		cd "${target}"
-		zle reset-prompt
-	fi
+_j() {
+	reply=(${(k)bookmarks})
 }
 
-zle -N fzf-bookmarks
-bindkey '^T' fzf-bookmarks
+compctl -K _j j
