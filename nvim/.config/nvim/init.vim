@@ -170,9 +170,6 @@ silent! colorscheme material-monokai
 " Use `Enter` for commands.
 noremap <Return> :
 
-" Jump to the paired character.
-noremap Z %
-
 " Play the macro recorded in the `q` register. If on visual mode, do it on each line.
 nnoremap Q @q
 xnoremap Q :normal! @q<CR>
@@ -221,21 +218,12 @@ inoremap ( ()<C-g>U<Left>
 inoremap [ []<C-g>U<Left>
 inoremap { {}<C-g>U<Left>
 
-" Join the current and next line.
-inoremap <C-j> <C-o>J
-
 " Fix the last misspelled word.
 inoremap <C-l> <Esc>[S1z=``a
 
-" Reflow the current line.
-inoremap <C-y> <C-o>gq_
-
-" Kill to the end of the {line,word}.
+" Delete to the end of the {line,word}.
 inoremap <C-k> <C-o>D
 inoremap <M-d> <C-o>de
-
-" Comment the current line with `<C-/>`.
-imap <C-_> <C-o>gcc
 
 " }}}
 " Leader keys {{{
@@ -246,10 +234,8 @@ let mapleader = ' '
 " Unmap the default behaviour to avoid unexpected actions.
 noremap <Leader> <nop>
 
-" Save and quit.
-nnoremap <Leader>w :update<CR>
-nnoremap <Leader>z ZQ
-nnoremap <Leader>q ZZ
+" Write file.
+nnoremap <Leader>s :update<CR>
 
 " Fuzzy finder.
 nnoremap <Leader>f :Files<CR>
