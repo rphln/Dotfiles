@@ -1,1 +1,1 @@
-tex.vim
+setlocal filetype=tex

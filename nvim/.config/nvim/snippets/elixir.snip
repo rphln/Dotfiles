@@ -1,0 +1,51 @@
+snippet map
+  |> Enum.map(${1})${2}
+
+snippet fn
+options word
+  fn ${1} -> ${2} end
+
+snippet ins
+  |> IO.inspect()${1}
+
+snippet insl
+  |> IO.inspect(label: "${1}")${2}
+
+snippet doc
+options head
+    @doc """
+    ${1}
+    """
+
+snippet mdoc
+options head
+    @moduledoc """
+    ${1}
+    """
+
+snippet tdoc
+options head
+    @typedoc "${1}"
+
+snippet do
+  do
+    ${1}
+  end
+
+snippet def
+options head
+  def ${1} do
+    ${2}
+  end
+
+snippet defp
+options head
+  defp ${1} do
+    ${2}
+  end
+
+snippet defm
+options head
+  defmodule ${1} do
+    ${2}
+  end

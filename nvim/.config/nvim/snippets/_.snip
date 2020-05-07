@@ -1,0 +1,44 @@
+snippet me
+options word
+  `FugitiveConfigGet('user.name')` <`FugitiveConfigGet('user.email')`>
+
+snippet today
+options word
+  `strftime("%b %d, %Y")`
+
+snippet ymd
+options word
+  `strftime("%Y-%m-%d")`
+
+snippet dmy
+options word
+  `strftime("%d/%m/%Y")`
+
+snippet lorem
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non eros vitae urna posuere congue. Mauris in porta risus. Curabitur a venenatis sem. Fusce quis hendrerit tortor. Aenean varius purus sit amet arcu feugiat pharetra. Vivamus blandit, dui in accumsan molestie, massa velit congue tellus, at porta dui enim at ipsum. Donec ac blandit neque. Donec sit amet enim leo. Aenean et magna id sem mattis viverra. Proin nibh purus, ultricies ac quam et, placerat auctor neque. Vestibulum faucibus id nisl sed dapibus. Suspendisse varius molestie justo, sed pulvinar eros. Donec congue eget eros bibendum tempor. Duis vel nunc sollicitudin, semper lacus vel, euismod dui. Mauris vehicula venenatis justo nec euismod. Cras condimentum enim scelerisque, laoreet ex eu, commodo leo.
+
+snippet completed
+  Title: ${1}
+  Status: ${2:Completed}
+  Progress: ${3:0}
+  Episodes: ${4:0}
+  Finished: ${5:`strftime("%b %d, %Y")`}
+  Page: ${6}
+
+snippet watching
+  Title: ${1}
+  Status: ${2:Watching}
+  Progress: ${3:0}
+  Episodes: ${4:0}
+  Finished: ${5:today}
+  Page: ${6}
+
+snippet rule
+  "${1}": {
+      "affectedFeeds": [
+          "https://nyaa.si/?page=rss&q=[1080p]&c=1_2&f=0&u=HorribleSubs"
+      ],
+      "assignedCategory": "HorribleSubs",
+      "mustContain": "HorribleSubs ${1} 1080p",
+      "savePath": "/home/blindjoker/Videos/Watching/${1}"
+  },

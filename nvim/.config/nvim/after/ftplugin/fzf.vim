@@ -1,1 +1,0 @@
-setlocal noshowmode noruler nonumber norelativenumber
