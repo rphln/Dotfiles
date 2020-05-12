@@ -1,6 +1,6 @@
 window:
   dimensions:
-    columns: 104
+    columns: 88
     lines: 24
 
   padding:
@@ -14,7 +14,7 @@ font:
     y: 1
 
   normal:
-    family: Iosevka Term
+    family: Iosevka
 
 colors:
   primary:
