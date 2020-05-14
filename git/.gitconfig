@@ -8,9 +8,9 @@
     standup = history --since yesterday
     today = history --since midnight
 
-    do = "!exec "
+    exec = "!exec "
 
-    # Trust repositories' binaries in `bin`.
+    # See <https://twitter.com/tpope/status/165631968996900865>.
     trust = !mkdir -p .git/safe
 
 [diff]
