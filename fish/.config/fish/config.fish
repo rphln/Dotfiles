@@ -40,6 +40,10 @@ abbr gp  'git push'
 abbr gp! 'git push --force'
 abbr gpf 'git push --force-with-lease'
 
+abbr ...   '../..'
+abbr ....  '../../..'
+abbr ..... '../../../..'
+
 if type -q hub
     alias git 'hub'
 end
