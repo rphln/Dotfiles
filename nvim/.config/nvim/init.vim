@@ -84,17 +84,7 @@ syntax enable
 set background=dark
 set termguicolors
 
-let g:materialmonokai_gui_italic = v:false
-let g:materialmonokai_italic = v:false
-
-function! s:colorscheme() abort
-  highlight! link ColorColumn LineNr
-  highlight! link MatchParen Type
-endfunction
-
-autocmd vimrc Colorscheme * call <SID>colorscheme()
-
-silent! colorscheme material-monokai
+colorscheme gruvbox
 
 " }}}
 " Snippets {{{
