@@ -19,20 +19,26 @@ abbr rm 'rm --interactive'
 abbr md 'mkdir --parents'
 abbr rd 'rmdir --parents'
 
-abbr ga 'git add'
-abbr gc 'git commit --verbose'
 abbr gd 'git diff'
 abbr gl 'git pull'
 abbr gm 'git merge'
-abbr gp 'git push'
 abbr gr 'git rebase --interactive'
 abbr gs 'git status --short'
+
+abbr ga  'git add'
+abbr gap 'git add --patch'
+
+abbr gc  'git commit --verbose'
+abbr gc! 'git commit --verbose --amend --reset-author'
+
+abbr gcr 'git clone --recursive'
 
 abbr gcm 'git checkout master'
 abbr gco 'git checkout'
 
-abbr gpf 'git push --force-with-lease'
+abbr gp  'git push'
 abbr gp! 'git push --force'
+abbr gpf 'git push --force-with-lease'
 
 if type -q hub
     alias git 'hub'
