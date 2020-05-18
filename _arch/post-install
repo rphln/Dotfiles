@@ -99,18 +99,6 @@ user_opts=(
 homectl create rphln "${user_opts[@]}"
 
 # }}}
-# Pacman cache {{{
-
-env SYSTEMD_EDITOR=tee systemctl edit darkhttpd.service <<EOF
-[Service]
-ExecStart =
-ExecStart = /usr/bin/darkhttpd /var/cache/pacman/pkg --port 8086 --no-server-id
-
-User = http
-Group = http
-EOF
-
-# }}}
 # Override scaling governor {{{
 
 env SYSTEMD_EDITOR=tee systemctl edit cpupower.service <<EOF
