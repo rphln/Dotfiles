@@ -12,9 +12,9 @@ alias ll 'l -l --human-readable'
 abbr v 'nvim'
 abbr f 'fg &>/dev/null'
 
-abbr cp 'cp --interactive'
-abbr mv 'mv --interactive'
-abbr rm 'rm --interactive'
+abbr cp 'cp -i'
+abbr mv 'mv -i'
+abbr rm 'rm -I'
 
 abbr md 'mkdir --parents'
 abbr rd 'rmdir --parents'
