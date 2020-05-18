@@ -55,3 +55,7 @@ end
 function fish_prompt
     printf "%s: " (prompt_pwd)
 end
+
+function fish_title
+    printf "%s — %s" (pwd) (status current-command)
+end
