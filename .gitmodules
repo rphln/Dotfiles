@@ -34,7 +34,7 @@
 	path = _nvim/pack/rphln/start/vim-surround
 	url = git://github.com/tpope/vim-surround.git
 	shallow = true
-[submodule "_nvim/pack/rphln/start/gruvbox"]
-	path = _nvim/pack/rphln/start/gruvbox
-	url = https://github.com/morhetz/gruvbox
+[submodule "_nvim/pack/rphln/start/vim-material-monokai"]
+	path = _nvim/pack/rphln/start/vim-material-monokai
+	url = git://github.com/skielbasa/vim-material-monokai.git
 	shallow = true
