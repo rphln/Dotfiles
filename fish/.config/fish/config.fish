@@ -25,10 +25,10 @@ abbr gm 'git merge'
 abbr gr 'git rebase --interactive'
 abbr gs 'git status --short'
 
-abbr ga  'git add'
+abbr ga 'git add'
 abbr gap 'git add --patch'
 
-abbr gc  'git commit --verbose'
+abbr gc 'git commit --verbose'
 abbr gc! 'git commit --verbose --amend --reset-author'
 
 abbr gcr 'git clone --recursive'
@@ -36,12 +36,12 @@ abbr gcr 'git clone --recursive'
 abbr gcm 'git checkout master'
 abbr gco 'git checkout'
 
-abbr gp  'git push'
+abbr gp 'git push'
 abbr gp! 'git push --force'
 abbr gpf 'git push --force-with-lease'
 
-abbr ...   '../..'
-abbr ....  '../../..'
+abbr ... '../..'
+abbr .... '../../..'
 abbr ..... '../../../..'
 
 if type -q hub
