@@ -1,1 +1,1 @@
-markdown.vim
+setlocal linebreak spell wrap colorcolumn+=50
