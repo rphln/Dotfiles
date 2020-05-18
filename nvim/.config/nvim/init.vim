@@ -22,6 +22,9 @@ set shiftround
 set splitbelow
 set splitright
 
+let g:loaded_netrw = v:true
+let g:loaded_netrwPlugin = v:true
+
 " }}}
 " Search and replace {{{
 
