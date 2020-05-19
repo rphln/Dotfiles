@@ -52,10 +52,12 @@ function chpwd --on-variable PWD
     l
 end
 
+set fish_prompt_pwd_dir_length 0
+
 function fish_prompt
     printf "%s: " (prompt_pwd)
 end
 
 function fish_title
-    printf "%s — %s" (pwd) (status current-command)
+    printf "%s — %s" (prompt_pwd) (status current-command)
 end
