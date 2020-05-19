@@ -6,8 +6,7 @@ set -x VISUAL nvim
 set -a PATH ~/.local/bin/
 set -p PATH .git/safe/../../bin
 
-alias l 'ls --classify --color --group-directories-first'
-alias ll 'l -l --human-readable'
+abbr l 'ls --group-directories-first'
 
 abbr v 'nvim'
 abbr f 'fg &>/dev/null'
@@ -49,7 +48,7 @@ if type -q hub
 end
 
 function chpwd --on-variable PWD
-    l
+    ls --group-directories-first
 end
 
 set fish_prompt_pwd_dir_length 0
