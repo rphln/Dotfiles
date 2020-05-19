@@ -126,6 +126,8 @@ nnoremap <Backspace> <C-^>
 nnoremap Q @q
 xnoremap Q :normal! @q<CR>
 
+xnoremap . :normal! .<CR>
+
 nnoremap N Nzz
 nnoremap n nzz
 
@@ -134,8 +136,6 @@ nnoremap Y y$
 nnoremap gl `[v`]
 
 xnoremap gb "_dP
-
-nnoremap =% gg=G``
 
 xnoremap < <gv
 xnoremap > >gv
@@ -147,6 +147,8 @@ nnoremap <M-Down>  <C-w>j
 nnoremap <M-Left>  <C-w>h
 nnoremap <M-Right> <C-w>l
 nnoremap <M-Up>    <C-w>k
+
+onoremap A :<C-u>normal! ggVG<CR>``
 
 inoremap " ""<C-g>U<Left>
 inoremap ` ``<C-g>U<Left>
