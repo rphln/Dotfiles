@@ -1,40 +1,40 @@
 [submodule "_nvim/vim-polyglot"]
-	path = _nvim/pack/rphln/start/vim-polyglot
+	path = _nvim/pack/default/start/vim-polyglot
 	url = git://github.com/sheerun/vim-polyglot.git
 	shallow = true
 [submodule "_nvim/pack/rphln/start/neosnippet.vim"]
-	path = _nvim/pack/rphln/start/neosnippet.vim
+	path = _nvim/pack/default/start/neosnippet.vim
 	url = git://github.com/Shougo/neosnippet.vim.git
 	shallow = true
 [submodule "_nvim/pack/rphln/start/fzf.vim"]
-	path = _nvim/pack/rphln/start/fzf.vim
+	path = _nvim/pack/default/start/fzf.vim
 	url = git://github.com/junegunn/fzf.vim.git
 	shallow = true
 [submodule "_nvim/pack/rphln/start/vim-abolish"]
-	path = _nvim/pack/rphln/start/vim-abolish
+	path = _nvim/pack/default/start/vim-abolish
 	url = git://github.com/tpope/vim-abolish.git
 	shallow = true
 [submodule "_nvim/pack/rphln/start/vim-commentary"]
-	path = _nvim/pack/rphln/start/vim-commentary
+	path = _nvim/pack/default/start/vim-commentary
 	url = git://github.com/tpope/vim-commentary.git
 	shallow = true
 [submodule "_nvim/pack/rphln/start/vim-fugitive"]
-	path = _nvim/pack/rphln/start/vim-fugitive
+	path = _nvim/pack/default/start/vim-fugitive
 	url = git://github.com/tpope/vim-fugitive.git
 	shallow = true
 [submodule "_nvim/pack/rphln/start/vim-repeat"]
-	path = _nvim/pack/rphln/start/vim-repeat
+	path = _nvim/pack/default/start/vim-repeat
 	url = git://github.com/tpope/vim-repeat.git
 	shallow = true
 [submodule "_nvim/pack/rphln/start/vim-sleuth"]
-	path = _nvim/pack/rphln/start/vim-sleuth
+	path = _nvim/pack/default/start/vim-sleuth
 	url = git://github.com/tpope/vim-sleuth.git
 	shallow = true
 [submodule "_nvim/pack/rphln/start/vim-surround"]
-	path = _nvim/pack/rphln/start/vim-surround
+	path = _nvim/pack/default/start/vim-surround
 	url = git://github.com/tpope/vim-surround.git
 	shallow = true
 [submodule "_nvim/pack/rphln/start/vim-material-monokai"]
-	path = _nvim/pack/rphln/start/vim-material-monokai
+	path = _nvim/pack/default/start/vim-material-monokai
 	url = git://github.com/skielbasa/vim-material-monokai.git
 	shallow = true
