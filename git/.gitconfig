@@ -10,8 +10,5 @@
 
     exec = "!exec "
 
-    # See <https://twitter.com/tpope/status/165631968996900865>.
-    trust = !mkdir -p .git/safe
-
 [diff]
     algorithm = histogram
