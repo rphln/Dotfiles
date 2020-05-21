@@ -1,6 +1,3 @@
-shell:
-  program: fish
-
 window:
   dimensions:
     columns: 88
