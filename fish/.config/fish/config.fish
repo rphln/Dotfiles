@@ -7,7 +7,6 @@ set -x EDITOR nvim
 set -x VISUAL nvim
 
 set -a PATH ~/.local/bin/
-set -p PATH .git/safe/../../bin
 
 abbr l 'ls --group-directories-first'
 
