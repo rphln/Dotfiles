@@ -135,7 +135,7 @@ nnoremap Y y$
 
 nnoremap gl `[v`]
 
-xnoremap gb "_dP
+xnoremap gb "_dp
 
 xnoremap < <gv
 xnoremap > >gv
