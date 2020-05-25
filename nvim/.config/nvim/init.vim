@@ -142,14 +142,6 @@ xnoremap gb "_dp
 xnoremap < <gv
 xnoremap > >gv
 
-nnoremap <M-a>s <C-w>s
-nnoremap <M-a>v <C-w>v
-
-nnoremap <M-Down>  <C-w>j
-nnoremap <M-Left>  <C-w>h
-nnoremap <M-Right> <C-w>l
-nnoremap <M-Up>    <C-w>k
-
 onoremap A :<C-u>normal! ggVG<CR>``
 
 inoremap " ""<C-g>U<Left>
@@ -171,6 +163,17 @@ nnoremap <Leader>r :Rg<CR>
 imap <C-e> <Plug>(neosnippet_expand_or_jump)
 smap <C-e> <Plug>(neosnippet_expand_or_jump)
 xmap <C-e> <Plug>(neosnippet_expand_target)
+
+" }}}
+" Split management {{{
+
+nnoremap <M-a>s <C-w>s
+nnoremap <M-a>v <C-w>v
+
+nnoremap <M-Down>  <C-w>j
+nnoremap <M-Left>  <C-w>h
+nnoremap <M-Right> <C-w>l
+nnoremap <M-Up>    <C-w>k
 
 " }}}
 
