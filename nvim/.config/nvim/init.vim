@@ -28,9 +28,6 @@ let g:loaded_netrwPlugin = v:true
 " }}}
 " Search and replace {{{
 
-set ignorecase
-set smartcase
-
 set inccommand=nosplit
 set incsearch
 
