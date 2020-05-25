@@ -25,6 +25,11 @@ set splitright
 let g:loaded_netrw = v:true
 let g:loaded_netrwPlugin = v:true
 
+let g:hardtime_allow_different_key = v:true
+let g:hardtime_default_on = v:true
+
+let g:list_of_insert_keys = ["<Backspace>", "<Up>", "<Down>", "<Left>", "<Right>"]
+
 " }}}
 " Search and replace {{{
 
