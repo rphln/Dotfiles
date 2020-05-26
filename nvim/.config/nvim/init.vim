@@ -130,6 +130,9 @@ xnoremap Q :normal! @q<CR>
 
 xnoremap . :normal! .<CR>
 
+nnoremap g/ /\c
+nnoremap g? ?\c
+
 nnoremap N Nzz
 nnoremap n nzz
 
