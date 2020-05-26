@@ -63,21 +63,20 @@ set showbreak=↪
 " }}}
 " Appearance {{{
 
+set title
+let &titlestring = "%t — nvim"
+
 set laststatus=0
+set noruler
 
 set list
-let &listchars = "tab:┆ ,trail:•,extends:»,precedes:«,nbsp:‡"
-
-set noruler
+let &listchars = "tab:┆ ,trail:•,nbsp:‡,extends:»,precedes:«"
 
 set number
 set relativenumber
 
 set scrolloff=5
 set sidescrolloff=5
-
-set title
-let &titlestring = "%t — nvim"
 
 let &fillchars = "fold: ,eob: "
 
