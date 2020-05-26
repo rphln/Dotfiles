@@ -138,7 +138,7 @@ nnoremap n nzz
 
 nnoremap Y y$
 
-nnoremap gl `[v`]
+nnoremap gl `[V`]
 
 nnoremap gs :%s/\<<C-r><C-w>\>/
 nnoremap gS :'[,']s/\<<C-r><C-w>\>/
