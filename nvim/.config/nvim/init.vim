@@ -110,10 +110,10 @@ let g:neosnippet#snippets_directory = "~/.config/nvim/snippets/"
 " }}}
 " Fuzzy finder {{{
 
-let $FZF_DEFAULT_COMMAND = 'fd --type f --follow --hidden --exclude .git'
-let $FZF_DEFAULT_OPTS = '--color bw --preview "cat {}"'
+let $FZF_DEFAULT_COMMAND = 'fd --type f --hidden --exclude .git'
+let $FZF_DEFAULT_OPTS = '--color bw'
 
-let g:fzf_layout = {'window': {'width': 0.8, 'height': 0.8}}
+let g:fzf_layout = {'window': {'width': 0.6, 'height': 0.8}}
 
 " }}}
 " Mappings {{{
