@@ -48,14 +48,16 @@ autocmd vimrc BufWinEnter * if ! empty(glob("%:p")) | silent! loadview | endif
 autocmd vimrc BufWinLeave * if ! empty(glob("%:p")) | silent! mkview   | endif
 
 " }}}
-" Line length {{{
+" Line wrapping {{{
 
-set colorcolumn+=+1
-set textwidth=80
-
-set linebreak
 set nowrap
 
+set textwidth=80
+set colorcolumn+=+1
+
+set linebreak
+
+set breakindent
 set showbreak=↪
 
 " }}}
