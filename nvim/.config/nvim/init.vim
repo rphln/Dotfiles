@@ -186,6 +186,9 @@ inoremap { {}<C-g>U<Left>
 " }}}
 " Readline {{{
 
+inoremap <C-a> <C-o>^
+inoremap <C-e> <C-o>$
+
 inoremap <C-k> <C-o>D
 inoremap <M-d> <C-o>de
 
