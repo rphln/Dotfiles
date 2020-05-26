@@ -15,8 +15,6 @@ set clipboard+=unnamedplus
 
 set lazyredraw
 
-set mouse=nvi
-
 set shiftround
 
 set splitbelow
