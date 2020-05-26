@@ -75,8 +75,8 @@ let &listchars = "tab:┆ ,trail:•,nbsp:‡,extends:»,precedes:«"
 set number
 set relativenumber
 
-set scrolloff=5
-set sidescrolloff=5
+set scrolloff=8
+set sidescrolloff=8
 
 let &fillchars = "fold: ,eob: "
 
