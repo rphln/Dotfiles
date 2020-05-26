@@ -148,6 +148,8 @@ xnoremap gb "_dp
 xnoremap < <gv
 xnoremap > >gv
 
+onoremap A :<C-u>normal! ggVG<CR>``
+
 xnoremap <Leader>c :!column -t -o ' '<CR>
 
 nnoremap <Leader>f :Files<CR>
