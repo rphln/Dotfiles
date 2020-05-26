@@ -147,8 +147,6 @@ xnoremap gb "_dp
 xnoremap < <gv
 xnoremap > >gv
 
-onoremap A :<C-u>normal! ggVG<CR>``
-
 inoremap " ""<C-g>U<Left>
 inoremap ` ``<C-g>U<Left>
 inoremap ( ()<C-g>U<Left>
