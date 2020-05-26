@@ -115,6 +115,7 @@ let $FZF_DEFAULT_OPTS = '--color bw'
 let g:fzf_layout = {'window': {'width': 0.6, 'height': 0.8}}
 
 " }}}
+
 " Mappings {{{
 
 let mapleader = ' '
@@ -147,17 +148,6 @@ xnoremap gb "_dp
 xnoremap < <gv
 xnoremap > >gv
 
-inoremap " ""<C-g>U<Left>
-inoremap ` ``<C-g>U<Left>
-inoremap ( ()<C-g>U<Left>
-inoremap [ []<C-g>U<Left>
-inoremap { {}<C-g>U<Left>
-
-inoremap <C-l> <Esc>[S1z=``a
-
-inoremap <C-k> <C-o>D
-inoremap <M-d> <C-o>de
-
 xnoremap <Leader>c :!column -t -o ' '<CR>
 
 nnoremap <Leader>f :Files<CR>
@@ -177,6 +167,27 @@ nnoremap <M-Down>  <C-w>j
 nnoremap <M-Left>  <C-w>h
 nnoremap <M-Right> <C-w>l
 nnoremap <M-Up>    <C-w>k
+
+" }}}
+" Insert {{{
+
+inoremap <C-l> <Esc>[S1z=``a
+
+" }}}
+" Character pairs {{{
+
+inoremap " ""<C-g>U<Left>
+inoremap ` ``<C-g>U<Left>
+
+inoremap ( ()<C-g>U<Left>
+inoremap [ []<C-g>U<Left>
+inoremap { {}<C-g>U<Left>
+
+" }}}
+" Readline {{{
+
+inoremap <C-k> <C-o>D
+inoremap <M-d> <C-o>de
 
 " }}}
 
