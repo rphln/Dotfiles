@@ -163,9 +163,9 @@ xnoremap <Leader>c :!column -t -o ' '<CR>
 nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>r :Rg<CR>
 
-imap <C-e> <Plug>(neosnippet_expand_or_jump)
-smap <C-e> <Plug>(neosnippet_expand_or_jump)
-xmap <C-e> <Plug>(neosnippet_expand_target)
+imap <C-t> <Plug>(neosnippet_expand_or_jump)
+smap <C-t> <Plug>(neosnippet_expand_or_jump)
+xmap <C-t> <Plug>(neosnippet_expand_target)
 
 " }}}
 " Split management {{{
