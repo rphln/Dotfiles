@@ -137,6 +137,9 @@ nnoremap Y y$
 
 nnoremap gl `[v`]
 
+nnoremap gs :%s/\<<C-r><C-w>\>/
+nnoremap gS :'[,']s/\<<C-r><C-w>\>/
+
 xnoremap gb "_dp
 
 xnoremap < <gv
