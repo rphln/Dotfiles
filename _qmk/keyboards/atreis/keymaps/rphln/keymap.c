@@ -89,17 +89,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-  if (keycode < SAFE_RANGE)
-    return true;
+  if (record->event.pressed) {
+    if (keycode == KC_INTO)
+      SEND_STRING("\n|> ");
 
-  if (record->event.pressed)
-    return false;
+    if (keycode == KC_OOMK)
+      SEND_STRING(SS_LALT(SS_DOWN(X_PSCR) SS_TAP(X_F) SS_UP(X_PSCR)));
+  }
 
-  if (keycode == KC_INTO)
-    SEND_STRING("\n|> ");
-
-  if (keycode == KC_OOMK)
-    SEND_STRING(SS_LALT(SS_DOWN(X_PSCR) SS_TAP(X_F) SS_UP(X_PSCR)));
-
-  return false;
+  return true;
 };
