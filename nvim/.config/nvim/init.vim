@@ -1,4 +1,4 @@
-" Setup {{{
+" Section: Setup
 
 augroup vimrc
   autocmd!
@@ -7,8 +7,7 @@ augroup end
 
 set packpath^=~/Dotfiles/_nvim/
 
-" }}}
-" General {{{
+" Section: General
 
 set clipboard+=unnamed
 set clipboard+=unnamedplus
@@ -20,26 +19,31 @@ set shiftround
 set splitbelow
 set splitright
 
+set undofile
+
 let g:loaded_netrw = v:true
 let g:loaded_netrwPlugin = v:true
+
+" Section: Hard time
 
 let g:hardtime_allow_different_key = v:true
 let g:hardtime_default_on = v:true
 
 let g:list_of_insert_keys = ["<Backspace>", "<Up>", "<Down>", "<Left>", "<Right>"]
 
-" }}}
-" Search and replace {{{
+" Section: Snippets
+
+let g:neosnippet#disable_runtime_snippets = {'_' : v:true}
+let g:neosnippet#snippets_directory = "~/.config/nvim/snippets/"
+
+" Section: Search and replace
 
 set inccommand=nosplit
 set incsearch
 
 set nohlsearch
 
-" }}}
-" Views and undo {{{
-
-set undofile
+" Section: Views
 
 set viewoptions-=curdir
 set viewoptions-=options
@@ -47,21 +51,19 @@ set viewoptions-=options
 autocmd vimrc BufWinEnter * if ! empty(glob("%:p")) | silent! loadview | endif
 autocmd vimrc BufWinLeave * if ! empty(glob("%:p")) | silent! mkview   | endif
 
-" }}}
-" Line wrapping {{{
+" Section: Line wrapping
 
 set nowrap
-
-set textwidth=80
-set colorcolumn+=+1
-
-set linebreak
 
 set breakindent
 set showbreak=↪
 
-" }}}
-" Appearance {{{
+set colorcolumn+=+1
+set textwidth=80
+
+set linebreak
+
+" Section: Appearance
 
 set title
 let &titlestring = "%t — nvim"
@@ -80,8 +82,7 @@ set sidescrolloff=8
 
 let &fillchars = "fold: ,eob: "
 
-" }}}
-" Color scheme {{{
+" Section: Color scheme
 
 syntax enable
 
@@ -98,25 +99,16 @@ endfunction
 
 autocmd vimrc Colorscheme * call <SID>colorscheme()
 
-silent! colorscheme material-monokai
+colorscheme material-monokai
 
-" }}}
-" Snippets {{{
-
-let g:neosnippet#disable_runtime_snippets = {'_' : v:true}
-let g:neosnippet#snippets_directory = "~/.config/nvim/snippets/"
-
-" }}}
-" Fuzzy finder {{{
+" Section: Fuzzy finder
 
 let $FZF_DEFAULT_COMMAND = 'fd --type f --hidden --exclude .git'
 let $FZF_DEFAULT_OPTS = '--color bw'
 
 let g:fzf_layout = {'window': {'width': 0.6, 'height': 0.8}}
 
-" }}}
-
-" Mappings {{{
+" Section: Mappings
 
 let mapleader = ' '
 
@@ -127,8 +119,6 @@ nnoremap <Backspace> <C-^>
 
 nnoremap Q @q
 xnoremap Q :normal! @q<CR>
-
-xnoremap . :normal! .<CR>
 
 nnoremap g/ /\c
 nnoremap g? ?\c
@@ -148,52 +138,43 @@ xnoremap gb "_dp
 xnoremap < <gv
 xnoremap > >gv
 
-onoremap A :<C-u>normal! ggVG<CR>``
+onoremap A <Cmd>normal! ggVG<CR>``
+
+inoremap <C-l> <Esc>[S1z=``a
+
+" Section: Leader mappings
 
 xnoremap <Leader>c :!column -t -o ' '<CR>
 
 nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>r :Rg<CR>
 
-imap <C-t> <Plug>(neosnippet_expand_or_jump)
-smap <C-t> <Plug>(neosnippet_expand_or_jump)
-xmap <C-t> <Plug>(neosnippet_expand_target)
-
-" }}}
-" Split management {{{
-
-nnoremap <M-a>s <C-w>s
-nnoremap <M-a>v <C-w>v
-
-nnoremap <M-Down>  <C-w>j
-nnoremap <M-Left>  <C-w>h
-nnoremap <M-Right> <C-w>l
-nnoremap <M-Up>    <C-w>k
-
-" }}}
-" Insert {{{
-
-inoremap <C-l> <Esc>[S1z=``a
-
-" }}}
-" Character pairs {{{
-
-inoremap " ""<C-g>U<Left>
-inoremap ` ``<C-g>U<Left>
-
-inoremap ( ()<C-g>U<Left>
-inoremap [ []<C-g>U<Left>
-inoremap { {}<C-g>U<Left>
-
-" }}}
-" Readline {{{
+" Section: Readline
 
 inoremap <C-a> <C-o>^
 inoremap <C-e> <C-o>$
 
+inoremap <C-b> <C-g>U<Left>
+inoremap <C-f> <C-g>U<Right>
+
 inoremap <C-k> <C-o>D
 inoremap <M-d> <C-o>de
 
-" }}}
+" Section: Character pairs
 
-" vim: set ts=2 sw=2 et fdm=marker:
+inoremap " ""<C-g>U<Left>
+inoremap ( ()<C-g>U<Left>
+inoremap [ []<C-g>U<Left>
+inoremap ` ``<C-g>U<Left>
+inoremap { {}<C-g>U<Left>
+
+let g:surround_{char2nr('[')} = "[\n\t\r\n]"
+let g:surround_{char2nr('{')} = "{\n\t\r\n}"
+
+" Section: Snippets
+
+imap <C-t> <Plug>(neosnippet_expand_or_jump)
+smap <C-t> <Plug>(neosnippet_expand_or_jump)
+xmap <C-t> <Plug>(neosnippet_expand_target)
+
+" vim: set ts=2 sw=2 et:
