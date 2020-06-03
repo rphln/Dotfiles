@@ -72,7 +72,7 @@ set laststatus=0
 set noruler
 
 set list
-let &listchars = "tab:┆ ,trail:•,nbsp:‡,extends:»,precedes:«"
+let &listchars = "tab:┆ ,trail:␣,nbsp:·,extends:»,precedes:«"
 
 set number
 set relativenumber
