@@ -13,6 +13,6 @@ qmk: $(QMK)
 	-stow --no-folding --target $(QMK) --stow _qmk
 
 $(QMK):
-	git clone --recursive https://github.com/qmk/qmk_firmware.git $(QMK)
+	qmk setup --yes --home $(QMK)
 
 .PHONY: $(PACKAGES) packages qmk
