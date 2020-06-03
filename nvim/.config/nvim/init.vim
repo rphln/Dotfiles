@@ -177,4 +177,24 @@ imap <C-t> <Plug>(neosnippet_expand_or_jump)
 smap <C-t> <Plug>(neosnippet_expand_or_jump)
 xmap <C-t> <Plug>(neosnippet_expand_target)
 
+" Section: Future
+
+if has('nvim-0.5')
+  packadd! nvim-lsp
+
+  lua lsp = require('nvim_lsp')
+
+  call v:lua.lsp.elixirls.setup({})
+  call v:lua.lsp.pyls.setup({})
+
+  function! s:lsp() abort
+    setlocal omnifunc=v:lua.vim.lsp.omnifunc
+
+    nnoremap <buffer> K <Cmd>call v:lua.vim.lsp.buf.hover()<CR>
+    nnoremap <buffer> gd <Cmd>call v:lua.vim.lsp.buf.definition()<CR>
+  endfunction
+
+  autocmd FileType python,elixir call <SID>lsp()
+endif
+
 " vim: set ts=2 sw=2 et:
