@@ -19,8 +19,6 @@ set shiftround
 set splitbelow
 set splitright
 
-set undofile
-
 let g:loaded_netrw = v:true
 let g:loaded_netrwPlugin = v:true
 
@@ -43,7 +41,9 @@ set incsearch
 
 set nohlsearch
 
-" Section: Views
+" Section: Views and undo
+
+set undofile
 
 set viewoptions-=curdir
 set viewoptions-=options
