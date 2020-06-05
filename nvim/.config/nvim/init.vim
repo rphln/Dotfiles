@@ -138,8 +138,6 @@ xnoremap gb "_dp
 xnoremap < <gv
 xnoremap > >gv
 
-onoremap A <Cmd>normal! ggVG<CR>``
-
 inoremap <C-l> <Esc>[S1z=``a
 
 " Section: Completion
