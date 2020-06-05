@@ -41,6 +41,13 @@ set incsearch
 
 set nohlsearch
 
+" Section: Completion
+
+set completeopt+=menuone
+set completeopt-=preview
+
+let g:float_preview#docked = v:false
+
 " Section: Views and undo
 
 set undofile
