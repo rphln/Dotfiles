@@ -149,6 +149,14 @@ onoremap A <Cmd>normal! ggVG<CR>``
 
 inoremap <C-l> <Esc>[S1z=``a
 
+" Section: Completion
+
+inoremap <expr> <Tab>   complete#tab(v:false)
+inoremap <expr> <S-Tab> complete#tab(v:true)
+
+inoremap <expr> <C-n> complete#next(v:false)
+inoremap <expr> <C-p> complete#next(v:true)
+
 " Section: Leader mappings
 
 xnoremap <Leader>c :!column -t -o ' '<CR>
