@@ -179,7 +179,6 @@ inoremap <C-e> <C-o>$
 inoremap <C-b> <C-g>U<Left>
 inoremap <C-f> <C-g>U<Right>
 
-inoremap <C-k> <C-o>D
 inoremap <M-d> <C-o>de
 
 " Section: Character pairs
@@ -195,9 +194,9 @@ let g:surround_{char2nr('{')} = "{\n\t\r\n}"
 
 " Section: Snippets
 
-imap <C-t> <Plug>(neosnippet_expand_or_jump)
-smap <C-t> <Plug>(neosnippet_expand_or_jump)
-xmap <C-t> <Plug>(neosnippet_expand_target)
+imap <C-k> <Plug>(neosnippet_expand_or_jump)
+smap <C-k> <Plug>(neosnippet_expand_or_jump)
+xmap <C-k> <Plug>(neosnippet_expand_target)
 
 " Section: Future
 
