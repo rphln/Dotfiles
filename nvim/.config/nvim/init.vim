@@ -29,6 +29,9 @@ let g:neosnippet#snippets_directory = "~/.config/nvim/snippets/"
 
 " Section: Search and replace
 
+set ignorecase
+set smartcase
+
 set inccommand=nosplit
 set incsearch
 
@@ -120,9 +123,6 @@ nnoremap <Backspace> <C-^>
 nnoremap Q @q
 xnoremap Q :normal! @q<CR>
 
-nnoremap g/ /\c
-nnoremap g? ?\c
-
 nnoremap N Nzz
 nnoremap n nzz
 
@@ -130,8 +130,7 @@ nnoremap Y y$
 
 nnoremap gl `[V`]
 
-nnoremap gs :%s/\<<C-r><C-w>\>/
-nnoremap gS :'[,']s/\<<C-r><C-w>\>/
+nnoremap gs :%s/\C\<<C-r><C-w>\>/
 
 xnoremap gb "_dp
 
