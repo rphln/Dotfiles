@@ -10,11 +10,8 @@ window:
 font:
   size: 18
 
-  offset:
-    y: 1
-
   normal:
-    family: Iosevka Fixed
+    family: IBM Plex Mono
 
 colors:
   primary:
