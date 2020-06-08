@@ -115,8 +115,8 @@ let g:fzf_layout = {'window': {'width': 0.6, 'height': 0.8}}
 
 let mapleader = ' '
 
-noremap <Leader> <Nop>
-noremap <Return> :
+noremap : ;
+noremap ; :
 
 nnoremap <Backspace> <C-^>
 
@@ -136,6 +136,14 @@ xnoremap gb "_dp
 
 xnoremap < <gv
 xnoremap > >gv
+
+" Section: Insert mappings
+
+inoremap jk <Esc>
+inoremap kj <Esc>
+
+cnoremap jk <C-c>
+cnoremap kj <C-c>
 
 inoremap <C-l> <Esc>[S1z=``a
 
