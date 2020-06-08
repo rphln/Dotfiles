@@ -211,8 +211,15 @@ if has('nvim-0.5')
   function! s:lsp() abort
     setlocal omnifunc=v:lua.vim.lsp.omnifunc
 
-    nnoremap <buffer> K <Cmd>call v:lua.vim.lsp.buf.hover()<CR>
+    nnoremap <buffer> <Leader>lc <Cmd>call v:lua.vim.lsp.buf.code_action()<CR>
+    nnoremap <buffer> <Leader>lf  <Cmd>call v:lua.vim.lsp.buf.formatting()<CR>
+    nnoremap <buffer> <Leader>lr <Cmd>call v:lua.vim.lsp.buf.rename()<CR>
+
+    nnoremap <buffer> K  <Cmd>call v:lua.vim.lsp.buf.hover()<CR>
     nnoremap <buffer> gd <Cmd>call v:lua.vim.lsp.buf.definition()<CR>
+    nnoremap <buffer> gi <Cmd>call v:lua.vim.lsp.buf.implementation()<CR>
+    nnoremap <buffer> gr <Cmd>call v:lua.vim.lsp.buf.references()<CR>
+    nnoremap <buffer> gs <Cmd>call v:lua.vim.lsp.buf.workspace_symbol()<CR>
   endfunction
 
   autocmd FileType python,elixir call <SID>lsp()
