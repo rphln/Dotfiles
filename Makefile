@@ -1,5 +1,5 @@
 # Stow packages installable with `make <target>`.
-PACKAGES := alacritty fish git mpv nvim quodlibet termux tmux x
+PACKAGES := alacritty fish git mpv nvim quodlibet termux tmux
 
 # QMK tree target.
 QMK ?= $(HOME)/Projects/qmk_firmware
