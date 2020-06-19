@@ -3,7 +3,7 @@
     email = 58113327+rphln@users.noreply.github.com
 
 [alias]
-    history = log --reverse --pretty=format:'%Cred(%h) %Creset%s %Cgreen(%ar) %Cblue<%an>'
+    history = log --pretty=format:'%Cred(%h) %Creset%s %Cgreen(%ar) %Cblue<%an>'
 
     standup = history --since yesterday
     today = history --since midnight
