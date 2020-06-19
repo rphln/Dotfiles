@@ -8,7 +8,7 @@ window:
     y: 18
 
 font:
-  size: 18
+  size: 16
 
   offset:
     y: 1
