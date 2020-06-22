@@ -139,12 +139,6 @@ xnoremap > >gv
 
 " Section: Insert mappings
 
-inoremap jk <Esc>
-inoremap kj <Esc>
-
-cnoremap jk <C-c>
-cnoremap kj <C-c>
-
 inoremap <C-l> <Esc>[S1z=``a
 
 " Section: Completion
