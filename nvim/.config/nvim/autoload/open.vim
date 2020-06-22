@@ -3,7 +3,7 @@ if ! exists('g:open#command')
 end
 
 if ! exists('g:open#github')
-  let g:open#github = 'https://github.com/%s'
+  let g:open#github = 'https://github.com/search?q=%s'
 end
 
 if ! exists('g:open#search')
@@ -15,7 +15,7 @@ function! open#uri(visual) abort
 endfunction
 
 function! open#github(visual) abort
-  call s:open(printf(g:open#github, s:get_target(a:visual)))
+  call s:open(printf(g:open#github, s:url_escape(s:get_target(a:visual))))
 endfunction
 
 function! open#search(visual) abort
