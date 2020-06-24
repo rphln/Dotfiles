@@ -159,13 +159,13 @@ nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>r :Rg<CR>
 
 nnoremap <Leader>gh :call open#github(v:false)<CR>
-vnoremap <Leader>gh :call open#github(v:true)<CR>
+xnoremap <Leader>gh :call open#github(v:true)<CR>
 
 nnoremap <Leader>go :call open#uri(v:false)<CR>
-vnoremap <Leader>go :call open#uri(v:true)<CR>
+xnoremap <Leader>go :call open#uri(v:true)<CR>
 
 nnoremap <Leader>gs :call open#search(v:false)<CR>
-vnoremap <Leader>gs :call open#search(v:true)<CR>
+xnoremap <Leader>gs :call open#search(v:true)<CR>
 
 " Section: Readline
 
