@@ -13,7 +13,7 @@ function! complete#next(reverse) abort
 endfunction
 
 function! complete#tab(reverse) abort
-  if s:getchar() =~ '\S'
+  if s:getchar() =~ '\k'
     return complete#next(a:reverse)
   else
     return "\<Tab>"
