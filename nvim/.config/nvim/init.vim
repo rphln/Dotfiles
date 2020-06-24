@@ -22,6 +22,8 @@ set splitright
 let g:loaded_netrw = v:true
 let g:loaded_netrwPlugin = v:true
 
+autocmd vimrc BufWritePre * if ! &binary | call trim#all() | endif
+
 " Section: Snippets
 
 let g:neosnippet#disable_runtime_snippets = {'_' : v:true}
