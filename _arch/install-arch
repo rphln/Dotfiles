@@ -100,23 +100,24 @@ append() {
 	fi
 }
 
-append "en_US.UTF-8 UTF-8" /etc/locale.gen
-append "pt_BR.UTF-8 UTF-8" /etc/locale.gen
+append "en_GB.UTF-8 UTF-8" /mnt/etc/locale.gen
+append "en_US.UTF-8 UTF-8" /mnt/etc/locale.gen
+append "pt_BR.UTF-8 UTF-8" /mnt/etc/locale.gen
 
-locale-gen
+arch-chroot /mnt locale-gen
 
 # Section: Post installation
 
-systemd-nspawn --directory /mnt systemd-firstboot --prompt
+arch-chroot /mnt systemd-firstboot --prompt
 
 # Section: Snapper
 
-systemd-nspawn --directory /mnt snapper -c root create-config /
+arch-chroot /mnt snapper -c root create-config /
 
-systemd-nspawn --directory /mnt systemctl enable --now snapper-timeline.timer
-systemd-nspawn --directory /mnt systemctl enable --now snapper-cleanup.timer
+arch-chroot /mnt systemctl enable snapper-timeline.timer
+arch-chroot /mnt systemctl enable snapper-cleanup.timer
 
-systemd-nspawn --directory /mnt snapper -c root create --description Base
+arch-chroot /mnt snapper -c root create --description Installed
 
 # Section: Packages
 
@@ -158,12 +159,12 @@ deps=(
 	xclip
 )
 
-systemd-nspawn --directory /mnt pacman -S --needed --noconfirm ${packages[@]}
-systemd-nspawn --directory /mnt pacman -S --needed --asdeps --noconfirm ${deps[@]}
+arch-chroot /mnt pacman -S --needed --noconfirm ${packages[@]}
+arch-chroot /mnt pacman -S --needed --asdeps --noconfirm ${deps[@]}
 
 # Section: Display manager
 
-systemd-nspawn --directory /mnt systemctl enable --now sddm
+arch-chroot /mnt systemctl enable sddm
 
 # Section: Boot
 
