@@ -109,9 +109,24 @@ colorscheme material-monokai
 " Section: Fuzzy finder
 
 let $FZF_DEFAULT_COMMAND = 'fd --type f --hidden --exclude .git'
-let $FZF_DEFAULT_OPTS = '--color bw'
 
 let g:fzf_layout = {'window': {'width': 0.6, 'height': 0.8}}
+
+let g:fzf_colors = {
+      \ 'fg':      ['fg', 'Normal'],
+      \ 'bg':      ['bg', 'Normal'],
+      \ 'hl':      ['fg', 'Comment'],
+      \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+      \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+      \ 'hl+':     ['fg', 'Statement'],
+      \ 'border':  ['fg', 'Comment'],
+      \ 'info':    ['fg', 'PreProc'],
+      \ 'prompt':  ['fg', 'Conditional'],
+      \ 'pointer': ['fg', 'Exception'],
+      \ 'marker':  ['fg', 'Keyword'],
+      \ 'spinner': ['fg', 'Label'],
+      \ 'header':  ['fg', 'Comment'],
+      \ }
 
 " Section: Mappings
 
