@@ -45,11 +45,11 @@ colors:
     white: "#ffffff"
 
 key_bindings:
-  - { key: Q, mods: Control, action: Quit }
+  - { key: C, mods: Alt, action: Copy }
+  - { key: V, mods: Alt, action: Paste }
 
-  # Open new window in the current directory.
-  - { key: N, mods: Control | Shift, action: SpawnNewInstance }
+  - { key: N, mods: Alt, action: SpawnNewInstance }
+  - { key: Q, mods: Alt, action: Quit }
 
-  # Kill {previous,next} word.
   - { key: Back, mods: Control, chars: "" }
   - { key: Delete, mods: Control, chars: "d" }
