@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-# This script can be executed with `bash <(curl -sL https://raw.githubusercontent.com/rphln/Dotfiles/master/_arch/install-arch)`.
-
 set -euxo pipefail
 
 die() {
@@ -9,74 +7,73 @@ die() {
 	exit 1
 }
 
-# Warning
-
-cat <<EOF
-Remember that some preferences should be changed directly in the script source!
-
-   1. The system is using UEFI;
-   2. The system has a disk with at least 40GiB (ish);
-   3. The locale is en-GB;
-   4. The timezone is America/São Paulo.
-   5. The user credentials (except for the password) are also hardcoded.
-
-EOF
-
-# Disk setup prompt.
-
-echo "Listing available disks..."
-lsblk -p -o name,size
-echo
-
-read -rp "Select the installation device: " device
-: "${device:?'Disk not specified!'}"
-
-# Choose mirrors
+# Section: Mirrors
 
 pacman -Sy --noconfirm pacman-contrib
 
-echo "Updating mirror list..."
+echo 'Updating mirror list...'
 
-curl -s "https://www.archlinux.org/mirrorlist/?country=BR&use_mirror_status=on" |
-	sed -e 's/^#Server/Server/' -e '/^#/d' |
-	rankmirrors -n 5 - >/etc/pacman.d/mirrorlist
+if [[ ! -f /tmp/mirrorlist ]]; then
+	sed -e 's/^#Server/Server/' -e '/^#/d' <(curl -sL 'https://archlinux.org/mirrorlist/?country=BR&use_mirror_status=on') >/tmp/mirrorlist
+fi
 
-# Partitions {{{
+rankmirrors /tmp/mirrorlist | tee /etc/pacman.d/mirrorlist
+
+# Section: Disk prompt
+
+echo 'Listing available disks...'
+lsblk -p -o name,size
+echo
+
+read -rp 'Select the installation device: ' device
+
+if [[ -z "${device}" ]]; then
+	die 'Disk not specified!'
+fi
+
+# Section: Partitions
 
 parted -s "${device}" -- mklabel gpt
 
-parted -s "${device}" -- mkpart ESP fat32 1MiB 512MiB          # 1 = /boot
-parted -s "${device}" -- mkpart primary ext4 512MiB 40GiB      # 2 = /
-parted -s "${device}" -- mkpart primary linux-swap 40GiB 52GiB # 3 = swap
-parted -s "${device}" -- mkpart primary ext4 52GiB 100%        # 4 = /home
+parted -s "${device}" -- mkpart ESP fat32 1MiB 1GiB           # 1 = boot
+parted -s "${device}" -- mkpart primary linux-swap 1GiB 17GiB # 2 = swap
+parted -s "${device}" -- mkpart primary btrfs 17GiB 100%      # 3 = root
 
 parted -s "${device}" -- set 1 boot on
 
 part_boot="${device}1"
-part_root="${device}2"
-part_swap="${device}3"
-part_home="${device}4"
+part_root="${device}3"
+part_swap="${device}2"
 
-mkswap "${part_swap}"
-swapon "${part_swap}"
+mkswap -L "Swap" "${part_swap}"
+swapon -L "Swap"
 
-mkfs.fat -F32 "${part_boot}"
+mkfs.fat -n "Boot" -F32 "${part_boot}"
+mkfs.btrfs -L "Arch" "${part_root}"
 
-mkfs.ext4 -L "Arch" "${part_root}"
-mkfs.ext4 -L "Home" "${part_home}"
+# Section: Butter
 
-mount "${part_root}" /mnt
+mount -o x-mount.mkdir "${part_root}" /mnt
 
-mkdir -p /mnt/boot && mount "${part_boot}" /mnt/boot
-mkdir -p /mnt/home && mount "${part_home}" /mnt/home
+btrfs subvolume create /mnt/@
+btrfs subvolume create /mnt/@home
+btrfs subvolume create /mnt/@pkg
+btrfs subvolume create /mnt/@var
 
-# }}}
-# Bootstrap {{{
+umount /mnt
 
-pacstrap /mnt base base-devel
+mount -o x-mount.mkdir,compress=zstd,subvol=@ "${part_root}" /mnt
+mount -o x-mount.mkdir,compress=zstd,subvol=@home "${part_root}" /mnt/home
+mount -o x-mount.mkdir,compress=zstd,subvol=@var "${part_root}" /mnt/var
+mount -o x-mount.mkdir,compress=zstd,subvol=@pkg "${part_root}" /mnt/var/cache/pacman/pkg
 
-# }}}
-# Bootloader {{{
+mount -o x-mount.mkdir "${part_boot}" /mnt/boot
+
+# Section: Bootstrap
+
+pacstrap /mnt linux base base-devel snapper pacman-contrib
+
+# Section: Bootloader
 
 arch-chroot /mnt bootctl install
 
@@ -88,21 +85,102 @@ tee /mnt/boot/loader/entries/arch.conf <<EOF
 title    Arch Linux
 linux    /vmlinuz-linux
 initrd   /initramfs-linux.img
-options  root=LABEL=Arch rw
+options  root=LABEL=Arch rootflags=subvol=/@ rw
 EOF
 
-# }}}
-# Generate `fstab` {{{
+# Section: Generate `fstab`
 
-genfstab /mnt | tee /mnt/etc/fstab
+genfstab -L /mnt | tee /mnt/etc/fstab
 
-# }}}
-# Post installation {{{
+# Section: Locale
 
-arch-chroot /mnt bash <(curl -sL https://raw.githubusercontent.com/rphln/Dotfiles/master/_arch/post-install)
+append() {
+	if ! grep -qxF "${1}" "${2}"; then
+		echo "${1}" >>"${2}"
+	fi
+}
 
-# }}}
+append "en_US.UTF-8 UTF-8" /etc/locale.gen
+append "pt_BR.UTF-8 UTF-8" /etc/locale.gen
+
+locale-gen
+
+# Section: Post installation
+
+systemd-nspawn --directory /mnt systemd-firstboot --prompt
+
+# Section: Snapper
+
+systemd-nspawn --directory /mnt snapper -c root create-config /
+
+systemd-nspawn --directory /mnt systemctl enable --now snapper-timeline.timer
+systemd-nspawn --directory /mnt systemctl enable --now snapper-cleanup.timer
+
+systemd-nspawn --directory /mnt snapper -c root create --description Base
+
+# Section: Packages
+
+echo "Installing packages..."
+
+packages=(
+	nvidia-dkms
+
+	plasma-meta
+	kde-utilities-meta
+	kde-system-meta
+	kde-graphics-meta
+
+	alacritty
+	firefox
+	syncthing
+	mpv
+	libreoffice-fresh
+
+	fish
+	hub
+	moreutils
+	neovim
+	stow
+	tmux
+)
+
+deps=(
+	linux-headers
+
+	noto-fonts-cjk
+	noto-fonts-emoji
+	noto-fonts-extra
+
+	flatpak
+	fwupd
+	packagekit-qt5
+
+	xclip
+)
+
+systemd-nspawn --directory /mnt pacman -S --needed --noconfirm ${packages[@]}
+systemd-nspawn --directory /mnt pacman -S --needed --asdeps --noconfirm ${deps[@]}
+
+# Section: Display manager
+
+systemd-nspawn --directory /mnt systemctl enable --now sddm
+
+# Section: Boot
 
 echo "Installation finished!"
+echo "Spawning the new system..."
 
-# vim: set ft=sh fdm=marker:
+tee -a /mnt/etc/securetty <<EOF
+pts/0
+pts/1
+pts/2
+pts/3
+pts/4
+pts/5
+pts/6
+pts/7
+pts/8
+pts/9
+EOF
+
+systemd-nspawn --boot --directory /mnt
