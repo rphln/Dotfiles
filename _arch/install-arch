@@ -132,13 +132,17 @@ packages=(
 	kde-graphics-meta
 
 	alacritty
+	elisa
 	firefox
-	syncthing
-	mpv
+	keepassxc
 	libreoffice-fresh
+	mpv
+	qbittorrent
+	syncthing
 
 	fish
 	hub
+	man
 	moreutils
 	neovim
 	stow
