@@ -112,7 +112,7 @@ if executable('fd')
   let $FZF_DEFAULT_COMMAND = 'fd --type f --hidden --exclude .git'
 end
 
-let g:fzf_layout = {'window': {'width': 0.6, 'height': 0.8}}
+let g:fzf_layout = {'window': {'width': 0.8, 'height': 0.8}}
 
 let g:fzf_colors = {
       \ 'fg':      ['fg', 'Normal'],
