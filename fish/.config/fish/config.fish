@@ -21,7 +21,7 @@ abbr rd 'rmdir --parents'
 abbr gd 'git diff'
 abbr gl 'git pull'
 abbr gm 'git merge'
-abbr gr 'git rebase --interactive'
+abbr gr 'git restore'
 abbr gs 'git status --short'
 
 abbr ga 'git add'
@@ -34,6 +34,9 @@ abbr gcr 'git clone --recursive'
 
 abbr gcm 'git checkout master'
 abbr gco 'git checkout'
+
+abbr grb 'git rebase --interactive'
+abbr grr 'git rebase --interactive --root'
 
 abbr gp 'git push'
 abbr gp! 'git push --force'
