@@ -7,7 +7,7 @@ if ! exists('g:open#github')
 end
 
 if ! exists('g:open#search')
-  let g:open#search = 'https://www.google.com/search?gl=us&hl=en&q=%s'
+  let g:open#search = 'https://duckduckgo.com/?q=%s'
 end
 
 function! open#uri(visual) abort
