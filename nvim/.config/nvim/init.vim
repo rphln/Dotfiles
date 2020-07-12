@@ -1,11 +1,11 @@
 " Section: Setup
 
+set packpath^=~/Dotfiles/_nvim/
+
 augroup vimrc
   autocmd!
   autocmd BufWritePost init.vim nested source $MYVIMRC
 augroup end
-
-set packpath^=~/Dotfiles/_nvim/
 
 " Section: General
 
