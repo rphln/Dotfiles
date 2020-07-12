@@ -26,7 +26,6 @@ autocmd vimrc BufWritePre * if ! &binary | call trim#all() | endif
 
 " Section: Snippets
 
-let g:neosnippet#disable_runtime_snippets = {'_' : v:true}
 let g:neosnippet#snippets_directory = "~/.config/nvim/snippets/"
 
 " Section: Search and replace

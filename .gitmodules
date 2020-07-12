@@ -10,6 +10,10 @@
 	path = _nvim/pack/default/start/neosnippet.vim
 	url = git://github.com/Shougo/neosnippet.vim.git
 	shallow = true
+[submodule "_nvim/pack/default/start/neosnippet-snippets"]
+	path = _nvim/pack/default/start/neosnippet-snippets
+	url = git://github.com/Shougo/neosnippet-snippets.git
+	shallow = true
 [submodule "_nvim/pack/default/start/vim-abolish"]
 	path = _nvim/pack/default/start/vim-abolish
 	url = git://github.com/tpope/vim-abolish.git
