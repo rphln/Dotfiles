@@ -30,10 +30,6 @@
 	path = _nvim/pack/default/start/vim-fugitive
 	url = git://github.com/tpope/vim-fugitive.git
 	shallow = true
-[submodule "_nvim/pack/default/start/vim-material-monokai"]
-	path = _nvim/pack/default/start/vim-material-monokai
-	url = git://github.com/skielbasa/vim-material-monokai.git
-	shallow = true
 [submodule "_nvim/pack/default/start/vim-polyglot"]
 	path = _nvim/pack/default/start/vim-polyglot
 	url = git://github.com/sheerun/vim-polyglot.git
@@ -53,4 +49,8 @@
 [submodule "_nvim/pack/default/opt/nvim-lsp"]
 	path = _nvim/pack/default/opt/nvim-lsp
 	url = git://github.com/neovim/nvim-lsp.git
+	shallow = true
+[submodule "_nvim/pack/default/start/vim-quantum"]
+	path = _nvim/pack/default/start/vim-quantum
+	url = git://github.com/tyrannicaltoucan/vim-quantum.git
 	shallow = true
