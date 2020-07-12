@@ -106,17 +106,17 @@ let g:fzf_layout = {'window': {'width': 0.8, 'height': 0.8}}
 let g:fzf_colors = {
       \ 'fg':      ['fg', 'Normal'],
       \ 'bg':      ['bg', 'Normal'],
-      \ 'hl':      ['fg', 'Comment'],
+      \ 'hl':      ['fg', 'IncSearch'],
       \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
       \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
-      \ 'hl+':     ['fg', 'Statement'],
-      \ 'border':  ['fg', 'Comment'],
-      \ 'info':    ['fg', 'PreProc'],
-      \ 'prompt':  ['fg', 'Conditional'],
-      \ 'pointer': ['fg', 'Exception'],
-      \ 'marker':  ['fg', 'Keyword'],
-      \ 'spinner': ['fg', 'Label'],
-      \ 'header':  ['fg', 'Comment'],
+      \ 'hl+':     ['fg', 'IncSearch'],
+      \ 'info':    ['fg', 'IncSearch'],
+      \ 'border':  ['fg', 'Search'],
+      \ 'prompt':  ['fg', 'Comment'],
+      \ 'pointer': ['fg', 'IncSearch'],
+      \ 'marker':  ['fg', 'IncSearch'],
+      \ 'spinner': ['fg', 'IncSearch'],
+      \ 'header':  ['fg', 'WildMenu'],
       \ }
 
 " Section: Mappings
