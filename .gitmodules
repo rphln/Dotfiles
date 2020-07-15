@@ -54,3 +54,7 @@
 	path = _nvim/pack/default/start/vim-quantum
 	url = git://github.com/tyrannicaltoucan/vim-quantum.git
 	shallow = true
+[submodule "_nvim/pack/default/start/vim-startify"]
+	path = _nvim/pack/default/start/vim-startify
+	url = git://github.com/mhinz/vim-startify.git
+	shallow = true
