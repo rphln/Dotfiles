@@ -216,7 +216,7 @@ if has('nvim-0.5')
 
   call v:lua.lsp.elixirls.setup({})
   call v:lua.lsp.pyls.setup({})
-  call v:lua.lsp.rls.setup({})
+  call v:lua.lsp.rust_analyzer.setup({})
 
   function! s:lsp() abort
     setlocal omnifunc=v:lua.vim.lsp.omnifunc
