@@ -149,8 +149,8 @@ xnoremap gb "_dp
 xnoremap < <gv
 xnoremap > >gv
 
-onoremap A :<C-u>normal! m`ggVG<CR>``
-xnoremap A :<C-u>normal! ggVG<CR>
+onoremap ab :<C-u>normal! m`ggVG<CR>``
+xnoremap ab :<C-u>normal! ggVG<CR>
 
 " Section: Insert mappings
 
