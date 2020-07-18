@@ -99,6 +99,9 @@ let g:loaded_netrwPlugin = v:true
 
 let g:neosnippet#snippets_directory = "~/.config/nvim/snippets/"
 
+let g:startify_change_to_dir = v:false
+let g:startify_change_to_vcs_root = v:true
+
 " Section: Fuzzy finder
 
 if executable('fd')
