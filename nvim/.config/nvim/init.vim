@@ -19,14 +19,7 @@ set shiftround
 set splitbelow
 set splitright
 
-let g:loaded_netrw = v:true
-let g:loaded_netrwPlugin = v:true
-
 autocmd vimrc BufWritePre * if ! &binary | call trim#all() | endif
-
-" Section: Snippets
-
-let g:neosnippet#snippets_directory = "~/.config/nvim/snippets/"
 
 " Section: Search and replace
 
@@ -98,6 +91,13 @@ endfunction
 autocmd vimrc Colorscheme * call <SID>colorscheme()
 
 colorscheme quantum
+
+" Section: Plugins
+
+let g:loaded_netrw = v:true
+let g:loaded_netrwPlugin = v:true
+
+let g:neosnippet#snippets_directory = "~/.config/nvim/snippets/"
 
 " Section: Fuzzy finder
 
