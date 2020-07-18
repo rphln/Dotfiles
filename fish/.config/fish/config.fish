@@ -38,6 +38,9 @@ abbr gco 'git checkout'
 abbr grb 'git rebase --interactive'
 abbr grr 'git rebase --interactive --root'
 
+abbr gsa 'git submodule add'
+abbr gsm 'git submodule'
+
 abbr gp 'git push'
 abbr gp! 'git push --force'
 abbr gpf 'git push --force-with-lease'
