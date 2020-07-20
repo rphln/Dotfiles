@@ -171,7 +171,7 @@ inoremap <expr> <C-p> complete#next(v:true)
 
 " Section: Leader mappings
 
-xnoremap <Leader>c :!column -Lt -o ' '<CR>
+xnoremap <Leader>c :!column -Lt -o ' '<CR>gv=
 
 nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>r :Rg<CR>
