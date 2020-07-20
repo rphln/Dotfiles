@@ -23,6 +23,8 @@ autocmd vimrc BufWritePre * if ! &binary | call trim#all() | endif
 
 " Section: Search and replace
 
+set gdefault
+
 set ignorecase
 set smartcase
 
