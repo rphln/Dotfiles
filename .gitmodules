@@ -58,3 +58,7 @@
 	path = _nvim/pack/default/start/vim-startify
 	url = git://github.com/mhinz/vim-startify.git
 	shallow = true
+[submodule "_nvim/pack/default/start/vim-signify"]
+	path = _nvim/pack/default/start/vim-signify
+	url = git://github.com/mhinz/vim-signify.git
+	shallow = true
