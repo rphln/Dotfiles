@@ -46,6 +46,10 @@
 	path = _nvim/pack/default/start/vim-surround
 	url = git://github.com/tpope/vim-surround.git
 	shallow = true
+[submodule "_nvim/pack/default/start/vim-unimpaired"]
+	path = _nvim/pack/default/start/vim-unimpaired
+	url = git://github.com/tpope/vim-unimpaired.git
+	shallow = true
 [submodule "_nvim/pack/default/opt/nvim-lsp"]
 	path = _nvim/pack/default/opt/nvim-lsp
 	url = git://github.com/neovim/nvim-lsp.git
