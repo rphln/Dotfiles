@@ -178,14 +178,11 @@ xnoremap <Leader>c :!column -Lt -o ' '<CR>gv=
 nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>r :Rg<CR>
 
-nnoremap <Leader>gh :call open#github(v:false)<CR>
-xnoremap <Leader>gh :call open#github(v:true)<CR>
+nnoremap <Leader>gh :call search#github(v:false)<CR>
+xnoremap <Leader>gh :call search#github(v:true)<CR>
 
-nnoremap <Leader>go :call open#uri(v:false)<CR>
-xnoremap <Leader>go :call open#uri(v:true)<CR>
-
-nnoremap <Leader>gs :call open#search(v:false)<CR>
-xnoremap <Leader>gs :call open#search(v:true)<CR>
+nnoremap <Leader>gs :call search#default(v:false)<CR>
+xnoremap <Leader>gs :call search#default(v:true)<CR>
 
 " Section: Readline
 
