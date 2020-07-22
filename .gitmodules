@@ -38,6 +38,10 @@
 	path = _nvim/pack/default/start/vim-repeat
 	url = git://github.com/tpope/vim-repeat.git
 	shallow = true
+[submodule "_nvim/pack/default/start/vim-rhubarb"]
+	path = _nvim/pack/default/start/vim-rhubarb
+	url = git://github.com/tpope/vim-rhubarb
+	shallow = true
 [submodule "_nvim/pack/default/start/vim-sleuth"]
 	path = _nvim/pack/default/start/vim-sleuth
 	url = git://github.com/tpope/vim-sleuth.git
