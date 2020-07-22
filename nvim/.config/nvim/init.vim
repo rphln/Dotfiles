@@ -101,9 +101,6 @@ colorscheme quantum
 
 " Section: Plugins
 
-let g:loaded_netrw = v:true
-let g:loaded_netrwPlugin = v:true
-
 let g:neosnippet#snippets_directory = "~/.config/nvim/snippets/"
 
 let g:startify_change_to_dir = v:false
