@@ -88,6 +88,11 @@ set termguicolors
 
 function! s:colorscheme() abort
   highlight! link MatchParen Type
+
+  highlight LSPDiagnosticsError       guifg=#dd7186
+  highlight LSPDiagnosticsHint        guifg=#70ace5
+  highlight LSPDiagnosticsInformation guifg=#d5b875
+  highlight LSPDiagnosticsWarning     guifg=#d7956e
 endfunction
 
 autocmd vimrc Colorscheme * call <SID>colorscheme()
