@@ -38,6 +38,8 @@ set nohlsearch
 set completeopt+=menuone
 set completeopt-=preview
 
+let g:float_preview#docked = v:false
+
 " Section: Views and undo
 
 set undofile
@@ -88,11 +90,6 @@ set termguicolors
 
 function! s:colorscheme() abort
   highlight! link MatchParen Type
-
-  highlight LSPDiagnosticsError       guifg=#dd7186
-  highlight LSPDiagnosticsHint        guifg=#70ace5
-  highlight LSPDiagnosticsInformation guifg=#d5b875
-  highlight LSPDiagnosticsWarning     guifg=#d7956e
 endfunction
 
 autocmd vimrc Colorscheme * call <SID>colorscheme()
@@ -105,6 +102,9 @@ let g:neosnippet#snippets_directory = "~/.config/nvim/snippets/"
 
 let g:startify_change_to_dir = v:false
 let g:startify_change_to_vcs_root = v:true
+
+let g:ale_sign_error   = '▶'
+let g:ale_sign_warning = '▶'
 
 " Section: Fuzzy finder
 
@@ -211,32 +211,22 @@ imap <C-k> <Plug>(neosnippet_expand_or_jump)
 smap <C-k> <Plug>(neosnippet_expand_or_jump)
 xmap <C-k> <Plug>(neosnippet_expand_target)
 
-" Section: Future
+" Section: Diagnostics
 
-if has('nvim-0.5')
-  packadd! nvim-lsp
+nmap <Leader>n <Plug>(ale_next_wrap)
+nmap <Leader>p <Plug>(ale_previous_wrap)
 
-  lua lsp = require('nvim_lsp')
+function! s:lsp() abort
+  setlocal omnifunc=ale#completion#OmniFunc
 
-  call v:lua.lsp.elixirls.setup({})
-  call v:lua.lsp.pyls.setup({})
-  call v:lua.lsp.rust_analyzer.setup({})
+  nmap <buffer> K <Plug>(ale_hover)
 
-  function! s:lsp() abort
-    setlocal omnifunc=v:lua.vim.lsp.omnifunc
+  nmap <buffer> gd <Plug>(ale_go_to_definition)
+  nmap <buffer> yr <Plug>(ale_rename)
 
-    nnoremap <buffer> <Leader>lc <Cmd>call v:lua.vim.lsp.buf.code_action()<CR>
-    nnoremap <buffer> <Leader>lf <Cmd>call v:lua.vim.lsp.buf.formatting()<CR>
-    nnoremap <buffer> <Leader>lr <Cmd>call v:lua.vim.lsp.buf.rename()<CR>
-    nnoremap <buffer> <Leader>ls <Cmd>call v:lua.vim.lsp.buf.workspace_symbol()<CR>
+  nmap <buffer> <Leader>af <Plug>(ale_fix)
+endfunction
 
-    nnoremap <buffer> K  <Cmd>call v:lua.vim.lsp.buf.hover()<CR>
-    nnoremap <buffer> gd <Cmd>call v:lua.vim.lsp.buf.definition()<CR>
-    nnoremap <buffer> gi <Cmd>call v:lua.vim.lsp.buf.implementation()<CR>
-    nnoremap <buffer> gr <Cmd>call v:lua.vim.lsp.buf.references()<CR>
-  endfunction
-
-  autocmd FileType python,elixir,rust call <SID>lsp()
-endif
+autocmd vimrc FileType python,elixir,rust call <SID>lsp()
 
 " vim: set ts=2 sw=2 et:

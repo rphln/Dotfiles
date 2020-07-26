@@ -6,13 +6,25 @@
 	path = _nvim/pack/vendor/start/fzf.vim
 	url = git://github.com/junegunn/fzf.vim.git
 	shallow = true
-[submodule "_nvim/pack/default/start/neosnippet.vim"]
-	path = _nvim/pack/vendor/start/neosnippet.vim
-	url = git://github.com/Shougo/neosnippet.vim.git
+[submodule "_nvim/pack/default/start/vim-signify"]
+	path = _nvim/pack/vendor/start/vim-signify
+	url = git://github.com/mhinz/vim-signify.git
+	shallow = true
+[submodule "_nvim/pack/default/start/vim-startify"]
+	path = _nvim/pack/vendor/start/vim-startify
+	url = git://github.com/mhinz/vim-startify.git
+	shallow = true
+[submodule "_nvim/pack/default/start/vim-polyglot"]
+	path = _nvim/pack/vendor/start/vim-polyglot
+	url = git://github.com/sheerun/vim-polyglot.git
 	shallow = true
 [submodule "_nvim/pack/default/start/neosnippet-snippets"]
 	path = _nvim/pack/vendor/start/neosnippet-snippets
 	url = git://github.com/Shougo/neosnippet-snippets.git
+	shallow = true
+[submodule "_nvim/pack/default/start/neosnippet.vim"]
+	path = _nvim/pack/vendor/start/neosnippet.vim
+	url = git://github.com/Shougo/neosnippet.vim.git
 	shallow = true
 [submodule "_nvim/pack/default/start/vim-abolish"]
 	path = _nvim/pack/vendor/start/vim-abolish
@@ -29,10 +41,6 @@
 [submodule "_nvim/pack/default/start/vim-fugitive"]
 	path = _nvim/pack/vendor/start/vim-fugitive
 	url = git://github.com/tpope/vim-fugitive.git
-	shallow = true
-[submodule "_nvim/pack/default/start/vim-polyglot"]
-	path = _nvim/pack/vendor/start/vim-polyglot
-	url = git://github.com/sheerun/vim-polyglot.git
 	shallow = true
 [submodule "_nvim/pack/default/start/vim-repeat"]
 	path = _nvim/pack/vendor/start/vim-repeat
@@ -54,19 +62,15 @@
 	path = _nvim/pack/vendor/start/vim-unimpaired
 	url = git://github.com/tpope/vim-unimpaired.git
 	shallow = true
-[submodule "_nvim/pack/default/opt/nvim-lsp"]
-	path = _nvim/pack/vendor/opt/nvim-lsp
-	url = git://github.com/neovim/nvim-lsp.git
-	shallow = true
 [submodule "_nvim/pack/default/start/vim-quantum"]
 	path = _nvim/pack/vendor/start/vim-quantum
 	url = git://github.com/tyrannicaltoucan/vim-quantum.git
 	shallow = true
-[submodule "_nvim/pack/default/start/vim-startify"]
-	path = _nvim/pack/vendor/start/vim-startify
-	url = git://github.com/mhinz/vim-startify.git
+[submodule "_nvim/pack/vendor/start/ale"]
+	path = _nvim/pack/vendor/start/ale
+	url = https://github.com/dense-analysis/ale
 	shallow = true
-[submodule "_nvim/pack/default/start/vim-signify"]
-	path = _nvim/pack/vendor/start/vim-signify
-	url = git://github.com/mhinz/vim-signify.git
+[submodule "_nvim/pack/vendor/start/float-preview.nvim"]
+	path = _nvim/pack/vendor/start/float-preview.nvim
+	url = https://github.com/ncm2/float-preview.nvim
 	shallow = true
