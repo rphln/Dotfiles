@@ -12,6 +12,8 @@ augroup end
 set clipboard+=unnamed
 set clipboard+=unnamedplus
 
+set hidden
+
 set lazyredraw
 
 set shiftround
