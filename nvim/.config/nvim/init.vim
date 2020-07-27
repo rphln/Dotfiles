@@ -132,7 +132,7 @@ let g:fzf_colors = {
       \ 'header':  ['fg', 'WildMenu'],
       \ }
 
-" Section: Mappings
+" Section: Overrides
 
 let mapleader = ' '
 
@@ -141,27 +141,31 @@ noremap ; :
 
 nnoremap <Backspace> <C-^>
 
-nnoremap Q @q
-xnoremap Q :normal! @q<CR>
-
-nnoremap N Nzz
-nnoremap n nzz
-
-nnoremap Y y$
-
-nnoremap gl `[V`]
-
-nnoremap gs :%s/\C\<<C-r><C-w>\>/
-
-xnoremap gb "_dp
-
 xnoremap < <gv
 xnoremap > >gv
 
-onoremap ab :<C-u>normal! m`ggVG<CR>``
-xnoremap ab :<C-u>normal! ggVG<CR>
+nnoremap n nzz
+xnoremap N Nzz
 
-" Section: Insert mappings
+xnoremap Q :normal! @q<CR>
+nnoremap Q @q
+
+nnoremap Y y$
+
+" Section: Misc
+
+onoremap af :<C-u>normal! ggVG<CR>
+xnoremap af :<C-u>normal! ggVG<CR>
+
+nnoremap c> *Ncgn
+nnoremap c< #NcgN
+
+nnoremap gl `[v`]
+nnoremap gL `[V`]
+
+nnoremap yr :%s/\C\<<C-r><C-w>\>/
+
+" Section: Insert
 
 inoremap <C-l> <Esc>[S1z=``a
 
@@ -173,7 +177,7 @@ inoremap <expr> <S-Tab> complete#tab(v:true)
 inoremap <expr> <C-n> complete#next(v:false)
 inoremap <expr> <C-p> complete#next(v:true)
 
-" Section: Leader mappings
+" Section: Leader
 
 xnoremap <Leader>c :!column -Lt -o ' '<CR>gv=
 
