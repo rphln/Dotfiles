@@ -13,7 +13,7 @@ function! complete#next(reverse) abort
 endfunction
 
 function! complete#tab(reverse) abort
-  if s:getchar() =~ '\S'
+  if pumvisible() || s:getchar() =~ '\S'
     return complete#next(a:reverse)
   else
     return "\<Tab>"
