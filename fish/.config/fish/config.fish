@@ -6,6 +6,8 @@ set -U fish_features stderr-nocaret
 set -x EDITOR nvim
 set -x VISUAL nvim
 
+abbr - 'cd -'
+
 abbr l 'ls --group-directories-first'
 
 abbr v 'nvim'
