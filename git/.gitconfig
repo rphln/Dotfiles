@@ -12,3 +12,13 @@
 
 [diff]
     algorithm = histogram
+
+[pull]
+    rebase = true
+
+[fetch]
+    prune = true
+
+[rebase]
+    autostash = true
+    autosquash = true
