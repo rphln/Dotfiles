@@ -1,1 +1,1 @@
-setlocal linebreak spell wrap colorcolumn+=50
+setlocal linebreak spell wrap colorcolumn+=51
