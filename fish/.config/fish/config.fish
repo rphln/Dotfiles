@@ -29,8 +29,8 @@ abbr gs 'git status --short'
 abbr ga 'git add'
 abbr gap 'git add --patch'
 
-abbr gc 'git commit --verbose'
-abbr gc! 'git commit --verbose --amend --reset-author'
+abbr gc 'git commit'
+abbr gc! 'git commit --amend --reset-author'
 
 abbr gcr 'git clone --recursive'
 
