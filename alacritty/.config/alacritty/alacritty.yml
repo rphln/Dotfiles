@@ -51,5 +51,7 @@ key_bindings:
   - { key: N, mods: Alt, action: SpawnNewInstance }
   - { key: Q, mods: Alt, action: Quit }
 
+  - { key: I, mods: Alt, action: ToggleViMode }
+
   - { key: Back, mods: Control, chars: "" }
   - { key: Delete, mods: Control, chars: "d" }
