@@ -228,9 +228,10 @@ function! s:lsp() abort
   nmap <buffer> K <Plug>(ale_hover)
 
   nmap <buffer> gd <Plug>(ale_go_to_definition)
-  nmap <buffer> yr <Plug>(ale_rename)
+  nmap <buffer> gr <Plug>(ale_find_references)
 
   nmap <buffer> <Leader>af <Plug>(ale_fix)
+  nmap <buffer> <Leader>ar <Plug>(ale_rename)
 endfunction
 
 autocmd vimrc FileType python,elixir,rust call <SID>lsp()
