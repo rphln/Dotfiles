@@ -22,3 +22,6 @@
 [rebase]
     autostash = true
     autosquash = true
+
+[commit]
+    verbose = true
