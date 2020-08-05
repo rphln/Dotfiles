@@ -69,8 +69,14 @@ function prompt_pwd_tail --description "Prints the last two path components from
     string match -r '(?:^/)?(?:[^/]+/?){0,2}$' (prompt_pwd)
 end
 
+function prompt_ssh --description "Prints `user@host` if on a SSH session."
+    if set -q SSH_TTY
+        printf "%s(%s@%s)%s " (set_color black) (whoami) (hostname) (set_color reset)
+    end
+end
+
 function fish_prompt
-    printf "%s: " (prompt_pwd_tail)
+    printf "%s%s: " (prompt_ssh) (prompt_pwd_tail)
 end
 
 function fish_title
