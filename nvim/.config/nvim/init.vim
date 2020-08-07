@@ -195,6 +195,9 @@ nnoremap <Leader>bk <Cmd>bdelete<CR>
 
 " Section: Readline
 
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
+
 inoremap <C-a> <C-o>^
 inoremap <C-e> <C-o>$
 
