@@ -190,6 +190,9 @@ xnoremap <Leader>gh :call search#github(v:true)<CR>
 nnoremap <Leader>gs :call search#default(v:false)<CR>
 xnoremap <Leader>gs :call search#default(v:true)<CR>
 
+nnoremap <Leader>bb <Cmd>Buffers<CR>
+nnoremap <Leader>bk <Cmd>bdelete<CR>
+
 " Section: Readline
 
 inoremap <C-a> <C-o>^
