@@ -3,15 +3,13 @@ set fish_greeting
 # TODO: Remove this when Fish disables this behaviour by default.
 set -U fish_features stderr-nocaret
 
-set -x EDITOR nvim
-set -x VISUAL nvim
+set -x EDITOR "nvim"
+set -x VISUAL "nvim"
+
+abbr v $EDITOR
 
 abbr - 'cd -'
-
 abbr l 'ls --group-directories-first'
-
-abbr v 'nvim'
-abbr f 'fg &>/dev/null'
 
 abbr cp 'cp -i'
 abbr mv 'mv -i'
