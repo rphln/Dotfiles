@@ -81,7 +81,7 @@ set relativenumber
 set scrolloff=8
 set sidescrolloff=8
 
-let &fillchars = "fold: ,eob: "
+let &fillchars = "fold: ,eob: ,vert: "
 
 " Section: Color scheme
 
