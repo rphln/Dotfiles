@@ -154,7 +154,7 @@ nnoremap Y y$
 
 " Section: Misc
 
-onoremap af :<C-u>normal! ggVG<CR>
+onoremap af :<C-u>normal! ggVG<CR>``
 xnoremap af :<C-u>normal! ggVG<CR>
 
 nnoremap c> *Ncgn
