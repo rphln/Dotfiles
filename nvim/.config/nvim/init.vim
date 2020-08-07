@@ -105,8 +105,8 @@ let g:neosnippet#snippets_directory = "~/.config/nvim/snippets/"
 let g:startify_change_to_dir = v:false
 let g:startify_change_to_vcs_root = v:true
 
-let g:ale_sign_error   = '▶'
-let g:ale_sign_warning = '▶'
+let g:ale_sign_error = '•'
+let g:ale_sign_warning = '•'
 
 " Section: Fuzzy finder
 
