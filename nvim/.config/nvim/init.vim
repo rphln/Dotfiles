@@ -191,7 +191,7 @@ nnoremap <Leader>gs :call search#default(v:false)<CR>
 xnoremap <Leader>gs :call search#default(v:true)<CR>
 
 nnoremap <Leader>bb <Cmd>Buffers<CR>
-nnoremap <Leader>bk <Cmd>bdelete<CR>
+nnoremap <Leader>bd <Cmd>bdelete<CR>
 
 " Section: Readline
 
