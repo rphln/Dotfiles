@@ -27,9 +27,6 @@ autocmd vimrc BufWritePre * if ! &binary | call trim#all() | endif
 
 set gdefault
 
-set ignorecase
-set smartcase
-
 set inccommand=nosplit
 set incsearch
 
@@ -163,7 +160,10 @@ nnoremap c< #NcgN
 nnoremap gl `[v`]
 nnoremap gL `[V`]
 
-nnoremap yr :%s/\C\<<C-r><C-w>\>/
+nnoremap g? ?\c
+nnoremap g/ /\c
+
+nnoremap yr :%s/\<<C-r><C-w>\>/
 
 " Section: Insert
 
