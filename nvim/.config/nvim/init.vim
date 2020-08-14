@@ -154,8 +154,7 @@ nnoremap Y y$
 onoremap af :<C-u>normal! ggVG<CR>``
 xnoremap af :<C-u>normal! ggVG<CR>
 
-nnoremap c> *Ncgn
-nnoremap c< #NcgN
+nnoremap cm *Ncgn
 
 nnoremap gl `[v`]
 nnoremap gL `[V`]
