@@ -130,16 +130,16 @@ nnoremap Y y$
 
 " Section: Misc
 
-onoremap af :<C-u>normal! ggVG<CR>``
+onoremap af :<C-u>normal! ggVG<CR>
 xnoremap af :<C-u>normal! ggVG<CR>
 
 nnoremap cm *Ncgn
 
-nnoremap gl `[v`]
-nnoremap gL `[V`]
-
-nnoremap g? ?\c
 nnoremap g/ /\c
+nnoremap g? ?\c
+
+nnoremap gB `[V`]
+nnoremap gb `[v`]
 
 nnoremap yr :%s/\<<C-r><C-w>\>/
 
@@ -163,16 +163,10 @@ xnoremap <Leader>gh :call search#github(v:true)<CR>
 nnoremap <Leader>gs :call search#default(v:false)<CR>
 xnoremap <Leader>gs :call search#default(v:true)<CR>
 
-nnoremap <Leader>bb <Cmd>Buffers<CR>
-nnoremap <Leader>bd <Cmd>bdelete<CR>
-
 " Section: Readline
 
-cnoremap <C-a> <Home>
-cnoremap <C-e> <End>
-
-inoremap <C-a> <C-o>^
-inoremap <C-e> <C-o>$
+noremap! <C-a> <Home>
+noremap! <C-e> <End>
 
 inoremap <C-b> <C-g>U<Left>
 inoremap <C-f> <C-g>U<Right>
@@ -189,6 +183,7 @@ inoremap { {}<C-g>U<Left>
 
 let g:surround_{char2nr('[')} = "[\n\t\r\n]"
 let g:surround_{char2nr('{')} = "{\n\t\r\n}"
+let g:surround_{char2nr('(')} = "(\n\t\r\n)"
 
 " Section: Snippets
 
