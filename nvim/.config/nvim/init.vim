@@ -100,6 +100,8 @@ let g:neosnippet#snippets_directory = "~/.config/nvim/snippets/"
 let g:startify_change_to_dir = v:false
 let g:startify_change_to_vcs_root = v:true
 
+let g:lion_squeeze_spaces = v:true
+
 if executable('fd')
   let g:ctrlp_user_command = 'fd --type f --hidden --exclude .git'
 else
@@ -154,8 +156,6 @@ inoremap <expr> <C-n> complete#next(v:false)
 inoremap <expr> <C-p> complete#next(v:true)
 
 " Section: Leader
-
-xnoremap <Leader>c :!column -Lt -o ' '<CR>gv=
 
 nnoremap <Leader>gh :call search#github(v:false)<CR>
 xnoremap <Leader>gh :call search#github(v:true)<CR>

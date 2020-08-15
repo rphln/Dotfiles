@@ -66,3 +66,7 @@
 	path = _nvim/pack/vendor/opt/nvim-lsp
 	url = https://github.com/neovim/nvim-lsp
 	shallow = true
+[submodule "_nvim/pack/vendor/start/vim-lion"]
+	path = _nvim/pack/vendor/start/vim-lion
+	url = https://github.com/tommcdo/vim-lion.git
+	shallow = true
