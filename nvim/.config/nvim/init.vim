@@ -37,8 +37,6 @@ set nohlsearch
 set completeopt+=menuone
 set completeopt-=preview
 
-let g:float_preview#docked = v:false
-
 " Section: Views and undo
 
 set undofile
@@ -101,9 +99,6 @@ let g:neosnippet#snippets_directory = "~/.config/nvim/snippets/"
 
 let g:startify_change_to_dir = v:false
 let g:startify_change_to_vcs_root = v:true
-
-let g:ale_sign_error = '•'
-let g:ale_sign_warning = '•'
 
 if executable('fd')
   let g:ctrlp_user_command = 'fd --type f --hidden --exclude .git'
@@ -203,21 +198,27 @@ xmap <C-k> <Plug>(neosnippet_expand_target)
 
 " Section: Diagnostics
 
-nmap <Leader>n <Plug>(ale_next_wrap)
-nmap <Leader>p <Plug>(ale_previous_wrap)
+if has('nvim-0.5')
+  packadd! nvim-lsp
 
-function! s:lsp() abort
-  setlocal omnifunc=ale#completion#OmniFunc
+  lua lsp = require('nvim_lsp')
 
-  nmap <buffer> K <Plug>(ale_hover)
+  call v:lua.lsp.elixirls.setup({})
+  call v:lua.lsp.pyls.setup({})
+  call v:lua.lsp.rust_analyzer.setup({})
 
-  nmap <buffer> gd <Plug>(ale_go_to_definition)
-  nmap <buffer> gr <Plug>(ale_find_references)
+  function! s:lsp() abort
+    setlocal omnifunc=v:lua.vim.lsp.omnifunc
 
-  nmap <buffer> <Leader>af <Plug>(ale_fix)
-  nmap <buffer> <Leader>ar <Plug>(ale_rename)
-endfunction
+    nnoremap <buffer> yr <Cmd>call v:lua.vim.lsp.buf.rename()<CR>
 
-autocmd vimrc FileType python,elixir,rust call <SID>lsp()
+    nnoremap <buffer> K <Cmd>call v:lua.vim.lsp.buf.hover()<CR>
+    nnoremap <buffer> gd <Cmd>call v:lua.vim.lsp.buf.definition()<CR>
+    nnoremap <buffer> gi <Cmd>call v:lua.vim.lsp.buf.implementation()<CR>
+    nnoremap <buffer> gr <Cmd>call v:lua.vim.lsp.buf.references()<CR>
+  endfunction
+
+  autocmd vimrc FileType python,elixir,rust call <SID>lsp()
+endif
 
 " vim: set ts=2 sw=2 et:

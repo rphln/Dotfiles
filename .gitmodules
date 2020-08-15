@@ -58,15 +58,11 @@
 	path = _nvim/pack/vendor/start/vim-quantum
 	url = https://github.com/tyrannicaltoucan/vim-quantum.git
 	shallow = true
-[submodule "_nvim/pack/vendor/start/ale"]
-	path = _nvim/pack/vendor/start/ale
-	url = https://github.com/dense-analysis/ale
-	shallow = true
-[submodule "_nvim/pack/vendor/start/float-preview.nvim"]
-	path = _nvim/pack/vendor/start/float-preview.nvim
-	url = https://github.com/ncm2/float-preview.nvim
-	shallow = true
 [submodule "_nvim/pack/vendor/start/ctrlp.vim"]
 	path = _nvim/pack/vendor/start/ctrlp.vim
 	url = https://github.com/ctrlpvim/ctrlp.vim.git
+	shallow = true
+[submodule "_nvim/pack/vendor/nvim-lsp"]
+	path = _nvim/pack/vendor/opt/nvim-lsp
+	url = https://github.com/neovim/nvim-lsp
 	shallow = true
