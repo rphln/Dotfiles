@@ -105,29 +105,11 @@ let g:startify_change_to_vcs_root = v:true
 let g:ale_sign_error = '•'
 let g:ale_sign_warning = '•'
 
-" Section: Fuzzy finder
-
 if executable('fd')
-  let $FZF_DEFAULT_COMMAND = 'fd --type f --hidden --exclude .git'
+  let g:ctrlp_user_command = 'fd --type f --hidden --exclude .git'
+else
+  let g:ctrlp_user_command = 'git ls-files --cached --others --exclude-standard'
 end
-
-let g:fzf_layout = {'window': {'width': 0.8, 'height': 0.8}}
-
-let g:fzf_colors = {
-      \ 'fg':      ['fg', 'Normal'],
-      \ 'bg':      ['bg', 'Normal'],
-      \ 'hl':      ['fg', 'IncSearch'],
-      \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-      \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
-      \ 'hl+':     ['fg', 'IncSearch'],
-      \ 'info':    ['fg', 'IncSearch'],
-      \ 'border':  ['fg', 'Search'],
-      \ 'prompt':  ['fg', 'Comment'],
-      \ 'pointer': ['fg', 'IncSearch'],
-      \ 'marker':  ['fg', 'IncSearch'],
-      \ 'spinner': ['fg', 'IncSearch'],
-      \ 'header':  ['fg', 'WildMenu'],
-      \ }
 
 " Section: Overrides
 
@@ -179,9 +161,6 @@ inoremap <expr> <C-p> complete#next(v:true)
 " Section: Leader
 
 xnoremap <Leader>c :!column -Lt -o ' '<CR>gv=
-
-nnoremap <Leader>f :Files<CR>
-nnoremap <Leader>r :Rg<CR>
 
 nnoremap <Leader>gh :call search#github(v:false)<CR>
 xnoremap <Leader>gh :call search#github(v:true)<CR>
