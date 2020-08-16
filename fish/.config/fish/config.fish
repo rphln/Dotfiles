@@ -2,8 +2,8 @@ set fish_greeting
 
 set -U fish_features '3.0'
 
-set -x EDITOR "nvim"
-set -x VISUAL "nvim"
+set -x EDITOR nvim
+set -x VISUAL nvim
 
 abbr v $EDITOR
 
