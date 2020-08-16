@@ -1,7 +1,6 @@
 set fish_greeting
 
-# TODO: Remove this when Fish disables this behaviour by default.
-set -U fish_features stderr-nocaret
+set -U fish_features '3.0'
 
 set -x EDITOR "nvim"
 set -x VISUAL "nvim"
