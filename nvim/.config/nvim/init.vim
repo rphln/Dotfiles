@@ -49,15 +49,13 @@ autocmd vimrc BufWinLeave * if ! empty(glob("%:p")) | silent! mkview   | endif
 
 " Section: Line wrapping
 
-set nowrap
-
 set breakindent
 set showbreak=↪
 
-set colorcolumn+=+1
+set linebreak
 set textwidth=80
 
-set linebreak
+set nowrap
 
 " Section: Appearance
 
