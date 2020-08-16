@@ -68,9 +68,6 @@ set noruler
 set list
 let &listchars = "tab:┆ ,trail:␣,nbsp:·,extends:»,precedes:«"
 
-set number
-set relativenumber
-
 set scrolloff=8
 set sidescrolloff=8
 
