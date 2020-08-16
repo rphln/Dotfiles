@@ -187,6 +187,9 @@ xmap <C-k> <Plug>(neosnippet_expand_target)
 if has('nvim-0.5')
   packadd! nvim-lsp
 
+  sign define LspDiagnosticsErrorSign text=@
+  sign define LspDiagnosticsWarningSign text=?
+
   lua lsp = require('nvim_lsp')
 
   call v:lua.lsp.elixirls.setup({})
