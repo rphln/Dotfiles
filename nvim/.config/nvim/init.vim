@@ -85,13 +85,9 @@ syntax enable
 set background=dark
 set termguicolors
 
-function! s:colorscheme() abort
-  highlight! link MatchParen Type
-endfunction
+let g:nord_underline = v:false
 
-autocmd vimrc Colorscheme * call <SID>colorscheme()
-
-colorscheme quantum
+colorscheme nord
 
 " Section: Plugins
 

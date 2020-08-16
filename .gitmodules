@@ -54,10 +54,6 @@
 	path = _nvim/pack/vendor/start/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
 	shallow = true
-[submodule "_nvim/pack/default/start/vim-quantum"]
-	path = _nvim/pack/vendor/start/vim-quantum
-	url = https://github.com/tyrannicaltoucan/vim-quantum.git
-	shallow = true
 [submodule "_nvim/pack/vendor/start/ctrlp.vim"]
 	path = _nvim/pack/vendor/start/ctrlp.vim
 	url = https://github.com/ctrlpvim/ctrlp.vim.git
@@ -69,4 +65,8 @@
 [submodule "_nvim/pack/vendor/start/vim-lion"]
 	path = _nvim/pack/vendor/start/vim-lion
 	url = https://github.com/tommcdo/vim-lion.git
+	shallow = true
+[submodule "_nvim/pack/colors/start/nord-vim"]
+	path = _nvim/pack/colors/start/nord
+	url = https://github.com/arcticicestudio/nord-vim.git
 	shallow = true
