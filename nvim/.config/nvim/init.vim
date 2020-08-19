@@ -108,6 +108,9 @@ noremap ; :
 
 nnoremap <Backspace> <C-^>
 
+nnoremap / /\c
+nnoremap ? ?\c
+
 xnoremap < <gv
 xnoremap > >gv
 
@@ -125,9 +128,6 @@ onoremap af :<C-u>normal! ggVG<CR>
 xnoremap af :<C-u>normal! ggVG<CR>
 
 nnoremap cm *Ncgn
-
-nnoremap g/ /\c
-nnoremap g? ?\c
 
 nnoremap gB `[V`]
 nnoremap gb `[v`]
