@@ -52,6 +52,7 @@ key_bindings:
   - { key: C, mods: Alt, action: Copy }
   - { key: V, mods: Alt, action: Paste }
 
+  - { key: F, mods: Alt, action: ToggleFullscreen }
   - { key: N, mods: Alt, action: SpawnNewInstance }
   - { key: Q, mods: Alt, action: Quit }
 
