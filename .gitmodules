@@ -1,3 +1,23 @@
+[submodule "_nvim/pack/default/start/neosnippet-snippets"]
+	path = _nvim/pack/vendor/start/neosnippet-snippets
+	url = https://github.com/Shougo/neosnippet-snippets.git
+	shallow = true
+[submodule "_nvim/pack/default/start/neosnippet.vim"]
+	path = _nvim/pack/vendor/start/neosnippet.vim
+	url = https://github.com/Shougo/neosnippet.vim.git
+	shallow = true
+[submodule "_nvim/pack/colors/start/nord-vim"]
+	path = _nvim/pack/colors/start/nord
+	url = https://github.com/arcticicestudio/nord-vim.git
+	shallow = true
+[submodule "_nvim/pack/fzf/start/fzf"]
+	path = _nvim/pack/fzf/start/fzf
+	url = https://github.com/junegunn/fzf.git
+	shallow = true
+[submodule "_nvim/pack/fzf/start/fzf.vim"]
+	path = _nvim/pack/fzf/start/fzf.vim
+	url = https://github.com/junegunn/fzf.vim.git
+	shallow = true
 [submodule "_nvim/pack/default/start/vim-signify"]
 	path = _nvim/pack/vendor/start/vim-signify
 	url = https://github.com/mhinz/vim-signify.git
@@ -6,17 +26,17 @@
 	path = _nvim/pack/vendor/start/vim-startify
 	url = https://github.com/mhinz/vim-startify.git
 	shallow = true
+[submodule "_nvim/pack/vendor/nvim-lsp"]
+	path = _nvim/pack/vendor/opt/nvim-lsp
+	url = https://github.com/neovim/nvim-lsp
+	shallow = true
 [submodule "_nvim/pack/default/start/vim-polyglot"]
 	path = _nvim/pack/vendor/start/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot.git
 	shallow = true
-[submodule "_nvim/pack/default/start/neosnippet-snippets"]
-	path = _nvim/pack/vendor/start/neosnippet-snippets
-	url = https://github.com/Shougo/neosnippet-snippets.git
-	shallow = true
-[submodule "_nvim/pack/default/start/neosnippet.vim"]
-	path = _nvim/pack/vendor/start/neosnippet.vim
-	url = https://github.com/Shougo/neosnippet.vim.git
+[submodule "_nvim/pack/vendor/start/vim-lion"]
+	path = _nvim/pack/vendor/start/vim-lion
+	url = https://github.com/tommcdo/vim-lion.git
 	shallow = true
 [submodule "_nvim/pack/default/start/vim-abolish"]
 	path = _nvim/pack/vendor/start/vim-abolish
@@ -53,20 +73,4 @@
 [submodule "_nvim/pack/default/start/vim-unimpaired"]
 	path = _nvim/pack/vendor/start/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
-	shallow = true
-[submodule "_nvim/pack/vendor/start/ctrlp.vim"]
-	path = _nvim/pack/vendor/start/ctrlp.vim
-	url = https://github.com/ctrlpvim/ctrlp.vim.git
-	shallow = true
-[submodule "_nvim/pack/vendor/nvim-lsp"]
-	path = _nvim/pack/vendor/opt/nvim-lsp
-	url = https://github.com/neovim/nvim-lsp
-	shallow = true
-[submodule "_nvim/pack/vendor/start/vim-lion"]
-	path = _nvim/pack/vendor/start/vim-lion
-	url = https://github.com/tommcdo/vim-lion.git
-	shallow = true
-[submodule "_nvim/pack/colors/start/nord-vim"]
-	path = _nvim/pack/colors/start/nord
-	url = https://github.com/arcticicestudio/nord-vim.git
 	shallow = true
