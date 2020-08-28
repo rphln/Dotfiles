@@ -74,3 +74,7 @@
 	path = _nvim/pack/vendor/start/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
 	shallow = true
+[submodule "_nvim/pack/vendor/start/vimwiki"]
+	path = _nvim/pack/vendor/start/vimwiki
+	url = https://github.com/vimwiki/vimwiki.git
+	shallow = true
