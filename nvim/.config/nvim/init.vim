@@ -9,8 +9,11 @@ augroup end
 
 " Section: General
 
-set clipboard+=unnamed
-set clipboard+=unnamedplus
+set title
+let &titlestring = "%t — vim"
+
+set clipboard^=unnamed
+set clipboard^=unnamedplus
 
 set hidden
 
@@ -53,14 +56,11 @@ set breakindent
 set showbreak=↪
 
 set linebreak
-set textwidth=80
 
 set nowrap
+set textwidth=80
 
 " Section: Appearance
-
-set title
-let &titlestring = "%t — nvim"
 
 set laststatus=0
 set noruler
@@ -75,14 +75,12 @@ let &fillchars = "fold: ,eob: ,vert: "
 
 " Section: Color scheme
 
-syntax enable
-
 set background=dark
 set termguicolors
 
-let g:nord_underline = v:false
+let g:gruvbox_sign_column = "bg0"
 
-colorscheme nord
+colorscheme gruvbox
 
 " Section: Plugins
 
@@ -95,15 +93,15 @@ let g:lion_squeeze_spaces = v:true
 
 " Section: Fuzzy finder
 
-let $FZF_DEFAULT_OPTS = '--color 16'
+let $FZF_DEFAULT_OPTS = "--color 16"
 
 if executable('fd')
-  let $FZF_DEFAULT_COMMAND = 'fd --type f --hidden --exclude .git'
+  let $FZF_DEFAULT_COMMAND = "fd --type f --hidden --exclude .git"
 end
 
 " Section: Overrides
 
-let mapleader = ' '
+let g:mapleader = "\<Space>"
 
 noremap : ;
 noremap ; :
@@ -117,10 +115,10 @@ xnoremap < <gv
 xnoremap > >gv
 
 nnoremap n nzz
-xnoremap N Nzz
+nnoremap N Nzz
 
-xnoremap Q :normal! @q<CR>
 nnoremap Q @q
+xnoremap Q :normal! @q<CR>
 
 nnoremap Y y$
 
@@ -142,7 +140,7 @@ inoremap <C-l> <Esc>[S1z=``a
 
 " Section: Completion
 
-inoremap <expr> <Tab>   complete#tab(v:false)
+inoremap <expr> <Tab> complete#tab(v:false)
 inoremap <expr> <S-Tab> complete#tab(v:true)
 
 inoremap <expr> <C-n> complete#next(v:false)
@@ -151,8 +149,6 @@ inoremap <expr> <C-p> complete#next(v:true)
 " Section: Leader
 
 nnoremap <Leader>f :Files<CR>
-nnoremap <Leader>r :Rg<CR>
-nnoremap <Leader>c :BCommits<CR>
 
 nnoremap <Leader>gh :call search#github(v:false)<CR>
 xnoremap <Leader>gh :call search#github(v:true)<CR>
@@ -168,8 +164,6 @@ noremap! <C-e> <End>
 inoremap <C-b> <C-g>U<Left>
 inoremap <C-f> <C-g>U<Right>
 
-inoremap <M-d> <C-o>de
-
 " Section: Character pairs
 
 inoremap " ""<C-g>U<Left>
@@ -178,9 +172,8 @@ inoremap [ []<C-g>U<Left>
 inoremap ` ``<C-g>U<Left>
 inoremap { {}<C-g>U<Left>
 
-let g:surround_{char2nr('[')} = "[\n\t\r\n]"
-let g:surround_{char2nr('{')} = "{\n\t\r\n}"
-let g:surround_{char2nr('(')} = "(\n\t\r\n)"
+let g:surround_{char2nr("[")} = "[\n\t\r\n]"
+let g:surround_{char2nr("{")} = "{\n\t\r\n}"
 
 " Section: Snippets
 

@@ -6,10 +6,6 @@
 	path = _nvim/pack/vendor/start/neosnippet.vim
 	url = https://github.com/Shougo/neosnippet.vim.git
 	shallow = true
-[submodule "_nvim/pack/colors/start/nord-vim"]
-	path = _nvim/pack/colors/start/nord
-	url = https://github.com/arcticicestudio/nord-vim.git
-	shallow = true
 [submodule "_nvim/pack/fzf/start/fzf"]
 	path = _nvim/pack/fzf/start/fzf
 	url = https://github.com/junegunn/fzf.git
@@ -26,9 +22,13 @@
 	path = _nvim/pack/vendor/start/vim-startify
 	url = https://github.com/mhinz/vim-startify.git
 	shallow = true
-[submodule "_nvim/pack/vendor/nvim-lsp"]
+[submodule "_nvim/pack/colors/start/gruvbox"]
+	path = _nvim/pack/colors/start/gruvbox
+	url = https://github.com/morhetz/gruvbox.git
+	shallow = true
+[submodule "_nvim/pack/vendor/opt/nvim-lsp"]
 	path = _nvim/pack/vendor/opt/nvim-lsp
-	url = https://github.com/neovim/nvim-lsp
+	url = https://github.com/neovim/nvim-lsp.git
 	shallow = true
 [submodule "_nvim/pack/default/start/vim-polyglot"]
 	path = _nvim/pack/vendor/start/vim-polyglot
