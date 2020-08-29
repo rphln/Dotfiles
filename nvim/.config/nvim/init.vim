@@ -93,10 +93,6 @@ let g:startify_change_to_vcs_root = v:true
 
 let g:lion_squeeze_spaces = v:true
 
-" Section: Wiki
-
-let g:vimwiki_list = [{'path': '~/Public/Wiki', 'syntax': 'markdown', 'ext': '.md'}]
-
 " Section: Fuzzy finder
 
 let $FZF_DEFAULT_OPTS = '--color 16'

@@ -70,7 +70,3 @@
 	path = _nvim/pack/vendor/start/vim-surround
 	url = https://github.com/tpope/vim-surround.git
 	shallow = true
-[submodule "_nvim/pack/vendor/start/vimwiki"]
-	path = _nvim/pack/vendor/start/vimwiki
-	url = https://github.com/vimwiki/vimwiki.git
-	shallow = true
