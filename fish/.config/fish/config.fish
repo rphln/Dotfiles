@@ -10,9 +10,9 @@ abbr v $EDITOR
 abbr - 'cd -'
 abbr l 'ls --group-directories-first'
 
-abbr cp 'cp -i'
-abbr mv 'mv -i'
-abbr rm 'rm -I'
+abbr c 'cp -i'
+abbr m 'mv -i'
+abbr r 'rm -I'
 
 abbr md 'mkdir --parents'
 abbr rd 'rmdir --parents'
@@ -20,7 +20,6 @@ abbr rd 'rmdir --parents'
 abbr gd 'git diff'
 abbr gl 'git pull'
 abbr gm 'git merge'
-abbr gr 'git restore'
 abbr gs 'git status --short'
 
 abbr ga 'git add'
@@ -34,11 +33,15 @@ abbr gcr 'git clone --recursive'
 abbr gcm 'git checkout master'
 abbr gco 'git checkout'
 
+abbr gr 'git restore'
+abbr grs 'git restore --staged'
+
 abbr grb 'git rebase --interactive'
 abbr grr 'git rebase --interactive --root'
 
 abbr gsa 'git submodule add'
 abbr gsm 'git submodule'
+abbr gsu 'git submodule update --init --recursive --remote'
 
 abbr gp 'git push'
 abbr gp! 'git push --force'
