@@ -134,6 +134,9 @@ nnoremap gb `[v`]
 
 nnoremap yr :%s/\<<C-r><C-w>\>/
 
+nnoremap yos :set spell! spell?<CR>
+nnoremap yow :set wrap! wrap?<CR>
+
 " Section: Insert
 
 inoremap <C-l> <Esc>[S1z=``a
