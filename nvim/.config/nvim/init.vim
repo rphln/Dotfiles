@@ -182,7 +182,7 @@ xmap <C-k> <Plug>(neosnippet_expand_target)
 " Section: Diagnostics
 
 if has('nvim-0.5')
-  packadd! nvim-lsp
+  packadd! nvim-lspconfig
 
   sign define LspDiagnosticsErrorSign text=@
   sign define LspDiagnosticsWarningSign text=?

@@ -26,9 +26,9 @@
 	path = _nvim/pack/colors/start/gruvbox
 	url = https://github.com/morhetz/gruvbox.git
 	shallow = true
-[submodule "_nvim/pack/vendor/opt/nvim-lsp"]
-	path = _nvim/pack/vendor/opt/nvim-lsp
-	url = https://github.com/neovim/nvim-lsp.git
+[submodule "_nvim/pack/vendor/opt/nvim-lspconfig"]
+	path = _nvim/pack/vendor/opt/nvim-lspconfig
+	url = https://github.com/neovim/nvim-lspconfig.git
 	shallow = true
 [submodule "_nvim/pack/self/start/lmgtfy.vim"]
 	path = _nvim/pack/self/start/lmgtfy.vim
