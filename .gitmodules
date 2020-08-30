@@ -30,6 +30,10 @@
 	path = _nvim/pack/vendor/opt/nvim-lsp
 	url = https://github.com/neovim/nvim-lsp.git
 	shallow = true
+[submodule "_nvim/pack/self/start/lmgtfy.vim"]
+	path = _nvim/pack/self/start/lmgtfy.vim
+	url = https://github.com/rphln/lmgtfy.vim.git
+	shallow = true
 [submodule "_nvim/pack/default/start/vim-polyglot"]
 	path = _nvim/pack/vendor/start/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot.git

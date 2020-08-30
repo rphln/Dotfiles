@@ -150,11 +150,9 @@ inoremap <expr> <C-p> complete#next(v:true)
 
 nnoremap <Leader>f :Files<CR>
 
-nnoremap <Leader>gh :call search#github(v:false)<CR>
-xnoremap <Leader>gh :call search#github(v:true)<CR>
-
-nnoremap <Leader>gs :call search#default(v:false)<CR>
-xnoremap <Leader>gs :call search#default(v:true)<CR>
+map <Leader>gg <Plug>(lmgtfy-grep)
+map <Leader>gh <Plug>(lmgtfy-github)
+map <Leader>gs <Plug>(lmgtfy-duckduckgo)
 
 " Section: Readline
 
