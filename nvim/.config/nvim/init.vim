@@ -30,7 +30,7 @@ autocmd vimrc BufWritePre * if ! &binary | call trim#all() | endif
 
 set gdefault
 
-set inccommand=nosplit
+set inccommand=split
 set incsearch
 
 set nohlsearch
