@@ -8,7 +8,7 @@ set -x VISUAL nvim
 abbr v $EDITOR
 
 abbr - 'cd -'
-abbr l 'ls --group-directories-first'
+abbr l 'ls --classify --group-directories-first'
 
 abbr c 'cp -i'
 abbr m 'mv -i'
@@ -60,7 +60,7 @@ if type -q hub
 end
 
 function chpwd --on-variable PWD
-    ls --group-directories-first
+    ls --classify --group-directories-first
 end
 
 set fish_prompt_pwd_dir_length 0
