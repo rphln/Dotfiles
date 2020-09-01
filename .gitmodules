@@ -66,10 +66,6 @@
 	path = _nvim/pack/vendor/start/vim-rhubarb
 	url = https://github.com/tpope/vim-rhubarb
 	shallow = true
-[submodule "_nvim/pack/default/start/vim-sleuth"]
-	path = _nvim/pack/vendor/start/vim-sleuth
-	url = https://github.com/tpope/vim-sleuth.git
-	shallow = true
 [submodule "_nvim/pack/default/start/vim-surround"]
 	path = _nvim/pack/vendor/start/vim-surround
 	url = https://github.com/tpope/vim-surround.git
