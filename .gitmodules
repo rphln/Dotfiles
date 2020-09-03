@@ -6,6 +6,10 @@
 	path = _nvim/pack/vendor/start/neosnippet.vim
 	url = https://github.com/Shougo/neosnippet.vim.git
 	shallow = true
+[submodule "_nvim/pack/vendor/start/editorconfig-vim"]
+	path = _nvim/pack/vendor/start/editorconfig-vim
+	url = https://github.com/editorconfig/editorconfig-vim.git
+	shallow = true
 [submodule "_nvim/pack/fzf/start/fzf"]
 	path = _nvim/pack/fzf/start/fzf
 	url = https://github.com/junegunn/fzf.git

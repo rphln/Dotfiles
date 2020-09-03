@@ -24,8 +24,6 @@ set shiftround
 set splitbelow
 set splitright
 
-autocmd vimrc BufWritePre * if ! &binary | call trim#all() | endif
-
 " Section: Search and replace
 
 set gdefault
