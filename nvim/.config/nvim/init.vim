@@ -10,7 +10,7 @@ augroup end
 " Section: General
 
 set title
-let &titlestring = "%t — vim"
+let &titlestring = "%t — %{v:progname}"
 
 set clipboard^=unnamed
 set clipboard^=unnamedplus
@@ -24,11 +24,16 @@ set shiftround
 set splitbelow
 set splitright
 
+let g:lion_squeeze_spaces = v:true
+
+let g:startify_change_to_dir = v:false
+let g:startify_change_to_vcs_root = v:true
+
 " Section: Search and replace
 
 set gdefault
 
-set inccommand=split
+set inccommand=nosplit
 set incsearch
 
 set nohlsearch
@@ -37,6 +42,8 @@ set nohlsearch
 
 set completeopt+=menuone
 set completeopt-=preview
+
+let g:mucomplete#minimum_prefix_length = 0
 
 " Section: Views and undo
 
@@ -69,25 +76,15 @@ let &listchars = "tab:┆ ,trail:␣,nbsp:·,extends:»,precedes:«"
 set scrolloff=8
 set sidescrolloff=8
 
-let &fillchars = "fold: ,eob: ,vert: "
-
 " Section: Color scheme
 
 set background=dark
 set termguicolors
 
+let g:gruvbox_bold = v:false
 let g:gruvbox_sign_column = "bg0"
 
 colorscheme gruvbox
-
-" Section: Plugins
-
-let g:neosnippet#snippets_directory = "~/.config/nvim/snippets/"
-
-let g:startify_change_to_dir = v:false
-let g:startify_change_to_vcs_root = v:true
-
-let g:lion_squeeze_spaces = v:true
 
 " Section: Fuzzy finder
 
@@ -132,47 +129,12 @@ nnoremap gb `[v`]
 
 nnoremap yr :%s/\<<C-r><C-w>\>/
 
-nnoremap yos :set spell! spell?<CR>
-nnoremap yow :set wrap! wrap?<CR>
-
-" Section: Insert
-
-inoremap <C-l> <Esc>[S1z=``a
-
-" Section: Completion
-
-inoremap <expr> <Tab> complete#tab(v:false)
-inoremap <expr> <S-Tab> complete#tab(v:true)
-
-inoremap <expr> <C-n> complete#next(v:false)
-inoremap <expr> <C-p> complete#next(v:true)
-
 " Section: Leader
 
 nnoremap <Leader>f :Files<CR>
+nnoremap <Leader>r :Rg<CR>
 
-map <Leader>gg <Plug>(lmgtfy-grep)
-map <Leader>gh <Plug>(lmgtfy-github)
-map <Leader>gs <Plug>(lmgtfy-duckduckgo)
-
-" Section: Readline
-
-noremap! <C-a> <Home>
-noremap! <C-e> <End>
-
-inoremap <C-b> <C-g>U<Left>
-inoremap <C-f> <C-g>U<Right>
-
-" Section: Character pairs
-
-inoremap " ""<C-g>U<Left>
-inoremap ( ()<C-g>U<Left>
-inoremap [ []<C-g>U<Left>
-inoremap ` ``<C-g>U<Left>
-inoremap { {}<C-g>U<Left>
-
-let g:surround_{char2nr("[")} = "[\n\t\r\n]"
-let g:surround_{char2nr("{")} = "{\n\t\r\n}"
+nnoremap <Leader>u :UndotreeToggle<CR>
 
 " Section: Snippets
 
@@ -180,32 +142,36 @@ imap <C-k> <Plug>(neosnippet_expand_or_jump)
 smap <C-k> <Plug>(neosnippet_expand_or_jump)
 xmap <C-k> <Plug>(neosnippet_expand_target)
 
-" Section: Diagnostics
+" Section: ALE
 
-if has('nvim-0.5')
-  packadd! nvim-lspconfig
+let g:ale_hover_cursor = v:false
 
-  sign define LspDiagnosticsErrorSign text=@
-  sign define LspDiagnosticsWarningSign text=?
+let g:ale_sign_error = "•"
+let g:ale_sign_warning = "•"
 
-  lua lsp = require('nvim_lsp')
+nmap <Leader>n <Plug>(ale_next_wrap)
+nmap <Leader>p <Plug>(ale_previous_wrap)
 
-  call v:lua.lsp.elixirls.setup({})
-  call v:lua.lsp.pyls.setup({})
-  call v:lua.lsp.rust_analyzer.setup({})
+autocmd vimrc FileType * call <SID>lsp()
 
-  function! s:lsp() abort
-    setlocal omnifunc=v:lua.vim.lsp.omnifunc
+function! s:lsp() abort
+  if s:has_lsp()
+    setlocal omnifunc=ale#completion#OmniFunc
 
-    nnoremap <buffer> yr <Cmd>call v:lua.vim.lsp.buf.rename()<CR>
+    nmap <buffer> K <Plug>(ale_hover)
 
-    nnoremap <buffer> K <Cmd>call v:lua.vim.lsp.buf.hover()<CR>
-    nnoremap <buffer> gd <Cmd>call v:lua.vim.lsp.buf.definition()<CR>
-    nnoremap <buffer> gi <Cmd>call v:lua.vim.lsp.buf.implementation()<CR>
-    nnoremap <buffer> gr <Cmd>call v:lua.vim.lsp.buf.references()<CR>
-  endfunction
+    nmap <buffer> gd <Plug>(ale_go_to_definition)
+    nmap <buffer> gr <Plug>(ale_find_references)
 
-  autocmd vimrc FileType python,elixir,rust call <SID>lsp()
-endif
+    nmap <buffer> <Leader>af <Plug>(ale_fix)
+    nmap <buffer> <Leader>ar <Plug>(ale_rename)
+  endif
+endfunction
 
-" vim: set ts=2 sw=2 et:
+function! s:has_lsp() abort
+  for l:linter in ale#linter#Get(&filetype)
+    if !empty(l:linter.lsp)
+      return v:true
+    endif
+  endfor
+endfunction

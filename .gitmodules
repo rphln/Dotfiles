@@ -1,76 +1,66 @@
-[submodule "_nvim/pack/default/start/neosnippet-snippets"]
-	path = _nvim/pack/vendor/start/neosnippet-snippets
-	url = https://github.com/Shougo/neosnippet-snippets.git
-	shallow = true
-[submodule "_nvim/pack/default/start/neosnippet.vim"]
-	path = _nvim/pack/vendor/start/neosnippet.vim
-	url = https://github.com/Shougo/neosnippet.vim.git
-	shallow = true
+[submodule "_nvim/pack/vendor/start/ale"]
+	path = _nvim/pack/vendor/start/ale
+	url = https://github.com/dense-analysis/ale.git
 [submodule "_nvim/pack/vendor/start/editorconfig-vim"]
 	path = _nvim/pack/vendor/start/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim.git
-	shallow = true
-[submodule "_nvim/pack/fzf/start/fzf"]
-	path = _nvim/pack/fzf/start/fzf
+[submodule "_nvim/pack/vendor/start/auto-pairs"]
+	path = _nvim/pack/vendor/start/auto-pairs
+	url = https://github.com/jiangmiao/auto-pairs.git
+[submodule "_nvim/pack/vendor/start/fzf"]
+	path = _nvim/pack/vendor/start/fzf
 	url = https://github.com/junegunn/fzf.git
-	shallow = true
-[submodule "_nvim/pack/fzf/start/fzf.vim"]
-	path = _nvim/pack/fzf/start/fzf.vim
+[submodule "_nvim/pack/vendor/start/fzf.vim"]
+	path = _nvim/pack/vendor/start/fzf.vim
 	url = https://github.com/junegunn/fzf.vim.git
-	shallow = true
-[submodule "_nvim/pack/default/start/vim-signify"]
+[submodule "_nvim/pack/vendor/start/vim-mucomplete"]
+	path = _nvim/pack/vendor/start/vim-mucomplete
+	url = https://github.com/lifepillar/vim-mucomplete.git
+[submodule "_nvim/pack/vendor/start/undotree"]
+	path = _nvim/pack/vendor/start/undotree
+	url = https://github.com/mbbill/undotree.git
+[submodule "_nvim/pack/vendor/start/vim-signify"]
 	path = _nvim/pack/vendor/start/vim-signify
 	url = https://github.com/mhinz/vim-signify.git
-	shallow = true
-[submodule "_nvim/pack/default/start/vim-startify"]
+[submodule "_nvim/pack/vendor/start/vim-startify"]
 	path = _nvim/pack/vendor/start/vim-startify
 	url = https://github.com/mhinz/vim-startify.git
-	shallow = true
-[submodule "_nvim/pack/colors/start/gruvbox"]
-	path = _nvim/pack/colors/start/gruvbox
+[submodule "_nvim/pack/vendor/start/gruvbox"]
+	path = _nvim/pack/vendor/start/gruvbox
 	url = https://github.com/morhetz/gruvbox.git
-	shallow = true
-[submodule "_nvim/pack/vendor/opt/nvim-lspconfig"]
-	path = _nvim/pack/vendor/opt/nvim-lspconfig
-	url = https://github.com/neovim/nvim-lspconfig.git
-	shallow = true
-[submodule "_nvim/pack/self/start/lmgtfy.vim"]
-	path = _nvim/pack/self/start/lmgtfy.vim
-	url = https://github.com/rphln/lmgtfy.vim.git
-	shallow = true
-[submodule "_nvim/pack/default/start/vim-polyglot"]
+[submodule "_nvim/pack/vendor/start/vim-polyglot"]
 	path = _nvim/pack/vendor/start/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot.git
-	shallow = true
+[submodule "_nvim/pack/vendor/start/neosnippet-snippets"]
+	path = _nvim/pack/vendor/start/neosnippet-snippets
+	url = https://github.com/Shougo/neosnippet-snippets.git
+[submodule "_nvim/pack/vendor/start/neosnippet.vim"]
+	path = _nvim/pack/vendor/start/neosnippet.vim
+	url = https://github.com/Shougo/neosnippet.vim.git
 [submodule "_nvim/pack/vendor/start/vim-lion"]
 	path = _nvim/pack/vendor/start/vim-lion
 	url = https://github.com/tommcdo/vim-lion.git
-	shallow = true
-[submodule "_nvim/pack/default/start/vim-abolish"]
+[submodule "_nvim/pack/vendor/start/vim-abolish"]
 	path = _nvim/pack/vendor/start/vim-abolish
 	url = https://github.com/tpope/vim-abolish.git
-	shallow = true
-[submodule "_nvim/pack/default/start/vim-commentary"]
+[submodule "_nvim/pack/vendor/start/vim-commentary"]
 	path = _nvim/pack/vendor/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
-	shallow = true
-[submodule "_nvim/pack/default/start/vim-eunuch"]
+[submodule "_nvim/pack/vendor/start/vim-eunuch"]
 	path = _nvim/pack/vendor/start/vim-eunuch
 	url = https://github.com/tpope/vim-eunuch.git
-	shallow = true
-[submodule "_nvim/pack/default/start/vim-fugitive"]
+[submodule "_nvim/pack/vendor/start/vim-fugitive"]
 	path = _nvim/pack/vendor/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
-	shallow = true
-[submodule "_nvim/pack/default/start/vim-repeat"]
+[submodule "_nvim/pack/vendor/start/vim-repeat"]
 	path = _nvim/pack/vendor/start/vim-repeat
 	url = https://github.com/tpope/vim-repeat.git
-	shallow = true
-[submodule "_nvim/pack/default/start/vim-rhubarb"]
+[submodule "_nvim/pack/vendor/start/vim-rhubarb"]
 	path = _nvim/pack/vendor/start/vim-rhubarb
-	url = https://github.com/tpope/vim-rhubarb
-	shallow = true
-[submodule "_nvim/pack/default/start/vim-surround"]
+	url = https://github.com/tpope/vim-rhubarb.git
+[submodule "_nvim/pack/vendor/start/vim-surround"]
 	path = _nvim/pack/vendor/start/vim-surround
 	url = https://github.com/tpope/vim-surround.git
-	shallow = true
+[submodule "_nvim/pack/vendor/start/vim-unimpaired"]
+	path = _nvim/pack/vendor/start/vim-unimpaired
+	url = https://github.com/tpope/vim-unimpaired.git
