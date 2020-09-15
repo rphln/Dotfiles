@@ -4,8 +4,8 @@ window:
     lines: 24
 
   padding:
-    x: 18
-    y: 18
+    x: 16
+    y: 16
 
 mouse:
   hide_when_typing: true
@@ -13,11 +13,8 @@ mouse:
 font:
   size: 16
 
-  offset:
-    y: 1
-
   normal:
-    family: Iosevka Fixed
+    family: JetBrains Mono
 
 colors:
   primary:
