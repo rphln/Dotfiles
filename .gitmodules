@@ -4,9 +4,6 @@
 [submodule "_nvim/pack/vendor/start/editorconfig-vim"]
 	path = _nvim/pack/vendor/start/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim.git
-[submodule "_nvim/pack/vendor/start/auto-pairs"]
-	path = _nvim/pack/vendor/start/auto-pairs
-	url = https://github.com/jiangmiao/auto-pairs.git
 [submodule "_nvim/pack/vendor/start/fzf"]
 	path = _nvim/pack/vendor/start/fzf
 	url = https://github.com/junegunn/fzf.git

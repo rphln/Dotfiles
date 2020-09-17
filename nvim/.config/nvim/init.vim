@@ -129,6 +129,25 @@ nnoremap gb `[v`]
 
 nnoremap yr :%s/\<<C-r><C-w>\>/
 
+" Section: Readline
+
+noremap! <C-a> <Home>
+noremap! <C-e> <End>
+
+inoremap <C-b> <C-g>U<Left>
+inoremap <C-f> <C-g>U<Right>
+
+" Section: Character pairs
+
+inoremap " ""<C-g>U<Left>
+inoremap ( ()<C-g>U<Left>
+inoremap [ []<C-g>U<Left>
+inoremap ` ``<C-g>U<Left>
+inoremap { {}<C-g>U<Left>
+
+let g:surround_{char2nr("[")} = "[\n\t\r\n]"
+let g:surround_{char2nr("{")} = "{\n\t\r\n}"
+
 " Section: Leader
 
 nnoremap <Leader>f :Files<CR>
