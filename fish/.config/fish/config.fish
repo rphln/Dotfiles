@@ -14,6 +14,8 @@ abbr c 'cp -i'
 abbr m 'mv -i'
 abbr r 'rm -I'
 
+abbr t 'touch'
+
 abbr md 'mkdir --parents'
 abbr rd 'rmdir --parents'
 
