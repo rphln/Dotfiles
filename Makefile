@@ -1,5 +1,5 @@
 # Stow packages installable with `make <target>`.
-PACKAGES := alacritty fish git mpv nvim quodlibet termux tmux
+PACKAGES := alacritty fish git mpv
 
 packages: $(PACKAGES)
 
