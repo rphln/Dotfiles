@@ -1,4 +1,0 @@
-&(~dirname = Western, ~codec != Opus)
-Western
-&(~dirname = Japanese, ~codec != Opus)
-Japanese
