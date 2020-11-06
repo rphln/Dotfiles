@@ -18,32 +18,32 @@ font:
 
 colors:
   primary:
-    background: "#242424"
-    foreground: "#cccccc"
+    background: "#24292e"
+    foreground: "#fafbfc"
 
   cursor:
-    text: "#242424"
-    cursor: "#cccccc"
+    text: "#24292e"
+    cursor: "#fafbfc"
 
   normal:
-    black: "#707070"
-    red: "#bc3f3c"
-    green: "#5e8759"
-    yellow: "#cc7832"
-    blue: "#3a86da"
-    magenta: "#85678f"
-    cyan: "#77b767"
-    white: "#cccccc"
+    black: "#24292e"
+    red: "#f97583"
+    green: "#85e89d"
+    yellow: "#ffab70"
+    blue: "#79b8ff"
+    magenta: "#b392f0"
+    cyan: "#9ecbff"
+    white: "#fafbfc"
 
   bright:
-    black: "#707070"
-    red: "#bc3f3c"
-    green: "#5e8759"
-    yellow: "#cc7832"
-    blue: "#3a86da"
-    magenta: "#85678f"
-    cyan: "#77b767"
-    white: "#cccccc"
+    black: "#959da5"
+    red: "#f97583"
+    green: "#85e89d"
+    yellow: "#ffab70"
+    blue: "#79b8ff"
+    magenta: "#ec6cb9"
+    cyan: "#9ecbff"
+    white: "#ffffff"
 
 key_bindings:
   - { key: C, mods: Alt, action: Copy }
