@@ -19,6 +19,8 @@ abbr t 'touch'
 abbr md 'mkdir --parents'
 abbr rd 'rmdir --parents'
 
+abbr rf 'rm -rf'
+
 abbr gd 'git diff'
 abbr gl 'git pull'
 abbr gm 'git merge'
