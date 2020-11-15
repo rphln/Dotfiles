@@ -22,6 +22,7 @@ abbr rd 'rmdir --parents'
 abbr rf 'rm -rf'
 
 abbr gd 'git diff'
+abbr gi 'git init'
 abbr gl 'git pull'
 abbr gm 'git merge'
 abbr gs 'git status --short'
