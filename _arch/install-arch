@@ -9,15 +9,9 @@ die() {
 
 # Section: Mirrors
 
-pacman -Sy --noconfirm pacman-contrib
-
-echo 'Updating mirror list...'
-
-if [[ ! -f /tmp/mirrorlist ]]; then
-	sed -e 's/^#Server/Server/' -e '/^#/d' <(curl -sL 'https://archlinux.org/mirrorlist/?country=BR&use_mirror_status=on') >/tmp/mirrorlist
-fi
-
-rankmirrors /tmp/mirrorlist | tee /etc/pacman.d/mirrorlist
+tee /etc/pacman.d/mirrorlist <<EOF
+Server = https://cloudflaremirrors.com/archlinux/$repo/os/$arch
+EOF
 
 # Section: Disk prompt
 
@@ -71,7 +65,7 @@ mount -o x-mount.mkdir "${part_boot}" /mnt/boot
 
 # Section: Bootstrap
 
-pacstrap /mnt linux base base-devel snapper pacman-contrib
+pacstrap /mnt linux base base-devel pacman-contrib posix snapper
 
 # Section: Bootloader
 
@@ -113,11 +107,13 @@ arch-chroot /mnt systemd-firstboot --prompt
 # Section: Snapper
 
 arch-chroot /mnt snapper --no-dbus -c root create-config /
+arch-chroot /mnt snapper --no-dbus -c home create-config /home/
 
 arch-chroot /mnt systemctl enable snapper-timeline.timer
 arch-chroot /mnt systemctl enable snapper-cleanup.timer
 
 arch-chroot /mnt snapper --no-dbus -c root create --description Installed
+arch-chroot /mnt snapper --no-dbus -c home create --description Installed
 
 # Section: Packages
 
@@ -138,18 +134,17 @@ packages=(
 	libreoffice-fresh
 	mpv
 	qbittorrent
-	syncthing
 
 	fish
 	hub
-	man
 	moreutils
-	neovim
 	stow
-	tmux
+
+	papirus-icon-theme
 )
 
 deps=(
+	linux-firmware
 	linux-headers
 
 	noto-fonts-cjk
@@ -159,8 +154,6 @@ deps=(
 	flatpak
 	fwupd
 	packagekit-qt5
-
-	xclip
 )
 
 arch-chroot /mnt pacman -S --needed --noconfirm ${packages[@]}
