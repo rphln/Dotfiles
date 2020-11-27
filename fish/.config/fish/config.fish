@@ -2,8 +2,8 @@ set fish_greeting
 
 set -U fish_features '3.0'
 
-set -x EDITOR code
-set -x VISUAL code
+set -x EDITOR 'code'
+set -x VISUAL 'code --wait'
 
 abbr v $EDITOR
 
