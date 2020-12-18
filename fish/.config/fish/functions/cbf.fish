@@ -1,3 +1,3 @@
 function cbf
-    cb (cat $argv)
+    cat $argv | cb
 end

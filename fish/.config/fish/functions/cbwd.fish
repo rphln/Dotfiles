@@ -1,3 +1,3 @@
 function cbwd
-    cb (pwd)
+    pwd | cb
 end
