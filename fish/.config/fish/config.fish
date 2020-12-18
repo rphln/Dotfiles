@@ -10,16 +10,15 @@ abbr v $EDITOR
 abbr - 'cd -'
 abbr l 'ls --classify --group-directories-first'
 
-abbr c 'cp -i'
-abbr m 'mv -i'
-abbr r 'rm -I'
+abbr r 'rm -Ir'
+
+abbr c 'cp --no-clobber --recursive'
+abbr m 'mv --no-clobber'
 
 abbr t 'touch'
 
 abbr md 'mkdir --parents'
 abbr rd 'rmdir --parents'
-
-abbr rf 'rm -rf'
 
 abbr gd 'git diff'
 abbr gi 'git init'
