@@ -15,8 +15,6 @@ abbr r 'rm -Ir'
 abbr c 'cp --no-clobber --recursive'
 abbr m 'mv --no-clobber'
 
-abbr t 'touch'
-
 abbr md 'mkdir --parents'
 abbr rd 'rmdir --parents'
 
