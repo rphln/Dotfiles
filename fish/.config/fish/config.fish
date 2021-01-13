@@ -10,7 +10,7 @@ abbr v $EDITOR
 abbr - 'cd -'
 abbr l 'ls --classify --group-directories-first'
 
-abbr r 'rm -Ir'
+abbr r 'trash --'
 
 abbr c 'cp --no-clobber --recursive'
 abbr m 'mv --no-clobber'
