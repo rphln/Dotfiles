@@ -18,6 +18,9 @@ abbr m 'mv --no-clobber'
 abbr md 'mkdir --parents'
 abbr rd 'rmdir --parents'
 
+abbr sd 'sudo'
+abbr se 'sudo -e'
+
 abbr gd 'git diff'
 abbr gi 'git init'
 abbr gl 'git pull'
