@@ -1,6 +1,7 @@
 " Section: Setup
 
 set packpath^=~/Dotfiles/_nvim/
+set packpath^=~/Dropbox/Dotfiles/_nvim/
 
 augroup vimrc
   autocmd!
