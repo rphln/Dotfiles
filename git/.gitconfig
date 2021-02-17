@@ -9,6 +9,7 @@
     today = history --since midnight
 
     exec = "!exec "
+    trust = "!mkdir --parents .git/safe"
 
 [diff]
     algorithm = histogram

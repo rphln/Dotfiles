@@ -5,6 +5,8 @@ set -U fish_features '3.0'
 set -x EDITOR 'nvim'
 set -x VISUAL 'nvim'
 
+set -p PATH '.git/safe/../../bin'
+
 abbr v $EDITOR
 
 abbr - 'cd -'
