@@ -1,6 +1,5 @@
-set fish_greeting
-
 set -U fish_features '3.0'
+set -U fish_greeting
 
 set -x EDITOR 'code'
 set -x VISUAL 'code --wait'
