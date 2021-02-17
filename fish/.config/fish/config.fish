@@ -2,8 +2,8 @@ set fish_greeting
 
 set -U fish_features '3.0'
 
-set -x EDITOR 'nvim'
-set -x VISUAL 'nvim'
+set -x EDITOR 'code'
+set -x VISUAL 'code --wait'
 
 set -p PATH '.git/safe/../../bin'
 
