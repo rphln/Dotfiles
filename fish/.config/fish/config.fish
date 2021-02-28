@@ -1,10 +1,11 @@
-set -U fish_features '3.0'
-set -U fish_greeting
+# Section: Environment
+
+set -p PATH '.git/safe/../../bin'
 
 set -x EDITOR 'code'
 set -x VISUAL 'code --wait'
 
-set -p PATH '.git/safe/../../bin'
+# Section: Abbreviations
 
 abbr v $EDITOR
 
@@ -21,6 +22,12 @@ abbr rd 'rmdir --parents'
 
 abbr sd 'sudo'
 abbr se 'sudo -e'
+
+abbr ... '../..'
+abbr .... '../../..'
+abbr ..... '../../../..'
+
+# Section: Git
 
 abbr gd 'git diff'
 abbr gi 'git init'
@@ -57,13 +64,14 @@ abbr gh 'git history'
 abbr ghg 'git history --grep'
 abbr gho 'git history origin..HEAD'
 
-abbr ... '../..'
-abbr .... '../../..'
-abbr ..... '../../../..'
-
 if type -q hub
     alias git 'hub'
 end
+
+# Section: Overrides
+
+set -U fish_features '3.0'
+set -U fish_greeting
 
 function chpwd --on-variable PWD
     ls --classify --group-directories-first
