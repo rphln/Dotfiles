@@ -15,13 +15,13 @@ abbr l 'ls --classify --group-directories-first'
 abbr c 'cp --no-clobber --recursive'
 abbr m 'mv --no-clobber'
 
-abbr rm 'trash --'
-
 abbr md 'mkdir --parents'
 abbr rd 'rmdir --parents'
 
 abbr sd 'sudo'
 abbr se 'sudo -e'
+
+abbr ts 'trash --'
 
 abbr ... '../..'
 abbr .... '../../..'
