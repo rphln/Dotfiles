@@ -64,6 +64,11 @@ abbr ghh 'git history'
 abbr ghg 'git history --grep'
 abbr gho 'git history origin..HEAD'
 
+# Section: Keybindings
+
+bind \cg 'yank-command'
+bind \cs 'yank-path'
+
 # Section: Overrides
 
 set -U fish_features '3.0'
