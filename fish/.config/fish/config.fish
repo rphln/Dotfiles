@@ -61,7 +61,7 @@ abbr gp 'git push'
 abbr gp! 'git push --force'
 abbr gpf 'git push --force-with-lease'
 
-abbr ghh 'git history'
+abbr ghi 'git history'
 abbr ghg 'git history --grep'
 abbr gho 'git history origin..HEAD'
 
