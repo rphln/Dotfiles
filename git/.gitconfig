@@ -5,6 +5,9 @@
 [alias]
     history = log --pretty=format:'%Cred(%h) %Creset%s %Cgreen(%ar) %Cblue<%an>'
 
+    unstage = reset HEAD
+    uncommit = reset --soft HEAD^
+
     standup = history --since yesterday
     today = history --since midnight
 
