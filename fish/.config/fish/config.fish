@@ -67,7 +67,7 @@ abbr gho 'git history origin..HEAD'
 
 # Section: Keybindings
 
-bind \cg 'yank-command'
+bind \cy 'yank-command'
 bind \cs 'yank-path'
 
 bind \co 'browse-here'
