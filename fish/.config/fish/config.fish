@@ -70,6 +70,8 @@ abbr gho 'git history origin..HEAD'
 bind \cg 'yank-command'
 bind \cs 'yank-path'
 
+bind \co 'browse-here'
+
 # Section: Overrides
 
 set -U fish_features '3.0'
