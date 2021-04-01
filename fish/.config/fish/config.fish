@@ -77,8 +77,10 @@ bind \co 'browse-here'
 set -U fish_features '3.0'
 set -U fish_greeting
 
+alias ls 'command ls --color --classify --group-directories-first'
+
 function chpwd --on-variable PWD
-    ls --classify --group-directories-first
+    ls
 end
 
 set fish_prompt_pwd_dir_length 0
