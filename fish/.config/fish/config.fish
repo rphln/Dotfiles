@@ -7,10 +7,12 @@ set -x VISUAL 'code --wait'
 
 # Section: Abbreviations
 
-abbr v $EDITOR
-
 abbr - 'cd -'
-abbr l 'ls --classify --group-directories-first'
+
+abbr 1 '../'
+abbr 2 '../../'
+abbr 3 '../../../'
+abbr 4 '../../../../'
 
 abbr c 'cp --no-clobber --recursive'
 abbr m 'mv --no-clobber'
@@ -18,15 +20,13 @@ abbr m 'mv --no-clobber'
 abbr r 'trash --'
 abbr t 'touch --'
 
+abbr v $EDITOR
+
 abbr md 'mkdir --parents --'
 abbr rd 'rmdir --parents --'
 
 abbr sd 'sudo'
 abbr se 'sudo -e'
-
-abbr ... '../..'
-abbr .... '../../..'
-abbr ..... '../../../..'
 
 # Section: Git
 
