@@ -31,39 +31,37 @@ abbr se 'sudo -e'
 # Section: Git
 
 abbr gd 'git diff'
-abbr gi 'git init'
-abbr gl 'git pull'
 abbr gm 'git merge'
 abbr gs 'git status --short'
+abbr gu 'git pull'
 
 abbr ga 'git add'
 abbr gap 'git add --patch'
+
+abbr gb 'git rebase --interactive'
+abbr gbn 'git rebase --interactive HEAD~9'
+abbr gbr 'git rebase --interactive --root'
 
 abbr gc 'git commit'
 abbr gc! 'git commit --amend --reset-author'
 
 abbr gcr 'git clone --recursive'
 
-abbr gcm 'git checkout master'
-abbr gco 'git checkout'
+abbr gi 'git init'
+abbr gig 'git ignore'
 
-abbr gr 'git restore'
-abbr grs 'git restore --staged'
+abbr gl 'git history'
+abbr glo 'git history origin..HEAD'
 
-abbr grb 'git rebase --interactive'
-abbr grr 'git rebase --interactive --root'
-
-abbr gsa 'git submodule add'
-abbr gsm 'git submodule'
-abbr gsu 'git submodule update --init --recursive --remote'
+abbr go 'git switch'
+abbr gom 'git switch master'
 
 abbr gp 'git push'
 abbr gp! 'git push --force'
 abbr gpf 'git push --force-with-lease'
 
-abbr ghi 'git history'
-abbr ghg 'git history --grep'
-abbr gho 'git history origin..HEAD'
+abbr gr 'git restore'
+abbr grs 'git restore --staged'
 
 # Section: Keybindings
 
