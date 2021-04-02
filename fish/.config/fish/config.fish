@@ -26,7 +26,7 @@ abbr md 'mkdir --parents --'
 abbr rd 'rmdir --parents --'
 
 abbr sd 'sudo'
-abbr se 'sudo -e'
+abbr se 'sudo --edit'
 
 # Section: Git
 
