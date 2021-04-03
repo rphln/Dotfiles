@@ -57,8 +57,7 @@ abbr go 'git switch'
 abbr gom 'git switch master'
 
 abbr gp 'git push'
-abbr gp! 'git push --force'
-abbr gpf 'git push --force-with-lease'
+abbr gp! 'git push --force-with-lease'
 
 abbr gr 'git restore'
 abbr grs 'git restore --staged'
