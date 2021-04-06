@@ -34,7 +34,8 @@ abbr se 'sudo --edit'
 # Section: Git
 
 abbr gd 'git diff'
-abbr gm 'git merge'
+abbr ge 'git merge'
+abbr gm 'git mv'
 abbr gs 'git status --short'
 abbr gu 'git pull'
 
@@ -64,6 +65,9 @@ abbr gp! 'git push --force-with-lease'
 
 abbr gr 'git restore'
 abbr grs 'git restore --staged'
+
+abbr gstp 'git stash pop'
+abbr gstu 'git stash push'
 
 # Section: Keybindings
 
