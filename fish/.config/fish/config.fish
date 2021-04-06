@@ -1,9 +1,9 @@
 # Section: Environment
 
-set -p PATH '.git/safe/../../bin'
+set --prepend PATH '.git/safe/../../bin'
 
-set -x EDITOR 'code'
-set -x VISUAL 'code --wait'
+set --export EDITOR 'code'
+set --export VISUAL 'code --wait'
 
 # Section: Abbreviations
 
@@ -83,7 +83,7 @@ end
 set fish_prompt_pwd_dir_length 0
 
 function prompt_pwd_tail --description "Prints the last two path components from `prompt_pwd`."
-    string match -r '(?:^/)?(?:[^/]+/?){0,2}$' (prompt_pwd)
+    string match --regex '(?:^/)?(?:[^/]+/?){0,2}$' (prompt_pwd)
 end
 
 function fish_prompt
