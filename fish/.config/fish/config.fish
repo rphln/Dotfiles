@@ -17,15 +17,18 @@ abbr 4 '../../../../'
 abbr c 'cp --no-clobber --recursive'
 abbr m 'mv --no-clobber'
 
-abbr r 'trash --'
-abbr t 'touch --'
+abbr l 'ls'
+
+abbr r 'trash'
+abbr t 'touch'
 
 abbr v $EDITOR
 
-abbr md 'mkdir --parents --'
-abbr rd 'rmdir --parents --'
+abbr dl 'curl --silent --location --remote-name-all'
 
-abbr sd 'sudo'
+abbr md 'mkdir --parents'
+abbr rd 'rmdir --parents'
+
 abbr se 'sudo --edit'
 
 # Section: Git
