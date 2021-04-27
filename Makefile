@@ -3,7 +3,10 @@ PACKAGES := alacritty fish git mpv
 
 packages: $(PACKAGES)
 
+uninstall:
+	-stow --no-folding --target $(HOME) --delete $(PACKAGES)
+
 $(PACKAGES):
 	-stow --no-folding --target $(HOME) --stow $@
 
-.PHONY: $(PACKAGES) packages
+.PHONY: $(PACKAGES) packages uninstall
