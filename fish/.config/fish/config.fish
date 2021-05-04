@@ -24,9 +24,11 @@ abbr l 'ls'
 abbr r 'trash'
 abbr t 'touch'
 
+abbr s 'rsync --archive --ignore-existing --human-readable --info progress2'
+
 abbr v $EDITOR
 
-abbr dl 'curl --silent --location --remote-name-all'
+abbr dl 'curl --progress-bar --location --remote-name-all'
 
 abbr md 'mkdir --parents'
 abbr rd 'rmdir --parents'
