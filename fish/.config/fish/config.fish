@@ -37,11 +37,14 @@ abbr se 'sudo --edit'
 
 # Section: Git
 
+abbr g 'git'
+
 abbr gd 'git diff'
 abbr ge 'git merge'
 abbr gm 'git mv'
 abbr gs 'git status --short'
 abbr gu 'git pull'
+abbr gx 'git exec'
 
 abbr ga 'git add'
 abbr gap 'git add --patch'
@@ -58,8 +61,13 @@ abbr gcr 'git clone --recursive'
 abbr gi 'git init'
 abbr gig 'git ignore'
 
+abbr gk 'git rm'
+abbr gkf 'git rm -f'
+abbr gkr 'git rm -r'
+
 abbr gl 'git history'
 abbr glo 'git history origin..HEAD'
+abbr glg 'git history --grep'
 
 abbr go 'git switch'
 abbr gom 'git switch master'
