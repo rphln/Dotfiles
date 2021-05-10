@@ -17,7 +17,7 @@ font:
     y: 2
 
   normal:
-    family: Iosevka
+    family: Iosevka Fixed
 
 colors:
   primary:
