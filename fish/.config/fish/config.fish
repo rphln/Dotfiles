@@ -5,8 +5,6 @@ set --prepend PATH '.git/safe/../../bin'
 set --export EDITOR 'code'
 set --export VISUAL 'code --wait'
 
-eval (dircolors --csh ~/.dircolors)
-
 # Section: Abbreviations
 
 abbr - 'cd -'
