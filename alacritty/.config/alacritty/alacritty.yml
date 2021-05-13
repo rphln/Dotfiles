@@ -31,3 +31,5 @@ colors:
 key_bindings:
   - { key: Back, mods: Control, chars: "" }
   - { key: Delete, mods: Control, chars: "d" }
+
+  - { key: K, mods: Alt, action: ClearHistory }
