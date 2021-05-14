@@ -13,9 +13,6 @@ mouse:
 font:
   size: 15
 
-  offset:
-    y: 2
-
   normal:
     family: Iosevka Fixed
 
