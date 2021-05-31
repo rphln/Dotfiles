@@ -14,7 +14,7 @@
     exec = "!exec "
     trust = "!mkdir --parents .git/safe"
 
-    ignore = "!f() { curl -sL https://www.gitignore.io/api/$@; }; f"
+    ignore = "!f() { exec curl -sL https://www.gitignore.io/api/$@; }; f"
 
 [diff]
     algorithm = histogram
