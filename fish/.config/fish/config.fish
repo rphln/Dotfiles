@@ -2,8 +2,8 @@
 
 set --prepend PATH '.git/safe/../../bin'
 
-set --export EDITOR 'code'
-set --export VISUAL 'code --wait'
+set --export EDITOR 'subl'
+set --export VISUAL 'subl --wait'
 
 # Section: Abbreviations
 
