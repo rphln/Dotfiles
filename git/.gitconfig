@@ -8,8 +8,8 @@
     unstage = reset HEAD
     uncommit = reset --soft HEAD^
 
-    standup = history --since yesterday
-    today = history --since midnight
+    standup = "!f() { exec git ${@:-history} --since yesterday; }; f"
+    today = "!f() { exec git ${@:-history} --since midnight; }; f"
 
     exec = "!exec "
     trust = "!mkdir --parents .git/safe"
