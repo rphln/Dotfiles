@@ -91,7 +91,9 @@ bind \co 'browse-here'
 set -U fish_features '3.0'
 set -U fish_greeting
 
-alias ls 'command ls --color --group-directories-first'
+function ls
+    command ls --color --group-directories-first $argv
+end
 
 function chpwd --on-variable PWD
     ls
