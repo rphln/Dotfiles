@@ -118,6 +118,6 @@ for group in fish_color_autosuggestion fish_color_cancel fish_color_command fish
 end
 
 set fish_color_error brred
+set fish_color_comment brblue
 
-set fish_color_comment brblack
 set fish_color_autosuggestion brblack
