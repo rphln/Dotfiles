@@ -31,3 +31,6 @@
 
 [commit]
     verbose = true
+
+[filter "pandoc"]
+    clean = pandoc --to gfm
