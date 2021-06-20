@@ -32,6 +32,9 @@
     "tmp"
   ],
 
+  // Use the native title bar.
+  "gtk_client_side_window_decorations": false,
+
   // Vintage
   "vintage_use_clipboard": true,
   "vintage_start_in_command_mode": true,
