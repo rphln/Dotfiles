@@ -92,7 +92,7 @@ set -U fish_features '3.0'
 set -U fish_greeting
 
 function ls
-    command ls --color --group-directories-first $argv
+    command ls --almost-all --color --group-directories-first $argv
 end
 
 function chpwd --on-variable PWD
