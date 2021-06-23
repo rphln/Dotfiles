@@ -12,6 +12,8 @@
   "scroll_context_lines": 2,
   "scroll_past_end": 0.5,
 
+  "mini_diff": false,
+
   "folder_exclude_patterns": [
     ".asset-cache",
     ".bundle",
