@@ -18,12 +18,32 @@ font:
 
 colors:
   primary:
-    background: "#24292e"
-    foreground: "#e1e4e8"
+    background: "#2d2a2e"
+    foreground: "#fcfcfa"
 
   cursor:
-    text: "#24292e"
-    cursor: "#e1e4e8"
+    text: "#2d2a2e"
+    cursor: "#fcfcfa"
+
+  normal:
+    black: "#2d2a2e"
+    red: "#ff6188"
+    green: "#a9dc76"
+    yellow: "#ffd866"
+    blue: "#fc9867"
+    magenta: "#ab9df2"
+    cyan: "#78dce8"
+    white: "#fcfcfa"
+
+  bright:
+    black: "#727072"
+    red: "#ff6188"
+    green: "#a9dc76"
+    yellow: "#ffd866"
+    blue: "#fc9867"
+    magenta: "#ab9df2"
+    cyan: "#78dce8"
+    white: "#fcfcfa"
 
 key_bindings:
   - { key: Back, mods: Control, chars: "" }
