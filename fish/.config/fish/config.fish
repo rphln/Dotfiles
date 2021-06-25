@@ -14,8 +14,8 @@ abbr 2 '../../'
 abbr 3 '../../../'
 abbr 4 '../../../../'
 
-abbr c 'cp --no-clobber --recursive'
-abbr m 'mv --no-clobber'
+abbr c 'cp --interactive --recursive'
+abbr m 'mv --interactive'
 
 abbr l 'ls'
 
