@@ -83,6 +83,8 @@ abbr gstu 'git stash push'
 
 # Section: Keybindings
 
+bind \c_ 'toggle-comment'
+
 bind \cy 'yank-command'
 bind \cs 'yank-path'
 
