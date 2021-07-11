@@ -37,7 +37,6 @@ abbr se 'sudo --edit'
 
 abbr g 'git'
 
-abbr gd 'git diff'
 abbr ge 'git merge'
 abbr gm 'git mv'
 abbr gs 'git status --short'
@@ -55,6 +54,9 @@ abbr gc 'git commit'
 abbr gc! 'git commit --amend --reset-author'
 
 abbr gcr 'git clone --recursive'
+
+abbr gd 'git diff'
+abbr gdw 'git diff --ignore-space-change'
 
 abbr gi 'git init'
 abbr gig 'git ignore'
