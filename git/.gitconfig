@@ -37,6 +37,3 @@
 
 [diff "jupyter"]
     textconv = jupytext --to md --output -
-
-[filter "pandoc"]
-    clean = pandoc --to gfm
