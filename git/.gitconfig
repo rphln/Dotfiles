@@ -11,6 +11,8 @@
     standup = "!f() { exec git ${@:-history} --since yesterday; }; f"
     today = "!f() { exec git ${@:-history} --since midnight; }; f"
 
+    fix = "!f() { git commit --allow-empty-message --no-edit; exec git rebase --interactive; }; f"
+
     exec = "!exec "
     trust = "!mkdir --parents .git/safe"
 

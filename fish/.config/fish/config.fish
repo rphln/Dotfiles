@@ -38,6 +38,7 @@ abbr se 'sudo --edit'
 abbr g 'git'
 
 abbr ge 'git merge'
+abbr gf 'git fix'
 abbr gm 'git mv'
 abbr gs 'git status --short'
 abbr gu 'git pull'
