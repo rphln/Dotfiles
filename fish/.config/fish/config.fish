@@ -14,6 +14,8 @@ abbr 2 '../../'
 abbr 3 '../../../'
 abbr 4 '../../../../'
 
+abbr = 'qalc'
+
 abbr c 'cp --interactive --recursive'
 abbr m 'mv --interactive'
 
