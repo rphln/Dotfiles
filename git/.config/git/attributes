@@ -1,2 +1,2 @@
-*.md	diff=markdown
-*.ipynb	diff=jupyter
+*.md    diff=md
+*.ipynb diff=ipynb

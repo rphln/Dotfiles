@@ -34,8 +34,8 @@
 [commit]
     verbose = true
 
-[diff "markdown"]
+[diff "md"]
     xfuncname = "^#.*"
 
-[diff "jupyter"]
+[diff "ipynb"]
     textconv = jupytext --to md --output -
