@@ -22,6 +22,7 @@ abbr m 'mv --interactive'
 abbr l 'ls'
 abbr la 'ls --almost-all'
 
+abbr o 'open'
 abbr r 'trash'
 abbr t 'touch'
 
