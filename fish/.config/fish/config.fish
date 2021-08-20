@@ -94,6 +94,7 @@ bind \cy 'yank-command'
 bind \cs 'yank-path'
 
 bind \co 'browse-here'
+bind \cr 'edit-here'
 
 # Section: Overrides
 
