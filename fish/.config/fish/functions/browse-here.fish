@@ -1,3 +1,3 @@
-function browse-here --description "Opens the workding directory in a graphical explorer."
+function browse-here --description "Opens the working directory in a graphical explorer."
     open (pwd)
 end
