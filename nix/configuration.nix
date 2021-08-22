@@ -6,6 +6,9 @@
       ./hardware-configuration.nix
     ];
 
+  nix.trustedUsers = [ "root" "@wheel" ];
+  security.sudo.wheelNeedsPassword = false;
+
   nixpkgs.config.allowUnfree = true;
 
   hardware = {
@@ -15,7 +18,10 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "Yamato";
+  networking = {
+    hostName = "Musashi";
+    networkmanager.enable = true;
+  };
 
   i18n.defaultLocale = "en_GB.UTF-8";
   time.timeZone = "America/Sao_Paulo";
@@ -41,21 +47,24 @@
   environment.systemPackages = with pkgs; [
     alacritty
     autojump
-    vscode
-    stow
-    git
-    moreutils
-    gnumake
-    vim
+    fd
     fish
-
-    mpv
-    btfs
-    youtube-dl
-
+    git
+    gnumake
+    keepassxc
+    moreutils
+    stow
     trash-cli
+    vim
+    vscode
+
     mesa
     nixpkgs-fmt
+
+    # Multimedia
+    btfs
+    mpv
+    youtube-dl
 
     # Browser
     firefox
@@ -95,8 +104,14 @@
 
   services.xserver = {
     enable = true;
+    videoDrivers = [ "nvidia" ];
     displayManager.sddm.enable = true;
     desktopManager.plasma5.enable = true;
+    screenSection = ''
+      Option         "metamodes" "nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }"
+      Option         "AllowIndirectGLXProtocol" "off"
+      Option         "TripleBuffer" "on"
+    '';
   };
 
   services.openssh = {
