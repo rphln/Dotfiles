@@ -1,6 +1,6 @@
 [user]
     name = Raphael Nepomuceno
-    email = 58113327+rphln@users.noreply.github.com
+    email = rphln@users.noreply.github.com
 
 [alias]
     history = log --pretty=format:'%Cred(%h) %Creset%s %Cgreen(%ar) %Cblue<%an>'
