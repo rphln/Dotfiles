@@ -119,6 +119,30 @@ function fish_prompt
     printf "%s: " (prompt_pwd_tail)
 end
 
+function fish_right_prompt
+    if [ $status = 0 ]
+        set_color green
+    else
+        set_color red
+    end
+
+    set -g __fish_git_prompt_showdirtystate 'yes'
+    set -g __fish_git_prompt_showstashstate 'yes'
+    set -g __fish_git_prompt_showuntrackedfiles 'yes'
+
+    set -g __fish_git_prompt_char_cleanstate '✔'
+    set -g __fish_git_prompt_char_conflictedstate '✖'
+    set -g __fish_git_prompt_char_dirtystate '✚'
+    set -g __fish_git_prompt_char_stagedstate '●'
+    set -g __fish_git_prompt_char_stashstate '⚑'
+    set -g __fish_git_prompt_char_untrackedfiles '…'
+    set -g __fish_git_prompt_char_upstream_ahead '↓'
+    set -g __fish_git_prompt_char_upstream_behind '↑'
+
+    __fish_git_prompt || echo -n '…'
+    set_color normal
+end
+
 function fish_title
     printf "%s — %s" (prompt_pwd_tail) (status current-command)
 end
