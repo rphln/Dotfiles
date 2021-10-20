@@ -37,6 +37,9 @@ abbr rd 'rmdir --parents'
 
 abbr se 'sudo --edit'
 
+abbr yf 'yank-file'
+abbr yp 'yank-path'
+
 # Section: Git
 
 abbr g 'git'
