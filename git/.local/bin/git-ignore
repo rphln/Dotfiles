@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+IFS=,
+exec curl --silent --location "https://www.gitignore.io/api/${*}"
