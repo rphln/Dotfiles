@@ -40,6 +40,8 @@ abbr se 'sudo --edit'
 abbr yf 'yank-file'
 abbr yp 'yank-path'
 
+abbr py 'ipython3'
+
 # Section: Git
 
 abbr g 'git'
@@ -59,6 +61,7 @@ abbr gbn 'git rebase --interactive HEAD~9'
 abbr gbr 'git rebase --interactive --root'
 
 abbr gc 'git commit'
+abbr gci 'git commit --message "Initial commit."'
 abbr gc! 'git commit --amend --reset-author'
 
 abbr gcr 'git clone --recursive'
@@ -81,6 +84,7 @@ abbr go 'git switch'
 abbr gom 'git switch master'
 
 abbr gp 'git push'
+abbr gpu 'git push --set-upstream origin master'
 abbr gp! 'git push --force-with-lease'
 
 abbr gr 'git restore'
