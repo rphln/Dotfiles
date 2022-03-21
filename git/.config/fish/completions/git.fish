@@ -1,7 +1,7 @@
 # Also load the default completions.
 source {$__fish_data_dir}/completions/git.fish
 
-set -g __fish_complete_git_ignore_cache "/tmp/__fish_complete_git_ignore"
+set -g __fish_complete_git_ignore_cache /tmp/__fish_complete_git_ignore
 
 function __fish_complete_git_ignore
     cat $__fish_complete_git_ignore_cache 2>/dev/null || begin
