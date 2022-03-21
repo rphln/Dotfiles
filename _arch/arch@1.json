@@ -1,0 +1,25 @@
+{
+    "audio": "pipewire",
+    "bootloader": "systemd-bootctl",
+    "debug": false,
+    "script": "guided",
+    "filesystem": "btrfs",
+    "hostname": "Taihou",
+    "kernels": [
+        "linux-zen"
+    ],
+    "keyboard-layout": "us",
+    "mirror-region": "Worldwide",
+    "nic": {
+    	"type": "NM"
+    },
+    "ntp": true,
+    "packages": ["git", "wget", "fish", "hub", "moreutils", "stow"],
+    "profile": "kde",
+    "gfx_driver": "All open-source (default)",
+    "swap": true,
+    "sys-encoding": "utf-8",
+    "sys-language": "en_GB",
+    "timezone": "America/Sao_Paulo",
+    "version": "2.3.1.dev0"
+}
