@@ -44,7 +44,7 @@
 
   // Fonts
   "font_face": "Iosevka",
-  "font_size": 16,
+  "font_size": 15,
   "font_options": ["gray_antialias"],
 
   "line_padding_bottom": 4,
@@ -55,5 +55,5 @@
 
   // Theme
   "theme": "Adaptive.sublime-theme",
-  "color_scheme": "Packages/Theme - Monokai Pro/Monokai Pro.sublime-color-scheme"
+  "color_scheme": "Alabaster BG.sublime-color-scheme"
 }
