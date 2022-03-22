@@ -1,5 +1,5 @@
 # Stow packages installable with `make <target>`.
-PACKAGES := alacritty bin fish git mpv
+PACKAGES := alacritty bin fish git mpv sublime
 
 packages: $(PACKAGES)
 

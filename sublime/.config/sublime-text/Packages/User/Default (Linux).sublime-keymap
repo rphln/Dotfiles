@@ -1,0 +1,19 @@
+[
+  { "keys": ["alt+j"], "command": "find_under_expand" },
+  {
+    "keys": ["alt+z"],
+    "command": "toggle_setting",
+    "args": { "setting": "word_wrap" }
+  },
+  {
+    "keys": ["Y"],
+    "command": "set_action_motion",
+    "args": {
+      "action": "vi_copy",
+      "motion": "vi_move_to_hard_eol",
+      "motion_args": { "repeat": 1, "extend": true },
+      "motion_inclusive": true
+    },
+    "context": [{ "key": "setting.command_mode" }]
+  }
+]
