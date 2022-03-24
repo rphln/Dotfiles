@@ -1,47 +1,47 @@
 # Section: Environment
 
-set --export EDITOR 'subl'
-set --export VISUAL 'subl --wait'
+set --export EDITOR subl
+set --export VISUAL subl --wait
 
 fish_add_path --prepend ~/.local/bin
 fish_add_path --prepend .git/safe/../../bin
 
 # Section: Abbreviations
 
-abbr - 'cd -'
+abbr - cd -
 
-abbr 1 '../'
-abbr 2 '../../'
-abbr 3 '../../../'
-abbr 4 '../../../../'
+abbr 1 ../
+abbr 2 ../../
+abbr 3 ../../../
+abbr 4 ../../../../
 
-abbr = 'qalc'
+abbr = qalc
 
-abbr c 'cp --interactive --recursive'
-abbr m 'mv --interactive'
+abbr c cp --interactive --recursive
+abbr m mv --interactive
 
-abbr l 'ls'
-abbr la 'ls --almost-all'
+abbr l ls
+abbr la ls --almost-all
 
-abbr o 'open'
-abbr r 'trash'
-abbr t 'touch'
+abbr o open
+abbr r trash
+abbr t touch
 
-abbr s 'rsync --archive --ignore-existing --human-readable --info progress2'
+abbr s rsync --archive --ignore-existing --human-readable --info progress2
 
 abbr v $EDITOR
 
-abbr dl 'curl --progress-bar --location --remote-name-all'
+abbr dl curl --progress-bar --location --remote-name-all
 
-abbr md 'mkdir --parents'
-abbr rd 'rmdir --parents'
+abbr md mkdir --parents
+abbr rd rmdir --parents
 
-abbr se 'sudo --edit'
+abbr se sudo --edit
 
-abbr yf 'yank-file'
-abbr yp 'yank-path'
+abbr yf yank-file
+abbr yp yank-path
 
-abbr py 'ipython3'
+abbr py ipython3
 
 # Section: Git
 
@@ -92,12 +92,12 @@ abbr gstu git stash push
 
 # Section: Keybindings
 
-bind \c_ 'toggle-comment'
-bind \cy 'yank-command'
+bind \c_ toggle-comment
+bind \cy yank-command
 
 # Section: Overrides
 
-set -U fish_features '3.0'
+set -U fish_features 3.0
 set -U fish_greeting
 
 function ls
@@ -115,7 +115,7 @@ function prompt_pwd_tail --description "Prints the last two path components from
 end
 
 function fish_prompt
-    printf "%s: " (prompt_pwd_tail)
+    printf '%s: ' (prompt_pwd_tail)
 end
 
 function fish_right_prompt
@@ -125,25 +125,25 @@ function fish_right_prompt
         set_color red
     end
 
-    set -g __fish_git_prompt_showdirtystate 'yes'
-    set -g __fish_git_prompt_showstashstate 'yes'
-    set -g __fish_git_prompt_showuntrackedfiles 'yes'
+    set -g __fish_git_prompt_showdirtystate yes
+    set -g __fish_git_prompt_showstashstate yes
+    set -g __fish_git_prompt_showuntrackedfiles yes
 
-    set -g __fish_git_prompt_char_cleanstate '✔'
-    set -g __fish_git_prompt_char_conflictedstate '✖'
-    set -g __fish_git_prompt_char_dirtystate '✚'
-    set -g __fish_git_prompt_char_stagedstate '●'
-    set -g __fish_git_prompt_char_stashstate '⚑'
-    set -g __fish_git_prompt_char_untrackedfiles '＊'
-    set -g __fish_git_prompt_char_upstream_ahead '↓'
-    set -g __fish_git_prompt_char_upstream_behind '↑'
+    set -g __fish_git_prompt_char_cleanstate ✔
+    set -g __fish_git_prompt_char_conflictedstate ✖
+    set -g __fish_git_prompt_char_dirtystate ✚
+    set -g __fish_git_prompt_char_stagedstate ●
+    set -g __fish_git_prompt_char_stashstate ⚑
+    set -g __fish_git_prompt_char_untrackedfiles ＊
+    set -g __fish_git_prompt_char_upstream_ahead ↓
+    set -g __fish_git_prompt_char_upstream_behind ↑
 
-    __fish_git_prompt || echo -n '…'
+    __fish_git_prompt || echo -n …
     set_color normal
 end
 
 function fish_title
-    printf "%s — %s" (prompt_pwd_tail) (status current-command)
+    printf '%s — %s' (prompt_pwd_tail) (status current-command)
 end
 
 for group in fish_color_autosuggestion fish_color_cancel fish_color_command fish_color_comment fish_color_cwd fish_color_cwd_root fish_color_end fish_color_error fish_color_escape fish_color_history_current fish_color_host fish_color_host_remote fish_color_match fish_color_normal fish_color_operator fish_color_param fish_color_quote fish_color_redirection fish_color_search_match fish_color_selection fish_color_status fish_color_user fish_color_valid_path fish_pager_color_background fish_pager_color_completion fish_pager_color_description fish_pager_color_prefix fish_pager_color_progress fish_pager_color_secondary_background fish_pager_color_secondary_completion fish_pager_color_secondary_description fish_pager_color_secondary_prefix fish_pager_color_selected_background fish_pager_color_selected_completion fish_pager_color_selected_description fish_pager_color_selected_prefix
