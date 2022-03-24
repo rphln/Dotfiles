@@ -1,9 +1,10 @@
 # Section: Environment
 
-set --prepend PATH '.git/safe/../../bin'
-
 set --export EDITOR 'subl'
 set --export VISUAL 'subl --wait'
+
+fish_add_path --prepend ~/.local/bin
+fish_add_path --prepend .git/safe/../../bin
 
 # Section: Abbreviations
 
