@@ -7,5 +7,5 @@ HistoryMode=2
 
 [Appearance]
 ColorScheme=rphln
-Font=Iosevka Fixed,15,-1,5,50,0,0,0,0,0
+Font=Iosevka Term,15,-1,5,50,0,0,0,0,0
 UseFontLineChararacters=true
