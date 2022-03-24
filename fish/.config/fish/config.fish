@@ -45,54 +45,50 @@ abbr py 'ipython3'
 
 # Section: Git
 
-abbr g 'git'
+abbr g git
 
-abbr ge 'git merge'
-abbr gf 'git fix'
-abbr gm 'git mv'
-abbr gs 'git status --short'
-abbr gu 'git pull'
-abbr gx 'git exec'
+abbr ge git merge
+abbr gf git fix
+abbr gm git mv
+abbr gr git rm
+abbr gs git status --short
+abbr gu git pull
+abbr gx git exec
 
-abbr ga 'git add'
-abbr gap 'git add --patch'
+abbr ga git add
+abbr gap git add --patch
 
-abbr gb 'git rebase --interactive'
-abbr gbn 'git rebase --interactive HEAD~9'
-abbr gbr 'git rebase --interactive --root'
+abbr gb git rebase --interactive
+abbr gbr git rebase --interactive --root
 
-abbr gc 'git commit'
-abbr gci 'git commit --message "Initial commit."'
-abbr gc! 'git commit --amend --reset-author'
+abbr gc git commit
+abbr gci git commit --message '"Initial commit."'
+abbr gc! git commit --amend --reset-author
 
-abbr gcr 'git clone --recursive'
+abbr gcr git clone --recursive
 
-abbr gd 'git diff'
-abbr gdw 'git diff --ignore-space-change'
+abbr gd git diff
+abbr gdw git diff --ignore-space-change
 
-abbr gi 'git init'
-abbr gig 'git ignore'
+abbr gi git init
+abbr gig git ignore
 
-abbr gk 'git rm'
-abbr gkf 'git rm -f'
-abbr gkr 'git rm -r'
+abbr gl git history
+abbr glo git history origin..HEAD
+abbr glg git history --grep
 
-abbr gl 'git history'
-abbr glo 'git history origin..HEAD'
-abbr glg 'git history --grep'
+abbr go git switch
+abbr gom git switch master
 
-abbr go 'git switch'
-abbr gom 'git switch master'
+abbr gp git push
+abbr gpu git push --set-upstream origin master
+abbr gp! git push --force-with-lease
 
-abbr gp 'git push'
-abbr gpu 'git push --set-upstream origin master'
-abbr gp! 'git push --force-with-lease'
+abbr gre git restore
+abbr grs git restore --staged
 
-abbr gr 'git restore'
-abbr grs 'git restore --staged'
-
-abbr gstp 'git stash pop'
-abbr gstu 'git stash push'
+abbr gstp git stash pop
+abbr gstu git stash push
 
 # Section: Keybindings
 
