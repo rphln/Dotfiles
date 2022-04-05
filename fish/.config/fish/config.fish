@@ -102,9 +102,7 @@ set -U fish_greeting
 
 fish_config theme choose None
 
-function ls
-    command ls --color --group-directories-first $argv
-end
+# Section: File manager
 
 function chpwd --on-variable PWD
     ls
