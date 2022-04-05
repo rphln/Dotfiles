@@ -112,16 +112,10 @@ end
 
 # Section: Prompt
 
-set fish_prompt_pwd_dir_length 0
-
-function prompt_pwd_tail --description "Prints the last two path components from `prompt_pwd`."
-    string match --regex '(?:^/)?(?:[^/]+/?){0,2}$' (prompt_pwd)
-end
-
 function fish_prompt
-    printf '%s: ' (prompt_pwd_tail)
+    printf '%s: ' (prompt-directory)
 end
 
 function fish_title
-    printf '%s — %s' (prompt_pwd_tail) (status current-command)
+    printf '%s — %s' (prompt-directory) (status current-command)
 end
