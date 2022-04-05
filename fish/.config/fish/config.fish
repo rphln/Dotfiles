@@ -1,3 +1,10 @@
+# Section: Overrides
+
+set -U fish_features 3.0
+set -U fish_greeting
+
+fish_config theme choose None
+
 # Section: Environment
 
 set --export EDITOR subl
@@ -94,13 +101,6 @@ abbr gstu git stash push
 
 bind \c_ toggle-comment
 bind \cy yank-command
-
-# Section: Overrides
-
-set -U fish_features 3.0
-set -U fish_greeting
-
-fish_config theme choose None
 
 # Section: File manager
 
