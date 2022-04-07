@@ -34,11 +34,12 @@ abbr o open
 abbr r trash
 abbr t touch
 
-abbr s rsync --archive --ignore-existing --human-readable --info progress2
+abbr s ssh
 
 abbr v $EDITOR
 
 abbr dl curl --progress-bar --location --remote-name-all
+abbr rs rsync --archive --ignore-existing --human-readable --info progress2
 
 abbr md mkdir --parents
 abbr rd rmdir --parents
