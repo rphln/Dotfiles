@@ -1,1 +1,3 @@
-alias ls 'command ls --color --group-directories-first'
+function ls
+    command ls --color --group-directories-first {$argv}
+end
