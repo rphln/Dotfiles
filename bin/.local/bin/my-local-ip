@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+exec ip route get 1.1.1.1 | grep --only-matching --perl-regexp 'src \K\S+'
