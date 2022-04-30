@@ -112,7 +112,11 @@ end
 # Section: Prompt
 
 function fish_prompt
-    printf '%s: ' (prompt-directory)
+    if set -q SSH_TTY
+        printf '%s%s ' (set_color green) (prompt_hostname)
+    end
+
+    printf '%s%s: ' (set_color normal) (prompt-directory)
 end
 
 function fish_title
