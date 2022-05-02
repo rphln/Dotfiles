@@ -1,0 +1,127 @@
+#!/usr/bin/env python3
+
+import sqlite3
+from datetime import datetime, timedelta
+from functools import cache, partial
+from itertools import islice
+from json import dumps
+from math import exp, log
+from pathlib import Path
+from sys import stderr
+from time import time
+
+# TODO: Switch to `argparse` to reduce dependencies.
+import click
+
+# TODO: Use logging.
+
+
+HALF_LIFE = timedelta(days=7).total_seconds()
+DECAY_RATE = log(2) / HALF_LIFE
+
+SIGMA = 8
+
+
+def similarity(a, b):
+    return exp(-0.5 * ((len(a) - len(b)) / SIGMA) ** 2)
+
+
+def s_to_t(s, epoch):
+    return epoch + log(s) / DECAY_RATE
+
+
+def t_to_s(t, epoch):
+    return exp((t - epoch) * DECAY_RATE)
+
+
+# TODO: Make this not global.
+connection = None
+
+
+@click.group()
+@click.option("--database", type=Path)
+def main(database):
+    global connection
+
+    now = time()
+    connection = sqlite3.connect(database.resolve())
+
+    connection.create_function("s_to_t", 1, partial(s_to_t, epoch=now))
+    connection.create_function("t_to_s", 1, partial(t_to_s, epoch=now))
+    connection.create_function("similarity", 2, similarity)
+
+
+@main.command()
+def init():
+    global connection
+
+    SCRIPT = """
+CREATE TABLE IF NOT EXISTS `visits` (
+  `path` TEXT PRIMARY KEY,
+  `expires` NUMERIC
+);
+"""
+
+    with connection:
+        connection.execute(SCRIPT)
+
+
+@main.command()
+@click.argument("path")
+def record(path):
+    global connection
+
+    SCRIPT = """
+    INSERT INTO `visits`
+        (`path`, `expires`)
+    VALUES
+        (:path, s_to_t(1))
+    ON CONFLICT (`path`) DO
+        UPDATE SET `expires` = s_to_t(t_to_s(`expires`) + 1);
+    """
+
+    with connection:
+        connection.execute(SCRIPT, {"path": path})
+
+
+@main.command()
+@click.argument("query", nargs=-1)
+@click.option("--count", default=1)
+@click.option("--json/--no-json", default=False)
+def query(query, count, json):
+    global connection
+
+    SCRIPT = """
+    SELECT
+        `path`,
+        `expires`,
+        t_to_s(`expires`) AS `score`,
+        similarity(`path`, :query) AS `similarity`
+    FROM
+        `visits`
+    WHERE
+        `path` LIKE "%" || :query || "%"
+    ORDER BY
+        `similarity` * `score` DESC;
+    """
+
+    query = "%".join(query)
+
+    with connection:
+        for (path, expires, score, similarity) in islice(
+            connection.execute(SCRIPT, {"query": query}), count
+        ):
+            if json:
+                row = {
+                    "score": score,
+                    "similarity": similarity,
+                    "expires": datetime.fromtimestamp(expires).isoformat(),
+                    "path": path,
+                }
+                print(dumps(row))
+            else:
+                print(path)
+
+
+if __name__ == "__main__":
+    main()
