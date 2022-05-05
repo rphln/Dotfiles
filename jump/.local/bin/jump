@@ -21,6 +21,8 @@ DECAY_RATE = log(2) / HALF_LIFE
 
 SIGMA = 8
 
+DEFAULT_PATH = Path("~/.cache/jump.sqlite3").expanduser()
+
 
 def similarity(a, b):
     return exp(-0.5 * ((len(a) - len(b)) / SIGMA) ** 2)
@@ -39,7 +41,7 @@ connection = None
 
 
 @click.group()
-@click.option("--database", type=Path)
+@click.option("--database", type=Path, default=DEFAULT_PATH)
 def main(database):
     global connection
 
