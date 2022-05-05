@@ -128,7 +128,6 @@ end
 function last_error --on-event fish_postexec
     set --local last_status $status
     if [ $last_status != 0 ]
-        printf "%s✘%s Command exited with the status code `%d`." (set_color red) (set_color normal) $last_status
-        echo
+        printf >&2 "%s✘%s Command exited with the status code `%d`.\n" (set_color red) (set_color normal) $last_status
     end
 end
