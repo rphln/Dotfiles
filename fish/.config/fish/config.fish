@@ -119,16 +119,17 @@ function fish_prompt
     printf '%s%s: ' (set_color normal) (prompt-directory)
 end
 
+
 function fish_title
     printf '%s — %s' (prompt-directory) (status current-command)
 end
 
 # Section: Exit status
 
-function last_error --on-event fish_postexec
+function report_last_error --on-event fish_postexec
     set --local last_status $status
     if [ $last_status != 0 ]
-        printf >&2 "%s✘%s Command exited with the status code `%d`.\n" (set_color red) (set_color normal) $last_status
+        printf >&2 "%s✘%s The previous command exited with the status code `%d`.\n" (set_color --bold red) (set_color normal) $last_status
     end
 end
 
