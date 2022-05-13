@@ -6,6 +6,7 @@ from functools import partial
 from itertools import islice
 from json import dumps
 from math import exp, log
+from os.path import exists
 from pathlib import Path
 from time import time
 
@@ -89,7 +90,8 @@ def record(path):
 @click.argument("query", nargs=-1)
 @click.option("--count", default=1)
 @click.option("--json/--no-json", default=False)
-def query(query, count, json):
+@click.option("--show-invalid/--hide-invalid", default=False)
+def query(query, count, json, show_invalid):
     global connection
 
     SCRIPT = """
@@ -112,6 +114,9 @@ def query(query, count, json):
         for (path, expires, score, similarity) in islice(
             connection.execute(SCRIPT, {"query": query}), count
         ):
+            if not show_invalid and not exists(path):
+                continue
+
             if json:
                 row = {
                     "score": score,
