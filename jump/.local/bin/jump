@@ -2,12 +2,11 @@
 
 import sqlite3
 from datetime import datetime, timedelta
-from functools import cache, partial
+from functools import partial
 from itertools import islice
 from json import dumps
 from math import exp, log
 from pathlib import Path
-from sys import stderr
 from time import time
 
 # TODO: Switch to `argparse` to reduce dependencies.
