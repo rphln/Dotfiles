@@ -87,6 +87,22 @@ def record(path):
 
 
 @main.command()
+@click.argument("path")
+def forget(path):
+    global connection
+
+    SCRIPT = """
+    DELETE FROM
+        `visits`
+    WHERE
+        `path` = :path
+    """
+
+    with connection:
+        connection.execute(SCRIPT, {"path": path})
+
+
+@main.command()
 @click.argument("query", nargs=-1)
 @click.option("--count", default=1)
 @click.option("--json/--no-json", default=False)
