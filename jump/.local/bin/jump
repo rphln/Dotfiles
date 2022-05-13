@@ -66,11 +66,11 @@ def init():
     global connection
 
     SCRIPT = """
-CREATE TABLE IF NOT EXISTS `visits` (
-  `path` TEXT PRIMARY KEY,
-  `expires` NUMERIC
-);
-"""
+    CREATE TABLE IF NOT EXISTS `visits` (
+      `path` TEXT PRIMARY KEY,
+      `expires` NUMERIC
+    );
+    """
 
     with connection:
         connection.execute(SCRIPT)
