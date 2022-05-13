@@ -28,12 +28,20 @@ def similarity(a, b):
     return exp(-0.5 * ((len(a) - len(b)) / SIGMA) ** 2)
 
 
-def s_to_t(s, epoch):
-    return epoch + log(s) / DECAY_RATE
+def s_to_t(s: float, now: float) -> float:
+    """
+    Converts a positive score to a timestamp. The timestamp indicates when the score will reach `1`.
+    """
+
+    return now + log(s) / DECAY_RATE
 
 
-def t_to_s(t, epoch):
-    return exp((t - epoch) * DECAY_RATE)
+def t_to_s(t, now):
+    """
+    Converts a timestamp to a score.
+    """
+
+    return exp((t - now) * DECAY_RATE)
 
 
 # TODO: Make this not global.
@@ -48,8 +56,8 @@ def main(database):
     now = time()
     connection = sqlite3.connect(database.resolve())
 
-    connection.create_function("s_to_t", 1, partial(s_to_t, epoch=now))
-    connection.create_function("t_to_s", 1, partial(t_to_s, epoch=now))
+    connection.create_function("s_to_t", 1, partial(s_to_t, now=now))
+    connection.create_function("t_to_s", 1, partial(t_to_s, now=now))
     connection.create_function("similarity", 2, similarity)
 
 
