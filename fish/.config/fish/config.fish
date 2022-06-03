@@ -126,13 +126,6 @@ end
 
 # Section: Exit status
 
-function report_last_error --on-event fish_postexec
-    set --local last_status $status
-    if [ $last_status != 0 ]
-        printf >&2 "%s✘%s The previous command exited with the status code `%d`.\n" (set_color --bold red) (set_color normal) $last_status
-    end
-end
-
 function report_command_duration --on-event fish_postexec
     if [ $CMD_DURATION -ge 60000 ]
         set --local s (math --scale 0 $CMD_DURATION / 1000 % 60)
@@ -140,5 +133,12 @@ function report_command_duration --on-event fish_postexec
         set --local h (math --scale 0 $CMD_DURATION / 3600000)
 
         printf >&2 "%s‼️%s The previous command took %02d:%02d:%02d.\n" (set_color --bold yellow) (set_color normal) $h $m $s
+    end
+end
+
+function report_last_error --on-event fish_postexec
+    set --local last_status $status
+    if [ $last_status != 0 ]
+        printf >&2 "%s✘%s The previous command exited with the status code `%d`.\n" (set_color --bold red) (set_color normal) $last_status
     end
 end
