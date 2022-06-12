@@ -1,10 +1,8 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 
 import sqlite3
-from datetime import datetime, timedelta
+from datetime import timedelta
 from functools import partial
-from itertools import islice
-from json import dumps
 from math import exp, log
 from os.path import exists
 from pathlib import Path
@@ -15,17 +13,11 @@ import click
 
 # TODO: Use logging.
 
-
+# Each visit has a half-life of a week by default.
 HALF_LIFE = timedelta(days=7).total_seconds()
 DECAY_RATE = log(2) / HALF_LIFE
 
-SIGMA = 8
-
 DEFAULT_PATH = Path("~/.cache/jump.sqlite3").expanduser()
-
-
-def similarity(a, b):
-    return exp(-0.5 * ((len(a) - len(b)) / SIGMA) ** 2)
 
 
 def s_to_t(s: float, now: float) -> float:
@@ -58,7 +50,8 @@ def main(database):
 
     connection.create_function("s_to_t", 1, partial(s_to_t, now=now))
     connection.create_function("t_to_s", 1, partial(t_to_s, now=now))
-    connection.create_function("similarity", 2, similarity)
+
+    connection.create_function("is_folder", 1, exists)
 
 
 @main.command()
@@ -111,46 +104,61 @@ def forget(path):
 
 
 @main.command()
-@click.argument("query", nargs=-1)
+@click.argument("pattern", nargs=-1)
 @click.option("--count", default=1)
-@click.option("--json/--no-json", default=False)
-@click.option("--show-invalid/--hide-invalid", default=False)
-def query(query, count, json, show_invalid):
+@click.option(
+    "--json",
+    is_flag=True,
+    default=False,
+    help="Render the output as JSON.",
+)
+@click.option(
+    "--show-missing",
+    is_flag=True,
+    default=False,
+    help="Whether to show or hide deleted folders.",
+)
+@click.option(
+    "--show-expired",
+    is_flag=True,
+    default=False,
+    help="Whether to show or hide expired folders.",
+)
+def query(pattern, count, json, show_missing, show_expired):
+    """
+    Returns the shortest matching path.
+    """
+
     global connection
 
     SCRIPT = """
     SELECT
-        `path`,
-        `expires`,
-        t_to_s(`expires`) AS `score`,
-        similarity(`path`, :query) AS `similarity`
+        `path`
     FROM
         `visits`
     WHERE
-        `path` LIKE "%" || :query || "%"
+        `path` LIKE "%" || :pattern || "%"
+        AND (:show_missing OR is_folder(`path`))
+        AND (:show_expired OR t_to_s(`expires`) >= 1)
     ORDER BY
-        `similarity` * `score` DESC;
+        LENGTH(`path`)
+    LIMIT
+        :count;
     """
 
-    query = "%".join(query)
+    pattern = "%".join(pattern)
 
     with connection:
-        for (path, expires, score, similarity) in islice(
-            connection.execute(SCRIPT, {"query": query}), count
-        ):
-            if not show_invalid and not exists(path):
-                continue
+        context = {
+            "pattern": pattern,
+            "count": count,
+            "show_missing": show_missing,
+            "show_expired": show_expired,
+        }
+        cursor = connection.execute(SCRIPT, context)
 
-            if json:
-                row = {
-                    "score": score,
-                    "similarity": similarity,
-                    "expires": datetime.fromtimestamp(expires).isoformat(),
-                    "path": path,
-                }
-                print(dumps(row))
-            else:
-                print(path)
+        for (path,) in cursor:
+            print(path)
 
 
 if __name__ == "__main__":
