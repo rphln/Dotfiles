@@ -2,9 +2,10 @@ function j
     set --local target (jump query $argv)
 
     if [ -n "$target" ]
+        printf "%s→%s %s\n" (set_color green) (set_color normal) $target
         cd -- "$target"
     else
-        printf >&2 "The query `%s` did not yield any results.\n" {$argv}
+        echo >&2 "The query `$argv` did not yield any results."
         return 1
     end
 end
