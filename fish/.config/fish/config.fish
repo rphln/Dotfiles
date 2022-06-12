@@ -39,7 +39,7 @@ abbr s ssh
 abbr v $EDITOR
 
 abbr dl curl --progress-bar --location --remote-name-all
-abbr rs rsync --archive --ignore-existing --human-readable --info progress2
+abbr rs rsync --partial --archive --ignore-existing --human-readable --info progress2
 
 abbr md mkdir --parents
 abbr rd rmdir --parents
