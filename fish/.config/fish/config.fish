@@ -41,6 +41,8 @@ abbr v $EDITOR
 abbr dl curl --progress-bar --location --remote-name-all
 abbr rs rsync --partial --archive --ignore-existing --human-readable --info progress2
 
+abbr sr systemd-run --user --pty --property MemoryHigh=2G
+
 abbr md mkdir --parents
 abbr rd rmdir --parents
 
