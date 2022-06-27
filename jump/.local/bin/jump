@@ -138,8 +138,8 @@ def query(pattern, count, json, show_missing, show_expired):
         `visits`
     WHERE
         `path` LIKE "%" || :pattern || "%"
-        AND (:show_missing OR is_folder(`path`))
         AND (:show_expired OR t_to_s(`expires`) >= 1)
+        AND (:show_missing OR is_folder(`path`))
     ORDER BY
         LENGTH(`path`)
     LIMIT
