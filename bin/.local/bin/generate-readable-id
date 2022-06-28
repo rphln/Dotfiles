@@ -2,14 +2,17 @@
 
 from random import choice, randint
 
-adjectives = [
+ADJECTIVES = [
     "afraid",
     "ancient",
     "angry",
+    "aquamarine",
     "average",
+    "azure",
     "bad",
     "big",
     "bitter",
+    "black",
     "black",
     "blue",
     "brave",
@@ -18,14 +21,18 @@ adjectives = [
     "brown",
     "busy",
     "calm",
+    "charcoal",
     "chatty",
     "chilly",
     "clever",
     "cold",
+    "coral",
     "cowardly",
+    "crimson",
     "cuddly",
     "curly",
     "curvy",
+    "cyan",
     "dangerous",
     "dry",
     "dull",
@@ -37,11 +44,13 @@ adjectives = [
     "foolish",
     "fresh",
     "friendly",
+    "fuchsia",
     "funny",
     "fuzzy",
     "gentle",
     "giant",
     "good",
+    "gray",
     "great",
     "green",
     "grumpy",
@@ -54,14 +63,19 @@ adjectives = [
     "hot",
     "hungry",
     "itchy",
+    "ivory",
     "jolly",
+    "khaki",
     "kind",
     "lazy",
     "light",
+    "lime",
     "little",
     "loud",
     "lovely",
     "lucky",
+    "magenta",
+    "maroon",
     "massive",
     "mean",
     "mighty",
@@ -74,11 +88,15 @@ adjectives = [
     "nice",
     "odd",
     "old",
+    "olden",
+    "olive",
+    "orange",
     "orange",
     "ordinary",
     "perfect",
     "pink",
     "plastic",
+    "plum",
     "polite",
     "popular",
     "pretty",
@@ -98,6 +116,7 @@ adjectives = [
     "shy",
     "silent",
     "silly",
+    "silver",
     "slimy",
     "slippery",
     "smart",
@@ -116,6 +135,7 @@ adjectives = [
     "tall",
     "tame",
     "tasty",
+    "teal",
     "tender",
     "terrible",
     "thin",
@@ -129,6 +149,7 @@ adjectives = [
     "warm",
     "weak",
     "wet",
+    "wheat",
     "white",
     "wicked",
     "wise",
@@ -138,7 +159,7 @@ adjectives = [
     "young",
 ]
 
-animals = [
+NOUNS = [
     "ape",
     "baboon",
     "badger",
@@ -245,9 +266,20 @@ animals = [
     "zebra",
 ]
 
-if __name__ == "__main__":
-    adjective = choice(adjectives)
-    noun = choice(animals)
+ALLITERATED = [
+    (adjective, noun)
+    for adjective in ADJECTIVES
+    for noun in NOUNS
+    if adjective[0] == noun[0]
+]
+
+
+def main():
+    adjective, noun = choice(ALLITERATED)
     index = randint(0, 9999)
 
     print(f"{adjective}-{noun}-{index:04d}")
+
+
+if __name__ == "__main__":
+    main()
