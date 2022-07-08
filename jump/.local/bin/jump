@@ -14,7 +14,7 @@ import click
 # TODO: Use logging.
 
 # Each visit has a half-life of a week by default.
-HALF_LIFE = timedelta(days=7).total_seconds()
+HALF_LIFE = timedelta(days=14).total_seconds()
 DECAY_RATE = log(2) / HALF_LIFE
 
 DEFAULT_PATH = Path("~/.cache/jump.sqlite3").expanduser()
