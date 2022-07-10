@@ -39,7 +39,7 @@ abbr s ssh
 abbr v $EDITOR
 
 abbr dl curl --progress-bar --location --remote-name-all
-abbr rs rsync --partial --archive --ignore-existing --human-readable --info progress2
+abbr rs rsync --archive --partial --progress --human-readable
 
 abbr sr systemd-run --user --pty --property MemoryHigh=2G
 
