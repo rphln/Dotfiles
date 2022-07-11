@@ -29,7 +29,7 @@ def s_to_t(s: float, now: float) -> float:
     return now + log(s) / DECAY_RATE
 
 
-def t_to_s(t, now):
+def t_to_s(t: float, now: float) -> float:
     """
     Converts a timestamp to a score.
     """
