@@ -61,6 +61,7 @@ abbr ge git merge
 abbr gf git fix
 abbr gm git mv
 abbr gr git rm
+abbr gs git show
 abbr gu git pull
 abbr gx git exec
 
