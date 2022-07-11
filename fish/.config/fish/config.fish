@@ -55,13 +55,12 @@ abbr py ipython3
 
 # Section: Git
 
-abbr g git
+abbr g git status --short
 
 abbr ge git merge
 abbr gf git fix
 abbr gm git mv
 abbr gr git rm
-abbr gs git status --short
 abbr gu git pull
 abbr gx git exec
 
