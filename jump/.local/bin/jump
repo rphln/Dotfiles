@@ -3,6 +3,7 @@
 import sqlite3
 from datetime import timedelta
 from functools import partial
+from json import dumps
 from math import exp, log
 from os.path import exists
 from pathlib import Path
@@ -133,13 +134,15 @@ def query(pattern, count, json, show_missing, show_expired):
 
     SCRIPT = """
     SELECT
-        `path`
+        `path`,
+        t_to_s(`expires`) AS `score`,
+        is_folder(`path`) AS `is_valid`
     FROM
         `visits`
     WHERE
         `path` LIKE "%" || :pattern || "%"
-        AND (:show_expired OR t_to_s(`expires`) >= 1)
-        AND (:show_missing OR is_folder(`path`))
+        AND (:show_expired OR `score` >= 1)
+        AND (:show_missing OR `is_valid`)
     ORDER BY
         LENGTH(`path`)
     LIMIT
@@ -157,8 +160,17 @@ def query(pattern, count, json, show_missing, show_expired):
         }
         cursor = connection.execute(SCRIPT, context)
 
-        for (path,) in cursor:
-            print(path)
+        for (path, score, is_valid) in cursor:
+            row = {
+                "path": path,
+                "score": score,
+                "is_valid": is_valid,
+            }
+
+            if json:
+                print(dumps(row))
+            else:
+                print(path)
 
 
 if __name__ == "__main__":
