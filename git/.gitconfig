@@ -8,6 +8,8 @@
     unstage = reset HEAD
     uncommit = reset --soft HEAD^
 
+    show-last = log --max-count 1 --patch
+
     standup = "!f() { exec git ${@:-history} --since yesterday; }; f"
     today = "!f() { exec git ${@:-history} --since midnight; }; f"
 
