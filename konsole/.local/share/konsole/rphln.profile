@@ -6,5 +6,5 @@ TerminalMargin=16
 HistoryMode=2
 
 [Appearance]
-ColorScheme=rphln
+ColorScheme=PaperColor
 Font=Iosevka Term,15,-1,5,50,0,0,0,0,0
