@@ -79,9 +79,9 @@ def record(path):
     INSERT INTO `visits`
         (`path`, `expires`)
     VALUES
-        (:path, s_to_t(1))
+        (:path, s_to_t(2))
     ON CONFLICT (`path`) DO
-        UPDATE SET `expires` = s_to_t(t_to_s(`expires`) + 1);
+        UPDATE SET `expires` = s_to_t(t_to_s(`expires`) + 2);
     """
 
     with connection:
