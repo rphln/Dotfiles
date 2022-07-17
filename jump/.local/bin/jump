@@ -111,21 +111,21 @@ def forget(path):
     "--json",
     is_flag=True,
     default=False,
-    help="Render the output as JSON.",
+    help="Render the output as JSONL.",
 )
 @click.option(
-    "--show-missing",
+    "--show-deleted",
     is_flag=True,
     default=False,
     help="Whether to show or hide deleted folders.",
 )
 @click.option(
-    "--show-expired",
+    "--show-stale",
     is_flag=True,
     default=False,
-    help="Whether to show or hide expired folders.",
+    help="Whether to show or hide stale folders.",
 )
-def query(pattern, count, json, show_missing, show_expired):
+def query(pattern, count, json, show_deleted, show_stale):
     """
     Returns the shortest matching path.
     """
@@ -141,8 +141,8 @@ def query(pattern, count, json, show_missing, show_expired):
         `visits`
     WHERE
         `path` LIKE "%" || :pattern || "%"
-        AND (:show_expired OR `score` >= 1)
-        AND (:show_missing OR `is_valid`)
+        AND (:show_stale OR `score` >= 1)
+        AND (:show_deleted OR `is_valid`)
     ORDER BY
         LENGTH(`path`)
     LIMIT
@@ -155,8 +155,8 @@ def query(pattern, count, json, show_missing, show_expired):
         context = {
             "pattern": pattern,
             "count": count,
-            "show_missing": show_missing,
-            "show_expired": show_expired,
+            "show_deleted": show_deleted,
+            "show_stale": show_stale,
         }
         cursor = connection.execute(SCRIPT, context)
 
