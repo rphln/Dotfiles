@@ -1,0 +1,6 @@
+[submodule "@vendor/nord-konsole"]
+	path = @vendor/nord-konsole
+	url = https://github.com/arcticicestudio/nord-konsole.git
+[submodule "@vendor/nord-sublime-text"]
+	path = @vendor/nord-sublime-text
+	url = https://github.com/arcticicestudio/nord-sublime-text.git
