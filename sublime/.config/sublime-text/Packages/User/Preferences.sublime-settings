@@ -56,5 +56,5 @@
 
   // Theme
   "theme": "Adaptive.sublime-theme",
-  "color_scheme": "Packages/User/PaperColor.tmTheme"
+  "color_scheme": "Nord.sublime-color-scheme"
 }
