@@ -121,7 +121,6 @@ function fish_prompt
     printf '%s%s: ' (set_color normal) (prompt-directory)
 end
 
-
 function fish_title
     printf '%s — %s' (prompt-directory) (status current-command)
 end
