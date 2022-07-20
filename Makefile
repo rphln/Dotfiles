@@ -1,7 +1,7 @@
 # Stow packages installable with `make <target>`.
 PACKAGES := bin fish git jump konsole mpv sublime tmux
 
-packages: $(PACKAGES)
+install: $(PACKAGES)
 
 uninstall:
 	-stow --no-folding --target $(HOME) --delete $(PACKAGES)
@@ -9,4 +9,5 @@ uninstall:
 $(PACKAGES):
 	-stow --no-folding --target $(HOME) --stow $@
 
-.PHONY: $(PACKAGES) packages uninstall
+.PHONY: uninstall install
+.PHONY: $(PACKAGES)
