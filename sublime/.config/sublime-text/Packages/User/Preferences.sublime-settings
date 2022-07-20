@@ -1,23 +1,48 @@
 {
-  "hot_exit": "disabled",
-  "hardware_acceleration": "opengl",
-  "inactive_sheet_dimming": false,
-  "close_windows_when_empty": true,
+  // Section: Theme
+  "theme": "Adaptive.sublime-theme",
+  "color_scheme": "Nord.sublime-color-scheme",
 
+  // Section: Fonts
+  "font_face": "Iosevka",
+  "font_size": 15,
+
+  "font_options": ["gray_antialias"],
+  "theme_font_options": ["gray_antialias"],
+
+  // Section: Behavior
   "ignored_packages": [],
 
-  "scroll_context_lines": 2,
-  "scroll_past_end": 0.5,
+  "close_windows_when_empty": true,
+  "overlay_scroll_bars": "enabled",
 
+  "hardware_acceleration": "opengl",
+
+  // Section: Vintage
+  "relative_line_numbers": true,
+  "vintage_start_in_command_mode": false,
+  "vintage_use_clipboard": true,
+
+  // Section: Saving
+  "trim_automatic_white_space": true,
+  "trim_trailing_white_space_on_save": true,
+
+  "default_line_ending": "unix",
+  "ensure_newline_at_eof_on_save": true,
+
+  // Section: Ignore
+  "file_exclude_patterns": ["Cargo.lock"],
   "folder_exclude_patterns": [
     ".asset-cache",
     ".bundle",
+    ".cargo",
     ".git",
-    ".venv",
+    ".idea",
     ".ipynb_checkpoints",
     ".pytest_cache",
     ".sass-cache",
     ".svn",
+    ".venv",
     "__pycache__",
     "_site",
     "build",
@@ -26,35 +51,7 @@
     "log",
     "node_modules",
     "public/packs",
+    "target",
     "tmp"
-  ],
-
-  // Use the native title bar.
-  "gtk_client_side_window_decorations": false,
-
-  // Vintage
-  "relative_line_numbers": true,
-  "vintage_start_in_command_mode": false,
-  "vintage_use_clipboard": true,
-
-  // Fonts
-  "font_face": "Iosevka",
-  "font_size": 15,
-
-  "line_padding_bottom": 4,
-  "line_padding_top": 4,
-
-  // Sanity
-  "trim_automatic_white_space": true,
-  "trim_trailing_white_space_on_save": true,
-
-  "default_line_ending": "unix",
-  "ensure_newline_at_eof_on_save": true,
-
-  // Hide unused scroll bars.
-  "overlay_scroll_bars": "enabled",
-
-  // Theme
-  "theme": "Adaptive.sublime-theme",
-  "color_scheme": "Nord.sublime-color-scheme"
+  ]
 }
