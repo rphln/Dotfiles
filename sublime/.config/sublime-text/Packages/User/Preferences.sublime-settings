@@ -13,6 +13,9 @@
   // Section: Behavior
   "ignored_packages": [],
 
+  "rulers": [88],
+  "hot_exit": "disabled",
+
   "close_windows_when_empty": true,
   "overlay_scroll_bars": "enabled",
 
