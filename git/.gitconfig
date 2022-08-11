@@ -38,7 +38,7 @@
     xfuncname = "^#.*"
 
 [diff "ipynb"]
-    textconv = jupytext --to md --output -
+    textconv = pandoc --standalone --to markdown
 
 [filter "lfs"]
 	clean = git-lfs clean -- %f
