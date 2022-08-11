@@ -48,9 +48,6 @@ abbr rd rmdir --parents
 
 abbr se sudo --edit
 
-abbr yf yank-file
-abbr yp yank-path
-
 abbr py ipython3
 
 # Section: Git
@@ -103,7 +100,9 @@ abbr gstu git stash push
 # Section: Keybindings
 
 bind \c_ toggle-comment
-bind \cy yank-command
+
+bind \cx yank-command
+bind \cy yank-path
 
 # Section: File manager
 
