@@ -5,10 +5,10 @@
 
   // Section: Fonts
   "font_face": "Iosevka Term",
-  "font_size": 15,
+  "font_size": 16,
 
   "line_padding_top": 2,
-  "line_padding_bottom": 1,
+  "line_padding_bottom": 2,
 
   "highlight_line": true,
 
