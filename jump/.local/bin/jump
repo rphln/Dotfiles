@@ -1,5 +1,29 @@
 #!/usr/bin/python3
 
+"""
+I made an `autojump` clone. After experimenting a bit with fuzzy matching and whatnot, I
+settled on something that is ultimately fairly simple, but predictable. And in my
+experience, being predictable is extremely valuable for for this type of tool, otherwise
+it just gets in my way.
+
+The whole thing is a SQLite table with a `path` and an `expires` column and a bunch of
+Python functions. The most complex part it has is the expiration timer, based on
+Firefox's [frecency], but that is mostly invisible in daily use. Finding the best
+matches is done by querying a directory by returning the shortest matching existing path
+which is not expired. The reasoning for this is as follows:
+
+1.  Matching the shortest path works nicely, as I can always be more specific in my
+    query to go deeper. This would not be an option if we were to match the longest path
+    instead. Fuzzy matching simply did not feel *good* to use.
+2.  Entries expires after a while. This prevents the jumper from getting filled with
+    clutter which I don't care about anymore. Again, see [frecency] for more details on
+    how it works.
+3.  The pattern should be obtained trivially and intuitively: using `j a /b/ c d` yields
+    `%a%/b/%c%d%`. We got exact sub-path matching for free.
+
+  [frecency]: https://wiki.mozilla.org/User:Jesse/NewFrecency?title=User:Jesse/NewFrecency
+"""
+
 import sqlite3
 from datetime import timedelta
 from functools import partial
