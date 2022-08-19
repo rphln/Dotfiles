@@ -1,5 +1,5 @@
 function j
-    set --local target (jump query $argv)
+    set --local target (jump query ~ $argv)
 
     if [ -n "$target" ]
         cd -- "$target"
