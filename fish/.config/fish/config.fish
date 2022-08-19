@@ -10,8 +10,8 @@ fish_config theme choose None
 set --export EDITOR subl
 set --export VISUAL subl --wait
 
-set --universal --prepend fish_user_paths ~/.local/bin
-set --universal --prepend fish_user_paths '.git/safe/../../bin'
+set --global --prepend fish_user_paths ~/.local/bin
+set --global --prepend fish_user_paths .git/safe/../../bin
 
 # Section: Abbreviations
 
