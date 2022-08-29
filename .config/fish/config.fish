@@ -63,6 +63,7 @@ abbr gu git pull
 abbr gx git exec
 
 abbr ga git add
+abbr gaf git add --force
 abbr gap git add --patch
 
 abbr gb git rebase --interactive
