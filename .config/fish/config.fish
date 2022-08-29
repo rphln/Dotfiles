@@ -98,6 +98,8 @@ abbr grs git restore --staged
 abbr gstp git stash pop
 abbr gstu git stash push
 
+alias cfg 'command git --git-dir ~/.cfg --work-tree ~'
+
 # Section: Keybindings
 
 bind \c_ toggle-comment
