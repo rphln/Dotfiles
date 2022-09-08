@@ -5,14 +5,6 @@ set -U fish_greeting
 
 fish_config theme choose None
 
-# Section: Environment
-
-set --export EDITOR subl
-set --export VISUAL subl --wait
-
-set --global --prepend fish_user_paths ~/.local/bin
-set --global --prepend fish_user_paths .git/safe/../../bin
-
 # Section: Abbreviations
 
 abbr - cd -
@@ -41,14 +33,10 @@ abbr v $EDITOR
 abbr dl curl --progress-bar --location --remote-name-all
 abbr rs rsync --archive --partial --progress --human-readable
 
-abbr sr systemd-run --user --shell --property MemoryHigh=2G --property CPUWeight=1
-
 abbr md mkdir --parents
 abbr rd rmdir --parents
 
 abbr se sudo --edit
-
-abbr py ipython3
 
 # Section: Git
 
@@ -109,14 +97,26 @@ bind \cy yank-path
 
 # Section: File manager
 
+function ls
+    command ls --color --group-directories-first {$argv}
+end
+
 function chpwd --on-variable PWD
+    jump record "$PWD" &
     ls
 end
 
 # Section: Prompt
 
 function fish_prompt
-    printf '%s%s:%s ' (set_color green) (prompt-directory) (set_color normal)
+    if [ $status = 0 ]
+        set_color green
+    else
+        set_color red
+    end
+
+    printf '%s: ' (prompt-directory)
+    set_color normal
 end
 
 function fish_right_prompt
@@ -127,23 +127,4 @@ end
 
 function fish_title
     printf '%s — %s' (prompt-directory) (status current-command)
-end
-
-# Section: Exit status
-
-function report_command_duration --on-event fish_postexec
-    if [ $CMD_DURATION -ge 60000 ]
-        set --local s (math --scale 0 $CMD_DURATION / 1000 % 60)
-        set --local m (math --scale 0 $CMD_DURATION / 60000 % 60)
-        set --local h (math --scale 0 $CMD_DURATION / 3600000)
-
-        printf >&2 "%s‼️%s The previous command took %02d:%02d:%02d.\n" (set_color --bold yellow) (set_color normal) $h $m $s
-    end
-end
-
-function report_last_error --on-event fish_postexec
-    set --local last_status $status
-    if [ $last_status != 0 ]
-        printf >&2 "%s✘%s The previous command exited with the status code `%d`.\n" (set_color --bold red) (set_color normal) $last_status
-    end
 end
