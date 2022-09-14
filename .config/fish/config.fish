@@ -1,9 +1,22 @@
-# Section: Overrides
+# Section: Environment
 
-set -U fish_features 3.0
-set -U fish_greeting
+set fish_features 3.0
+set fish_greeting
 
 fish_config theme choose None
+
+set --prepend fish_user_paths ~/.local/bin
+set --prepend fish_user_paths .git/safe/../../bin
+
+set --export EDITOR subl
+set --export VISUAL subl --wait
+
+set --export LESS_TERMCAP_mb (set_color red) # Begin blinking.
+set --export LESS_TERMCAP_md (set_color blue) # Begin bold.
+set --export LESS_TERMCAP_me (set_color normal) # End mode.
+set --export LESS_TERMCAP_se (set_color normal) # End standout-mode.
+set --export LESS_TERMCAP_ue (set_color normal) # End underline.
+set --export LESS_TERMCAP_us (set_color green) # Begin underline.
 
 # Section: Abbreviations
 
