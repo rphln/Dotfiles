@@ -20,34 +20,24 @@ set --export LESS_TERMCAP_us (set_color green) # Begin underline.
 
 # Section: Abbreviations
 
-abbr - cd -
-
-abbr 1 ../
-abbr 2 ../../
-abbr 3 ../../../
-abbr 4 ../../../../
-
-abbr = qalc
+abbr l ls
+abbr la ls -A
 
 abbr c cp --interactive --recursive
 abbr m mv --interactive
 
-abbr l ls
-abbr la ls --almost-all
+abbr md mkdir --parents
+abbr rd rmdir --parents
 
-abbr o open
+abbr v $EDITOR
+
 abbr r trash
 abbr t touch
 
 abbr s ssh
 
-abbr v $EDITOR
-
 abbr dl curl --progress-bar --location --remote-name-all
-abbr rs rsync --archive --partial --progress --human-readable
-
-abbr md mkdir --parents
-abbr rd rmdir --parents
+abbr rs rsync --archive --partial --info progress2 --human-readable
 
 abbr se sudo --edit
 
@@ -111,11 +101,14 @@ bind \cy yank-path
 # Section: File manager
 
 function ls
-    command ls --color --group-directories-first {$argv}
+    command ls --color --group-directories-first --human-readable $argv
 end
 
-function chpwd --on-variable PWD
+function record-on-cd --on-variable PWD
     jump record "$PWD" &
+end
+
+function ls-on-cd --on-variable PWD
     ls
 end
 
