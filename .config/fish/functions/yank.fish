@@ -1,5 +1,5 @@
 function yank --description "Pipes a value into the clipboard."
-    perl -pe 'chomp if eof' | if type --query pbcopy
+    perl -pe 'chomp if eof' -- $argv | if type --query pbcopy
         pbcopy
     else if type --query wl-copy && set --query WAYLAND_DISPLAY
         wl-copy
