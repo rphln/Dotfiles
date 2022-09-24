@@ -37,7 +37,7 @@ abbr t touch
 abbr s ssh
 
 abbr dl curl --progress-bar --location --remote-name-all
-abbr rs rsync --archive --partial --info progress2 --human-readable
+abbr rs rsync --archive --partial --progress --human-readable
 
 abbr se sudo --edit
 
