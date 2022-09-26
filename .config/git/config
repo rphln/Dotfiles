@@ -4,19 +4,14 @@
 
 [alias]
     history = log --pretty=format:'%Cred(%h) %Creset%s %Cgreen(%ar) %Cblue<%an>'
+    show-last = log --max-count 1 --patch
+
+    fix = "!f() { git commit --allow-empty-message --no-edit && exec git rebase --interactive; }; f"
 
     unstage = reset HEAD
     uncommit = reset --soft HEAD^
 
-    show-last = log --max-count 1 --patch
-
-    standup = "!f() { exec git ${@:-history} --since yesterday; }; f"
-    today = "!f() { exec git ${@:-history} --since midnight; }; f"
-
-    fix = "!f() { git commit --allow-empty-message --no-edit && exec git rebase --interactive; }; f"
-
     exec = "!exec "
-    trust = "!mkdir --parents .git/safe"
 
 [diff]
     algorithm = histogram
@@ -39,9 +34,3 @@
 
 [diff "ipynb"]
     textconv = pandoc --standalone --to markdown
-
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
