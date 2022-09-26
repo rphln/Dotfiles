@@ -8,6 +8,7 @@
   "font_size": 15,
 
   "highlight_line": true,
+  "draw_white_space": ["selection", "trailing", "isolated"],
 
   // Section: Behavior
   "ignored_packages": [],
@@ -26,9 +27,6 @@
   "vintage_use_clipboard": true,
 
   // Section: Saving
-  "trim_automatic_white_space": true,
-  "trim_trailing_white_space_on_save": true,
-
   "default_line_ending": "unix",
   "ensure_newline_at_eof_on_save": true,
 
