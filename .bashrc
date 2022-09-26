@@ -54,6 +54,7 @@ alias r="trash"
 alias t="touch"
 
 alias s="ssh"
+alias x="tmux new -A -s default"
 
 alias dl="curl --progress-bar --location --remote-name-all"
 alias rs="rsync --archive --partial --progress --human-readable"
