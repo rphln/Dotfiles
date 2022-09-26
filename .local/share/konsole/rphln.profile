@@ -7,4 +7,4 @@ HistoryMode=2
 
 [Appearance]
 ColorScheme=Nord
-Font=Iosevka Term,15,-1,5,50,0,0,0,0,0
+Font=PragmataPro,15,-1,5,50,0,0,0,0,0
