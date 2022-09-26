@@ -1,14 +1,9 @@
 #!/usr/bin/env bash
 
 self=$(basename ${0})
-file=${1}
+file=${1:-/dev/stdin}
 
-if [ $# != 1 ]; then
-	printf >&2 "usage: %s <file>\n" ${self}
-	exit 1
-fi
-
-if [ ! -f ${file} ]; then
+if [ ! -r ${file} ]; then
 	printf >&2 "%s: %s: No such file or directory\n" ${self} ${file}
 	exit 2
 fi
