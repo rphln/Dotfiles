@@ -38,7 +38,7 @@ function prompt-directory {
 # Section: Aliases
 
 # shellcheck disable=SC2139
-alias v=${EDITOR:-vi}
+alias v="${EDITOR:-vi}"
 
 alias c="cp --interactive --recursive"
 alias m="mv --interactive"
