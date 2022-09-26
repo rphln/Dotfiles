@@ -12,7 +12,7 @@ shopt -s histappend
 
 export PATH="${HOME}/.local/bin${PATH:+:${PATH}}"
 
-if command -v subl &>/dev/null; then
+if hash subl &>/dev/null; then
 	export EDITOR='subl'
 	export VISUAL='subl --wait'
 fi
@@ -128,13 +128,14 @@ function preview {
 }
 
 function yank {
-	perl -pe 'chomp if eof' -- "$@" | if [ -n "${WAYLAND_DISPLAY}" ] && command -v wl-copy &>/dev/null; then
-		wl-copy
-	elif [ -n "${DISPLAY}" ] && command -v xclip &>/dev/null; then
-		xclip -selection clipboard
-	else
-		base64 --wrap 0 | xargs printf '\e]52;c;%s;\a'
-	fi
+	perl -pe 'chomp if eof' -- "$@" |
+		if [[ -v WAYLAND_DISPLAY ]] && hash wl-copy &>/dev/null; then
+			wl-copy
+		elif [[ -v DISPLAY ]] && hash xclip &>/dev/null; then
+			xclip -selection clipboard
+		else
+			base64 --wrap 0 | xargs printf '\e]52;c;%s;\a'
+		fi
 }
 
 function packages {
