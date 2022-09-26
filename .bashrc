@@ -64,6 +64,7 @@ alias g="git status --short"
 
 alias ge="git merge"
 alias gf="git fix"
+alias gi="git init"
 alias gm="git mv"
 alias gr="git rm"
 alias gs="git show-last"
@@ -85,9 +86,6 @@ alias gcr="git clone --recursive"
 
 alias gd="git diff"
 alias gdw="git diff --ignore-space-change"
-
-alias gi="git init"
-alias gig="git ignore"
 
 alias gl="git history"
 alias glo="git history origin..HEAD"
