@@ -16,7 +16,7 @@ fi
 TEMP=$(mktemp)
 trap 'rm -- ${TEMP}' INT TERM EXIT
 
-cat "${FILE}" >"${TEMP}"
+cp -- "${FILE}" "${TEMP}" || exit 1
 
 case ${SELF} in
 csv-to-json)
