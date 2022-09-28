@@ -52,6 +52,9 @@ alias rd="rmdir --parents"
 
 alias l="ls --color --group-directories-first --human-readable"
 
+alias la="l -A"
+alias ll="l -l"
+
 alias r="trash"
 alias t="touch"
 
