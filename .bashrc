@@ -31,7 +31,7 @@ export LESS_TERMCAP_us=$'\e[32m' # Begin underline.
 
 # Section: Prompt
 
-PS1=$'${SSH_TTY:+\[\e[36m\]\h }\[\e[32m\]$(prompt-directory)⟩\[\e[0m\] '
+PS1=$'${SSH_TTY:+\[\e[36m\]\h }\[\e[32m\]$(prompt-directory):\[\e[0m\] '
 
 function prompt-directory {
 	dirs +0 | grep --perl --only-matching "(?:^/)?(?:[^/]+/?){0,2}$"
