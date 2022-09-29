@@ -43,6 +43,7 @@ alias -- -="cd -"
 
 # shellcheck disable=SC2139
 alias v="${EDITOR:-vi}"
+alias vs="sudo --edit"
 
 alias c="cp --interactive --recursive"
 alias m="mv --interactive"
@@ -63,8 +64,6 @@ alias x="tmux new -A -s default"
 
 alias dl="wget --continue --no-verbose --show-progress"
 alias rs="rsync --archive --human-readable --partial --progress"
-
-alias se="sudo --edit"
 
 # Section: Git
 
