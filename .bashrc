@@ -61,8 +61,8 @@ alias t="touch"
 alias s="ssh"
 alias x="tmux new -A -s default"
 
-alias dl="curl --progress-bar --location --remote-name-all"
-alias rs="rsync --archive --partial --progress --human-readable"
+alias dl="wget --continue --no-verbose --show-progress"
+alias rs="rsync --archive --human-readable --partial --progress"
 
 alias se="sudo --edit"
 
