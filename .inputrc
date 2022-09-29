@@ -1,6 +1,5 @@
 $include /etc/inputrc
 
-set enable-bracketed-paste off
 set bind-tty-special-chars off
 
 set show-all-if-ambiguous on
