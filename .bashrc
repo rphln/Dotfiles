@@ -42,7 +42,7 @@ function prompt-directory {
 trap "source ~/.bash_profile" SIGUSR1
 
 function reload-bash {
-	killall --signal SIGUSR1 bash
+	killall --user "${USER}" --signal SIGUSR1 bash
 }
 
 # Section: Aliases
