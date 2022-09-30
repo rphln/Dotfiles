@@ -37,6 +37,14 @@ function prompt-directory {
 	dirs +0 | grep --perl --only-matching "(?:^/)?(?:[^/]+/?){0,2}$"
 }
 
+# Section: Reload
+
+trap "source ~/.bash_profile" SIGUSR1
+
+function reload-bash {
+	killall --signal SIGUSR1 bash
+}
+
 # Section: Aliases
 
 alias -- -="cd -"
