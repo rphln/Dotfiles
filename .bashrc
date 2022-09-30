@@ -147,3 +147,27 @@ function packages {
 	# shellcheck disable=SC2046
 	expac --timefmt '%Y-%m-%d' '%l	%n' $(pacman --query --explicit --quiet) | sort
 }
+
+function trash {
+	if mkdir --parents ~/.local/share/Trash/files ~/.local/share/Trash/info; then
+		version="$(date +%s%N)"
+
+		for file; do
+			path="$(realpath "${file}")"
+
+			name="${path##*/}"
+			stem="${name%.*}"
+			suffix="${name#"${stem}"}"
+
+			destination="${stem}.~${version}~${suffix:-.}"
+
+			if mv -- "${path}" "${HOME}/.local/share/Trash/files/${destination}"; then
+				cat <<-EOF >"${HOME}/.local/share/Trash/info/${destination}.trashinfo"
+					[Trash Info]
+					Path=${path}
+					DeletionDate=$(date +%FT%T)
+				EOF
+			fi
+		done
+	fi
+}
