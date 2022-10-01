@@ -5,10 +5,18 @@
 shopt -s autocd
 shopt -s globstar
 
-shopt -s cmdhist
-shopt -s histappend
+shopt -s cmdhist    # Save multi-line commands as one.
+shopt -s histappend # Append instead of overwritting.
 
-shopt -s no_empty_cmd_completion
+HISTSIZE=     # Unlimited history storage in the memory.
+HISTFILESIZE= # Unlimited history storage in the file.
+
+HISTTIMEFORMAT="%F %T	" # Date and time format for `history`.
+
+HISTCONTROL="erasedups:ignoreboth"                  # Ignore duplicate entries.
+HISTIGNORE="&:[ ]*:exit:ls:l:-:bg:fg:history:clear" # Ignore uninteresting commands.
+
+PROMPT_COMMAND+="${PROMPT_COMMAND:+;} history -a" # Flush the history immediately.
 
 # Section: Environment
 
