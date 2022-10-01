@@ -143,12 +143,12 @@ function preview {
 
 function yank {
 	sed '${/^$/d}' -- "$@" |
-		if [[ -v WAYLAND_DISPLAY ]] && hash wl-copy &>/dev/null; then
+		if [[ -n ${WAYLAND_DISPLAY} ]] && hash wl-copy &>/dev/null; then
 			wl-copy
-		elif [[ -v DISPLAY ]] && hash xclip &>/dev/null; then
+		elif [[ -n ${DISPLAY} ]] && hash xclip &>/dev/null; then
 			xclip -selection clipboard
 		else
-			base64 --wrap 0 | xargs printf '\e]52;c;%s;\a'
+			echo -ne "\e]52;c;$(base64 --wrap 0);\a"
 		fi
 }
 
