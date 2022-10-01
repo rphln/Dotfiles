@@ -133,7 +133,8 @@ function my-ip {
 }
 
 function my-local-ip {
-	ip route get 1.1.1.1 | perl -lne 'print for /src (\K\S+)/'
+	ip route get 1.1.1.1 |
+		grep --perl --only-matching "src (\K\S+)"
 }
 
 function preview {
@@ -141,7 +142,7 @@ function preview {
 }
 
 function yank {
-	perl -pe 'chomp if eof' -- "$@" |
+	sed '${/^$/d}' -- "$@" |
 		if [[ -v WAYLAND_DISPLAY ]] && hash wl-copy &>/dev/null; then
 			wl-copy
 		elif [[ -v DISPLAY ]] && hash xclip &>/dev/null; then
