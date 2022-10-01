@@ -145,7 +145,7 @@ function preview {
 }
 
 function yank {
-	sed '${/^$/d}' -- "$@" |
+	cat -- "$@" |
 		if [[ -n ${WAYLAND_DISPLAY} ]] && hash wl-copy &>/dev/null; then
 			wl-copy
 		elif [[ -n ${DISPLAY} ]] && hash xclip &>/dev/null; then
