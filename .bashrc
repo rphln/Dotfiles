@@ -166,7 +166,7 @@ function trash {
 		version="$(date +%s%N)"
 
 		for file; do
-			path="$(realpath "${file}")"
+			path="$(realpath --no-symlinks "${file}")"
 
 			name="${path##*/}"
 			stem="${name%.*}"
