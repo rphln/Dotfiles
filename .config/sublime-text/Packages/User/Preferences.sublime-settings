@@ -4,8 +4,8 @@
   "color_scheme": "Nord.sublime-color-scheme",
 
   // Section: Fonts
-  "font_face": "PragmataPro",
-  "font_size": 15,
+  "font_face": "Essential PragmataPro",
+  "font_size": 12,
 
   "highlight_line": true,
   "draw_white_space": ["selection", "trailing", "isolated"],

@@ -7,4 +7,4 @@ HistoryMode=2
 
 [Appearance]
 ColorScheme=Nord
-Font=PragmataPro,15,-1,5,50,0,0,0,0,0
+Font=Essential PragmataPro,12,-1,5,50,0,0,0,0,0
