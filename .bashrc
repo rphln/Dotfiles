@@ -68,7 +68,7 @@ alias ll="l -l"
 alias r="trash"
 alias t="touch"
 
-alias s="ssh"
+alias s='ssh -o RequestTTY=yes -o RemoteCommand="hash tmux &>/dev/null && tmux new -A -s default || $SHELL"'
 alias x="tmux new -A -s default"
 
 alias dl="wget --continue --no-verbose --show-progress"
