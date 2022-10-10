@@ -51,7 +51,7 @@ function prompt-directory {
 alias -- -="cd -"
 
 # shellcheck disable=SC2139
-alias v="${EDITOR:-vi}"
+alias v='${EDITOR:-vi}'
 alias vs="sudo --edit"
 
 alias c="cp --interactive --recursive"
