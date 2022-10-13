@@ -11,6 +11,14 @@ shopt -s histappend # Append instead of overwritting.
 HISTSIZE=     # Unlimited history storage in the memory.
 HISTFILESIZE= # Unlimited history storage in the file.
 
+# An unconfigured Bash instance may truncate the default history file when opened. We
+# can prevent such accidents by moving it elsewhere.
+#
+# See: <https://news.ycombinator.com/item?id=33187749>
+if mkdir --parents ~/.local/state/bash; then
+	HISTFILE=~/.local/state/bash/history
+fi
+
 HISTTIMEFORMAT="%F %T	" # Date and time format for `history`.
 
 HISTCONTROL="erasedups:ignoreboth"                  # Ignore duplicate entries.
