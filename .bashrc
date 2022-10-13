@@ -28,7 +28,7 @@ PROMPT_COMMAND+="${PROMPT_COMMAND:+;} history -a" # Flush the history immediatel
 
 # Section: Environment
 
-export PATH="${HOME}/.local/bin${PATH:+:${PATH}}"
+export PATH+="${PATH:+:}${HOME}/.local/bin"
 
 if hash subl &>/dev/null; then
 	export EDITOR="subl"
