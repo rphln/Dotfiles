@@ -134,9 +134,8 @@ alias cfg="git --git-dir ~/.cfg --work-tree ~"
 # Section: Functions
 
 function cd {
-	builtin cd "$@" ||
-		return
-	l
+	builtin cd "$@" &&
+		l
 }
 
 function my-ip {
