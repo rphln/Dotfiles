@@ -25,6 +25,7 @@ HISTCONTROL="erasedups:ignoreboth"                  # Ignore duplicate entries.
 HISTIGNORE="&:[ ]*:exit:ls:l:-:bg:fg:history:clear" # Ignore uninteresting commands.
 
 PROMPT_COMMAND+="${PROMPT_COMMAND:+;} history -a" # Flush the history immediately.
+PROMPT_COMMAND+="${PROMPT_COMMAND:+;} history -n" # Read entries from the history file.
 
 # Section: Environment
 
