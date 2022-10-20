@@ -57,6 +57,11 @@ export LESS_TERMCAP_se=$'\e[0m'  # End standout-mode.
 export LESS_TERMCAP_ue=$'\e[0m'  # End underline.
 export LESS_TERMCAP_us=$'\e[32m' # Begin underline.
 
+# Host-local overrides.
+if [[ -r ~/.bash-local ]]; then
+	# shellcheck disable=SC1090
+	source ~/.bash-local
+fi
 
 # Section: Aliases
 
