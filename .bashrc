@@ -31,6 +31,13 @@ HISTIGNORE="&:[ ]*:exit:ls:l:-:bg:fg:history:clear" # Ignore uninteresting comma
 # history across live instances, but that was a tad confusing.
 PROMPT_COMMAND+="${PROMPT_COMMAND:+;} history -a"
 
+function prompt-directory {
+	dirs +0 |
+		grep --perl --only-matching "(?:^/)?(?:[^/]+/?){0,2}$"
+}
+
+PS1=$'${SSH_TTY:+\[\e[36m\]\h }\[\e[32m\]$(prompt-directory):\[\e[0m\] '
+
 # Section: Environment
 
 export PATH+="${PATH:+:}${HOME}/.local/bin"
@@ -50,14 +57,6 @@ export LESS_TERMCAP_se=$'\e[0m'  # End standout-mode.
 export LESS_TERMCAP_ue=$'\e[0m'  # End underline.
 export LESS_TERMCAP_us=$'\e[32m' # Begin underline.
 
-# Section: Prompt
-
-PS1=$'${SSH_TTY:+\[\e[36m\]\h }\[\e[32m\]$(prompt-directory):\[\e[0m\] '
-
-function prompt-directory {
-	dirs +0 |
-		grep --perl --only-matching "(?:^/)?(?:[^/]+/?){0,2}$"
-}
 
 # Section: Aliases
 
