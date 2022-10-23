@@ -1,0 +1,19 @@
+[Unit]
+Description=SSH Authentication Agent
+Documentation=man:ssh-agent(1)
+Before=default.target
+
+[Service]
+Environment=SSH_AUTH_SOCK=%t/ssh-agent.sock
+
+ExecStart=/usr/bin/ssh-agent -D -a $SSH_AUTH_SOCK
+ExecStartPost=/usr/bin/systemctl --user import-environment SSH_AUTH_SOCK
+ExecStartPost=/usr/bin/ssh-add
+
+ExecReload=/usr/bin/ssh-add -D
+ExecReload=/usr/bin/ssh-add
+
+SuccessExitStatus=2
+
+[Install]
+WantedBy=default.target
