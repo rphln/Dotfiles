@@ -36,7 +36,8 @@ function prompt-directory {
 		grep --perl --only-matching "(?:^/)?(?:[^/]+/?){0,2}$"
 }
 
-PS1=$'${SSH_TTY:+\[\e[36m\]\h }\[\e[32m\]$(prompt-directory):\[\e[0m\] '
+# We need to export `PS1`: some programs, such as `conda`, break otherwise.
+export PS1=$'${SSH_TTY:+\[\e[36m\]\h }\[\e[32m\]$(prompt-directory):\[\e[0m\] '
 
 # Section: Environment
 
