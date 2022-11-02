@@ -156,6 +156,12 @@ function my-local-ip {
 		grep --perl --only-matching "src (\K\S+)"
 }
 
+function open {
+	for file; do
+		xdg-open "${file}" &>/dev/null
+	done
+}
+
 function preview {
 	pandoc --standalone --sandbox --to man "$@" |
 		man --local-file -
