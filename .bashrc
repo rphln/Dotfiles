@@ -201,3 +201,28 @@ function trash {
 		done
 	fi
 }
+
+# Section: Laziness
+
+# Performs lazy initialization through hot-swap stubs. These tools are particularly slow
+# to setup; being lazy considerably improves the shell start-up time.
+#
+# See: <https://dev.to/zanehannanau/bash-lazy-completion-evaluation-2a2d>
+
+function conda {
+	unset -f conda
+
+	# shellcheck disable=SC1090
+	source <(conda shell.bash hook)
+	conda "${@}"
+}
+
+function _pandoc {
+	unset -f _pandoc
+
+	# shellcheck disable=SC1090
+	source <(pandoc --bash-completion)
+	_pandoc "${@}"
+}
+
+complete -F _pandoc pandoc
