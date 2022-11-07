@@ -186,8 +186,6 @@ function packages {
 
 function trash {
 	if mkdir --parents ~/.local/share/Trash/files ~/.local/share/Trash/info; then
-		version="$(date +%s%N)"
-
 		for file; do
 			path="$(realpath --no-symlinks "${file}")"
 
@@ -195,6 +193,7 @@ function trash {
 			stem="${name%.*}"
 			suffix="${name#"${stem}"}"
 
+			version="$(date +%s%N)"
 			destination="${stem}.~${version}~${suffix:-.}"
 
 			if mv -- "${path}" "${HOME}/.local/share/Trash/files/${destination}"; then
