@@ -54,7 +54,8 @@ export LS_COLORS="no=00:rs=0:fi=00:di=01;34:ln=36:mh=04;36:pi=04;01;36:so=04;33:
 export LESS_TERMCAP_mb=$'\e[31m' # Begin blinking.
 export LESS_TERMCAP_md=$'\e[34m' # Begin bold.
 export LESS_TERMCAP_me=$'\e[0m'  # End mode.
-export LESS_TERMCAP_se=$'\e[0m'  # End standout-mode.
+export LESS_TERMCAP_se=$'\e[0m'  # End highlight.
+export LESS_TERMCAP_so=$'\e[7m'  # Begin highlight.
 export LESS_TERMCAP_ue=$'\e[0m'  # End underline.
 export LESS_TERMCAP_us=$'\e[32m' # Begin underline.
 
