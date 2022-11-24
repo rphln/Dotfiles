@@ -32,8 +32,7 @@ HISTIGNORE="&:[ ]*:exit:ls:l:-:bg:fg:history:clear" # Ignore uninteresting comma
 PROMPT_COMMAND+="${PROMPT_COMMAND:+;} history -a"
 
 function prompt-directory {
-	dirs +0 |
-		grep --perl --only-matching "(?:^/)?(?:[^/]+/?){0,2}$"
+	grep --perl --only-matching "(?:^/)?(?:[^/]+/?){0,2}$" <<<"${PWD/#${HOME}/'~'}"
 }
 
 # We need to export `PS1`: some programs, such as `conda`, break otherwise.
