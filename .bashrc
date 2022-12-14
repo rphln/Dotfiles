@@ -92,6 +92,8 @@ alias x="tmux new -A -s default"
 alias dl="wget --continue --no-verbose --show-progress"
 alias rs="rsync --archive --human-readable --partial --progress"
 
+alias httpd="python3 -m http.server"
+
 # Section: Git
 
 alias g="git status --short"
