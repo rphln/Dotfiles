@@ -1,0 +1,5 @@
+# Section: Locale
+
+LANGUAGE DEFAULT="en_CA"
+LANG     DEFAULT="${LANGUAGE}.UTF-8"
+LC_ALL   DEFAULT="${LANG}"
