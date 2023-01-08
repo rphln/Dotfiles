@@ -180,6 +180,22 @@ function yank {
 		fi
 }
 
+function clipboard {
+	if [[ -n ${WAYLAND_DISPLAY} ]] && hash wl-paste &>/dev/null; then
+		wl-paste
+	elif [[ -n ${DISPLAY} ]] && hash xclip &>/dev/null; then
+		xclip -selection clipboard -out
+	fi
+}
+
+function cb {
+	if [[ -t 0 ]]; then
+		clipboard
+	else
+		yank
+	fi
+}
+
 function packages {
 	# shellcheck disable=SC2046
 	expac --timefmt "%F %T" "%l	%n" $(pacman --query --explicit --quiet) |
