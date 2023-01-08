@@ -31,6 +31,8 @@
   "ensure_newline_at_eof_on_save": true,
 
   // Section: Ignore
+  "goto_anything_exclude_gitignore": true,
+
   "file_exclude_patterns": ["Cargo.lock"],
   "folder_exclude_patterns": [
     ".asset-cache",
@@ -52,6 +54,7 @@
     "node_modules",
     "public/packs",
     "target",
-    "tmp"
+    "tmp",
+    "var"
   ]
 }
