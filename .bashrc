@@ -169,6 +169,7 @@ function preview {
 		man --local-file -
 }
 
+# shellcheck disable=SC2120
 function yank {
 	cat -- "$@" |
 		if [[ -n ${WAYLAND_DISPLAY} ]] && hash wl-copy &>/dev/null; then
