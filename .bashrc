@@ -40,6 +40,12 @@ export PS1=$'${SSH_TTY:+\[\e[36m\]\h }\[\e[32m\]$(prompt-directory):\[\e[0m\] '
 
 # Section: Environment
 
+: "${LANGUAGE:="en_GB:en_CA:en"}"
+export LANGUAGE
+
+export LANG="${LANGUAGE%%:*}.UTF-8"
+export LC_ALL="${LANGUAGE%%:*}.UTF-8"
+
 export PATH+="${PATH:+:}${HOME}/.local/bin"
 
 if hash subl &>/dev/null; then
