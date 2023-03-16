@@ -143,8 +143,8 @@ alias gp!="git push --force-with-lease"
 alias gre="git restore"
 alias grs="git restore --staged"
 
-alias gstp="git stash pop"
-alias gstu="git stash push"
+alias gspo="git stash pop"
+alias gspu="git stash push"
 
 alias cfg="git --git-dir ~/.cfg --work-tree ~"
 
