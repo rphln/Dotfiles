@@ -3,7 +3,7 @@
     email = rphln@users.noreply.github.com
 
 [alias]
-    history = log --pretty=format:'%Cred(%h) %Creset%s %Cgreen(%ar) %Cblue<%an>'
+    history = log --pretty=format:'%Cred%h %Creset%s %Cgreen(%ar)%Cblue%d'
     show-last = log --max-count 1 --patch
 
     fix = "!f() { git commit --allow-empty-message --no-edit && exec git rebase --interactive; }; f"
