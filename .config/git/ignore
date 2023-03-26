@@ -2,8 +2,9 @@
 # and friends should be ignored at the project level.
 
 # Section: JetBrains
+.fleet
 .idea
 
 # Section: Sublime Text
-*.sublime-workspace
 *.sublime-project
+*.sublime-workspace
