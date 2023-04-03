@@ -183,7 +183,7 @@ function yank {
 		elif [[ -n ${DISPLAY} ]] && hash xclip &>/dev/null; then
 			xclip -selection clipboard
 		else
-			echo -ne "\e]52;c;$(base64 --wrap 0);\a"
+			echo -ne "\e]52;c;$(base64 --wrap 0);\a" >"${SSH_TTY:-/dev/stdout}"
 		fi
 }
 
