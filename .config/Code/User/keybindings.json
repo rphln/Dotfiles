@@ -1,0 +1,11 @@
+[
+  {
+    "key": "ctrl+e",
+    "command": "ctrl+e",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "editor.action.joinLines"
+  }
+]

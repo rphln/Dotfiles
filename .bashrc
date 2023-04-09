@@ -48,9 +48,9 @@ export LC_ALL="${LANGUAGE%%:*}.UTF-8"
 
 export PATH+="${PATH:+:}${HOME}/.local/bin"
 
-if hash subl &>/dev/null; then
-	export EDITOR="subl"
-	export VISUAL="subl --wait"
+if hash code &>/dev/null; then
+	export EDITOR="code"
+	export VISUAL="code --wait"
 fi
 
 # See: <https://github.com/arcticicestudio/nord-dircolors>.
