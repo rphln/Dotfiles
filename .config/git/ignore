@@ -1,5 +1,5 @@
 # Note: we should only ignore files from the operating system and editors here. Binaries
-# and friends should be ignored at the project level.
+# and others should be ignored at the project level.
 
 # Section: JetBrains
 .fleet
@@ -8,3 +8,6 @@
 # Section: Sublime Text
 *.sublime-project
 *.sublime-workspace
+
+# Section: Visual Studio Code
+.vscode
