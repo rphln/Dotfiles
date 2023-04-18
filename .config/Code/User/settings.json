@@ -1,6 +1,6 @@
 {
   // region: Theme
-  "workbench.colorTheme": "GitHub Dark",
+  "workbench.colorTheme": "Nord",
   // endregion: Theme
   // region: Fonts
   "editor.fontFamily": "'Essential PragmataPro'",
