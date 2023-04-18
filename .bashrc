@@ -155,6 +155,13 @@ function cd {
 		l
 }
 
+function bookmark() {
+	command=$(printf 'alias @%q="cd %q"\n' "${1}" "${2:-${PWD}}")
+
+	eval "${command}" &&
+		echo "${command}" >>~/.bash-local
+}
+
 function my-ip {
 	dig +short myip.opendns.com @resolver1.opendns.com
 }
