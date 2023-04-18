@@ -26,6 +26,11 @@
   "editor.inlineSuggest.enabled": true,
   "editor.semanticHighlighting.enabled": true,
 
-  "window.restoreWindows": "none"
+  "window.restoreWindows": "none",
+
+  "[markdown]": {
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 88
+  }
   // endregion: Behavior
 }
