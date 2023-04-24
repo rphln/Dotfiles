@@ -22,6 +22,7 @@
   // endregion: Unclutter
   // region: Behavior
   "files.insertFinalNewline": true,
+  "editor.comments.ignoreEmptyLines": false,
 
   "editor.inlineSuggest.enabled": true,
   "editor.semanticHighlighting.enabled": true,
