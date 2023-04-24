@@ -7,5 +7,23 @@
   {
     "key": "ctrl+j",
     "command": "editor.action.joinLines"
+  },
+  {
+    "key": "ctrl+alt+down",
+    "command": "cursorMove",
+    "when": "editorTextFocus",
+    "args": {
+      "to": "nextBlankLine",
+      "by": "wrappedLine"
+    }
+  },
+  {
+    "key": "ctrl+alt+up",
+    "command": "cursorMove",
+    "when": "editorTextFocus",
+    "args": {
+      "to": "prevBlankLine",
+      "by": "wrappedLine"
+    }
   }
 ]
