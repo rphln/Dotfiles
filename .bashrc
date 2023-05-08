@@ -21,7 +21,7 @@ if [[ -r ~/.bash-local ]]; then
 	source ~/.bash-local
 fi
 
-if [[ -z "${PS1}" ]]; then
+if [[ ! -v PS1 ]]; then
 	return
 fi
 
