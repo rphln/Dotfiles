@@ -1,0 +1,60 @@
+{
+  // Section: Theme
+  "theme": "Adaptive.sublime-theme",
+  "color_scheme": "Nord.sublime-color-scheme",
+
+  // Section: Fonts
+  "font_face": "Essential PragmataPro",
+  "font_size": 12,
+
+  "highlight_line": true,
+  "draw_white_space": ["selection", "trailing", "isolated"],
+
+  // Section: Behavior
+  "ignored_packages": [],
+
+  "rulers": [88],
+  "hot_exit": "disabled",
+
+  "close_windows_when_empty": true,
+  "overlay_scroll_bars": "enabled",
+
+  "hardware_acceleration": "opengl",
+
+  // Section: Vintage
+  "relative_line_numbers": true,
+  "vintage_start_in_command_mode": false,
+  "vintage_use_clipboard": true,
+
+  // Section: Saving
+  "default_line_ending": "unix",
+  "ensure_newline_at_eof_on_save": true,
+
+  // Section: Ignore
+  "goto_anything_exclude_gitignore": true,
+
+  "file_exclude_patterns": ["Cargo.lock"],
+  "folder_exclude_patterns": [
+    ".asset-cache",
+    ".bundle",
+    ".cargo",
+    ".git",
+    ".idea",
+    ".ipynb_checkpoints",
+    ".pytest_cache",
+    ".sass-cache",
+    ".svn",
+    ".venv",
+    "__pycache__",
+    "_site",
+    "build",
+    "coverage",
+    "dist",
+    "log",
+    "node_modules",
+    "public/packs",
+    "target",
+    "tmp",
+    "var"
+  ]
+}

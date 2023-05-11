@@ -1,0 +1,10 @@
+{
+  "draw_centered": true,
+  "draw_indent_guides": false,
+  "rulers": [],
+  "gutter": false,
+  "highlight_line": false,
+  "margin": 16,
+  "word_wrap": true,
+  "wrap_width": 73
+}
