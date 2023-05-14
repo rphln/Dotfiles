@@ -133,7 +133,8 @@ alias gc!="git commit --amend --reset-author"
 alias gcr="git clone --recursive"
 
 alias gd="git diff"
-alias gdw="git diff --ignore-space-change"
+alias gds="git diff --ignore-space-change"
+alias gdw="git diff --minimal --color-words --word-diff-regex '\w+'"
 
 alias gl="git history"
 alias glo="git history origin..HEAD"
