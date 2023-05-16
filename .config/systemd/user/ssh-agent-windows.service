@@ -1,13 +1,13 @@
 [Unit]
-Description=SSH Authentication Agent
+Description=Windows SSH Authentication Agent
 Documentation=man:ssh-agent(1)
 Before=default.target
-Conflicts=ssh-agent-windows.service
+Conflicts=ssh-agent.service
 
 [Service]
 Environment=SSH_AUTH_SOCK=%t/ssh-agent.socket
 
-ExecStart=/usr/bin/ssh-agent -D -a $SSH_AUTH_SOCK
+ExecStart=/usr/bin/socat UNIX-LISTEN:${SSH_AUTH_SOCK},fork EXEC:"/opt/npiperelay.exe -ei -s //./pipe/openssh-ssh-agent",nofork
 
 ExecStartPost=/usr/bin/systemctl --user import-environment SSH_AUTH_SOCK
 ExecStartPost=/usr/bin/ssh-add

@@ -8,6 +8,9 @@ export LANGUAGE
 export LANG="${LANGUAGE%%:*}.UTF-8"
 export LC_ALL="${LANGUAGE%%:*}.UTF-8"
 
+: "${SSH_AUTH_SOCK:="${XDG_RUNTIME_DIR}/ssh-agent.socket"}"
+export SSH_AUTH_SOCK
+
 export PATH+="${PATH:+:}${HOME}/.local/bin"
 
 if hash code &>/dev/null; then
