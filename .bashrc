@@ -24,6 +24,7 @@ if [[ -r ~/.bash-local ]]; then
 	source ~/.bash-local
 fi
 
+# See: <https://meta.ath0.com/2007/10/23/cleaning-up-bash-customizations/>
 if [[ ! -v PS1 ]]; then
 	return
 fi
