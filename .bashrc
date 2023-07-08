@@ -133,8 +133,9 @@ alias gb="git rebase --interactive"
 alias gbr="git rebase --interactive --root"
 
 alias gc="git commit"
+alias gca="git commit --amend --reset-author"
 alias gci="git commit --message 'Initial commit.'"
-alias gc!="git commit --amend --reset-author"
+alias gcn="git commit --no-verify"
 
 alias gcr="git clone --recursive"
 
