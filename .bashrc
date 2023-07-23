@@ -169,7 +169,7 @@ function cd {
 		l
 }
 
-function bookmark() {
+function bookmark {
 	command=$(printf 'alias @%q="cd %q"\n' "${1}" "${2:-${PWD}}")
 
 	eval "${command}" &&
