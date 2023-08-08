@@ -2,6 +2,9 @@
     name = Raphael Nepomuceno
     email = rphln@users.noreply.github.com
 
+[url "ssh://git@github.com/"]
+	insteadof = https://github.com/
+
 [alias]
     history = log --pretty=format:'%Cred%h %Creset%s %Cgreen(%ar)%Cblue%d'
     show-last = log --max-count 1 --patch
