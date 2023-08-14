@@ -101,6 +101,8 @@ alias q="qalc"
 alias r="trash"
 alias t="touch"
 
+alias h='env HTOPRC=~/.config/htop/minrc htop --user ${USER}'
+
 alias s="ssh -o RequestTTY=yes -o RemoteCommand='tmux new -A -s default'"
 alias x="tmux new -A -s default"
 
