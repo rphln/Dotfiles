@@ -146,8 +146,7 @@ alias go="git switch"
 alias gom="git switch master"
 
 alias gp="git push"
-alias gpu="git push --set-upstream origin master"
-alias gp!="git push --force-with-lease"
+alias gpf="git push --force-with-lease"
 
 alias gre="git restore"
 alias grs="git restore --staged"
