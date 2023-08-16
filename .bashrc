@@ -184,16 +184,10 @@ function preview {
 		man --local-file -
 }
 
-# shellcheck disable=SC2120
 function yank {
-	cat -- "$@" |
-		if [[ -n ${WAYLAND_DISPLAY} ]] && hash wl-copy &>/dev/null; then
-			wl-copy
-		elif [[ -n ${DISPLAY} ]] && hash xclip &>/dev/null; then
-			xclip -selection clipboard
-		else
-			echo -ne "\e]52;;$(base64 --wrap 0)\a" >"${SSH_TTY:-/dev/stdout}"
-		fi
+	printf "\e]52;c;"
+	base64 -- "${@}"
+	printf "\a"
 }
 
 # Section: Laziness
