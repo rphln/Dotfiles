@@ -81,12 +81,13 @@ export LESS_TERMCAP_us=$'\e[32m' # Begin underline.
 
 alias -- -="cd -"
 
-# shellcheck disable=SC2139
 alias v='${EDITOR:-vi}'
 alias vs="sudo --edit"
 
 alias c="cp --interactive --recursive"
 alias m="mv --interactive"
+
+alias t="touch"
 
 alias md="mkdir --parents"
 alias rd="rmdir --parents"
@@ -96,15 +97,10 @@ alias l="ls --color --group-directories-first --human-readable"
 alias la="l -A"
 alias ll="l -l"
 
-alias q="qalc"
-
-alias r="trash"
-alias t="touch"
+alias x="tmux new -A -s default"
+alias s="ssh -o RequestTTY=yes -o RemoteCommand='tmux new -A -s default'"
 
 alias h='env HTOPRC=~/.config/htop/minrc htop --user ${USER}'
-
-alias s="ssh -o RequestTTY=yes -o RemoteCommand='tmux new -A -s default'"
-alias x="tmux new -A -s default"
 
 alias dl="wget --continue --no-verbose --show-progress"
 alias rs="rsync --archive --human-readable --partial --progress"
