@@ -179,12 +179,6 @@ function my-local-ip {
 		grep --perl --only-matching "src (\K\S+)"
 }
 
-function open {
-	for file; do
-		xdg-open "${file}" &>/dev/null
-	done
-}
-
 function preview {
 	pandoc --standalone --sandbox --to man "$@" |
 		man --local-file -
@@ -200,51 +194,6 @@ function yank {
 		else
 			echo -ne "\e]52;;$(base64 --wrap 0)\a" >"${SSH_TTY:-/dev/stdout}"
 		fi
-}
-
-function clipboard {
-	if [[ -n ${WAYLAND_DISPLAY} ]] && hash wl-paste &>/dev/null; then
-		wl-paste
-	elif [[ -n ${DISPLAY} ]] && hash xclip &>/dev/null; then
-		xclip -selection clipboard -out
-	fi
-}
-
-function cb {
-	if [[ -t 0 ]]; then
-		clipboard
-	else
-		yank
-	fi
-}
-
-function packages {
-	# shellcheck disable=SC2046
-	expac --timefmt "%F %T" "%l	%n" $(pacman --query --explicit --quiet) |
-		sort
-}
-
-function trash {
-	if mkdir --parents ~/.local/share/Trash/files ~/.local/share/Trash/info; then
-		for file; do
-			path="$(realpath --no-symlinks "${file}")"
-
-			name="${path##*/}"
-			stem="${name%.*}"
-			suffix="${name#"${stem}"}"
-
-			version="$(date +%s%N)"
-			destination="${stem}.~${version}~${suffix:-.}"
-
-			if mv -- "${path}" "${HOME}/.local/share/Trash/files/${destination}"; then
-				cat <<-EOF >"${HOME}/.local/share/Trash/info/${destination}.trashinfo"
-					[Trash Info]
-					Path=${path}
-					DeletionDate=$(date +%FT%T)
-				EOF
-			fi
-		done
-	fi
 }
 
 # Section: Laziness
