@@ -91,9 +91,9 @@ alias md="mkdir --parents"
 alias rd="rmdir --parents"
 
 alias l="ls --color --group-directories-first --human-readable"
-
 alias la="l -A"
 alias ll="l -l"
+alias lla="l -lA"
 
 alias t="tmux new -A -s default"
 alias s="ssh -o RequestTTY=yes -o RemoteCommand='tmux new -A -s default'"
