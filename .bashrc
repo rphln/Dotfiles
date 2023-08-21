@@ -95,7 +95,7 @@ alias l="ls --color --group-directories-first --human-readable"
 alias la="l -A"
 alias ll="l -l"
 
-alias x="tmux new -A -s default"
+alias t="tmux new -A -s default"
 alias s="ssh -o RequestTTY=yes -o RemoteCommand='tmux new -A -s default'"
 
 alias h='env HTOPRC=~/.config/htop/minrc htop --user ${USER}'
