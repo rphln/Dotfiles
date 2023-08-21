@@ -132,7 +132,6 @@ alias gcr="git clone --recursive"
 
 alias gd="git diff --relative"
 alias gds="git diff --relative --ignore-space-change"
-alias gdw="git diff --relative --minimal --color-words --word-diff-regex '\w+'"
 
 alias gl="git history"
 alias glo="git history origin..HEAD"
