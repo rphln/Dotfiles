@@ -87,8 +87,6 @@ alias vs="sudo --edit"
 alias c="cp --interactive --recursive"
 alias m="mv --interactive"
 
-alias t="touch"
-
 alias md="mkdir --parents"
 alias rd="rmdir --parents"
 
