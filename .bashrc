@@ -10,6 +10,9 @@ export SSH_AUTH_SOCK
 
 export PATH+="${PATH:+:}${HOME}/.local/bin"
 
+: "${EDITOR:=vi}"
+: "${VISUAL:=vi}"
+
 if hash code &>/dev/null; then
 	export EDITOR="code"
 	export VISUAL="code --wait"
