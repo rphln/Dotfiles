@@ -184,7 +184,7 @@ function preview {
 
 function yank {
 	printf "\e]52;c;"
-	base64 -- "${@}"
+	cat -- "${@}" | base64
 	printf "\a"
 }
 
