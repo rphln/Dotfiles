@@ -1,37 +1,20 @@
 {
   // region: Theme
-  "workbench.colorTheme": "Nord",
-  // endregion: Theme
-  // region: Fonts
+  "workbench.colorTheme": "GitHub Dark Default",
   "editor.fontFamily": "'Essential PragmataPro'",
-
+  "editor.fontLigatures": true,
   "editor.fontSize": 16,
   "editor.lineHeight": 1.2,
-
   "terminal.integrated.fontSize": 16,
   "terminal.integrated.lineHeight": 1.2,
-  // endregion: Fonts
+  "editor.smoothScrolling": true,
+  // endregion: Theme
   // region: Unclutter
   "explorer.excludeGitIgnore": true,
-
-  "window.menuBarVisibility": "toggle",
   "editor.minimap.enabled": false,
-
   "editor.inlayHints.enabled": "offUnlessPressed",
   "editor.inlayHints.padding": true,
+  "workbench.sideBar.location": "right",
+  "window.menuBarVisibility": "toggle"
   // endregion: Unclutter
-  // region: Behavior
-  "files.insertFinalNewline": true,
-  "editor.comments.ignoreEmptyLines": false,
-
-  "editor.inlineSuggest.enabled": true,
-  "editor.semanticHighlighting.enabled": true,
-
-  "window.restoreWindows": "none",
-
-  "[markdown]": {
-    "editor.wordWrap": "wordWrapColumn",
-    "editor.wordWrapColumn": 88
-  }
-  // endregion: Behavior
 }
