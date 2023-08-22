@@ -8,6 +8,7 @@ window:
 
 font:
   size: 12
+  offset: { y: 1 }
 
   normal:
     family: Essential PragmataPro
