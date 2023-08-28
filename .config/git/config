@@ -1,39 +1,39 @@
 [user]
-    name = Raphael Nepomuceno
-    email = rphln@users.noreply.github.com
+	name = Raphael Nepomuceno
+	email = rphln@users.noreply.github.com
 
 [url "ssh://git@github.com/"]
 	insteadof = https://github.com/
 
 [alias]
-    history = log --pretty=format:'%Cred%h %Creset%s %Cgreen(%ar)%Cblue%d'
-    show-last = log --max-count 1 --patch
+	history = log --pretty=format:'%Cred%h %Creset%s %Cgreen(%ar)%Cblue%d'
+	show-last = log --max-count 1 --patch
 
-    fix = "!f() { git commit --allow-empty-message --no-edit && exec git rebase --interactive; }; f"
+	fix = "!f() { git commit --allow-empty-message --no-edit && exec git rebase --interactive; }; f"
 
-    unstage = reset HEAD
-    uncommit = reset --soft HEAD^
+	unstage = reset HEAD
+	uncommit = reset --soft HEAD^
 
-    exec = "!exec "
+	exec = "!exec "
 
 [diff]
-    algorithm = histogram
+	algorithm = histogram
 
 [pull]
-    rebase = true
+	rebase = true
 
 [fetch]
-    prune = true
+	prune = true
 
 [rebase]
-    autostash = true
-    autosquash = true
+	autostash = true
+	autosquash = true
 
 [commit]
-    verbose = true
+	verbose = true
 
 [diff "md"]
-    xfuncname = "^#.*"
+	xfuncname = "^#.*"
 
 [diff "ipynb"]
-    textconv = pandoc --standalone --to markdown
+	textconv = pandoc --standalone --to markdown
