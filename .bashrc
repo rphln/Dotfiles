@@ -8,7 +8,10 @@ unset LANG LANGUAGE LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE LC_MONETARY LC_MESSAG
 : "${SSH_AUTH_SOCK:="${XDG_RUNTIME_DIR}/ssh-agent.socket"}"
 export SSH_AUTH_SOCK
 
-export PATH+="${PATH:+:}${HOME}/.local/bin"
+# shellcheck disable=SC2076
+if ! [[ ":${PATH}:" =~ ":${HOME}/.local/bin:" ]]; then
+	export PATH="${HOME}/.local/bin:${PATH}"
+fi
 
 : "${EDITOR:=vi}"
 : "${VISUAL:=vi}"
