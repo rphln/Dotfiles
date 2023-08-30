@@ -10,7 +10,7 @@ export SSH_AUTH_SOCK
 
 # shellcheck disable=SC2076
 if ! [[ ":${PATH}:" =~ ":${HOME}/.local/bin:" ]]; then
-	export PATH="${HOME}/.local/bin:${PATH}"
+	export PATH="${HOME}/.local/bin${PATH:+:${PATH}}"
 fi
 
 : "${EDITOR:=vi}"
