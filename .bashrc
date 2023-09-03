@@ -56,14 +56,12 @@ HISTTIMEFORMAT="%F %T	" # Date and time format for `history`.
 HISTCONTROL="erasedups:ignoreboth"                  # Ignore duplicate entries.
 HISTIGNORE="&:[ ]*:exit:ls:l:-:bg:fg:history:clear" # Ignore uninteresting commands.
 
-# Flush the history with every command. This ensures that new Bash instances read an
+# Flush the history after every command. This ensures that new Bash instances read an
 # up-to-date history.
 #
-# Previously, this also had either `history -n` or `history -c; history -r` to share
-# the history across live instances, but that was a tad confusing.
-#
-# See: <https://stromberg.dnsalias.org/~strombrg/PS0-prompt/>.
-PS0+=$'$(history -a)'
+# Previously, this also had either `history -n` or `history -c; history -r` to share the
+# history across live instances, but that was a tad confusing.
+PROMPT_COMMAND+="${PROMPT_COMMAND:+;} history -a"
 
 # Section: Appearance
 
