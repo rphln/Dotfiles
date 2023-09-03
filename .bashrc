@@ -37,11 +37,20 @@ fi
 shopt -s autocd   # Change into a directory by using its bare name.
 shopt -s globstar # Enable recursive globs.
 
+# Section: History
+
 shopt -s cmdhist    # Save multi-line commands as one.
 shopt -s histappend # Append instead of overwritting.
 
+# Deduplicate commands and ignores lines prefixed with a space, but otherwise record
+# everything.
+HISTCONTROL="erasedups:ignoreboth"
+HISTIGNORE=
+
 HISTSIZE=     # Unlimited history storage in the memory.
 HISTFILESIZE= # Unlimited history storage in the file.
+
+HISTTIMEFORMAT="%F %T	" # Date and time format for `history`.
 
 # An unconfigured Bash instance may truncate the default history file when opened. We
 # can prevent such accidents by moving it elsewhere.
@@ -51,17 +60,18 @@ if mkdir --parents ~/.local/state/bash; then
 	HISTFILE=~/.local/state/bash/history
 fi
 
-HISTTIMEFORMAT="%F %T	" # Date and time format for `history`.
-
-HISTCONTROL="erasedups:ignoreboth"                  # Ignore duplicate entries.
-HISTIGNORE="&:[ ]*:exit:ls:l:-:bg:fg:history:clear" # Ignore uninteresting commands.
-
 # Flush the history after every command. This ensures that new Bash instances read an
 # up-to-date history.
 #
 # Previously, this also had either `history -n` or `history -c; history -r` to share the
 # history across live instances, but that was a tad confusing.
 PROMPT_COMMAND+="${PROMPT_COMMAND:+;} history -a"
+
+# Synchronize and deduplicate the history. Because this is an expensive operation, we
+# compromise by only doing it when the shell quits.
+#
+# See: <https://unix.stackexchange.com/a/556267>.
+trap 'history -n; history -w' EXIT
 
 # Section: Appearance
 
