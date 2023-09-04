@@ -67,12 +67,6 @@ fi
 # history across live instances, but that was a tad confusing.
 PROMPT_COMMAND+="${PROMPT_COMMAND:+;} history -a"
 
-# Synchronize and deduplicate the history. Because this is an expensive operation, we
-# compromise by only doing it when the shell quits.
-#
-# See: <https://unix.stackexchange.com/a/556267>.
-trap 'history -n; history -w' EXIT
-
 # Section: Appearance
 
 function prompt-directory {
