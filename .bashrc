@@ -42,8 +42,8 @@ shopt -s globstar # Enable recursive globs.
 shopt -s cmdhist    # Save multi-line commands as one.
 shopt -s histappend # Append instead of overwritting.
 
-# Ignores duplicates and lines prefixed with spaces in the history, but otherwise
-# records everything.
+# Ignores back-to-back duplicates and lines prefixed with spaces, but otherwise records
+# everything in the history.
 HISTCONTROL="erasedups:ignoreboth"
 HISTIGNORE=
 
