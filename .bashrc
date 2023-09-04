@@ -42,29 +42,35 @@ shopt -s globstar # Enable recursive globs.
 shopt -s cmdhist    # Save multi-line commands as one.
 shopt -s histappend # Append instead of overwritting.
 
-# Deduplicate commands and ignores lines prefixed with a space, but otherwise record
-# everything.
+# Ignores duplicates and lines prefixed with spaces in the history, but otherwise
+# records everything.
 HISTCONTROL="erasedups:ignoreboth"
 HISTIGNORE=
 
-HISTSIZE=     # Unlimited history storage in the memory.
-HISTFILESIZE= # Unlimited history storage in the file.
+# Removes the limit on the number of commands in the history, both in memory and in the
+# file, respectively.
+HISTSIZE=
+HISTFILESIZE=
 
-HISTTIMEFORMAT="%F %T	" # Date and time format for `history`.
+# Records the execution time of each command in the history file when set. Then, uses
+# the specified time format for `history`.
+HISTTIMEFORMAT="%F %T	"
 
 # An unconfigured Bash instance may truncate the default history file when opened. We
 # can prevent such accidents by moving it elsewhere.
 #
-# See: <https://news.ycombinator.com/item?id=33187749>
+# See: <https://news.ycombinator.com/item?id=33187749>.
 if mkdir --parents ~/.local/state/bash; then
 	HISTFILE=~/.local/state/bash/history
 fi
 
-# Flush the history after every command. This ensures that new Bash instances read an
+# Flushes the history after every command. This ensures that new Bash instances read an
 # up-to-date history.
 #
-# Previously, this also had either `history -n` or `history -c; history -r` to share the
-# history across live instances, but that was a tad confusing.
+# Previously, this also had either `history -n` or `history -c; history -r` to share
+# the history across live instances, but that was a tad confusing.
+#
+# See: <https://unix.stackexchange.com/a/18443>.
 PROMPT_COMMAND+="${PROMPT_COMMAND:+;} history -a"
 
 # Section: Appearance
