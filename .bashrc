@@ -42,19 +42,14 @@ shopt -s globstar # Enable recursive globs.
 shopt -s cmdhist    # Save multi-line commands as one.
 shopt -s histappend # Append instead of overwritting.
 
-# Ignores back-to-back duplicates and lines prefixed with spaces, but otherwise records
-# everything in the history.
-HISTCONTROL="erasedups:ignoreboth"
+# Records everything in the history.
+HISTCONTROL=
 HISTIGNORE=
 
 # Removes the limit on the number of commands in the history, both in memory and in the
 # file, respectively.
 HISTSIZE=
 HISTFILESIZE=
-
-# Records the execution time of each command in the history file when set. Then, uses
-# the specified time format for `history`.
-HISTTIMEFORMAT="%F %T	"
 
 # An unconfigured Bash instance may truncate the default history file when opened. We
 # can prevent such accidents by moving it elsewhere.
@@ -72,6 +67,15 @@ fi
 #
 # See: <https://unix.stackexchange.com/a/18443>.
 PROMPT_COMMAND+="${PROMPT_COMMAND:+;} history -a"
+
+# Remove duplicate commands from the history file such that the most recent execution
+# wins.
+#
+# Performing the deduplication on launch keeps live Bash instances as they are, but
+# ensures that new instances have no duplicates.
+#
+# This is a potential source of slowdowns for large histories or slow disks.
+gawk -i inplace '{ seen[$0] = NR } ENDFILE { PROCINFO["sorted_in"] = "@val_num_asc"; for (command in seen) print command }' "${HISTFILE}"
 
 # Section: Appearance
 
