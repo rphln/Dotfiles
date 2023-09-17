@@ -27,8 +27,10 @@ if [[ -r ~/.bash-local ]]; then
 	source ~/.bash-local
 fi
 
+# Commands after this point are only executed in interactive shells.
+#
 # See: <https://meta.ath0.com/2007/10/23/cleaning-up-bash-customizations/>
-if [[ ! -v PS1 ]]; then
+if ! [[ $- =~ i ]]; then
 	return
 fi
 
