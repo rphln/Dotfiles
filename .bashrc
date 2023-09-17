@@ -39,6 +39,8 @@ fi
 shopt -s autocd   # Change into a directory by using its bare name.
 shopt -s globstar # Enable recursive globs.
 
+source /etc/bash_completion
+
 # Section: History
 
 shopt -s cmdhist    # Save multi-line commands as one.
