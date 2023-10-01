@@ -13,6 +13,11 @@ if ! [[ ":${PATH}:" =~ ":${HOME}/.local/bin:" ]]; then
 	export PATH="${HOME}/.local/bin${PATH:+:${PATH}}"
 fi
 
+# shellcheck disable=SC2076
+if ! [[ ":${PATH}:" =~ ":${HOME}/.local/lib/miniforge3/bin:" ]]; then
+	export PATH="${HOME}/.local/lib/miniforge3/bin${PATH:+:${PATH}}"
+fi
+
 : "${EDITOR:=vi}"
 : "${VISUAL:=vi}"
 
