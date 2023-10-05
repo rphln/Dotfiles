@@ -214,6 +214,14 @@ function yank {
 	printf "\a"
 }
 
+function yank-path {
+	if [[ $# -eq 0 ]]; then
+		yank <(pwd)
+	else
+		yank <(realpath -- "${@}")
+	fi
+}
+
 # Section: Laziness
 
 # Performs lazy initialization through hot-swap stubs. These tools are particularly slow
