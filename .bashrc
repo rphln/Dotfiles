@@ -23,12 +23,12 @@ if ! [[ ":${PATH}:" =~ ":${HOME}/.cargo/bin:" ]]; then
 	export PATH="${HOME}/.cargo/bin${PATH:+:${PATH}}"
 fi
 
-: "${EDITOR:=vi}"
-: "${VISUAL:=vi}"
-
 if hash code &>/dev/null; then
-	export EDITOR="code"
-	export VISUAL="code --wait"
+	: "${EDITOR:=code}"
+	: "${VISUAL:=code --wait}"
+else
+	: "${EDITOR:=vi}"
+	: "${VISUAL:=vi}"
 fi
 
 # Host-specific overrides.
