@@ -1,0 +1,2 @@
+# shellcheck disable=SC1090
+source <(rustup completions bash rustup)

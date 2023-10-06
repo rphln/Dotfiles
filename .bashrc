@@ -44,6 +44,7 @@ fi
 shopt -s autocd   # Change into a directory by using its bare name.
 shopt -s globstar # Enable recursive globs.
 
+# See `~/.local/share/bash-completion/completions` for lazy loading of completions.
 source /etc/bash_completion
 
 # Section: History
@@ -236,13 +237,3 @@ function conda {
 	source <(conda shell.bash hook)
 	conda "${@}"
 }
-
-function _pandoc {
-	unset -f _pandoc
-
-	# shellcheck disable=SC1090
-	source <(pandoc --bash-completion)
-	_pandoc "${@}"
-}
-
-complete -F _pandoc pandoc
