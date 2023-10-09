@@ -31,6 +31,8 @@ else
 	: "${VISUAL:=vi}"
 fi
 
+export EDITOR VISUAL
+
 # Host-specific overrides.
 if [[ -r ~/.bash-local ]]; then
 	# shellcheck disable=SC1090
