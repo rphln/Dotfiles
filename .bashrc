@@ -92,7 +92,7 @@ PROMPT_COMMAND+="${PROMPT_COMMAND:+;} history -a"
 # ensures that new instances have no duplicates.
 #
 # This is a potential source of slowdowns for large histories or slow disks.
-gawk -i inplace '{ seen[$0] = NR } ENDFILE { PROCINFO["sorted_in"] = "@val_num_asc"; for (command in seen) print command }' "${HISTFILE}"
+gawk -i inplace '{ seen[$0] = NR } ENDFILE { PROCINFO["sorted_in"] = "@val_num_asc"; for (command in seen) print command }' "${HISTFILE}" &>/dev/null
 
 # Section: Appearance
 
