@@ -1,7 +1,7 @@
 {
   // region: Theme
   "workbench.colorTheme": "GitHub Dark Default",
-  "editor.fontFamily": "'Essential PragmataPro'",
+  "editor.fontFamily": "'Essential PragmataPro', monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 16,
   "editor.lineHeight": 1.2,
@@ -15,6 +15,16 @@
   "editor.inlayHints.enabled": "offUnlessPressed",
   "editor.inlayHints.padding": true,
   "workbench.sideBar.location": "right",
-  "window.menuBarVisibility": "toggle"
+  "window.titleBarStyle": "custom",
+  "window.menuBarVisibility": "toggle",
+  "window.restoreWindows": "none",
+  "workbench.editor.closeEmptyGroups": false,
   // endregion: Unclutter
+  // region: Behavior
+  "settingsSync.ignoredSettings": ["remote.SSH.path"],
+  "github.copilot.enable": {
+    "*": true
+  },
+  "files.insertFinalNewline": true
+  // endregion: Behavior
 }

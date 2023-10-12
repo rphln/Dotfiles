@@ -1,29 +1,36 @@
 [
   {
     "key": "ctrl+e",
-    "command": "ctrl+e",
-    "when": "terminalFocus"
+    "when": "terminalFocus",
+    "command": "ctrl+e"
   },
   {
     "key": "ctrl+j",
+    "when": "editorTextFocus",
     "command": "editor.action.joinLines"
   },
   {
-    "key": "ctrl+alt+down",
-    "command": "cursorMove",
+    "key": "alt+shift+]",
     "when": "editorTextFocus",
+    "command": "cursorMove",
     "args": {
       "to": "nextBlankLine",
       "by": "wrappedLine"
     }
   },
   {
-    "key": "ctrl+alt+up",
-    "command": "cursorMove",
+    "key": "alt+shift+[",
     "when": "editorTextFocus",
+    "command": "cursorMove",
     "args": {
       "to": "prevBlankLine",
       "by": "wrappedLine"
     }
+  },
+  {
+    "key": "ctrl+k tab",
+    "when": "editorTextFocus",
+    "command": "type",
+    "args": { "text": "\t" }
   }
 ]
