@@ -237,10 +237,12 @@ function yank-path {
 #
 # See: <https://dev.to/zanehannanau/bash-lazy-completion-evaluation-2a2d>
 
-function conda {
-	unset -f conda
+if hash conda &>/dev/null; then
+	function conda {
+		unset -f conda
 
-	# shellcheck disable=SC1090
-	source <(conda shell.bash hook)
-	conda "${@}"
-}
+		# shellcheck disable=SC1090
+		source <(conda shell.bash hook)
+		conda "${@}"
+	}
+fi
