@@ -2,7 +2,7 @@
 
 # Section: Environment
 
-export LC_ALL="en_GB.UTF-8"
+export LC_ALL="en_CA.UTF-8"
 unset LANG LANGUAGE LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE LC_MONETARY LC_MESSAGES LC_PAPER LC_NAME LC_ADDRESS LC_TELEPHONE LC_MEASUREMENT LC_IDENTIFICATION
 
 : "${SSH_AUTH_SOCK:="${XDG_RUNTIME_DIR}/ssh-agent.socket"}"
@@ -24,14 +24,12 @@ if ! [[ ":${PATH}:" =~ ":${HOME}/.cargo/bin:" ]]; then
 fi
 
 if hash code &>/dev/null; then
-	: "${EDITOR:=code}"
-	: "${VISUAL:=code --wait}"
+	export EDITOR="code"
+	export VISUAL="code --wait"
 else
-	: "${EDITOR:=vi}"
-	: "${VISUAL:=vi}"
+	export EDITOR="vi"
+	export VISUAL="vi"
 fi
-
-export EDITOR VISUAL
 
 # Host-specific overrides.
 if [[ -r ~/.bash-local ]]; then
