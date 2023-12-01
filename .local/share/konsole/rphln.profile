@@ -6,5 +6,5 @@ TerminalMargin=16
 HistoryMode=2
 
 [Appearance]
-ColorScheme=Nord
-Font=Essential PragmataPro,12,-1,5,50,0,0,0,0,0
+ColorScheme=GitHub Dark Default
+Font=Iosevka Term,12,-1,5,50,0,0,0,0,0
