@@ -1,0 +1,14 @@
+import = ["~/.config/alacritty/github_dark_default.toml"]
+
+[font]
+size = 12
+
+[font.normal]
+family = "Essential PragmataPro"
+
+[font.offset]
+y = 1
+
+[window.padding]
+x = 16
+y = 16
