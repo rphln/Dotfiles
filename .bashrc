@@ -83,15 +83,6 @@ fi
 # See: <https://unix.stackexchange.com/a/18443>.
 PROMPT_COMMAND+="${PROMPT_COMMAND:+;} history -a"
 
-# Remove duplicate commands from the history file such that the most recent execution
-# wins.
-#
-# Performing the deduplication on launch keeps live Bash instances as they are, but
-# ensures that new instances have no duplicates.
-#
-# This is a potential source of slowdowns for large histories or slow disks.
-gawk -i inplace '{ seen[$0] = NR } ENDFILE { PROCINFO["sorted_in"] = "@val_num_asc"; for (command in seen) print command }' "${HISTFILE}" &>/dev/null
-
 # Section: Appearance
 
 function prompt-directory {
