@@ -66,6 +66,10 @@ HISTIGNORE=
 HISTSIZE=
 HISTFILESIZE=
 
+# Records the execution time of each command in the history file when set. Then, uses
+# the specified time format for `history`.
+HISTTIMEFORMAT="%F %T  "
+
 # An unconfigured Bash instance may truncate the default history file when opened. We
 # can prevent such accidents by moving it elsewhere.
 #
