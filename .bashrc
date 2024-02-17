@@ -163,9 +163,10 @@ alias gcr="git clone --recursive"
 alias gd="git diff --relative"
 alias gds="git diff --relative --ignore-space-change"
 
-alias gl="git history"
-alias glo="git history origin..HEAD"
-alias glg="git history --grep"
+alias gl="git log"
+alias glg="git log --grep"
+alias glo="git log origin..HEAD"
+alias glp="git log --patch"
 
 alias go="git switch"
 alias gom="git switch master"

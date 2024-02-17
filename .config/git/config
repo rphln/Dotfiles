@@ -6,34 +6,24 @@
 	insteadof = https://github.com/
 
 [alias]
-	history = log --pretty=format:'%Cred%h %Creset%s %Cgreen(%ar)%Cblue%d'
-	show-last = log --max-count 1 --patch
-
-	fix = "!f() { git commit --allow-empty-message --no-edit && exec git rebase --interactive; }; f"
-
-	unstage = reset HEAD
-	uncommit = reset --soft HEAD^
-
 	exec = "!exec "
 
-[diff]
-	algorithm = histogram
+	uncommit = reset --soft HEAD^
+	unstage = reset HEAD
+
+	fix = "!f() { git commit --allow-empty-message --no-edit && exec git rebase --interactive; }; f"
 
 [pull]
 	rebase = true
 
-[fetch]
-	prune = true
+[format]
+	pretty = %C(red)%h%d %C(reset)%s %C(dim)(%ar by %an)
 
-[rebase]
-	autostash = true
-	autosquash = true
+[merge]
+	conflictstyle = diff3
 
-[commit]
-	verbose = true
+[diff]
+	algorithm = histogram
 
-[diff "md"]
-	xfuncname = "^#.*"
-
-[diff "ipynb"]
+[diff "pandoc"]
 	textconv = pandoc --standalone --to markdown

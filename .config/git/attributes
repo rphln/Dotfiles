@@ -1,2 +1,1 @@
-*.md    diff=md
-*.ipynb diff=ipynb
+*.ipynb diff=pandoc
