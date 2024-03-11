@@ -13,6 +13,9 @@
 
 	fix = "!f() { git commit --allow-empty-message --no-edit && exec git rebase --interactive; }; f"
 
+[commit]
+	verbose = true
+
 [pull]
 	rebase = true
 
