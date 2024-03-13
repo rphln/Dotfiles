@@ -10,6 +10,8 @@ set skip-completed-text on
 set colored-stats on
 set colored-completion-prefix off
 
+set match-hidden-files off
+
 set mark-directories off
 set mark-symlinked-directories off
 
