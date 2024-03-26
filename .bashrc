@@ -216,12 +216,8 @@ function yank {
 	printf "\a"
 }
 
-function yank-path {
-	if [[ $# -eq 0 ]]; then
-		yank <(pwd)
-	else
-		yank <(realpath -- "${@}")
-	fi
+function yankpath {
+	realpath --strip --zero -- "${@:-${PWD}}" | xargs -0 printf "%q " | yank -
 }
 
 # Section: Laziness
