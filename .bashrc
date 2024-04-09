@@ -160,8 +160,9 @@ alias gcn="git commit --no-verify"
 
 alias gcr="git clone --recursive"
 
-alias gd="git diff --relative"
-alias gds="git diff --relative --ignore-space-change"
+alias gd="git diff"
+alias gdw="git diff --color-words"
+alias gds="git diff --ignore-space-change"
 
 alias gl="git log"
 alias glg="git log --grep"
