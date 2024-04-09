@@ -216,10 +216,6 @@ function yank {
 	printf "\a"
 }
 
-function yankpath {
-	realpath --strip --zero -- "${@:-${PWD}}" | xargs -0 printf "%q " | yank -
-}
-
 # Section: Laziness
 
 # Performs lazy initialization through hot-swap stubs. These tools are particularly slow
