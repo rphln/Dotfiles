@@ -32,9 +32,9 @@ else
 fi
 
 # Host-specific overrides.
-if [[ -r ~/.bash-local ]]; then
+if [[ -r ~/.bashrc.local ]]; then
 	# shellcheck disable=SC1090
-	source ~/.bash-local
+	source ~/.bashrc.local
 fi
 
 # Commands after this point are only executed in interactive shells.
