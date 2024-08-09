@@ -211,11 +211,18 @@ function preview {
 		man --local-file -
 }
 
+# shellcheck disable=SC2120
 function yank {
 	printf "\e]52;c;"
 	cat -- "${@}" | base64
 	printf "\a"
 }
+
+function yank-command-line {
+	printf "%s" "${READLINE_LINE}" | yank
+}
+
+bind -x '"\C-y": yank-command-line'
 
 # Section: Laziness
 
