@@ -194,7 +194,7 @@ function bookmark {
 	command=$(printf 'alias @%q="cd %q"\n' "${1}" "${2:-${PWD}}")
 
 	eval "${command}" &&
-		echo "${command}" >>~/.bash-local
+		echo "${command}" >>~/.bashrc.local
 }
 
 function my-ip {
