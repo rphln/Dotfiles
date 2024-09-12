@@ -28,9 +28,5 @@ Tab: menu-complete
 Control-u: kill-whole-line
 Control-w: backward-kill-word
 
-"\e;": history-and-alias-expand-line
-
 "\e[A": history-search-backward
 "\e[B": history-search-forward
-
-"\es": "\C-asudo "
