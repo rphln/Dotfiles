@@ -219,7 +219,7 @@ function yank {
 }
 
 function yank-command-line {
-	printf "%s" "${READLINE_LINE}" | yank
+	yank <<<"${READLINE_LINE}"
 }
 
 bind -x '"\C-y": yank-command-line'
