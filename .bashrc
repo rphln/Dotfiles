@@ -50,7 +50,11 @@ shopt -s autocd   # Change into a directory by using its bare name.
 shopt -s globstar # Enable recursive globs.
 
 # See `~/.local/share/bash-completion/completions` for lazy loading of completions.
-source /etc/bash_completion
+if [[ -f /etc/bash_completion ]]; then
+	source /etc/bash_completion
+elif [[ -f /usr/share/bash-completion/bash_completion ]]; then
+	source /usr/share/bash-completion/bash_completion
+fi
 
 # Section: History
 
