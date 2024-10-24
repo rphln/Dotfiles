@@ -11,13 +11,15 @@
 	uncommit = reset --soft HEAD^
 	unstage = reset HEAD
 
-	fix = "!f() { git commit --allow-empty-message --no-edit && exec git rebase --interactive; }; f"
-
 [commit]
 	verbose = true
 
 [pull]
 	rebase = true
+
+[rerere]
+	enabled = true
+	autoupdate = true
 
 [format]
 	pretty = %C(red)%h%d %C(reset)%s %C(dim)(%ar by %an)
@@ -27,6 +29,13 @@
 
 [diff]
 	algorithm = histogram
+	tool = vscode
 
 [diff "pandoc"]
 	textconv = pandoc --standalone --to markdown
+
+[difftool]
+	prompt = false
+
+[difftool "vscode"]
+	cmd = code --wait --diff $LOCAL $REMOTE
