@@ -1,10 +1,10 @@
-import = ["~/.config/alacritty/github_dark_default.toml"]
+import = ["~/.config/alacritty/solarized_light.toml"]
 
 [font]
 size = 12
 
 [font.normal]
-family = "Essential PragmataPro"
+family = "Iosevka Fixed"
 
 [font.offset]
 y = 1
