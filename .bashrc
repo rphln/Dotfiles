@@ -141,49 +141,15 @@ alias rs="rsync --archive --human-readable --partial --progress"
 
 alias g="git status --short"
 
-alias ge="git merge"
-alias gf="git fix"
-alias gi="git init"
-alias gm="git mv"
-alias gr="git rm"
-alias gs="git show-last"
-alias gu="git pull"
-alias gx="git exec"
-
 alias ga="git add"
-alias gaf="git add --force"
-alias gap="git add --patch"
-
-alias gb="git rebase --interactive"
-alias gbr="git rebase --interactive --root"
-
-alias gc="git commit"
-alias gca="git commit --amend --reset-author"
-alias gci="git commit --message 'Initial commit.'"
-alias gcn="git commit --no-verify"
-
-alias gcr="git clone --recursive"
-
 alias gd="git diff"
-alias gdw="git diff --color-words"
-alias gds="git diff --ignore-space-change"
-
 alias gl="git log"
-alias glg="git log --grep"
-alias glo="git log origin..HEAD"
-alias glp="git log --patch"
-
-alias go="git switch"
-alias gom="git switch master"
-
 alias gp="git push"
-alias gpf="git push --force-with-lease"
+alias gr="git restore"
+alias gu="git pull"
 
-alias gre="git restore"
-alias grs="git restore --staged"
-
-alias gspo="git stash pop"
-alias gspu="git stash push"
+alias gcl="git clone --recursive"
+alias gco="git commit"
 
 alias cfg="git --git-dir ~/.cfg --work-tree ~"
 
