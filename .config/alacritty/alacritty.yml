@@ -1,0 +1,12 @@
+import:
+  - ~/.config/alacritty/solarized_light.yml
+font:
+  size: 12
+  normal:
+    family: Iosevka Fixed
+  offset:
+    y: 1
+window:
+  padding:
+    x: 16
+    y: 16
