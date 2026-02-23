@@ -1,0 +1,46 @@
+
+# Commit Message (Conventional Commits)
+#
+# Format: <type>(<scope>)<!>: <subject>
+#
+# SUBJECT
+#
+#   - Use imperative, present tense: "add feature" not "added" or "adds"
+#   - No initial capital, no trailing period
+#   - Append "!" after the scope for breaking changes
+#
+# BODY (optional)
+#
+#   - Explain what changed and why, not how
+#   - Contrast with the previous behavior where helpful
+#   - Can include: testing notes, rollback plan, alternatives considered
+#
+# FOOTER (optional)
+#
+#   - BREAKING CHANGE: describe the impact and migration steps
+#   - Closes #123, Refs #456
+#   - Co-authored-by: Name <email>
+#
+# REVERTS
+#
+#   - Header: revert: <original commit subject>
+#   - Body:   This reverts commit <hash>.
+#
+# TYPES
+#
+#   feat      A new feature
+#   fix       A bug fix
+#   refactor  A code change that is neither a fix nor a feature
+#   perf      A performance improvement
+#   test      Adding or updating tests
+#   docs      Documentation changes only
+#   style     Formatting or whitespace, no change to logic or meaning
+#   build     Build system or external dependency changes
+#   ci        CI configuration or scripts
+#   chore     Maintenance tasks that do not affect src or tests
+#   revert    An explicit revert of a previous commit
+#
+# SCOPE
+#
+#   A free-form label for the area that changed, e.g. api, cli, ui, auth, db
+#   Omit if the change is truly global or does not fit a single area.
