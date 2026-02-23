@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 # Section: Environment
 
 export LC_ALL="en_GB.UTF-8"
