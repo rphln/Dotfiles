@@ -7,13 +7,13 @@
 #
 #   - Use imperative, present tense: "add feature" not "added" or "adds"
 #   - No initial capital, no trailing period
-#   - Append "!" after the scope for breaking changes
+#   - Append "!" after the scope to mark a breaking change
 #
 # BODY (optional)
 #
 #   - Explain what changed and why, not how
 #   - Contrast with the previous behavior where helpful
-#   - Can include: testing notes, rollback plan, alternatives considered
+#   - May include testing notes, a rollback plan, or alternatives considered
 #
 # FOOTER (optional)
 #
@@ -23,8 +23,8 @@
 #
 # REVERTS
 #
-#   - Header: revert: <original commit subject>
-#   - Body:   This reverts commit <hash>.
+#   - Subject: revert: <original commit subject>
+#   - Body:    This reverts commit <hash>.
 #
 # TYPES
 #
@@ -37,10 +37,10 @@
 #   style     Formatting or whitespace, no change to logic or meaning
 #   build     Build system or external dependency changes
 #   ci        CI configuration or scripts
-#   chore     Maintenance tasks that do not affect src or tests
+#   chore     Maintenance tasks that do not affect source or tests
 #   revert    An explicit revert of a previous commit
 #
 # SCOPE
 #
 #   A free-form label for the area that changed, e.g. api, cli, ui, auth, db
-#   Omit if the change is truly global or does not fit a single area.
+#   Omit if the change is global or does not fit a single area.
