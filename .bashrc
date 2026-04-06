@@ -129,7 +129,7 @@ alias lla="l -lA"
 alias t="tmux new -A -s default"
 alias s="ssh -o RequestTTY=yes -o RemoteCommand='tmux new -A -s default'"
 
-alias h='env HTOPRC=~/.config/htop/minrc htop --user ${USER}'
+alias h="htop --user"
 
 alias dl="wget --continue --no-verbose --show-progress"
 alias rs="rsync --archive --human-readable --partial --progress"
