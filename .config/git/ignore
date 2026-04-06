@@ -11,3 +11,6 @@
 
 # Section: Visual Studio Code
 .vscode
+
+# Section: Zed
+.zed
