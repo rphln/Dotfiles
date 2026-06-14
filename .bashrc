@@ -148,6 +148,9 @@ alias gu="git pull"
 alias gcl="git clone --recursive"
 alias gco="git commit"
 
+# The `--no-symlinks` is a workaround for WSL.
+alias gdt="git difftool --dir-diff --no-symlinks"
+
 alias cfg="git --git-dir ~/.cfg --work-tree ~"
 
 # Section: Functions

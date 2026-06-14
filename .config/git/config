@@ -30,7 +30,7 @@
 
 [diff]
 	algorithm = histogram
-	tool = vscode
+	tool = zed
 
 [diff "pandoc"]
 	textconv = pandoc --standalone --to markdown
@@ -38,5 +38,5 @@
 [difftool]
 	prompt = false
 
-[difftool "vscode"]
-	cmd = code --wait --diff $LOCAL $REMOTE
+[difftool "zed"]
+	cmd = zed --wait --diff $LOCAL $REMOTE
