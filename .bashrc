@@ -92,7 +92,7 @@ PROMPT_COMMAND+="${PROMPT_COMMAND:+;} history -a"
 # Section: Appearance
 
 function prompt-directory {
-	grep --perl --only-matching "(?:^/)?(?:[^/]+/?){0,2}$" <<<"${PWD/#${HOME}/'~'}"
+	grep --perl-regexp --only-matching "(?:^/)?(?:[^/]+/?){0,2}$" <<<"${PWD/#${HOME}/'~'}"
 }
 
 PS1=$'\[\e[34m\]${SSH_TTY:+\h }$(prompt-directory):\[\e[0m\] '
@@ -173,7 +173,7 @@ function my-ip {
 
 function my-local-ip {
 	ip route get 1.1.1.1 |
-		grep --perl --only-matching "src (\K\S+)"
+		grep --perl-regexp --only-matching "src (\K\S+)"
 }
 
 function preview {
@@ -184,7 +184,7 @@ function preview {
 # shellcheck disable=SC2120
 function yank {
 	printf "\e]52;c;"
-	cat -- "${@}" | base64
+	cat -- "${@}" | base64 --wrap 0
 	printf "\a"
 }
 
