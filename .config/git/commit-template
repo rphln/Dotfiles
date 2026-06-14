@@ -1,46 +1,21 @@
 
-# Commit Message (Conventional Commits)
+# Header: <scope>[!]: <subject>
 #
-# Format: <type>(<scope>)<!>: <subject>
+# Scope
 #
-# SUBJECT
+#   - Use a free-form label for the area affected by the change, such as
+#     “api”, “cli”, “ui”, “auth”, or “db”.
+#   - Append “!” to the scope to signal a breaking change.
 #
-#   - Use imperative, present tense: "add feature" not "added" or "adds"
-#   - No initial capital, no trailing period
-#   - Append "!" after the scope to mark a breaking change
+# Subject
 #
-# BODY (optional)
+#   - Use the imperative mood in the present tense: write “add feature”,
+#     not “added feature” or “adds feature”.
+#   - Start with a lowercase letter.
+#   - Do not end with a period.
 #
-#   - Explain what changed and why, not how
-#   - Contrast with the previous behavior where helpful
-#   - May include testing notes, a rollback plan, or alternatives considered
+# Body (optional)
 #
-# FOOTER (optional)
-#
-#   - BREAKING CHANGE: describe the impact and migration steps
-#   - Closes #123, Refs #456
-#   - Co-authored-by: Name <email>
-#
-# REVERTS
-#
-#   - Subject: revert: <original commit subject>
-#   - Body:    This reverts commit <hash>.
-#
-# TYPES
-#
-#   feat      A new feature
-#   fix       A bug fix
-#   refactor  A code change that is neither a fix nor a feature
-#   perf      A performance improvement
-#   test      Adding or updating tests
-#   docs      Documentation changes only
-#   style     Formatting or whitespace, no change to logic or meaning
-#   build     Build system or external dependency changes
-#   ci        CI configuration or scripts
-#   chore     Maintenance tasks that do not affect source or tests
-#   revert    An explicit revert of a previous commit
-#
-# SCOPE
-#
-#   A free-form label for the area that changed, e.g. api, cli, ui, auth, db
-#   Omit if the change is global or does not fit a single area.
+#   - Explain what changed and why, not how it was implemented.
+#   - Contrast the new behavior with the previous behavior when useful.
+#   - May include testing notes, rollback plans, or alternatives considered.
